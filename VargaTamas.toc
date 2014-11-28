@@ -1,0 +1,39 @@
+\select@language {magyar} \contentsline {section}{Feladatki\IeC {\'\i }r\'as}{4}
+\select@language {magyar} \contentsline {section}{Tartalmi \"osszefoglal\'o}{5}
+\select@language {magyar} \contentsline {section}{Bevezet\'es}{6}
+\select@language {magyar} \contentsline {chapter}{\numberline {1}Bork\'ostol\'o algoritmusok}{7}
+\select@language {magyar} \contentsline {section}{\numberline {1.1}CoHITS}{7}
+\select@language {magyar} \contentsline {section}{\numberline {1.2}Hamming}{7}
+\select@language {magyar} \contentsline {section}{\numberline {1.3}Koszinusz}{7}
+\select@language {magyar} \contentsline {section}{\numberline {1.4}Precedencia}{7}
+\select@language {magyar} \contentsline {section}{\numberline {1.5}\"Osszef\"ugg\H os\'egi}{7}
+\select@language {magyar} \contentsline {section}{\numberline {1.6}Poz\IeC {\'\i }ci\'o szerinti}{7}
+\select@language {magyar} \contentsline {chapter}{\numberline {2}A weboldal}{8}
+\select@language {magyar} \contentsline {section}{\numberline {2.1}Iter\'aci\'ok}{8}
+\select@language {magyar} \contentsline {section}{\numberline {2.2}PHP}{8}
+\select@language {magyar} \contentsline {section}{\numberline {2.3}JavaScript}{8}
+\select@language {magyar} \contentsline {section}{\numberline {2.4}Grafikonok}{8}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.4.1}Google Charts}{8}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.4.2}Charts.js}{8}
+\select@language {magyar} \contentsline {section}{\numberline {2.5}Statikus tartalom}{8}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.5.1}index.html - F\H ooldal}{8}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.5.2}borkostolasEredmenyek.html - Eredm\'enyek}{8}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.5.3}modszerek.html - M\'odszerek}{8}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.5.4}kapcsolat.html - Kapcsolat}{8}
+\select@language {magyar} \contentsline {section}{\numberline {2.6}Dinamikus tartalom}{8}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.6.1}Regisztr\'aci\'o}{8}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.6.2}Bejelentkez\'es}{8}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.6.3}demo.html - Dem\'o}{8}
+\select@language {magyar} \contentsline {chapter}{\numberline {3}A mobil alkalmaz\'as}{9}
+\select@language {magyar} \contentsline {section}{\numberline {3.1}Android}{9}
+\select@language {magyar} \contentsline {chapter}{\numberline {4}A weboldal \'es a mobil alkalmaz\'as \"osszef\H uz\'ese}{10}
+\select@language {magyar} \contentsline {chapter}{\numberline {5}Tesztel\'es}{11}
+\select@language {magyar} \contentsline {chapter}{\numberline {6}\"Osszefoglal\'as}{12}
+\select@language {magyar} \contentsline {chapter}{\numberline {7}Egyebek}{13}
+\select@language {magyar} \contentsline {section}{\numberline {7.1}K\"ornyezetek}{13}
+\select@language {magyar} \contentsline {chapter}{\numberline {8}F\"uggel\'ek}{15}
+\select@language {magyar} \contentsline {section}{\numberline {8.1}A program forr\'ask\'odja}{15}
+\select@language {magyar} \ 
+\select@language {magyar} \contentsline {section}{Nyilatkozat}{16}
+\select@language {magyar} \contentsline {section}{K\"osz\"onetnyilv\'an\IeC {\'\i }t\'as}{17}
+\select@language {magyar} \contentsline {section}{Irodalomjegyz\'ek}{18}
