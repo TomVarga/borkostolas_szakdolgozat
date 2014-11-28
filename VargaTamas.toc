@@ -28,6 +28,10 @@
 \select@language {magyar} \contentsline {section}{\numberline {3.1}Android}{9}
 \select@language {magyar} \contentsline {chapter}{\numberline {4}A weboldal \'es a mobil alkalmaz\'as \"osszef\H uz\'ese}{10}
 \select@language {magyar} \contentsline {chapter}{\numberline {5}Tesztel\'es}{11}
+\select@language {magyar} \contentsline {section}{\numberline {5.1}Regisztr\'aci\'os \'es bejelentkeztet\H o rendszer}{11}
+\select@language {magyar} \contentsline {section}{\numberline {5.2}Demo adatkezel\'es\'enek ellen\H orz\'ese}{11}
+\select@language {magyar} \contentsline {section}{\numberline {5.3}Algoritmusok ellen\H orz\'ese kis adatokon}{11}
+\select@language {magyar} \contentsline {section}{\numberline {5.4}Algoritmusok ellen\H orz\'ese ismert eredm\'enyekkel}{11}
 \select@language {magyar} \contentsline {chapter}{\numberline {6}\"Osszefoglal\'as}{12}
 \select@language {magyar} \contentsline {chapter}{\numberline {7}Egyebek}{13}
 \select@language {magyar} \contentsline {section}{\numberline {7.1}K\"ornyezetek}{13}
@@ -35,5 +39,4 @@
 \select@language {magyar} \contentsline {section}{\numberline {8.1}A program forr\'ask\'odja}{15}
 \select@language {magyar} \ 
 \select@language {magyar} \contentsline {section}{Nyilatkozat}{16}
-\select@language {magyar} \contentsline {section}{K\"osz\"onetnyilv\'an\IeC {\'\i }t\'as}{17}
-\select@language {magyar} \contentsline {section}{Irodalomjegyz\'ek}{18}
+\select@language {magyar} \contentsline {section}{Irodalomjegyz\'ek}{17}
