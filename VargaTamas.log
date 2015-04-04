@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2015.4.4)  4 APR 2015 22:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2015.4.4)  4 APR 2015 22:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -345,18 +345,6 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 [12
 
 ]
-Overfull \hbox (1.4209pt too wide) in paragraph at lines 233--234
- \T1/ptm/b/n/12 Verz-iókezelés röv-i-den [] [] Verz-iókezelés röv-i-den: \T1/pt
-m/m/n/12 Ez alatt több verz-ió-val ren-delkez® ada-
- []
-
-
-Overfull \hbox (1.52507pt too wide) in paragraph at lines 233--234
-\T1/ptm/m/n/12 tok kezelését értjük. Leg-gyakrab-ban a szoftver-fe-jlesztés-ben
- használ-nak verz-iókezel® rend-
- []
-
-
 Overfull \hbox (14.4491pt too wide) in paragraph at lines 236--237
 \T1/ptm/m/n/12 jlesztéséhez. Az elosz-tottság ab-ban való-sul meg, hogy a Git m
 in-den fe-jleszt® helyi munkavál-
@@ -405,18 +393,14 @@ at a Szege-di Tu-domány-
 
 [16
 
-]
-
-LaTeX Warning: Empty `thebibliography' environment on input line 498.
-
-[17
+] [17
 
 ] (./VargaTamas.aux) ) 
 Here is how much of TeX's memory you used:
- 4151 strings out of 493109
- 58065 string characters out of 6138588
- 135558 words of memory out of 5000000
- 7542 multiletter control sequences out of 15000+600000
+ 4152 strings out of 493109
+ 58073 string characters out of 6138588
+ 135562 words of memory out of 5000000
+ 7543 multiletter control sequences out of 15000+600000
  40170 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,10n,45p,771b,490s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -425,7 +409,7 @@ c:/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/t
 exlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2014/texmf-
 dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2014/texmf-dist/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on VargaTamas.pdf (17 pages, 60961 bytes).
+Output written on VargaTamas.pdf (17 pages, 61088 bytes).
 PDF statistics:
  76 PDF objects out of 1000 (max. 8388607)
  52 compressed objects within 1 object stream
