@@ -39,12 +39,16 @@
 \select@language {magyar} \contentsline {chapter}{\numberline {6}\"Osszefoglal\'as}{12}{chapter.6}
 \select@language {magyar} \contentsline {section}{\numberline {6.1}Verzi\'okezel\'es}{13}{section.6.1}
 \select@language {magyar} \contentsline {section}{Verzi\'okezel\'es}{13}{section.6.1}
-\select@language {magyar} \contentsline {paragraph}{Verzi\'okezel\'es r\"oviden}{13}{section*.11}
-\select@language {magyar} \contentsline {paragraph}{Git}{13}{section*.12}
-\select@language {magyar} \contentsline {paragraph}{GitHub}{13}{section*.13}
-\select@language {magyar} \contentsline {section}{\numberline {6.2}K\"ornyezetek}{13}{section.6.2}
-\select@language {magyar} \contentsline {chapter}{\numberline {7}F\"uggel\'ek}{15}{chapter.7}
-\select@language {magyar} \contentsline {section}{\numberline {7.1}A program forr\'ask\'odja}{15}{section.7.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {6.1.1}Verzi\'okezel\'es r\"oviden}{13}{subsection.6.1.1}
+\select@language {magyar} \contentsline {subsection}{Verzi\'okezel\'es r\"oviden}{13}{subsection.6.1.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {6.1.2}Git}{13}{subsection.6.1.2}
+\select@language {magyar} \contentsline {subsection}{Git}{13}{subsection.6.1.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {6.1.3}GitHub}{13}{subsection.6.1.3}
+\select@language {magyar} \contentsline {subsection}{GitHub}{13}{subsection.6.1.3}
+\select@language {magyar} \contentsline {paragraph}{A v\'alaszt\'as}{13}{section*.11}
+\select@language {magyar} \contentsline {section}{\numberline {6.2}K\"ornyezetek}{14}{section.6.2}
+\select@language {magyar} \contentsline {chapter}{\numberline {7}F\"uggel\'ek}{16}{chapter.7}
+\select@language {magyar} \contentsline {section}{\numberline {7.1}A program forr\'ask\'odja}{16}{section.7.1}
 \select@language {magyar} \ 
-\select@language {magyar} \contentsline {section}{Nyilatkozat}{16}{chapter*.14}
-\select@language {magyar} \contentsline {section}{Irodalomjegyz\'ek}{17}{chapter*.15}
+\select@language {magyar} \contentsline {section}{Nyilatkozat}{17}{chapter*.12}
+\select@language {magyar} \contentsline {section}{Irodalomjegyz\'ek}{18}{chapter*.13}
