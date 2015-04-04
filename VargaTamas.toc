@@ -34,8 +34,7 @@
 \select@language {magyar} \contentsline {section}{\numberline {5.4}Algoritmusok ellen\H orz\'ese ismert eredm\'enyekkel}{11}
 \select@language {magyar} \contentsline {chapter}{\numberline {6}\"Osszefoglal\'as}{12}
 \select@language {magyar} \contentsline {chapter}{\numberline {7}Egyebek}{13}
-\select@language {magyar} \contentsline {section}{\numberline {7.1}Verzi\'o kezel\'es}{13}
-\select@language {magyar} \contentsline {section}{\numberline {7.2}K\"ornyezetek}{13}
+\select@language {magyar} \contentsline {section}{\numberline {7.1}K\"ornyezetek}{13}
 \select@language {magyar} \contentsline {chapter}{\numberline {8}F\"uggel\'ek}{15}
 \select@language {magyar} \contentsline {section}{\numberline {8.1}A program forr\'ask\'odja}{15}
 \select@language {magyar} \ 
