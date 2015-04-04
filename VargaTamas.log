@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2015.4.4)  4 APR 2015 21:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2015.4.4)  4 APR 2015 21:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -347,7 +347,13 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 ]
 7. fejezet.
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--234
+Overfull \hbox (4.02876pt too wide) in paragraph at lines 233--234
+\T1/ptm/m/n/12 tel és tel-jes revíz-iókövetési lehet®séggel, ame-ly nem függ a 
+hálózat elérését®l vagy közpon-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--241
 
  []
 
@@ -358,13 +364,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 233--234
 [15
 
 ]
-Overfull \hbox (8.47397pt too wide) in paragraph at lines 429--431
+Overfull \hbox (8.47397pt too wide) in paragraph at lines 436--438
 \T1/ptm/m/n/12 Alulírott [] sza-kos hall-gató, ki-je-len-tem, hogy a dol-go-zat
 omat a Szege-
  []
 
 
-Overfull \hbox (3.73915pt too wide) in paragraph at lines 434--435
+Overfull \hbox (3.73915pt too wide) in paragraph at lines 441--442
 []\T1/ptm/m/n/12 Tudomásul veszem, hogy sza-k-dol-go-zatomat / diplo-ma-munká-m
 at a Szege-di Tu-domány-
  []
@@ -373,7 +379,7 @@ at a Szege-di Tu-domány-
 
 ]
 
-LaTeX Warning: Empty `thebibliography' environment on input line 487.
+LaTeX Warning: Empty `thebibliography' environment on input line 494.
 
 [17
 
@@ -385,12 +391,12 @@ Here is how much of TeX's memory you used:
  7542 multiletter control sequences out of 15000+600000
  39965 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,10n,45p,265b,490s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,10n,45p,764b,490s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}<
 c:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2014/te
 xmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2014/texmf-dist/fonts/typ
 e1/urw/times/utmri8a.pfb>
-Output written on VargaTamas.pdf (17 pages, 51789 bytes).
+Output written on VargaTamas.pdf (17 pages, 53520 bytes).
 PDF statistics:
  72 PDF objects out of 1000 (max. 8388607)
  49 compressed objects within 1 object stream
