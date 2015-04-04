@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2015.4.4)  4 APR 2015 22:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2015.4.4)  4 APR 2015 22:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -345,32 +345,60 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 [12
 
 ]
-7. fejezet.
+Overfull \hbox (1.4209pt too wide) in paragraph at lines 233--234
+ \T1/ptm/b/n/12 Verz-iókezelés röv-i-den [] [] Verz-iókezelés röv-i-den: \T1/pt
+m/m/n/12 Ez alatt több verz-ió-val ren-delkez® ada-
+ []
 
-Overfull \hbox (4.02876pt too wide) in paragraph at lines 233--233
+
+Overfull \hbox (1.52507pt too wide) in paragraph at lines 233--234
+\T1/ptm/m/n/12 tok kezelését értjük. Leg-gyakrab-ban a szoftver-fe-jlesztés-ben
+ használ-nak verz-iókezel® rend-
+ []
+
+
+Overfull \hbox (14.4491pt too wide) in paragraph at lines 236--237
+\T1/ptm/m/n/12 jlesztéséhez. Az elosz-tottság ab-ban való-sul meg, hogy a Git m
+in-den fe-jleszt® helyi munkavál-
+ []
+
+
+Overfull \hbox (8.84065pt too wide) in paragraph at lines 236--237
+\T1/ptm/m/n/12 ágakat im-portálják és össze-fésül-het®ek, ha-son-lóan a hely-be
+n létre-ho-zott fe-jlesztési ágakhoz.
+ []
+
+
+Overfull \hbox (9.12862pt too wide) in paragraph at lines 236--237
+\T1/ptm/m/n/12 Ez azért jó, mert így min-den munkamá-so-lat egy tel-jes érték¶ 
+repos-i-to-ry tel-jes verz-iótörténet-
+ []
+
+
+Overfull \hbox (4.02876pt too wide) in paragraph at lines 236--237
 \T1/ptm/m/n/12 tel és tel-jes revíz-iókövetési lehet®séggel, ame-ly nem függ a 
 hálózat elérését®l vagy közpon-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--241
+Underfull \hbox (badness 10000) in paragraph at lines 244--245
 
  []
 
 [13
 
 ] [14]
-8. fejezet.
+7. fejezet.
 [15
 
 ]
-Overfull \hbox (8.47397pt too wide) in paragraph at lines 436--438
+Overfull \hbox (8.47397pt too wide) in paragraph at lines 440--442
 \T1/ptm/m/n/12 Alulírott [] sza-kos hall-gató, ki-je-len-tem, hogy a dol-go-zat
 omat a Szege-
  []
 
 
-Overfull \hbox (3.73915pt too wide) in paragraph at lines 441--442
+Overfull \hbox (3.73915pt too wide) in paragraph at lines 445--446
 []\T1/ptm/m/n/12 Tudomásul veszem, hogy sza-k-dol-go-zatomat / diplo-ma-munká-m
 at a Szege-di Tu-domány-
  []
@@ -379,7 +407,7 @@ at a Szege-di Tu-domány-
 
 ]
 
-LaTeX Warning: Empty `thebibliography' environment on input line 494.
+LaTeX Warning: Empty `thebibliography' environment on input line 498.
 
 [17
 
@@ -389,17 +417,18 @@ Here is how much of TeX's memory you used:
  58065 string characters out of 6138588
  135558 words of memory out of 5000000
  7542 multiletter control sequences out of 15000+600000
- 39965 words of font info for 64 fonts, out of 8000000 for 9000
+ 40170 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,10n,45p,769b,490s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,10n,45p,771b,490s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}<
-c:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2014/te
-xmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2014/texmf-dist/fonts/typ
-e1/urw/times/utmri8a.pfb>
-Output written on VargaTamas.pdf (17 pages, 53520 bytes).
+c:/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/t
+exlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2014/texmf-
+dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2014/texmf-dist/fonts/type1/u
+rw/times/utmri8a.pfb>
+Output written on VargaTamas.pdf (17 pages, 60961 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
+ 76 PDF objects out of 1000 (max. 8388607)
+ 52 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
