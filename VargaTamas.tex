@@ -58,7 +58,8 @@
 \headsep 5mm
 \textheight 237mm
 
-
+%Hyperlinkek:
+\usepackage{hyperref}
 
 
 \begin{document}
@@ -133,10 +134,7 @@ Szeged
 \chapter*{Feladatkiírás}
 %A tartalomjegyzékben mégis szerepeltetni kell, mint szakasz(section) szerepeljen:
 \addcontentsline{toc}{section}{Feladatkiírás}
-
-
-
-A témavezetõ által megfogalmazott feladatkiírás. Önálló oldalon szerepel.
+A hallgató feladata egy olyan web és hozzá tartozó android alkalmazás készítése, amely képes borkóstolás során gyûjtött bor értékelések alapján több különbözõ algoritmus használatával a kóstolók rangsorolására. A web és android alkalmazásoknak képeseknek kell lenniük egymás közötti szinkronizációra, több felhasználó kezelésére valamint a bevitt adatok és az alkalmazás állapotaink tárolására. Az android alkalmazásnak offline módban is használható kell hogy legyen.
 
 \chapter*{Tartalmi összefoglaló}
 \addcontentsline{toc}{section}{Tartalmi összefoglaló}
@@ -145,13 +143,29 @@ A témavezetõ által megfogalmazott feladatkiírás. Önálló oldalon szerepel.
 Minõségkinyerés borkóstolási adatokból, web és android alkalmazás fejlesztés
 
 \paragraph{A feladat megfogalmazása}
-
+Web és android alkalmazás fejlesztése, amely képes bor értékelések alapján már létezõ algoritmusok által rangsorolni a borkóstolókat. A mobil alkalmazás felhasználó barát megvalósítása, mely bármilyen körülmény mellet valós idejû adat bevitelt is garantál.
 
 \paragraph{A megoldási mód}
+A web alkalmazás a következõ címekrõl érhetõ el:
+\url{http://bor.tvarga.hu}
+
+Az android alkalmazás letölthetõ bármelyik fent említett URL -rõl a jobb oldali floating menün keresztül, vagy az alábbi közvetlen linken:
+\hyperref[borkostolas.apk]{http://bor.tvarga.hu/borkostolas.apk}
 
 \paragraph{Alkalmazott eszközök, módszerek}
+\begin{itemize}
+    \item Web alkalmazás: 
+    \subitem Programozási nyelvek: PHP, JavaScript, MySQL
+    \subitem Fejlesztõi környezetek: SublimeText, PhpStorm
+    \item Android alkalmazás:
+    \subitem Programozási nyelvek: Java
+    \subitem Fejlesztõi környezetek: Android Studio
+    \item Verziókezelés: GitHub
+\end{itemize}
 
 \paragraph{Kulcsszavak}
+Android, PHP, JavaScript, Borkóstolás
+
 
 A tartalmi összefoglalónak tartalmaznia kell (rövid, legfeljebb egy oldalas, összefüggõ megfogalmazásban)
 a következõket: a téma megnevezése, a megadott feladat megfogalmazása - a feladatkiíráshoz viszonyítva-,
