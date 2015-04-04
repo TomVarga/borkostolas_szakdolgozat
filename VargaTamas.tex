@@ -1,24 +1,24 @@
-% LaTeX mintafájl szakdolgozat és diplomamunkáknak az
-% SZTE Informatikai Tanszekcsoportja által megkövetelt
-% formai követelményeinek megvalósításához
+% LaTeX mintafĂĄjl szakdolgozat ĂŠs diplomamunkĂĄknak az
+% SZTE Informatikai Tanszekcsoportja ĂĄltal megkĂśvetelt
+% formai kĂśvetelmĂŠnyeinek megvalĂłsĂ­tĂĄsĂĄhoz
 % Modositva: 2011.04.28 Nemeth L. Zoltan
-% A fájl használatához szükséges a magyar.ldf 2005/05/12 v1.5-ös vagy későbbi verziója
-% ez letölthető a http://www.math.bme.hu/latex/ weblapról, a magyar nyelvű szedéshez
-% Hasznos információk, linekek, LaTeX leirasok a www.latex.lap.hu weboldalon vannak.
+% A fĂĄjl hasznĂĄlatĂĄhoz szĂźksĂŠges a magyar.ldf 2005/05/12 v1.5-Ăśs vagy kĂŠsĹbbi verziĂłja
+% ez letĂślthetĹ a http://www.math.bme.hu/latex/ weblaprĂłl, a magyar nyelvĹą szedĂŠshez
+% Hasznos informĂĄciĂłk, linekek, LaTeX leirasok a www.latex.lap.hu weboldalon vannak.
 %
 
 
 \documentclass[12pt]{report}
 
-%Magyar nyelvi támogatás (Babel 3.7 vagy későbbi kell!)
+%Magyar nyelvi tĂĄmogatĂĄs (Babel 3.7 vagy kĂŠsĹbbi kell!)
 \def\magyarOptions{defaults=hu-min}
 \usepackage[magyar]{babel}
 
-%Az ékezetes betűk használatához:
-\usepackage{t1enc}% ékezetes szavak automatikus elválasztásához
-\usepackage[latin2]{inputenc}% ékezetes szavak beviteléhez
+%Az ĂŠkezetes betĹąk hasznĂĄlatĂĄhoz:
+\usepackage{t1enc}% ĂŠkezetes szavak automatikus elvĂĄlasztĂĄsĂĄhoz
+\usepackage[latin2]{inputenc}% ĂŠkezetes szavak bevitelĂŠhez
 
-% A formai kovetelmenyekben megkövetelt Times betűtípus hasznalata:
+% A formai kovetelmenyekben megkĂśvetelt Times betĹątĂ­pus hasznalata:
 \usepackage{times}
 
 %Az AMS csomagjai
@@ -26,29 +26,29 @@
 \usepackage{amssymb}
 \usepackage{amsthm}
 
-%A fejléc láblécek kialakításához:
+%A fejlĂŠc lĂĄblĂŠcek kialakĂ­tĂĄsĂĄhoz:
 \usepackage{fancyhdr}
 
-%Természetesen további csomagok is használhatók,
-%például ábrák beillesztéséhez a graphix és a psfrag,
-%ha nincs rájuk szükség természetesen kihagyhatók.
+%TermĂŠszetesen tovĂĄbbi csomagok is hasznĂĄlhatĂłk,
+%pĂŠldĂĄul ĂĄbrĂĄk beillesztĂŠsĂŠhez a graphix ĂŠs a psfrag,
+%ha nincs rĂĄjuk szĂźksĂŠg termĂŠszetesen kihagyhatĂłk.
 \usepackage{graphicx}
 \usepackage{psfrag}
 
-%Tételszerű környezetek definiálhatók, ezek most fejezetenkent egyutt szamozodnak, pl.
-\newtheorem{tét}{Tétel}[chapter]
-\newtheorem{defi}[tét]{Definíció}
-\newtheorem{lemma}[tét]{Lemma}
-\newtheorem{áll}[tét]{Állítás}
-\newtheorem{köv}[tét]{Következmény}
+%TĂŠtelszerĹą kĂśrnyezetek definiĂĄlhatĂłk, ezek most fejezetenkent egyutt szamozodnak, pl.
+\newtheorem{tĂŠt}{TĂŠtel}[chapter]
+\newtheorem{defi}[tĂŠt]{DefinĂ­ciĂł}
+\newtheorem{lemma}[tĂŠt]{Lemma}
+\newtheorem{ĂĄll}[tĂŠt]{ĂllĂ­tĂĄs}
+\newtheorem{kĂśv}[tĂŠt]{KĂśvetkezmĂŠny}
 
-%Ha a megjegyzések és a példak szövegét nem akarjuk dőlten szedni, akkor
-%az alábbi parancs után kell őket definiální:
+%Ha a megjegyzĂŠsek ĂŠs a pĂŠldak szĂśvegĂŠt nem akarjuk dĹlten szedni, akkor
+%az alĂĄbbi parancs utĂĄn kell Ĺket definiĂĄlnĂ­:
 \theoremstyle{definition}
-\newtheorem{megj}[tét]{Megjegyzés}
-\newtheorem{pld}[tét]{Példa}
+\newtheorem{megj}[tĂŠt]{MegjegyzĂŠs}
+\newtheorem{pld}[tĂŠt]{PĂŠlda}
 
-%Margók:
+%MargĂłk:
 \hoffset -1in
 \voffset -1in
 \oddsidemargin 35mm
@@ -63,39 +63,39 @@
 
 \begin{document}
 
-%A FEJEZETEK KEZDŐOLDALAINAK FEJ ES LÁBLÉCE:
-%a plain oldalstílust kell átdefiniálni, hogy ott ne legyen fejléc:
+%A FEJEZETEK KEZDĹOLDALAINAK FEJ ES LĂBLĂCE:
+%a plain oldalstĂ­lust kell ĂĄtdefiniĂĄlni, hogy ott ne legyen fejlĂŠc:
 \fancypagestyle{plain}{%
-%ez mindent töröl:
+%ez mindent tĂśrĂśl:
 \fancyhf{}
-% a láblécbe jobboldalra kerüljön az oldalszám:
+% a lĂĄblĂŠcbe jobboldalra kerĂźljĂśn az oldalszĂĄm:
 \fancyfoot[R]{\thepage}
-%elválasztó vonal sem kell:
+%elvĂĄlasztĂł vonal sem kell:
 \renewcommand{\headrulewidth}{0pt}
 }
 
-%A TÖBBI OLDAL FEJ ÉS LÁBLÉCE:
+%A TĂBBI OLDAL FEJ ĂS LĂBLĂCE:
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{Minőségkinyerés borkóstolási adatokból, web és android alkalmazás fejlesztés}
+\fancyhead[L]{MinĹsĂŠgkinyerĂŠs borkĂłstolĂĄsi adatokbĂłl, web ĂŠs android alkalmazĂĄs fejlesztĂŠs}
 \fancyfoot[R]{\thepage}
 
 
-%A címoldalra se fej- se lábléc nem kell:
+%A cĂ­moldalra se fej- se lĂĄblĂŠc nem kell:
 \thispagestyle{empty}
 
 \begin{center}
 \vspace*{1cm}
-{\Large\bf Szegedi Tudományegyetem}
+{\Large\bf Szegedi TudomĂĄnyegyetem}
 
 \vspace{0.5cm}
 
-{\Large\bf Informatikai Tanszékcsoport}
+{\Large\bf Informatikai TanszĂŠkcsoport}
 
 \vspace*{3.8cm}
 
 
-{\LARGE\bf Minőségkinyerés borkóstolási adatokból, web és android alkalmazás fejlesztés}
+{\LARGE\bf MinĹsĂŠgkinyerĂŠs borkĂłstolĂĄsi adatokbĂłl, web ĂŠs android alkalmazĂĄs fejlesztĂŠs}
 
 
 \vspace*{3.6cm}
@@ -105,13 +105,13 @@
 
 \vspace*{4cm}
 
-%Értelemszerűen megváltoztatandó:
+%ĂrtelemszerĹąen megvĂĄltoztatandĂł:
 {\large
 \begin{tabular}{c@{\hspace{4cm}}c}
-\emph{Készítette:}     &\emph{Témavezető:}\\
-\bf{Varga Tamás}  &\bf{Dr. Csendes Tibor}\\
-Programtervező Informatikus     &tanszékvezető egyetemi tanár\\
-hallgató&
+\emph{KĂŠszĂ­tette:}     &\emph{TĂŠmavezetĹ:}\\
+\bf{Varga TamĂĄs}  &\bf{Dr. Csendes Tibor}\\
+ProgramtervezĹ Informatikus     &tanszĂŠkvezetĹ egyetemi tanĂĄr\\
+hallgatĂł&
 \end{tabular}
 }
 
@@ -126,46 +126,46 @@ Szeged
 \end{center}
 
 
-%A tartalomjegyzék:
+%A tartalomjegyzĂŠk:
 \tableofcontents
 
-%A \chapter* parancs nem ad a fejezetnek sorszámot
-\chapter*{Feladatkiírás}
-%A tartalomjegyzékben mégis szerepeltetni kell, mint szakasz(section) szerepeljen:
-\addcontentsline{toc}{section}{Feladatkiírás}
+%A \chapter* parancs nem ad a fejezetnek sorszĂĄmot
+\chapter*{FeladatkiĂ­rĂĄs}
+%A tartalomjegyzĂŠkben mĂŠgis szerepeltetni kell, mint szakasz(section) szerepeljen:
+\addcontentsline{toc}{section}{FeladatkiĂ­rĂĄs}
 
-A témavezető által megfogalmazott feladatkiírás. Önálló oldalon szerepel.
+A tĂŠmavezetĹ ĂĄltal megfogalmazott feladatkiĂ­rĂĄs. ĂnĂĄllĂł oldalon szerepel.
 
-\chapter*{Tartalmi összefoglaló}
-\addcontentsline{toc}{section}{Tartalmi összefoglaló}
+\chapter*{Tartalmi ĂśsszefoglalĂł}
+\addcontentsline{toc}{section}{Tartalmi ĂśsszefoglalĂł}
 
-A tartalmi összefoglalónak tartalmaznia kell (rövid, legfeljebb egy oldalas, összefüggő megfogalmazásban)
-a következőket: a téma megnevezése, a megadott feladat megfogalmazása - a feladatkiíráshoz viszonyítva-,
-a megoldási mód, az alkalmazott eszközök, módszerek, az elért eredmények, kulcsszavak (4-6 darab).
+A tartalmi ĂśsszefoglalĂłnak tartalmaznia kell (rĂśvid, legfeljebb egy oldalas, ĂśsszefĂźggĹ megfogalmazĂĄsban)
+a kĂśvetkezĹket: a tĂŠma megnevezĂŠse, a megadott feladat megfogalmazĂĄsa - a feladatkiĂ­rĂĄshoz viszonyĂ­tva-,
+a megoldĂĄsi mĂłd, az alkalmazott eszkĂśzĂśk, mĂłdszerek, az elĂŠrt eredmĂŠnyek, kulcsszavak (4-6 darab).
 
-Az összefoglaló nyelvének meg kell egyeznie a dolgozat nyelvével. Ha a dolgozat idegen nyelven készül,
-magyar nyelvű tartalmi összefoglaló készítése is kötelező (külön lapon), melynek terjedelmét a TVSZ szabályozza.
-
-
-\chapter*{Bevezetés}
-\addcontentsline{toc}{section}{Bevezetés}
-
-Itt kezdődik a bevezetés, mely nem kap sorszámot.
+Az ĂśsszefoglalĂł nyelvĂŠnek meg kell egyeznie a dolgozat nyelvĂŠvel. Ha a dolgozat idegen nyelven kĂŠszĂźl,
+magyar nyelvĹą tartalmi ĂśsszefoglalĂł kĂŠszĂ­tĂŠse is kĂśtelezĹ (kĂźlĂśn lapon), melynek terjedelmĂŠt a TVSZ szabĂĄlyozza.
 
 
+\chapter*{BevezetĂŠs}
+\addcontentsline{toc}{section}{BevezetĂŠs}
 
-\chapter{Borkóstoló algoritmusok}
+Itt kezdĹdik a bevezetĂŠs, mely nem kap sorszĂĄmot.
 
-Ez pedig már az első fejezet, ...
+
+
+\chapter{BorkĂłstolĂł algoritmusok}
+
+Ez pedig mĂĄr az elsĹ fejezet, ...
 
 \section{CoHITS}
 A CoHITS
 
-%\subsection{Al-al cím}
-%Sőt al-al fejezetek is.
+%\subsection{Al-al cĂ­m}
+%SĹt al-al fejezetek is.
 
-%\subsection{Másik}
-%Na lássunk egy másodikat is.
+%\subsection{MĂĄsik}
+%Na lĂĄssunk egy mĂĄsodikat is.
 
 %\subsection{Harmadik}
 %Meg egy harmadikat is.
@@ -179,15 +179,15 @@ Koszinusz
 \section{Precedencia}
 Precedencia
 
-\section{Összefüggőségi}
-Összefüggőségi
+\section{ĂsszefĂźggĹsĂŠgi}
+ĂsszefĂźggĹsĂŠgi
 
-\section{Pozíció szerinti}
-Pozíció szerinti
+\section{PozĂ­ciĂł szerinti}
+PozĂ­ciĂł szerinti
 
 \chapter{A weboldal}
 
-\section{Iterációk}
+\section{IterĂĄciĂłk}
 
 \section{PHP}
 
@@ -198,125 +198,125 @@ Pozíció szerinti
 \subsection{Charts.js}
 
 \section{Statikus tartalom}
-\subsection{index.html - Főoldal}
-\subsection{borkostolasEredmenyek.html - Eredmények}
-\subsection{modszerek.html - Módszerek}
+\subsection{index.html - FĹoldal}
+\subsection{borkostolasEredmenyek.html - EredmĂŠnyek}
+\subsection{modszerek.html - MĂłdszerek}
 \subsection{kapcsolat.html - Kapcsolat}
 
 \section{Dinamikus tartalom}
-\subsection{Regisztráció}
-\subsection{Bejelentkezés}
-\subsection{demo.html - Demó}
+\subsection{RegisztrĂĄciĂł}
+\subsection{BejelentkezĂŠs}
+\subsection{demo.html - DemĂł}
 
-\chapter{A mobil alkalmazás}
-Androd alkalmazás fejlesztés
+\chapter{A mobil alkalmazĂĄs}
+Androd alkalmazĂĄs fejlesztĂŠs
 
 \section{Android}
 Android
 
-\chapter{A weboldal és a mobil alkalmazás összefűzése}
-A weboldal és a mobil alkalmazás összefűzése
+\chapter{A weboldal ĂŠs a mobil alkalmazĂĄs ĂśsszefĹązĂŠse}
+A weboldal ĂŠs a mobil alkalmazĂĄs ĂśsszefĹązĂŠse
 
-\chapter{Tesztelés}
-\section{Regisztrációs és bejelentkeztető rendszer}
-\section{Demo adatkezelésének ellenőrzése}
-\section{Algoritmusok ellenőrzése kis adatokon}
-\section{Algoritmusok ellenőrzése ismert eredményekkel}
+\chapter{TesztelĂŠs}
+\section{RegisztrĂĄciĂłs ĂŠs bejelentkeztetĹ rendszer}
+\section{Demo adatkezelĂŠsĂŠnek ellenĹrzĂŠse}
+\section{Algoritmusok ellenĹrzĂŠse kis adatokon}
+\section{Algoritmusok ellenĹrzĂŠse ismert eredmĂŠnyekkel}
 
-\chapter{Összefoglalás}
+\chapter{ĂsszefoglalĂĄs}
 
 \chapter{Egyebek}
-\section{Verzió kezelés}
+\section{VerziĂł kezelĂŠs}
 
-\section{Környezetek}
+\section{KĂśrnyezetek}
 SublimeText3 - linterek\\
 
 AndroidStudi
 
-%\begin{tét}
-%\label{tét-alap}
-%Ez itt egy tétel.
-%\end{tét}
+%\begin{tĂŠt}
+%\label{tĂŠt-alap}
+%Ez itt egy tĂŠtel.
+%\end{tĂŠt}
 
-%%A bizonyítás \begin{proof} és \end{proof} közé kerül:
+%%A bizonyĂ­tĂĄs \begin{proof} ĂŠs \end{proof} kĂśzĂŠ kerĂźl:
 %\begin{proof}
-%Ez pedig a bizonyítása, melyben szerepel egy képlet:
+%Ez pedig a bizonyĂ­tĂĄsa, melyben szerepel egy kĂŠplet:
 %\begin{equation}
 %\begin{split}
-%E^{\text{globális}} &= \text{tét}_1\cdot E_1^{\text{elemi}}+\text{tét}_2\cdot
-%E_2^{\text{elemi}}+\ldots+\text{tét}_n\cdot E_n^{elemi} \\
-%&=E^{\text{elemi}}\left(\text{tét}_1+\text{tét}_2+\ldots+\text{tét}_n\right)\\
-%&=E^{\text{elemi}}\cdot\text{össztét}
+%E^{\text{globĂĄlis}} &= \text{tĂŠt}_1\cdot E_1^{\text{elemi}}+\text{tĂŠt}_2\cdot
+%E_2^{\text{elemi}}+\ldots+\text{tĂŠt}_n\cdot E_n^{elemi} \\
+%&=E^{\text{elemi}}\left(\text{tĂŠt}_1+\text{tĂŠt}_2+\ldots+\text{tĂŠt}_n\right)\\
+%&=E^{\text{elemi}}\cdot\text{ĂśssztĂŠt}
 %\end{split}
 %\end{equation}
-%A második egyenlőségnél azt használtunk ki, hogy ...
+%A mĂĄsodik egyenlĹsĂŠgnĂŠl azt hasznĂĄltunk ki, hogy ...
 %
-%Ezzel a bizonyítást befejeztük.
+%Ezzel a bizonyĂ­tĂĄst befejeztĂźk.
 %\end{proof}
 
 %\begin{defi}
 %\label{def-pelda}
-%Ez egy definíció. Számozása a tételekkel együtt történik.
+%Ez egy definĂ­ciĂł. SzĂĄmozĂĄsa a tĂŠtelekkel egyĂźtt tĂśrtĂŠnik.
 %\end{defi}
 
-%\begin{áll}
-%A követekező négy állítás egymással ekvivalens:
-%\label{áll-ekvivalencia}
+%\begin{ĂĄll}
+%A kĂśvetekezĹ nĂŠgy ĂĄllĂ­tĂĄs egymĂĄssal ekvivalens:
+%\label{ĂĄll-ekvivalencia}
 %  \begin{itemize}
-%  \item[(i)] $M$ és $N$ gyengén ekvivalensek.
+%  \item[(i)] $M$ ĂŠs $N$ gyengĂŠn ekvivalensek.
 %  \item[(ii)] Minden $n$
-%  nemnegatív egész számra $|L_{M}\cap \Sigma_{1}^{n}|=|L_{N}\cap \Sigma_{2}^{n}|$ teljesül.
-%  \item[(iii)] Minden $n$ nemnegatív egész szám esetén
-%   létezik
-%  $ \pi_{n}: L_{M}\cap \Sigma_{1}^{n} \rightarrow L_{N}\cap \Sigma_{2}^{n} $ kölcsönösen egyértelmű
-%  leképezés.
-%  \item[(iv)] Minden nemnegatív $n$-re $x A^{n} y^{T}=x' A'^{n} y'^{T}$.
+%  nemnegatĂ­v egĂŠsz szĂĄmra $|L_{M}\cap \Sigma_{1}^{n}|=|L_{N}\cap \Sigma_{2}^{n}|$ teljesĂźl.
+%  \item[(iii)] Minden $n$ nemnegatĂ­v egĂŠsz szĂĄm esetĂŠn
+%   lĂŠtezik
+%  $ \pi_{n}: L_{M}\cap \Sigma_{1}^{n} \rightarrow L_{N}\cap \Sigma_{2}^{n} $ kĂślcsĂśnĂśsen egyĂŠrtelmĹą
+%  lekĂŠpezĂŠs.
+%  \item[(iv)] Minden nemnegatĂ­v $n$-re $x A^{n} y^{T}=x' A'^{n} y'^{T}$.
 %  \end{itemize}
-%\end{áll}
+%\end{ĂĄll}
 
-%\begin{köv}
-%  Ez pedig egy következmény.
-%\end{köv}
+%\begin{kĂśv}
+%  Ez pedig egy kĂśvetkezmĂŠny.
+%\end{kĂśv}
 
 %\begin{pld}
-%  Ez lesz a példa, ezt nem szedjük dőlten.
+%  Ez lesz a pĂŠlda, ezt nem szedjĂźk dĹlten.
 %\end{pld}
 
 %\begin{megj}
-%  A fejezetet pedig egy megjegyzés zárja.
+%  A fejezetet pedig egy megjegyzĂŠs zĂĄrja.
 %\end{megj}
 
 
-%\section{Listák}
+%\section{ListĂĄk}
 %
-%Ez egy felsorolás:
+%Ez egy felsorolĂĄs:
 %\begin{itemize}
-%    \item első
-%    \item második
-%      \subitem első
-%      \subitem második
+%    \item elsĹ
+%    \item mĂĄsodik
+%      \subitem elsĹ
+%      \subitem mĂĄsodik
 %    \item harmadik
-%    \item[$\clubsuit$]  saját jel is alkalmazható
+%    \item[$\clubsuit$]  sajĂĄt jel is alkalmazhatĂł
 %\end{itemize}
-%Ez pedig egy számozott lista:
+%Ez pedig egy szĂĄmozott lista:
 %\begin{enumerate}
-%            \item hétfő
+%            \item hĂŠtfĹ
 %            \item kedd
 %            \item szerda
 %\end{enumerate}
 
-%Oldaltörést is alkalmazhatunk
+%OldaltĂśrĂŠst is alkalmazhatunk
 \pagebreak
 
 
-%\section{Egy táblázat és egy ábra}
+%\section{Egy tĂĄblĂĄzat ĂŠs egy ĂĄbra}
 %
-%A táblázat itt következik.
+%A tĂĄblĂĄzat itt kĂśvetkezik.
 %\begin{table}[!h]\label{strategia}
-%\caption{Példa stratégiatáblára a Black Jack esetében}
+%\caption{PĂŠlda stratĂŠgiatĂĄblĂĄra a Black Jack esetĂŠben}
 %\begin{center}
 %\begin{tabular}{l||r|r|r|r|r|r|r|r|r|r}
-%&ász&2&3&4&5&6&7&8&9&10\\
+%&ĂĄsz&2&3&4&5&6&7&8&9&10\\
 %\hline\hline
 %21&n&n&n&n&n&n&n&n&n&n\\
 %20&n&n&n&n&n&n&n&n&n&n\\
@@ -333,7 +333,7 @@ AndroidStudi
 %\end{center}
 %\end{table}
 %
-%Lássunk egy ábrát is!
+%LĂĄssunk egy ĂĄbrĂĄt is!
 %\begin{figure}[!h]
 %\unitlength 8mm
 %\begin{center}
@@ -356,17 +356,17 @@ AndroidStudi
 %\put(7,2){\makebox(1,1){\(\$\)}}
 %\end{picture}
 %\end{center}
-%\caption{\label{labirintus}Labirintus bejárása}
+%\caption{\label{labirintus}Labirintus bejĂĄrĂĄsa}
 %\end{figure}
 
-%laptörés:
+%laptĂśrĂŠs:
 \newpage
 %
-Külön fájlban elkészített grafika beillesztését a 
-%\ref{abra-automata} ábra szemlélteti.
+KĂźlĂśn fĂĄjlban elkĂŠszĂ­tett grafika beillesztĂŠsĂŠt a 
+%\ref{abra-automata} ĂĄbra szemlĂŠlteti.
 %\begin{figure}[h]
 %\centering
-%%A psfrag csomag használatával a (encapsulated)postcript abra feliratait LaTeX koddal helyettesíthatjük:
+%%A psfrag csomag hasznĂĄlatĂĄval a (encapsulated)postcript abra feliratait LaTeX koddal helyettesĂ­thatjĂźk:
 %\psfrag{a}[c][c]{$q_0$}
 %\psfrag{b}[c][c]{$q_1$}
 %\psfrag{c}[c][c]{$q_2$}
@@ -382,15 +382,15 @@ Külön fájlban elkészített grafika beillesztését a
 %\psfrag{15}[c][c]{$a_{15}$}
 %%Garfika belillesztese, "scale2 a nagyitas/kicinyites merteke, itt 80%.
 %\includegraphics[scale=0.8]{abra.eps}
-%\caption{\label{abra-automata} A $4\times m$-es tábla lefedéseinek mátrixreprezentációit felismerő automata}
+%\caption{\label{abra-automata} A $4\times m$-es tĂĄbla lefedĂŠseinek mĂĄtrixreprezentĂĄciĂłit felismerĹ automata}
 %\end{figure}
 
 
-\chapter{Függelék}
+\chapter{FĂźggelĂŠk}
 
-\section{A program forráskódja}
-%A függelékbe kerülhetnek a hosszú táblázatok, vagy mondjuk egy programlista:
-%% A verbatim kornyezet hasznalatanal ügyeljünk rá, hogy az editor a szóközöjket át ne írja tab karakterekre!
+\section{A program forrĂĄskĂłdja}
+%A fĂźggelĂŠkbe kerĂźlhetnek a hosszĂş tĂĄblĂĄzatok, vagy mondjuk egy programlista:
+%% A verbatim kornyezet hasznalatanal ĂźgyeljĂźnk rĂĄ, hogy az editor a szĂłkĂśzĂśjket ĂĄt ne Ă­rja tab karakterekre!
 %\begin{verbatim}
 %   while (ujkmodosito[i]<0)
 %   {
@@ -410,34 +410,34 @@ Külön fájlban elkészített grafika beillesztését a
 
 
 \chapter*{Nyilatkozat}
-%Egy üres sort adunk a tartalomjegyzékhez:
+%Egy Ăźres sort adunk a tartalomjegyzĂŠkhez:
 \addtocontents{toc}{\ }
 \addcontentsline{toc}{section}{Nyilatkozat}
 %\hspace{\parindent}
 
-% A nyilatkozat szövege más titkos és nem titkos dolgozatok esetében.
-% Csak az egyik tipusú myilatokzatnak kell a dolgozatban szerepelni
-% A ponok helyére az adatok értelemszerűen behelyettesídendők es
+% A nyilatkozat szĂśvege mĂĄs titkos ĂŠs nem titkos dolgozatok esetĂŠben.
+% Csak az egyik tipusĂş myilatokzatnak kell a dolgozatban szerepelni
+% A ponok helyĂŠre az adatok ĂŠrtelemszerĹąen behelyettesĂ­dendĹk es
 % a szakdolgozat /diplomamunka szo megfeleloen kivalasztando.
 
 
-%A nyilatkozat szövege TITKOSNAK NEM MINŐSÍTETT dolgozatban a következő:
-%A pontokkal jelölt szövegrészek értelemszerűen a szövegszerkesztőben és
-%nem kézzel helyettesítendők:
+%A nyilatkozat szĂśvege TITKOSNAK NEM MINĹSĂTETT dolgozatban a kĂśvetkezĹ:
+%A pontokkal jelĂślt szĂśvegrĂŠszek ĂŠrtelemszerĹąen a szĂśvegszerkesztĹben ĂŠs
+%nem kĂŠzzel helyettesĂ­tendĹk:
 
 \noindent
-Alulírott \makebox[4cm]{\dotfill} szakos hallgató, kijelentem, hogy a dolgozatomat a Szegedi Tudományegyetem, Informatikai Tanszékcsoport \makebox[4cm]{\dotfill} Tanszékén készítettem, \makebox[4cm]{\dotfill} diploma megszerzése érdekében.
+AlulĂ­rott \makebox[4cm]{\dotfill} szakos hallgatĂł, kijelentem, hogy a dolgozatomat a Szegedi TudomĂĄnyegyetem, Informatikai TanszĂŠkcsoport \makebox[4cm]{\dotfill} TanszĂŠkĂŠn kĂŠszĂ­tettem, \makebox[4cm]{\dotfill} diploma megszerzĂŠse ĂŠrdekĂŠben.
 
-Kijelentem, hogy a dolgozatot más szakon korábban nem védtem meg, saját munkám eredménye, és csak a hivatkozott forrásokat (szakirodalom, eszközök, stb.) használtam fel.
+Kijelentem, hogy a dolgozatot mĂĄs szakon korĂĄbban nem vĂŠdtem meg, sajĂĄt munkĂĄm eredmĂŠnye, ĂŠs csak a hivatkozott forrĂĄsokat (szakirodalom, eszkĂśzĂśk, stb.) hasznĂĄltam fel.
 
-Tudomásul veszem, hogy szakdolgozatomat / diplomamunkámat a Szegedi Tudományegyetem Informatikai Tanszékcsoport könyvtárában, a helyben olvasható könyvek között helyezik el.
+TudomĂĄsul veszem, hogy szakdolgozatomat / diplomamunkĂĄmat a Szegedi TudomĂĄnyegyetem Informatikai TanszĂŠkcsoport kĂśnyvtĂĄrĂĄban, a helyben olvashatĂł kĂśnyvek kĂśzĂśtt helyezik el.
 
 \vspace*{2cm}
 
 \begin{tabular}{lc}
 Szeged, \today\
 \hspace{2cm} & \makebox[6cm]{\dotfill} \\
-& aláírás \\
+& alĂĄĂ­rĂĄs \\
 \end{tabular}
 
 
@@ -451,20 +451,20 @@ Szeged, \today\
 %\bibliography{diploma}
 %\bibliographystyle{plain}
 
-%VAGY "kézzel" a következő módon:
+%VAGY "kĂŠzzel" a kĂśvetkezĹ mĂłdon:
 
 \begin{thebibliography}{9}
-%10-nél kevesebb hivatkozás esetén
+%10-nĂŠl kevesebb hivatkozĂĄs esetĂŠn
 
 %\begin{thebibliography}{99}
-% 10-nél több hivatkozás esetén
+% 10-nĂŠl tĂśbb hivatkozĂĄs esetĂŠn
 
-\addcontentsline{toc}{section}{Irodalomjegyzék}
+\addcontentsline{toc}{section}{IrodalomjegyzĂŠk}
 
-%Elso szerzok vezetekneve alapjan ábécérendben rendezve.
+%Elso szerzok vezetekneve alapjan ĂĄbĂŠcĂŠrendben rendezve.
 
 
-%folyóirat cikk: szerzok(k), a folyóirat neve kiemelve,
+%folyĂłirat cikk: szerzok(k), a folyĂłirat neve kiemelve,
 %az evfolyam felkoveren, zarojelben az evszam, vegul az oldalszamok es pont.
 
 %\bibitem{Gischer}
@@ -472,7 +472,7 @@ Szeged, \today\
 %The equational theory of pomsets.
 %\emph{Theoret. Comput. Sci.}, \textbf{61}(1988), 199--224.
 
-%könyv (szerzo(k), a könyv neve kiemelve, utana a kiado, a kiado szekhelye, az evszam es pont.)
+%kĂśnyv (szerzo(k), a kĂśnyv neve kiemelve, utana a kiado, a kiado szekhelye, az evszam es pont.)
 
 %\bibitem{Pin}
 %J.-E. Pin,
