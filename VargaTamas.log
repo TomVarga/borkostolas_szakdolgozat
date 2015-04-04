@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2015.4.4)  4 APR 2015 21:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2015.4.4)  4 APR 2015 22:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -347,13 +347,13 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 ]
 7. fejezet.
 
-Overfull \hbox (4.02876pt too wide) in paragraph at lines 233--234
+Overfull \hbox (4.02876pt too wide) in paragraph at lines 234--235
 \T1/ptm/m/n/12 tel és tel-jes revíz-iókövetési lehet®séggel, ame-ly nem függ a 
 hálózat elérését®l vagy közpon-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--241
+Underfull \hbox (badness 10000) in paragraph at lines 242--243
 
  []
 
@@ -364,13 +364,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 240--241
 [15
 
 ]
-Overfull \hbox (8.47397pt too wide) in paragraph at lines 436--438
+Overfull \hbox (8.47397pt too wide) in paragraph at lines 438--440
 \T1/ptm/m/n/12 Alulírott [] sza-kos hall-gató, ki-je-len-tem, hogy a dol-go-zat
 omat a Szege-
  []
 
 
-Overfull \hbox (3.73915pt too wide) in paragraph at lines 441--442
+Overfull \hbox (3.73915pt too wide) in paragraph at lines 443--444
 []\T1/ptm/m/n/12 Tudomásul veszem, hogy sza-k-dol-go-zatomat / diplo-ma-munká-m
 at a Szege-di Tu-domány-
  []
@@ -379,7 +379,7 @@ at a Szege-di Tu-domány-
 
 ]
 
-LaTeX Warning: Empty `thebibliography' environment on input line 494.
+LaTeX Warning: Empty `thebibliography' environment on input line 496.
 
 [17
 
