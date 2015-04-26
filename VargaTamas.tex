@@ -10,6 +10,8 @@
 
 \documentclass[12pt]{report}
 \usepackage{setspace}
+\usepackage{pgf, tikz}
+\usetikzlibrary{arrows, automata}
 
 %Magyar nyelvi támogatás (Babel 3.7 vagy késõbbi kell!)
 \def\magyarOptions{defaults=hu-min}
@@ -181,34 +183,105 @@ A dolgozat elején röviden bemutatom az alkalmazás által használt algoritmusokat.
 
 \chapter{Borkóstoló algoritmusok}
 
-Ezen szakdolgozat keretében elsõ sorban a feladatom a CoHITS algoritmus implementálás volt, mely mellé csatlakozott néhány Borkóstolás projekt\cite{Borkóstolás projekt} keretében használt már Szilárd Iván által implementált algoritmus, mint a Hamming, Koszinusz, Precedencia, Összefüggõségi, Pozíció szerinti.
+Ezen szakdolgozat keretében a CoHITS algoritmus került implementálásra, mely mellé csatlakozott néhány Borkóstolás projekt\cite{Borkóstolás projekt} keretében használt már Szilárd Iván által implementált algoritmus, mint a Hamming, Koszinusz, Precedencia, Összefüggõségi. Ezeknél az algoritmusoknál a PageRank egy hasonlósági mátrixon propagál, ennek elemeit a borkóstolók páronkénti értékeléseinek inverz távolságából kapjuk a hozzájuk illõ távolság mértékek alkalmazásával (Hamming távolság, koszinusz távolság, precedencia távolság, összefüggõsségi távolság)\cite{Borkóstolás projekt}.
 
 \section{CoHITS}
-A CoHITS
+A CoHITS algoritmus a PageRank és a HITS algoritmuson egy kiterjesztett változata.\cite{CoHITS} A PageRank algoritmust Sergey Brin és Larry Page fejlesztette ki a Google keresõ használatához\cite{PageRank} keresési találatok fontossági rangsorolásnak meghatározása céljából. Tõlük függetlenül Jon Kleinberg egy hasonló koncepcióval állt elõ mely ugyan ilyen jellegû feladatot látott el\cite{HITS}.
 
-%\subsection{Al-al cím}
-%Sõt al-al fejezetek is.
+Legyen $ X $ és $ Y $ a kóstolók és borok. Ugyan abból a $p^0$ értékbõl indulunk ki minden $x_{i} \in X $ kóstolónál. Ekkor legyen $w'\left(\overrightarrow{x_{i}y_{j}}\right)$ az az értékelés amit $y_j$ bor kapott az $x_i$ kóstolótól és legyen $w\left(\overrightarrow{x_{i}y_{j}}\right)=w'\left(\overrightarrow{x_{i}y_{j}}\right)/\sum_{j \in Y}w'\left(\overrightarrow{x_{i}y_{j}}\right)$ a normalizáltja. Továbbá legyen $q_j^0$ érték (az $y_j$ borra) az értékelések átlaga. Majd definiáljuk a $w\left(\overleftarrow{x_iy_j}\right)$ az alábbi képen: tegyük fel hogy $y_j$ bort $l$ különbözõ kóstoló kóstolta és legyen
 
-%\subsection{Másik}
-%Na lássunk egy másodikat is.
+\begin{equation} \label{CoHITS sum of diff}
+D=\sum_{i \in X}|q_j^0-w'\left(\overrightarrow{x_iy_j}\right)|,
+\end{equation}
 
-%\subsection{Harmadik}
-%Meg egy harmadikat is.
+az összegek különbsége az átlagtól az $y_j$ borra tekintve. Végül, legyen
+
+\begin{equation} \label{CoHITS transition probability}
+w\left(\overleftarrow{x_iy_j}\right)=\dfrac{|\sum_{i \in X}|q_j^0-w'\left(\overrightarrow{x_iy_j}\right)||}{\left(l-1\right)D}
+\end{equation} 
+
+Ekkor $\sum_{i \in X}w\left(\overleftarrow{x_iy_j}\right)=1$ tehát minden $w\left(\overleftarrow{x_iy_j}\right)$ súlyra lehet úgy tekinteni mint egy átmeneti valószínûség $y_j$-bõl $x_i$-be. Az \ref{CoHITS gráf} ábra a súlyok kiszámítására mutat egy konkrét példát.
+
+A két kóstoló közti súly $x_i$ és $x_j$ úgy definiálható mint egy rejtett átmeneti valószínûség 1 által definiálva. Ekkor a $p=W_{xp}$ HITS egyenlet  $p=\left(p_1,p_2,...,p_m\right)$ megoldás megadja a kóstolók rangsorát.
+
+\begin{figure}[!h]
+	\begin{center}
+\begin{tikzpicture}[
+> = stealth, % arrow head style
+shorten > = 1pt, % don't touch arrow head to node
+auto,
+node distance = 4cm, % distance between nodes
+semithick % line style
+]
+
+\tikzstyle{every state}=[
+draw = black,
+thick,
+fill = white,
+minimum size = 22mm
+]
+
+\node[state] (taster1) {Kóstoló 1};
+\node[state] (wine2) [below of=taster1] {Bor 2};
+\node[state] (wine1) [left of=wine2] {Bor 1};
+\node[state] (wine3) [right of=wine2] {Bor 3};
+
+\path[->] (taster1) edge node {2/12} (wine1);
+\path[->] (taster1) edge node {3/12} (wine2);
+\path[->] (taster1) edge node {7/12} (wine3);
+
+\node[state] (taster1b) [below of=wine1] {Kóstoló 1};
+\node[state] (taster2) [below of=wine2] {Kóstoló 2};
+\node[state] (taster3) [below of=wine3] {Kóstoló 3};
+\node[state] (wine1b) [below of=taster2] {Bor 1};
+
+\path[->] (wine1b) edge node {4/12} (taster1b);
+\path[->] (wine1b) edge node {5/12} (taster2);
+\path[->] (wine1b) edge node {3/12} (taster3);
+
+
+\end{tikzpicture}
+	\end{center}
+	\caption{\label{CoHITS gráf} A gráf súlyai amikor a Kóstoló 1 a 20, 30 és 70 értékeléseket adott a Bor 1, Bor 2 és Bor 3 borokra, valamint a Bor 1 a 20, 30 és 70 értékeléseket kapott a Kóstoló 1, Kóstoló 2 és Kóstoló 3 aktól.}
+\end{figure}
+
+Tehát látható, hogy az így elõ állított algoritmust alkalmazni lehet egy borkóstolási gráfra kóstolók rangsorolásának céljából az õ képességeik és szakmai hozzáértésük alapján. Általánosságban az figyelhetõ meg, hogy az így elõálló rangsor jobban teljesít mint más egyszerû statisztikai algoritmusok. Ki tudja szûrni a hozzá nem értõ kóstolókat\cite{CoHITS}.
 
 \section{Hamming}
-Hamming
+A Hamming-távolságot \eqref{Hamming-távolság} többnyire vektorok, karaktersorozatok valamint bitminták közötti eltérések kimutatására használják. A Hamming-távolság csak azt mondja meg, hogy hány helyen nem illeszkedik az egyik minta a másikra. Legyen $ S_{1} $ és $ S_{2} $ két azonos hosszú minta.
+
+\begin{equation} \label{Hamming-távolság}
+D_{Hamming}\left ( S_{1},S_{2} \right )=\sum_{p=0}^{|S_{1}|}S_{1}\left(p\right)\neq S_{2}\left(p\right)
+\end{equation}
+
+Ez a távolság nem lesz megfelelõ mérték vizsgálathoz mivel nem túl informatív.
 
 \section{Koszinusz}
-Koszinusz
+Legyen $ \pi^1 $ és $ \pi^2 $ két permutáció-vektor. Ekkor ezek koszinusz távolságát az \eqref{Koszinusz-távolság} képlet szerint számíthatjuk ki, ahol $ || \cdot || $ az euklideszi normát jelöli.
+
+\begin{equation} \label{Koszinusz-távolság}
+D_{cos}\left(\pi^1,\pi^2\right)=1-\dfrac{\pi^1\cdot\pi^2}{||\pi^1||\cdot||\pi^2||}
+\end{equation}
 
 \section{Precedencia}
-Precedencia
+A precedencia távolság meghatározásához definiálnunk kell elõször a precedencia mátrix fogalmát. Egy $ \pi $, $ n $ hosszúságú permutáció precedencia mátrixa egy olyan bináris elemekbõl álló $ n \times n $-es $ P $ mátrix, melyben $ P_{\pi_{i}\pi_{j}}=1, i<j $ egyébként $P_{ij}=0$, azaz a permutáció elemeinek sorrendjét kódoljuk egy bináris mátrixszal. A precedencia távolságot két $\pi^1$ és $\pi^2$ permutáció között ($P_{1}$ és $P_{2}$ a nekik megfelelõ precedencia mátrix) a precedencia mátrixuk egyezõ nem nulla elemeinek számából számíthatjuk ki \eqref{Precedencia-távolság} szerint.
+
+\begin{equation} \label{Precedencia-távolság}
+D_{prec}\left(\pi^1, \pi^2\right)=\dfrac{n\left(n-1\right)}{2}-\sum_{i=1}^{n}\sum_{j=1}^{n}P_{ij}^1P_{ij}^2
+\end{equation}
 
 \section{Összefüggõségi}
-Összefüggõségi
+Az összefüggõsségi távolság a szomszédos elemek azonos elõfordulásából számítható. Legyen a két permutációnk $\pi^1$ és $\pi^2$, $n$ hosszúságúak, és a szomszédos elemek azonos elõfordulásának száma $n_{adj}$.
 
-\section{Pozíció szerinti}
-Pozíció szerinti
+Szemléletesen: Legyen $N_{\pi}$ a $\pi$ permutáció összefüggõségi mátrixa. Kezdetben minden eleme legyen $0$, majd a $\pi$ permutáció minden $i$ elemére az $N_{pi}\left(\pi_{i},\pi{i+1}\right)=1$. A $\pi^1$ és $\pi^2$ permutációra kiszámoljuk az $N_{\pi^1}$ és $N_{\pi^2}$ mátrixokat. $n_{adj}$ az $N_{\pi^1}$
+és$N_{\pi^2}$ mátrixban azonos cellában lévõ $1$-esek száma. 
+
+Ekkor az összefüggõsségi távolság \eqref{Összeföggõségi-távolság} szerint számítandó.
+\begin{equation} \label{Összeföggõségi-távolság}
+D_{adj}\left(\pi^1,\pi^2\right)=n-n_{adj}-1
+\end{equation}
+\cite{Borkóstolás projekt}
+
 
 \chapter{A weboldal}
 
@@ -373,7 +446,7 @@ Android Studio
 %\end{center}
 %\end{table}
 %
-%Lássunk egy ábrát is!
+% % %%Lássunk egy ábrát is!
 %\begin{figure}[!h]
 %\unitlength 8mm
 %\begin{center}
@@ -493,9 +566,19 @@ Szeged, \today\
 
 \begin{thebibliography}{9}
 %10-nél kevesebb hivatkozás esetén
+\bibitem{Borkóstolás projekt} Borkóstolás projekt - http://www.inf.u-szeged.hu/~tnemeth/osa/
+
+\bibitem{PageRank} Sergey Brin and Lawrence Page. The anatomy of a large-scale hypertextual web search engine. 
+\emph{ Computer Networks and ISDN Systems},
+vol. 30, no 1, 107-117, 1998
+
+\bibitem{HITS} J. Kleinberg. Authoritative sources in a hyperlinked environment.
+\emph{Journal of the ACM}, vol. 46, no. 5, 604-632, 1999
+
 \bibitem{Github} GitHub - https://github.com/about
 
-\bibitem{Borkóstolás projekt} Borkóstolás projekt - http://www.inf.u-szeged.hu/~tnemeth/osa/
+\bibitem{CoHITS}London András és Csendes Tibor. HITS based network algorithm for evaluating the professional skills of wine tasters
+
 
 
 %\begin{thebibliography}{99}
