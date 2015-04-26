@@ -9,6 +9,7 @@
 
 
 \documentclass[12pt]{report}
+\usepackage{setspace}
 
 %Magyar nyelvi támogatás (Babel 3.7 vagy késõbbi kell!)
 \def\magyarOptions{defaults=hu-min}
@@ -130,6 +131,7 @@ Szeged
 %A tartalomjegyzék:
 \tableofcontents
 
+\onehalfspacing
 %A \chapter* parancs nem ad a fejezetnek sorszámot
 \chapter*{Feladatkiírás}
 %A tartalomjegyzékben mégis szerepeltetni kell, mint szakasz(section) szerepeljen:
@@ -171,8 +173,11 @@ Android, PHP, JavaScript, Borkóstolás
 \chapter*{Bevezetés}
 \addcontentsline{toc}{section}{Bevezetés}
 
-Itt kezdõdik a bevezetés, mely nem kap sorszámot.
+Borkóstolók rangsorolásával illetve minõségkinyeréssel valamint borversenyek lebonyolításával már elõttem is többen foglalkoztak. Bár még van kutatni való ezen a területen, jól mûködõ algoritmus már több is ismert ilyen jellegû feladatok megoldására. Ezért ennek a szakdolgozatnak nem is újabb algoritmusok kifejlesztése vagy már meglévõk továbbfejlesztése a fõ célja. Mivel található több olyan web alkalmazás is, mely egy specifikus egyszerû algoritmust vagy talán egy sokat tesztelt komplexebbet használ, mégsem létezek egy közismert, modern és felhasználóbarát alkalmazás, amely egy igényes felhasználói felületen keresztül bemutatná ezen algoritmusok mûködését lehetõvé téve hogy nyomon kövessük akár saját laikus eredményeinket neves szakértõkhöz viszonyítva.
 
+Mivel a mai világban a mobil eszközök egyre nagyobb teret hódítanak, az is célom volt hogy egy olyan mobil (android) alkalmazás társuljon a web alkalmazáshoz mely egy könnyen kezelhetõ intuitív felületen keresztül lehetõvé tegye a rendszer használatát, bizonyos funkciókat még offline üzemmódban is elérhetõvé téve, kielégítve napjaink átlagos felhasználóinak igényeit. 
+
+A dolgozat elején röviden bemutatom az alkalmazás által használt algoritmusokat. Majd rátérek a weboldal és a mögötte álló rendszerek felépítésére, a hozzájuk társuló fejlesztõi környezetek és eszközök rövid ismertetésére. Ezt majd a mobil (android) alkalmazás bemutatás követ, melynél szintén kitérek a rendszer felépítésére illetve a megvalósítást lehetõvé tevõ eszközökre,  erõforrásokra. Logikusan ezt a két alkalmazási felület (web és mobil) összefûzésének megvalósítása követi. Az összefoglalás elõtt néhány teszten keresztül bemutatom a rendszer megbízhatóságát. Legvégül pedig kitérek néhány olyan dologra mely segítette a munkámat, mint például verziókezelõ rendszerek használata.
 
 
 \chapter{Borkóstoló algoritmusok}
