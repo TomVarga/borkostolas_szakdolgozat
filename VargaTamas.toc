@@ -13,37 +13,39 @@
 \select@language {magyar} \contentsline {section}{\numberline {1.4}Precedencia}{9}{section.1.4}
 \select@language {magyar} \contentsline {section}{\numberline {1.5}\"Osszef\"ugg\H os\'egi}{9}{section.1.5}
 \select@language {magyar} \contentsline {chapter}{\numberline {2}A weboldal}{11}{chapter.2}
-\select@language {magyar} \contentsline {section}{\numberline {2.1}Iter\'aci\'ok}{12}{section.2.1}
-\select@language {magyar} \contentsline {section}{\numberline {2.2}PHP}{12}{section.2.2}
-\select@language {magyar} \contentsline {section}{\numberline {2.3}JavaScript}{12}{section.2.3}
-\select@language {magyar} \contentsline {section}{\numberline {2.4}Grafikonok}{12}{section.2.4}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.4.1}Google Charts}{12}{subsection.2.4.1}
-\select@language {magyar} \contentsline {section}{\numberline {2.5}Statikus tartalom}{12}{section.2.5}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.5.1}index.html - F\H ooldal}{12}{subsection.2.5.1}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.5.2}borkostolasEredmenyek.html - Eredm\'enyek}{12}{subsection.2.5.2}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.5.3}modszerek.html - M\'odszerek}{12}{subsection.2.5.3}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.5.4}kapcsolat.html - Kapcsolat}{12}{subsection.2.5.4}
-\select@language {magyar} \contentsline {section}{\numberline {2.6}Dinamikus tartalom}{12}{section.2.6}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.6.1}Regisztr\'aci\'o}{12}{subsection.2.6.1}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.6.2}Bejelentkez\'es}{12}{subsection.2.6.2}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.6.3}demo.html - Dem\'o}{12}{subsection.2.6.3}
-\select@language {magyar} \contentsline {chapter}{\numberline {3}A mobil alkalmaz\'as}{13}{chapter.3}
-\select@language {magyar} \contentsline {section}{\numberline {3.1}Android}{13}{section.3.1}
-\select@language {magyar} \contentsline {chapter}{\numberline {4}A weboldal \'es a mobil alkalmaz\'as \"osszef\H uz\'ese}{14}{chapter.4}
-\select@language {magyar} \contentsline {chapter}{\numberline {5}Tesztel\'es}{15}{chapter.5}
-\select@language {magyar} \contentsline {section}{\numberline {5.1}Regisztr\'aci\'os \'es bejelentkeztet\H o rendszer}{15}{section.5.1}
-\select@language {magyar} \contentsline {section}{\numberline {5.2}Demo adatkezel\'es\'enek ellen\H orz\'ese}{15}{section.5.2}
-\select@language {magyar} \contentsline {section}{\numberline {5.3}Algoritmusok ellen\H orz\'ese kis adatokon}{15}{section.5.3}
-\select@language {magyar} \contentsline {section}{\numberline {5.4}Algoritmusok ellen\H orz\'ese ismert eredm\'enyekkel}{15}{section.5.4}
-\select@language {magyar} \contentsline {chapter}{\numberline {6}\"Osszefoglal\'as}{16}{chapter.6}
-\select@language {magyar} \contentsline {chapter}{\numberline {7}Egyebek}{17}{chapter.7}
-\select@language {magyar} \contentsline {section}{\numberline {7.1}Verzi\'okezel\'es}{17}{section.7.1}
-\select@language {magyar} \contentsline {subsection}{\numberline {7.1.1}Git}{17}{subsection.7.1.1}
-\select@language {magyar} \contentsline {subsection}{\numberline {7.1.2}GitHub}{17}{subsection.7.1.2}
-\select@language {magyar} \contentsline {subsection}{\numberline {7.1.3}A v\'alaszt\'as}{18}{subsection.7.1.3}
-\select@language {magyar} \contentsline {section}{\numberline {7.2}K\"ornyezetek}{18}{section.7.2}
-\select@language {magyar} \contentsline {chapter}{\numberline {8}F\"uggel\'ek}{20}{chapter.8}
-\select@language {magyar} \contentsline {section}{\numberline {8.1}A program forr\'ask\'odja}{20}{section.8.1}
+\select@language {magyar} \contentsline {section}{\numberline {2.1}Iter\'aci\'ok}{13}{section.2.1}
+\select@language {magyar} \contentsline {section}{\numberline {2.2}Adatb\'azis}{13}{section.2.2}
+\select@language {magyar} \contentsline {section}{\numberline {2.3}PHP}{13}{section.2.3}
+\select@language {magyar} \contentsline {section}{\numberline {2.4}JavaScript}{13}{section.2.4}
+\select@language {magyar} \contentsline {section}{\numberline {2.5}JQuery}{13}{section.2.5}
+\select@language {magyar} \contentsline {section}{\numberline {2.6}Grafikonok}{13}{section.2.6}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.6.1}Google Charts}{13}{subsection.2.6.1}
+\select@language {magyar} \contentsline {section}{\numberline {2.7}Statikus tartalom}{13}{section.2.7}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.7.1}index.php - F\H ooldal}{13}{subsection.2.7.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.7.2}borkostolasEredmenyek.php - Eredm\'enyek}{13}{subsection.2.7.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.7.3}modszerek.php - M\'odszerek}{13}{subsection.2.7.3}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.7.4}kapcsolat.php - Kapcsolat}{13}{subsection.2.7.4}
+\select@language {magyar} \contentsline {section}{\numberline {2.8}Dinamikus tartalom}{13}{section.2.8}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.8.1}Regisztr\'aci\'o}{13}{subsection.2.8.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.8.2}Bejelentkez\'es}{13}{subsection.2.8.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.8.3}demo.php - Dem\'o}{13}{subsection.2.8.3}
+\select@language {magyar} \contentsline {chapter}{\numberline {3}A mobil alkalmaz\'as}{14}{chapter.3}
+\select@language {magyar} \contentsline {section}{\numberline {3.1}Android}{14}{section.3.1}
+\select@language {magyar} \contentsline {chapter}{\numberline {4}A weboldal \'es a mobil alkalmaz\'as \"osszef\H uz\'ese}{15}{chapter.4}
+\select@language {magyar} \contentsline {chapter}{\numberline {5}Tesztel\'es}{16}{chapter.5}
+\select@language {magyar} \contentsline {section}{\numberline {5.1}Regisztr\'aci\'os \'es bejelentkeztet\H o rendszer}{16}{section.5.1}
+\select@language {magyar} \contentsline {section}{\numberline {5.2}Demo adatkezel\'es\'enek ellen\H orz\'ese}{16}{section.5.2}
+\select@language {magyar} \contentsline {section}{\numberline {5.3}Algoritmusok ellen\H orz\'ese kis adatokon}{16}{section.5.3}
+\select@language {magyar} \contentsline {section}{\numberline {5.4}Algoritmusok ellen\H orz\'ese ismert eredm\'enyekkel}{16}{section.5.4}
+\select@language {magyar} \contentsline {chapter}{\numberline {6}\"Osszefoglal\'as}{17}{chapter.6}
+\select@language {magyar} \contentsline {chapter}{\numberline {7}Egyebek}{18}{chapter.7}
+\select@language {magyar} \contentsline {section}{\numberline {7.1}Verzi\'okezel\'es}{18}{section.7.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {7.1.1}Git}{18}{subsection.7.1.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {7.1.2}GitHub}{18}{subsection.7.1.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {7.1.3}A v\'alaszt\'as}{19}{subsection.7.1.3}
+\select@language {magyar} \contentsline {section}{\numberline {7.2}K\"ornyezetek}{19}{section.7.2}
+\select@language {magyar} \contentsline {chapter}{\numberline {8}F\"uggel\'ek}{21}{chapter.8}
+\select@language {magyar} \contentsline {section}{\numberline {8.1}A program forr\'ask\'odja}{21}{section.8.1}
 \select@language {magyar} \ 
-\select@language {magyar} \contentsline {section}{Nyilatkozat}{21}{chapter*.11}
-\select@language {magyar} \contentsline {section}{Irodalomjegyz\'ek}{22}{chapter*.12}
+\select@language {magyar} \contentsline {section}{Nyilatkozat}{22}{chapter*.11}
+\select@language {magyar} \contentsline {section}{Irodalomjegyz\'ek}{23}{chapter*.12}

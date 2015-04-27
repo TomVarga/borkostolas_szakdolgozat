@@ -282,14 +282,33 @@ D_{adj}\left(\pi^1,\pi^2\right)=n-n_{adj}-1
 \end{equation}
 \cite{Borkóstolás projekt}
 
-
 \chapter{A weboldal}
 
+A web oldal kialakításánál számomra fontos szempont volt, hogy az egy letisztult könnyen kezelhetõ felületet prezentáljon a felhasználók felé. Ennek érdekében már a kezdetektõl folyton szem elõtt tartottam hogy a stilisztikai elemek hogyan viszonyulnak egymáshoz, illetve külön figyelmet fordítottam arra, hogy a CSS (\textbf{C}ascading \textbf{S}tyle \textbf{S}heets) konzisztens megjelenést biztosítson a web alkalmazás minden oldalán. Ez azért is jó döntés volt, mert így sokkal könnyebb volt kisebb finomításokat végezni, mint ha a stilisztikai definíciók közvetlen a php fájlokban található HTML tagokban szerepeltek volna.
+
+A web alkalmazás alapvetõen három részbõl épül fel:
+
+\begin{itemize}
+	\item Statikus oldalak
+	\item Dinamikus oldalak
+	\item Az android alkalmazást ellátó szolgáltatások
+\end{itemize}
+
+Statikus oldalnak akkor nevezünk egy weblapot, ha annak a tartalma nem változik attól függõen, hogy a látogató kicsoda, hanyadszor jelentkezik be vagy hogy honnan jelentkezik be stb..., tehát a tartalom konzisztens minden egyes látogatás alkalmával. Ez a megközelítés fõképp akkor elõnyös ha valami olyan tartalmat akarunk nyújtani a felhasználóknak amin egyáltalán nem áll szándékunkban változtatni, vagy csak nagy ritkán.
+
+Dinamikus oldalakról akkor beszélünk amikor valamilyen feltétel vagy beavatkozás közvetlenül befolyásolja azt hogy a felhasználó által megtekintett tartalom pontosan micsoda is. Legtöbbször akkor használatos, ha egy adatbázis tartalmát akarjuk megjeleníteni, vagy olyan felületet hozunk létre amely interakciót tesz lehetõvé a felhasználó és a web alkalmazás között.
+
+Az android alkalmazást szolgáltatásokkal ellátó rész fõ feladata hogy a szerveren található adatbázishoz elérést biztosítson, mivel android alkalmazások nem tudnak közvetlenül csatlakozni egy távoli adatbázishoz, ezért kell ez a közbülsõ réteg amely kiszolgálja a mobil eszköz kéréseit, illetve olyan tartalmakat elérését teszi lehetõvé amelyek közvetlenül valamilyen limitációs okokból nem lennének elérhetõek. Sokszor ezeket egy böngészõbõl megnyitva nem látunk semmit, ez teljesen természetes, mivel itt a hangsúly nem azon van hogy emberek számára értelmezhetõ/olvasható tartalmat biztosítsunk, hanem fõ célunk a web és a mobil alkalmazás közötti kommunikációs csatorna megteremtése, tehát egy olyan környezet ahol csak gépek beszélnek egymással.
+
 \section{Iterációk}
+
+\section{Adatbázis}
 
 \section{PHP}
 
 \section{JavaScript}
+
+\section{JQuery}
 
 \section{Grafikonok}
 \subsection{Google Charts}
