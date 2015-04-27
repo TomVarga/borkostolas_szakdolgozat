@@ -10,7 +10,9 @@
 
 \documentclass[12pt]{report}
 \usepackage{setspace}
+\usepackage{todonotes}
 \usepackage{pgf, tikz}
+
 \usetikzlibrary{arrows, automata}
 
 %Magyar nyelvi támogatás (Babel 3.7 vagy késõbbi kell!)
@@ -296,11 +298,35 @@ A web alkalmazás alapvetõen három részbõl épül fel:
 
 Statikus oldalnak akkor nevezünk egy weblapot, ha annak a tartalma nem változik attól függõen, hogy a látogató kicsoda, hanyadszor jelentkezik be vagy hogy honnan jelentkezik be stb..., tehát a tartalom konzisztens minden egyes látogatás alkalmával. Ez a megközelítés fõképp akkor elõnyös ha valami olyan tartalmat akarunk nyújtani a felhasználóknak amin egyáltalán nem áll szándékunkban változtatni, vagy csak nagy ritkán.
 
-Dinamikus oldalakról akkor beszélünk amikor valamilyen feltétel vagy beavatkozás közvetlenül befolyásolja azt hogy a felhasználó által megtekintett tartalom pontosan micsoda is. Legtöbbször akkor használatos, ha egy adatbázis tartalmát akarjuk megjeleníteni, vagy olyan felületet hozunk létre amely interakciót tesz lehetõvé a felhasználó és a web alkalmazás között.
+Dinamikus oldalakról akkor beszélünk amikor valamilyen feltétel vagy beavatkozás közvetlenül befolyásolja azt hogy a felhasználó által megtekintett tartalom pontosan micsoda is. Legtöbbször akkor használatos, ha egy adatbázis tartalmát akarjuk megjeleníteni, vagy olyan felületet hozunk létre amely interakciót tesz lehetõvé a felhasználó és a web alkalmazás között. Rengeteg programozás nyelv létezik ennek a célnak az ellátására. Én a php-t és a JavaScript-et választottam.
 
 Az android alkalmazást szolgáltatásokkal ellátó rész fõ feladata hogy a szerveren található adatbázishoz elérést biztosítson, mivel android alkalmazások nem tudnak közvetlenül csatlakozni egy távoli adatbázishoz, ezért kell ez a közbülsõ réteg amely kiszolgálja a mobil eszköz kéréseit, illetve olyan tartalmakat elérését teszi lehetõvé amelyek közvetlenül valamilyen limitációs okokból nem lennének elérhetõek. Sokszor ezeket egy böngészõbõl megnyitva nem látunk semmit, ez teljesen természetes, mivel itt a hangsúly nem azon van hogy emberek számára értelmezhetõ/olvasható tartalmat biztosítsunk, hanem fõ célunk a web és a mobil alkalmazás közötti kommunikációs csatorna megteremtése, tehát egy olyan környezet ahol csak gépek beszélnek egymással.
 
 \section{Iterációk}
+
+Az oldal megalkotásához egy iterációs dizájn megközelítést alkalmaztam, melyen során egy rövid kezdeti tervezés után elkezdtem a tényleges munkát ami abból állt, hogy implementáltam az adott feladatot, majd az így elkészült munkát tesztelve prezentáltam a megrendelõnek (konzulensnek) A következõ lépés a tesztek során elõkerülõ hibák megbeszélése és azok javításának lehetséges orvosolása valamint az alkalmazás új funkciókkal való bõvítése volt. Ez az utolsó három lépés, tehát az implementálás, tesztelés és hibajavítás valamint további funkciókkal való bõvítés képezte az iterációs dizájn megközelítésem ciklikus magját. Az iterációk során felhasznált eszközökre és technológiák ismertetésére majd csak az iterációs mérföldkövek ismertetése után fogok kitérni. 
+
+\subsection{Elsõ mérföldkõ}Az elsõ mérföldkõ folyamán elõször megbeszéltem a megrendelõvel hogy milyen elvárásokkal rendelkezek illetve vázoltam az általam tervezett munkamenetet. Továbbá kiválasztottam a fejlesztéshez szükséges fejlesztõi környezeteket, valamint ezek és a használatukhoz elengedhetetlen eszközöket elõkészítettem a projekt munkában való felhasználáshoz. Ekkor történt meg még a felhasználói felület megjelenési terveinek elkészítése. Webszerver, domain és adatbázis létrehozás illetve telepítés. A kész oldalszerkezeti tervekkel \ref{fig:Wireframe} neki kezdtem a grafikus elemek vizualizációjának valamint implementáltam az oldalszerkezet statikus elemeit mint: Menü rendszer, fejléc, alsó információs sáv, kapcsolatok és egyéb hír csatornák megjelenítésért felelõs elemeket.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\linewidth]{Wireframe}
+\caption[Elsõ oldalszerkezeti terv]{Elsõ oldalszerkezeti terv}
+\label{fig:Wireframe}
+\end{figure}
+
+\subsection{Második mérföldkõ}A második mérföldkõ során került sor a megrendelõtõl kapott dokumentumok és források feldolgozására majd azok feltöltése a projektbe fõként statikus HTML elemekként. Továbbá végrehajtása a megrendelõ által kért grafikus és szerkezeti változtatásokat mint: Alsó információs sáv átmozgatása és re-faktorizációja egy oldalsó mozgó elemmé, menüpontok átnevezése, fejléc logó frissítése, A $borkostolasEredmenyek$ oldal átdolgozása az alábbi módon:
+Táblázatok kettéválasztása. Vízszintes görgetõ sáv hozzáadása a borok táblázat felsõ és alsó részéhez, melyek együtt mozognak egymással így megoldva a táblázat nagyságából fakadó kezelhetõségi problémát. Az elõre láthatólag bekövetkezõ grafikai felépítés esetleges módosítása könnyítésének érdekében több stílus elemet is újabb osztályokba rendeztem, tehát egy átfogóbb re faktorizáció történt mely mint késõbb kiderült a további stilisztikai elemek hozzáadását és stilizálását is megkönnyítette.
+
+\subsection{Harmadik mérföldkõ}A harmadik mérföldkõ fõ feladata az azt megelõzõ konzultáció során átbeszélt $demo$ oldal elkészítése volt. Tehát itt került sor a CoHITS algoritmus megismerése a hozzá tartozó szakirodalom áttanulmányozására majd az algoritmus implementálásának megkezdésére a projektbe. Ezt követte a korreláció és átlagtól való átlagos eltérés számolásának implementálása, de mint késõbb kiderült ezek az algoritmusok nem tûrték jól a hiányos bemeneti adatokat ezért végül az általuk generált kimenet nem került felhasználásra. A mérföldkõ végére a CoHITS algoritmus implementálásának befejezése és tesztelése maradt. A Google grafikonkészítõ API megismerése, majd felhasználása a CoHITS algoritmus, korreláció és átlagtól való átlagos eltérés adatsorok reprezentációjához.
+
+\subsection{Negyedik mérföldkõ}A negyedik mérföldkõ során egy másik projektbõl\cite{Borkóstolás projekt} származó algoritmusok és azok már kész implementálásának feldolgozása és megismerése volt a fõ feladat. Át kellett tekinteni a kapott kódbázist abból a célból, hogy ezeket is mint majd további opciókat integráljam a rendszerbe. Az említett algoritmusok: Hamming, Koszinusz, Precedencia, Összefüggõségi. De még mielõtt ebbe bele kezdtem, kísérleteztem egy kicsit egy új grafikonrajzoló API (Charts.js) használata mely könnyebben, stílusosabban és személyre szabhatóbban reprezentálja az adatokat. Miután megkaptam a fent említett már implementált algoritmusokat, elkezdtem azokat integrálni az én projektem kódbázisába. Sajnos ez nem ment teljesen gördülékenyen, szükség volt a kapott kódbázisból elõkerülõ implementációs és mûködési problémákkal kapcsolatos kérdések átgondolására valamit konzultálásra ezekkel kapcsolatban, majd a hibák javítása. A sikeres hibaelhárítás és javítások után jött az algoritmusok és demo oldal mûködésének tesztelése.
+
+\subsection{Ötödik mérföldkõ}Az ötödik mérföldkõ bebizonyította, hogy érdemes volt jól megtervezni és szétválasztani az egyes stilisztikai elemeket, mivel a megrendelõ ismét a menü rendszer valamint a fejléc kép ismételt átrendezését és szerkesztését kérte. Továbbá új teszt adatok használatát javasolta a $demo$ menüpontban, amelyek már a friss adatokat tükrözik. Implementálásra került egy visszaigazolást kérõ felhasználói felület mely fõ célja a beviteli mátrix véletlen felülírásának meggátolása volt. Késõbb a bevitel metódus megváltoztatása miatt ennek a funkcionalitása elévült. A korrelációt számoló kód mûködésébõl fakadó hiba ki lett javítva, így már nem áll meg a számolás, ha a kapott hiányos adatsoron nem lehet egyszerûen korrelációt számolni. Valamint megtörtént a tesztelések során elõkerült további hibák kijavítása is.
+
+\subsection{Hatodik mérföldkõ}A hatodik mérföldkõ vissza hozta a régi grafikonrajzoló APIt (Google charts API), valamint megtörtént a grafikonokat megjelenítõ elemek stilizálásnak egységesítése. Fõ ok a visszaváltásra az volt, hogy az értékeket mint címkéket megjeleníthetõvé tegyük az oszlopok mellett. A borszakértõk személyiségi jogainak védése érdekében a nevük anonimizálásra került. A web alkalmazás új funkciókkal bõvült: Regisztráció, belépés. Ezt követte a demo oldal teljes átdolgozása így már az hozzá kapcsolódik a felhasználói rendszerhez. Ebbõl fakadóan a demo oldal már csak regisztráció illetve bejelentkezés után használható. így a felhasználók a neves borszakértõk által kóstolt borokat saját maguk is tudják értékelni.
+
+\subsection{Hetedik mérföldkõ}A hetedik és egyben utolsó mérföldkõ nagy részét a mobil android alkalmazás elkészítése tette ki, de itt valósult meg az õt kiszolgáló web szolgáltatások implementálása valamint egy alap adminisztrációs felület létrehozása. Legvégül pedig elvégeztem némely kód csinosítást és re-faktorizációt hogy a kódom könnyebben olvasható és általában véve jobb tetszést keltsen az emberben.
 
 \section{Adatbázis}
 
@@ -330,6 +356,9 @@ Android alkalmazás fejlesztés
 
 \section{Android}
 Android
+\todo talk about threading UI/new thread mi futhat hol és mi nem
+\todo távoli adatbázis elérés
+\todo lokális változok kezelése SQL/properties vagy mifene
 
 \chapter{A weboldal és a mobil alkalmazás összefûzése}
 A weboldal és a mobil alkalmazás összefûzése
