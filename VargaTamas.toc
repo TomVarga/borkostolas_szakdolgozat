@@ -30,7 +30,7 @@
 \select@language {magyar} \contentsline {paragraph}{Flaot}{20}{section*.11}
 \select@language {magyar} \contentsline {paragraph}{Absolute positioning}{20}{section*.12}
 \select@language {magyar} \contentsline {paragraph}{Position}{20}{section*.13}
-\select@language {magyar} \contentsline {paragraph}{Float \'es clear}{20}{section*.14}
+\select@language {magyar} \contentsline {paragraph}{Float \'es clear}{21}{section*.14}
 \select@language {magyar} \contentsline {section}{\numberline {2.4}PHP}{21}{section.2.4}
 \select@language {magyar} \contentsline {section}{\numberline {2.5}JavaScript}{23}{section.2.5}
 \select@language {magyar} \contentsline {subsection}{\numberline {2.5.1}numeric}{23}{subsection.2.5.1}
