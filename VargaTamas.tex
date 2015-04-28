@@ -298,7 +298,7 @@ D_{adj}\left(\pi^1,\pi^2\right)=n-n_{adj}-1
 
 \chapter{A weboldal}
 
-A web oldal kialakításánál számomra fontos szempont volt, hogy az egy letisztult könnyen kezelhetõ felületet prezentáljon a felhasználók felé. Ennek érdekében már a kezdetektõl folyton szem elõtt tartottam hogy a stilisztikai elemek hogyan viszonyulnak egymáshoz, illetve külön figyelmet fordítottam arra, hogy a CSS (\textbf{C}ascading \textbf{S}tyle \textbf{S}heets) konzisztens megjelenést biztosítson a web alkalmazás minden oldalán. Ez azért is jó döntés volt, mert így sokkal könnyebb volt kisebb finomításokat végezni, mint ha a stilisztikai definíciók közvetlen a php fájlokban található HTML tagokban szerepeltek volna.
+A web oldal kialakításánál számomra fontos szempont volt, hogy az egy letisztult könnyen kezelhetõ felületet prezentáljon a felhasználók felé. Ennek érdekében már a kezdetektõl folyton szem elõtt tartottam hogy a stilisztikai elemek hogyan viszonyulnak egymáshoz, illetve külön figyelmet fordítottam arra, hogy a CSS (\textbf{C}ascading \textbf{S}tyle \textbf{S}heets) konzisztens megjelenést biztosítson a web alkalmazás minden oldalán. Ez azért is jó döntés volt, mert így sokkal könnyebb volt kisebb finomításokat végezni, mint ha a stilisztikai definíciók közvetlen a PHP fájlokban található HTML tagokban szerepeltek volna.
 
 A web alkalmazás alapvetõen három részbõl épül fel:
 
@@ -310,7 +310,7 @@ A web alkalmazás alapvetõen három részbõl épül fel:
 
 Statikus oldalnak akkor nevezünk egy weblapot, ha annak a tartalma nem változik. Attól is független, hogy a látogató kicsoda, hanyadszor jelentkezik be vagy hogy honnan jelentkezik be stb..., tehát a tartalom konzisztens minden egyes látogatás alkalmával. Ez a megközelítés fõképp akkor elõnyös ha valami olyan tartalmat akarunk nyújtani a felhasználóknak amin egyáltalán nem áll szándékunkban változtatni, vagy csak nagyon ritkán.
 
-Dinamikus oldalakról akkor beszélünk amikor valamilyen feltétel vagy beavatkozás közvetlenül befolyásolja azt hogy a felhasználó által megtekintett tartalom pontosan micsoda is. Legtöbbször akkor használatos, ha egy adatbázis tartalmát akarjuk megjeleníteni, vagy olyan felületet hozunk létre amely interakciót tesz lehetõvé a felhasználó és a web alkalmazás között. Rengeteg programozás nyelv létezik ennek a célnak az ellátására. Én a php-t és a JavaScript-et választottam.
+Dinamikus oldalakról akkor beszélünk amikor valamilyen feltétel vagy beavatkozás közvetlenül befolyásolja azt hogy a felhasználó által megtekintett tartalom pontosan micsoda is. Legtöbbször akkor használatos, ha egy adatbázis tartalmát akarjuk megjeleníteni, vagy olyan felületet hozunk létre amely interakciót tesz lehetõvé a felhasználó és a web alkalmazás között. Rengeteg programozás nyelv létezik ennek a célnak az ellátására. Én a PHP-t és a JavaScript-et választottam.
 
 Az android alkalmazást szolgáltatásokkal ellátó rész fõ feladata hogy a szerveren található adatbázishoz elérést biztosítson, mivel android alkalmazások nem tudnak közvetlenül csatlakozni egy távoli adatbázishoz, ezért kell ez a közbülsõ réteg amely kiszolgálja a mobil eszköz kéréseit, illetve olyan tartalmak elérését teszi lehetõvé amelyek közvetlenül valamilyen limitációs okokból nem lennének elérhetõek. Sokszor ezeket egy böngészõbõl megnyitva nem látunk semmit, ez teljesen természetes, mivel itt a hangsúly nem azon van hogy emberek számára értelmezhetõ/olvasható tartalmat biztosítsunk, hanem fõ célunk a web és a mobil alkalmazás közötti kommunikációs csatorna megteremtése, tehát egy olyan környezet ahol csak gépek beszélnek egymással.
 
@@ -388,9 +388,31 @@ A borokat tartalmazó $wines$ tábla egyáltalán nem bonyolult. A tábla indexelését
 
 A felhasználókra vonatkozó adatokat nyomon követõ tábla neve az adatbázisban $users$. A tábla elsõre talán túl bonyolultnak tûnhet, de minden mezõnek fontos feladata van, melyek lehetõvé teszik egy kedvelt felhasználó kezelõ modul használatát \cite{php-login}. A borokat tároló $wines$ táblához hasonlóan itt is van egy azonosító még pedig a $user\_id$ amely a tábla indexelését látja el és automatikusan növekszik eggyel az $AUTO\_INCREMENT$ -nek köszönhetõen amikor egy új felhasználó regisztrál a rendszerbe. A $user\_id$ nem az egyetlen egyedi $UNIQUE$ azonosító a táblában, a felhasználó nevét tároló $user\_name$, valamint a regisztrált felhasználó által megadott e-mail címet tároló $user\_email$ mezõ is egyedi ezzel azt meggátolva, hogy valaki már egy létezõ e-mail címmel vagy felhasználó névvel újból regisztráljon. Ezek voltak a regisztráció során kötelezõen megadandó mezõk egy része, persze késõbb még szó lesz a jelszó kezelésrõl is. A regisztráció után már aktivált felhasználó státuszt a $user\_active$ követi nyom, úgy hogy azokhoz akik még nem látogatták meg a regisztrációt visszaigazoló e-mailben kapott linket, hozzájuk nullát rendel, akik pedig ezt már megetették egyet kapnak, ez arra szolgál hogy csak olyan e-mail címeket zároljon a rendszer amelyek már regisztráció után aktivált felhasználó fiókhoz tartoznak. A felhasználót azonosító süti kulcs a $user\_rememberme\_token$ mezõben tárolódik, mely két hétig érvényes, ezzel lehetõvé téve a web alkalmazás számára, hogy felismerje az ismételt látogatókat még akkor is ha már más $HttpSession$ be tartoznak. A hibás bejelentkezések számát a $user\_failed\_logins$ mezõ tárolja, többek között ennek pontos felhasználását késõbb fogom részletezni a felhasználó kezelõ rendszer részletes ismertetésénél. A regisztráció során használt ip cím a $user\_registration\_ip$ -ben tárolódik el. Adminisztrátori jogosultság megadását teszi lehetõvé a $user\_permission$ mezõ, melynek alapértelmezett értéke $0$, $1$ pedig az adminisztrátori jogosultságot szimbolizálja. A még nem tárgyalt mezõket két csoportra bonthatjuk, az egyik mely valamilyen hash stringet tartalmaznak mint a $user\_password\_hash$, $user\_activation\_hash$, $user\_password_reset\_hash$. A másik csoport pedig olyan mezõk amelyek valamilyen tevékenységet nyomon követõ idõ bélyeget tárolnak mint a: $user\_password\_reset\_timestamp$, $user\_last\_failed\_login$, $user\_registration\_datetime$. Nézzük elõször az utóbbit, az idõ bélyeg típust tároló mezõket. A $user\_password\_reset\_timestamp$ arra szolgál hogy nyomon tudjuk követni, hogy a felhasználó vagy esetleges támadó mikor igényelt jelszó újra beállító e-mailt. A $user\_last\_failed\_login$ mezõ a legutolsó hibás bejelentkezés idõpontját tárolja. A $user\_registration\_datetime$ -ben tárolt idõpontra pedig majd a regisztrációt visszaigazoló és aktiváló e-mail linkjének kezelésekor lesz szükség. Végül röviden azokról a mezõ típusokról amelyek valamilyen hash stringet tárolnak, mivel arra, hogy mi a hash és miért de fõképp milyen módon van használva, majd többek között késõbb térek ki a felhasználó kezelõ rendszer részletes ismertetésénél. A $user\_password\_hash$ tárolja a felhasználó jelszavát hashelt formátumban. A regisztráció után küldött aktivációs e-mailhez használt aktivációs link validitásának ellenõrzésére szolgáló hasht a  $user\_activation\_hash$ tárolja. $user\_password_reset\_hash$ pedig az új jelszót igénylõ e-mail link hitelesítésére használt hasht tárolja.
 
-\section{php}
+\section{PHP}
+A PHP ($PHP: Hypertext Preprocessor$) egy széles körben elterjedt nyílt forráskódú általános célokra kifejlesztett szkript nyelv amely különösképpen alkalmas webes fejlesztésre, valamint HTML -be ágyazható. Ezt az alábbi példa \ref{lst:php hello world} kód részlet szemlélteti.
+\begin{minipage}{\linewidth}
+	\begin{lstlisting}[language=html,label={lst:php hello world}, caption={PHP Hello World!}]
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+	<title>Példa</title>
+	</head>
+	<body>
+		<?php
+			echo "Hello Világ!";
+		?>	
+	</body>
+</html>
+	\end{lstlisting}
+\end{minipage}
+A PHP kód egy különleges nyitó és záró $<?php\ ?>$ struktúrában helyezkedik el, ezzel lehetõvé téve, hogy ki és be lépjünk a PHP-ba. A PHP-t azt különbözteti meg a kliens oldali szkriptektõl mint például a JavaScript, hogy a kód a szerver oldalon hajtódik végre, itt generálódik a HTML tartalom melyet majd a webszerver küld a kliensnek. Az is megoldható, hogy egy webszervert úgy konfiguráljunk, hogy az a PHP-t tartalmazó HTML fájlokat is dolgozza fel. Ekkor a felhasználó nem fogja megtudni, hogy mi neki most éppen egy PHP által generált tartalmat mutatunk.
+
+Annak ellenére, hogy a PHP egy szkript nyelv robusztus alkalmazások létrehozására is használható, erre kiváló példa többek között a Facebook vagy akár a Wikipedia. Személy szerint ez elõtt nem sokat foglalkoztam a PHP -val csak kisebb weboldalak létrehozására használtam, nem igazán követtem nyomon a nyelv fejlõdését mely eredetileg a PHP/FI névvel lett létrehozva 1994 -ben Rasmus Lerdorf által. Ez az elsõ változat egy egyszerû Common Gateway Interface (CGI) bináris állomány volt a C programozási nyelven írva melynek fõ feladata az õ személyes honlapjának egy eszköze volt. Ez már nagyon régen volt és a nyelv rengeteg változtatáson és javításon esett át. Most már a PHP 5. verziójánál tartunk mely 2004 -ben lett kiadva, melynek fõ vezérlõ magja a $Zend\ Engine\ 2.0$ amely egy tucatnyi új szolgáltatás között egy új objektum modellt is tartalmaz. Jelenleg több tucatnyi fejlesztõ dolgozik a PHP továbbfejlesztésével mely még pár tucat fejlesztõnek ad munkát akinek a feladata a PHP -hez kapcsolódó támogató projektek fejlesztése és dokumentálása. Ez csak egy korábbi éveken alapuló becslés, de nyugodtan mondhatjuk, hogy a PHP több tíz vagy akár száz millió domain-re van telepítve világszerte \cite{php-history}.
 
 \section{JavaScript}
+\subsection{numeric}
+http://numericjs.com/lib/numeric-1.2.6.min.js
 
 \section{JQuery}
 
@@ -694,6 +716,8 @@ vol. 30, no 1, 107-117, 1998
 
 \bibitem{php-login}Panique. http://www.php-login.net
 \emph{http://opensource.org/licenses/MIT MIT License}
+
+\bibitem{php-history}History of PHP. http://php.net/manual/en/history.php.php
 
 %\begin{thebibliography}{99}
 % 10-nél több hivatkozás esetén
