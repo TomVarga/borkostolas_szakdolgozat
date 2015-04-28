@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.11.23)  28 APR 2015 00:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.11.23)  28 APR 2015 03:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -360,6 +360,33 @@ LaTeX Info: Redefining \addtolength on input line 76.
 \calc@Cskip=\skip45
 )
 \c@@todonotes@numberoftodonotes=\count112
+) (x:/texlive/2014/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count113
+\lst@gtempboxa=\box37
+\lst@token=\toks28
+\lst@length=\count114
+\lst@currlwidth=\dimen153
+\lst@column=\count115
+\lst@pos=\count116
+\lst@lostspace=\dimen154
+\lst@width=\dimen155
+\lst@newlines=\count117
+\lst@lineno=\count118
+\lst@maxwidth=\dimen156
+
+(x:/texlive/2014/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
+\c@lstnumber=\count119
+\lst@skipnumbers=\count120
+\lst@framebox=\box38
+)
+(x:/texlive/2014/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2014/09/06 1.5e listings configuration
+))
+Package: listings 2014/09/06 1.5e (Carsten Heinz)
+
+(x:/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
 (x:/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
 braryarrows.code.tex
@@ -367,7 +394,7 @@ File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
 
 (x:/texlive/2014/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2013/09/23 v3.0.0 (rcs-revision 1.16)
-\arrowsize=\dimen153
+\arrowsize=\dimen157
 ))
 (x:/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
 braryautomata.code.tex
@@ -381,26 +408,26 @@ File: tikzlibraryshapes.multipart.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
 (x:/texlive/2014/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.m
 ultipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2010/01/07 v3.0.0 (rcs-revision 1.2)
-\pgfnodepartlowerbox=\box37
-\pgfnodeparttwobox=\box38
-\pgfnodepartthreebox=\box39
-\pgfnodepartfourbox=\box40
-\pgfnodeparttwentybox=\box41
-\pgfnodepartnineteenbox=\box42
-\pgfnodeparteighteenbox=\box43
-\pgfnodepartseventeenbox=\box44
-\pgfnodepartsixteenbox=\box45
-\pgfnodepartfifteenbox=\box46
-\pgfnodepartfourteenbox=\box47
-\pgfnodepartthirteenbox=\box48
-\pgfnodeparttwelvebox=\box49
-\pgfnodepartelevenbox=\box50
-\pgfnodeparttenbox=\box51
-\pgfnodepartninebox=\box52
-\pgfnodeparteightbox=\box53
-\pgfnodepartsevenbox=\box54
-\pgfnodepartsixbox=\box55
-\pgfnodepartfivebox=\box56
+\pgfnodepartlowerbox=\box39
+\pgfnodeparttwobox=\box40
+\pgfnodepartthreebox=\box41
+\pgfnodepartfourbox=\box42
+\pgfnodeparttwentybox=\box43
+\pgfnodepartnineteenbox=\box44
+\pgfnodeparteighteenbox=\box45
+\pgfnodepartseventeenbox=\box46
+\pgfnodepartsixteenbox=\box47
+\pgfnodepartfifteenbox=\box48
+\pgfnodepartfourteenbox=\box49
+\pgfnodepartthirteenbox=\box50
+\pgfnodeparttwelvebox=\box51
+\pgfnodepartelevenbox=\box52
+\pgfnodeparttenbox=\box53
+\pgfnodepartninebox=\box54
+\pgfnodeparteightbox=\box55
+\pgfnodepartsevenbox=\box56
+\pgfnodepartsixbox=\box57
+\pgfnodepartfivebox=\box58
 ))) (x:/texlive/2014/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2014/09/25 3.9l The Babel package
 
@@ -408,26 +435,26 @@ Package: babel 2014/09/25 3.9l The Babel package
 Language: magyar 2005/05/12 v1.5 Magyar support from the babel v3.7 system
  (x:/texlive/2014/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2014/09/25 3.9l Babel common definitions
-\babel@savecnt=\count113
-\U@D=\dimen154
+\babel@savecnt=\count121
+\U@D=\dimen158
 )
-\l@magyar=\count114
-\c@enumv=\count115
+\l@magyar=\count122
+\c@enumv=\count123
 Package babel Info: Making ; an active character on input line 2271.
 Package babel Info: Making ! an active character on input line 2273.
 Package babel Info: Making ? an active character on input line 2279.
 Package babel Info: Making : an active character on input line 2281.
 Package babel Info: Making ` an active character on input line 2297.
-\c@footnote@add=\count116
-\c@footnote@ch=\count117
+\c@footnote@add=\count124
+\c@footnote@ch=\count125
 ))
 (x:/texlive/2014/texmf-dist/tex/latex/base/t1enc.sty
 Package: t1enc 1994/06/01 Standard LaTeX package
 )
 (x:/texlive/2014/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2014/04/30 v1.2b Input encoding file
-\inpenc@prehook=\toks28
-\inpenc@posthook=\toks29
+\inpenc@prehook=\toks29
+\inpenc@posthook=\toks30
 
 (x:/texlive/2014/texmf-dist/tex/latex/base/latin2.def
 File: latin2.def 2014/04/30 v1.2b Input encoding file
@@ -445,51 +472,51 @@ Package: amstext 2000/06/29 v2.01
 
 (x:/texlive/2014/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks30
-\ex@=\dimen155
+\@emptytoks=\toks31
+\ex@=\dimen159
 ))
 (x:/texlive/2014/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen156
+\pmbraise@=\dimen160
 )
 (x:/texlive/2014/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count118
+\inf@bad=\count126
 LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count119
-\leftroot@=\count120
+\uproot@=\count127
+\leftroot@=\count128
 LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count121
-\DOTSCASE@=\count122
+\classnum@=\count129
+\DOTSCASE@=\count130
 LaTeX Info: Redefining \ldots on input line 378.
 LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
-\Mathstrutbox@=\box57
-\strutbox@=\box58
-\big@size=\dimen157
+\Mathstrutbox@=\box59
+\strutbox@=\box60
+\big@size=\dimen161
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count123
-\c@MaxMatrixCols=\count124
+\macc@depth=\count131
+\c@MaxMatrixCols=\count132
 \dotsspace@=\muskip10
-\c@parentequation=\count125
-\dspbrk@lvl=\count126
-\tag@help=\toks31
-\row@=\count127
-\column@=\count128
-\maxfields@=\count129
-\andhelp@=\toks32
-\eqnshift@=\dimen158
-\alignsep@=\dimen159
-\tagshift@=\dimen160
-\tagwidth@=\dimen161
-\totwidth@=\dimen162
-\lineht@=\dimen163
-\@envbody=\toks33
+\c@parentequation=\count133
+\dspbrk@lvl=\count134
+\tag@help=\toks32
+\row@=\count135
+\column@=\count136
+\maxfields@=\count137
+\andhelp@=\toks33
+\eqnshift@=\dimen162
+\alignsep@=\dimen163
+\tagshift@=\dimen164
+\tagwidth@=\dimen165
+\totwidth@=\dimen166
+\lineht@=\dimen167
+\@envbody=\toks34
 \multlinegap=\skip47
 \multlinetaggap=\skip48
-\mathdisplay@stack=\toks34
+\mathdisplay@stack=\toks35
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
@@ -505,15 +532,15 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 ))
 (x:/texlive/2014/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2009/07/02 v2.20.1
-\thm@style=\toks35
-\thm@bodyfont=\toks36
-\thm@headfont=\toks37
-\thm@notefont=\toks38
-\thm@headpunct=\toks39
+\thm@style=\toks36
+\thm@bodyfont=\toks37
+\thm@headfont=\toks38
+\thm@notefont=\toks39
+\thm@headpunct=\toks40
 \thm@preskip=\skip49
 \thm@postskip=\skip50
 \thm@headsep=\skip51
-\dth@everypar=\toks40
+\dth@everypar=\toks41
 )
 (x:/texlive/2014/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip52
@@ -528,11 +555,11 @@ Package: amsthm 2009/07/02 v2.20.1
 )
 (x:/texlive/2014/texmf-dist/tex/latex/psfrag/psfrag.sty
 Package: psfrag 1998/04/11 v3.04 PSfrag (MCG)
-\pfg@pcount=\count130
-\pfg@scount=\count131
+\pfg@pcount=\count138
+\pfg@scount=\count139
 \pfg@temp=\write4
 )
-\c@tét=\count132
+\c@tét=\count140
 
 (x:/texlive/2014/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
@@ -591,14 +618,14 @@ Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 (x:/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen164
-\Hy@linkcounter=\count133
-\Hy@pagecounter=\count134
+\@linkdim=\dimen168
+\Hy@linkcounter=\count141
+\Hy@pagecounter=\count142
 
 (x:/texlive/2014/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count135
+\Hy@SavedSpaceFactor=\count143
 
 (x:/texlive/2014/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -610,17 +637,17 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count136
+\c@Hy@tempcnt=\count144
 
 (x:/texlive/2014/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen165
-\Fld@menulength=\count137
-\Field@Width=\dimen166
-\Fld@charsize=\dimen167
+\XeTeXLinkMargin=\dimen169
+\Fld@menulength=\count145
+\Field@Width=\dimen170
+\Fld@charsize=\dimen171
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -630,17 +657,17 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count138
-\c@Item=\count139
-\c@Hfootnote=\count140
+\Hy@abspage=\count146
+\c@Item=\count147
+\c@Hfootnote=\count148
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (x:/texlive/2014/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count141
-\c@bookmark@seq@number=\count142
+\Fld@listcount=\count149
+\c@bookmark@seq@number=\count150
 
 (x:/texlive/2014/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
@@ -652,37 +679,37 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 (./VargaTamas.aux)
 \openout1 = `VargaTamas.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 70.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 80.
  (x:/texlive/2014/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 (x:/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count143
-\scratchdimen=\dimen168
-\scratchbox=\box59
-\nofMPsegments=\count144
-\nofMParguments=\count145
-\everyMPshowfont=\toks41
-\MPscratchCnt=\count146
-\MPscratchDim=\dimen169
-\MPnumerator=\count147
-\makeMPintoPDFobject=\count148
-\everyMPtoPDFconversion=\toks42
+\scratchcounter=\count151
+\scratchdimen=\dimen172
+\scratchbox=\box61
+\nofMPsegments=\count152
+\nofMParguments=\count153
+\everyMPshowfont=\toks42
+\MPscratchCnt=\count154
+\MPscratchDim=\dimen173
+\MPnumerator=\count155
+\makeMPintoPDFobject=\count156
+\everyMPtoPDFconversion=\toks43
 ) ABD: EveryShipout initializing macros
 (x:/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -699,6 +726,8 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+\c@lstlisting=\count157
+
 
 Package magyar.ldf Warning: Requested Hungarian hyphenation= patterns missing.
 (magyar.ldf)                To make LaTeX hyphenate Hungarian words, please
@@ -708,42 +737,42 @@ Package magyar.ldf Warning: Requested Hungarian hyphenation= patterns missing.
 LaTeX Warning: Please use \usepackage[latin2]{inputenc} with
                \usepackage[magyar]{babel}.
 
-\AtBeginShipoutBox=\box60
-Package hyperref Info: Link coloring OFF on input line 70.
+\AtBeginShipoutBox=\box62
+Package hyperref Info: Link coloring OFF on input line 80.
 (x:/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (x:/texlive/2014/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count149
+\c@section@level=\count158
 )
-LaTeX Info: Redefining \ref on input line 70.
-LaTeX Info: Redefining \pageref on input line 70.
-LaTeX Info: Redefining \nameref on input line 70.
+LaTeX Info: Redefining \ref on input line 80.
+LaTeX Info: Redefining \pageref on input line 80.
+LaTeX Info: Redefining \nameref on input line 80.
 
 (./VargaTamas.out) (./VargaTamas.out)
 \@outlinefile=\write5
 \openout5 = `VargaTamas.out'.
 
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 95.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 105.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 104.
-LaTeX Font Info:    Try loading font information for U+msa on input line 116.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 114.
+LaTeX Font Info:    Try loading font information for U+msa on input line 126.
 
 (x:/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 116.
+LaTeX Font Info:    Try loading font information for U+msb on input line 126.
 
 (x:/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 118.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 128.
 
-Overfull \hbox (37.87688pt too wide) in paragraph at lines 116--123
+Overfull \hbox (37.87688pt too wide) in paragraph at lines 126--133
  [][] 
  []
 
@@ -752,7 +781,7 @@ Non-PDF special ignored!
 
 {x:/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 136.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 146.
  (./VargaTamas.toc
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 9.
@@ -765,14 +794,14 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
  [3] [4
 
 ]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 157.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 167.
 
 (x:/texlive/2014/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 ) [5
 
 ]
-Overfull \hbox (3.40837pt too wide) in paragraph at lines 184--185
+Overfull \hbox (3.40837pt too wide) in paragraph at lines 194--195
 \T1/ptm/m/n/12 (web és mo-bil) össze-f¶zésének meg-valósítása követi. Az össze-
 foglalás el®tt néhány teszten
  []
@@ -784,14 +813,14 @@ foglalás el®tt néhány teszten
 [7
 
 ]
-Overfull \hbox (1.39929pt too wide) in paragraph at lines 207--208
+Overfull \hbox (1.39929pt too wide) in paragraph at lines 217--218
 []\T1/ptm/m/n/12 A két kós-toló közti sú-ly $\OML/cmm/m/it/12 x[]$ \T1/ptm/m/n/
 12 és $\OML/cmm/m/it/12 x[]$ \T1/ptm/m/n/12 úgy definiál-ható mint egy re-jtett
  átmeneti valószín¶ség
  []
 
 
-Overfull \hbox (6.21225pt too wide) in paragraph at lines 250--251
+Overfull \hbox (6.21225pt too wide) in paragraph at lines 260--261
 \T1/ptm/m/n/12 gráfra kós-tolók rang-sorolásá-nak céljából az ® képességeik és 
 sza-k-mai hoz-záértésük alapján.
  []
@@ -799,18 +828,18 @@ sza-k-mai hoz-záértésük alapján.
 [8]
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 275.
+(hyperref)                removing `\H' on input line 285.
 
 [9] [10]
 2. fejezet.
 
-Overfull \hbox (18.89598pt too wide) in paragraph at lines 289--290
+Overfull \hbox (18.89598pt too wide) in paragraph at lines 299--300
 \T1/ptm/m/n/12 tek-t®l foly-ton szem el®tt tar-tot-tam hogy a stil-isztikai el-
 e-mek hogyan vis-zonyul-nak egymáshoz,
  []
 
 
-Overfull \hbox (0.66898pt too wide) in paragraph at lines 303--304
+Overfull \hbox (0.66898pt too wide) in paragraph at lines 313--314
 \T1/ptm/m/n/12 ható adat-bázishoz elérést biz-tosít-son, miv-el an-droid al-ka-
 lmazá-sok nem tudnak közvetlenül
  []
@@ -818,33 +847,33 @@ lmazá-sok nem tudnak közvetlenül
 [11
 
 ]
-Overfull \hbox (45.00737pt too wide) in paragraph at lines 307--308
+Overfull \hbox (45.00737pt too wide) in paragraph at lines 317--318
 \T1/ptm/m/n/12 és hi-ba-javítás valamint továb-bi funkciókkal való b®vítés képe
 zte az iterá-ciós dizájn megközelítésem
  []
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 309.
+(hyperref)                removing `\H' on input line 319.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 309.
+(hyperref)                removing `\H' on input line 319.
 
 
-Overfull \hbox (1.36842pt too wide) in paragraph at lines 309--310
+Overfull \hbox (1.36842pt too wide) in paragraph at lines 319--320
 \T1/ptm/m/n/12 sokkal ren-delkezek il-letve vá-zoltam az ál-ta-lam ter-vezett m
 unkamenetet. Továb-bá kiválasz-
  []
 
 
-Overfull \hbox (8.28809pt too wide) in paragraph at lines 309--310
+Overfull \hbox (8.28809pt too wide) in paragraph at lines 319--320
 \T1/ptm/m/n/12 tot-tam a fe-jlesztéshez szük-séges fe-jleszt®i környezeteket, v
 alamint ezek és a használatukhoz
  []
 
 
-Overfull \hbox (7.1406pt too wide) in paragraph at lines 309--310
+Overfull \hbox (7.1406pt too wide) in paragraph at lines 319--320
 \T1/ptm/m/n/12 elenged-hetetlen es-zközöket el®készítet-tem a pro-jekt munkában
  való fel-használáshoz. Ekkor
  []
@@ -852,7 +881,7 @@ Overfull \hbox (7.1406pt too wide) in paragraph at lines 309--310
 <Wireframe.png, id=362, 730.73pt x 530.98375pt>
 File: Wireframe.png Graphic file (type png)
  <use Wireframe.png>
-Package pdftex.def Info: Wireframe.png used on input line 313.
+Package pdftex.def Info: Wireframe.png used on input line 323.
 (pdftex.def)             Requested size: 298.75262pt x 217.08897pt.
 
 
@@ -860,16 +889,16 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 318.
+(hyperref)                removing `\H' on input line 328.
 
 
-Overfull \hbox (14.55298pt too wide) in paragraph at lines 318--320
+Overfull \hbox (14.55298pt too wide) in paragraph at lines 328--330
 \T1/ptm/m/n/12 Al-só in-for-má-ciós sáv át-moz-gatása és re-faktorizációja egy 
 oldal-só mozgó el-em-mé, menüpon-
  []
 
 
-Overfull \hbox (4.62906pt too wide) in paragraph at lines 318--320
+Overfull \hbox (4.62906pt too wide) in paragraph at lines 328--330
 \T1/ptm/m/n/12 táblázat fel-s® és al-só részéhez, melyek együtt mo-zog-nak egym
 ás-sal így megold-va a táblázat
  []
@@ -877,156 +906,151 @@ Overfull \hbox (4.62906pt too wide) in paragraph at lines 318--320
 [12]
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 321.
+(hyperref)                removing `\H' on input line 331.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 323.
+(hyperref)                removing `\H' on input line 333.
 
 [13 <./Wireframe.png>]
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 325.
+(hyperref)                removing `\H' on input line 335.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 327.
+(hyperref)                removing `\H' on input line 337.
 
 
-Overfull \hbox (6.40395pt too wide) in paragraph at lines 327--328
+Overfull \hbox (6.40395pt too wide) in paragraph at lines 337--338
 \T1/ptm/m/n/12 A ha-todik mér-föld-k® vis-sza hoz-ta a ré-gi grafikon-ra-j-zoló
  APIt (Google charts API), valamint
  []
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 329.
+(hyperref)                removing `\H' on input line 339.
 
-[14]
+[14] [15]
+<../../Borkostolas_weblap/dbmodel.png, id=395, 415.5525pt x 420.57124pt>
+File: ../../Borkostolas_weblap/dbmodel.png Graphic file (type png)
+
+<use ../../Borkostolas_weblap/dbmodel.png>
+Package pdftex.def Info: ../../Borkostolas_weblap/dbmodel.png used on input lin
+e 358.
+(pdftex.def)             Requested size: 298.75262pt x 302.37468pt.
+
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 343.
+(hyperref)                removing `\H' on input line 374.
 
-[15]
+[16 <../../Borkostolas_weblap/dbmodel.png>] [17]
 3. fejezet.
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 359.
+ine 390.
 
-LaTeX Warning: Marginpar on page 16 moved.
-
-
-LaTeX Warning: Marginpar on page 16 moved.
+LaTeX Warning: Marginpar on page 18 moved.
 
 
-LaTeX Warning: Marginpar on page 16 moved.
+LaTeX Warning: Marginpar on page 18 moved.
 
 
-LaTeX Warning: Marginpar on page 16 moved.
+LaTeX Warning: Marginpar on page 18 moved.
 
 
-LaTeX Warning: Marginpar on page 16 moved.
+LaTeX Warning: Marginpar on page 18 moved.
 
-[16
+
+LaTeX Warning: Marginpar on page 18 moved.
+
+[18
 
 ]
 4. fejezet.
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 366.
+(hyperref)                removing `\H' on input line 397.
 
-[17
+[19
 
 ]
 5. fejezet.
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 370.
+(hyperref)                removing `\H' on input line 401.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 371.
+(hyperref)                removing `\H' on input line 402.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 372.
+(hyperref)                removing `\H' on input line 403.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 373.
+(hyperref)                removing `\H' on input line 404.
 
-[18
+[20
 
 ]
 6. fejezet.
-[19
+[21
 
 ]
 7. fejezet.
 
-Overfull \hbox (4.02876pt too wide) in paragraph at lines 385--386
+Overfull \hbox (4.02876pt too wide) in paragraph at lines 416--417
 \T1/ptm/m/n/12 tel és tel-jes revíz-iókövetési lehet®séggel, ame-ly nem függ a 
 hálózat elérését®l vagy közpon-
  []
 
-[20
+[22
 
-] [21] [22]
+] [23] [24]
 8. fejezet.
-[23
+[25
 
 ]
-Overfull \hbox (2.07404pt too wide) in paragraph at lines 593--595
+Overfull \hbox (2.07404pt too wide) in paragraph at lines 624--626
 \T1/ptm/m/n/12 Alulírott Var-ga Tamás pro-gramter-vez® in-for-matikus BSc sza-k
 os hall-gató, ki-je-len-tem, hogy
  []
 
 
-Overfull \hbox (4.59113pt too wide) in paragraph at lines 598--599
+Overfull \hbox (4.59113pt too wide) in paragraph at lines 629--630
 []\T1/ptm/m/n/12 Tudomásul veszem, hogy sza-k-dol-go-zatomat a Szege-di Tu-domá
 ny-e-gyetem In-for-matikai
  []
 
-[24
+[26
 
-] [25
+] [27
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 668.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 668.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 699.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 699.
  (./VargaTamas.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 668.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 668.
-
-
-Package rerunfilecheck Warning: File `VargaTamas.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `VargaTamas.out':
-(rerunfilecheck)             Before: 099E077AAF6955D906386A8FFDEDAB15;3466
-(rerunfilecheck)             After:  20014115A1B98D5DD9084EA0086FC62A;3466.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 668.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 699.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 699.
+Package rerunfilecheck Info: File `VargaTamas.out' has not changed.
+(rerunfilecheck)             Checksum: 6FB6B5B221650618E40E04883026684E;3466.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 699.
  ) 
 Here is how much of TeX's memory you used:
- 19442 strings out of 493109
- 371278 string characters out of 6138586
- 464715 words of memory out of 5000000
- 22439 multiletter control sequences out of 15000+600000
- 43639 words of font info for 69 fonts, out of 8000000 for 9000
+ 21329 strings out of 493109
+ 395825 string characters out of 6138586
+ 532852 words of memory out of 5000000
+ 24298 multiletter control sequences out of 15000+600000
+ 46927 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,16n,76p,1093b,925s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,16n,76p,1371b,1482s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{cite.Bork\363stol\341s\040projekt} has been refer
 enced but does not exist, replaced by a fixed one
 
 pdfTeX warning (dest): name{http\\unskip\040\\penalty\040\\@M\040\\kern\040.1em
 ://bor.tvarga.hu/borkostolas.apk} has been referenced but does not exist, repla
 ced by a fixed one
-
-pdfTeX warning (dest): name{chapter*.15} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter*.14} has been referenced but does not exist
-, replaced by a fixed one
 
 {x:/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}<x:/texlive/2014/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><x:/texlive/2014/texmf-dist/font
@@ -1041,10 +1065,10 @@ dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><x:/texlive/2014/texmf-dist/fonts
 e1/urw/courier/ucrr8a.pfb><x:/texlive/2014/texmf-dist/fonts/type1/urw/times/utm
 b8a.pfb><x:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><x:/texliv
 e/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on VargaTamas.pdf (25 pages, 198792 bytes).
+Output written on VargaTamas.pdf (27 pages, 222938 bytes).
 PDF statistics:
- 513 PDF objects out of 1000 (max. 8388607)
- 465 compressed objects within 5 object streams
- 109 named destinations out of 1000 (max. 500000)
- 434 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 533 PDF objects out of 1000 (max. 8388607)
+ 482 compressed objects within 5 object streams
+ 119 named destinations out of 1000 (max. 500000)
+ 439 words of extra memory for PDF output out of 10000 (max. 10000000)
 
