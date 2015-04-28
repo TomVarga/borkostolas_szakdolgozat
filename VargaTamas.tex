@@ -342,21 +342,19 @@ Táblázatok kettéválasztása. Vízszintes görgetõ sáv hozzáadása a borok táblázat f
 Annak ellenére hogy web oldal legelsõ változata perzisztens adat tárolás nélkül üzemelt és az implementált algoritmus tesztelése részben e nélkül zajlottak, nem jelenti azt hogy a végsõ változatból ez kimaradt volna, vagy esetleg egy nem teljesen kidolgozott adat tároló hierarchiával rendelkezne. Pontosan az ellenkezõje az igaz. Az adatbázis létrahozása elõtt jelentõs idõt fordítottam annak megtervezésére, szem elõtt tartva azt hogy a tervezett alkalmazásoknak milyen igényei lesznek. Az adatbázis relációs sémáját a \ref{fig:dbmodel} ábrázolja. 
 
 \begin{minipage}{\linewidth}
-	\begin{lstlisting}[language=sql,label={lst:scores create}, caption={$scores$ táblát létrehozó parancs}]
-	CREATE TABLE IF NOT EXISTS `scores` (
-	`user_id` int(11) DEFAULT NULL COMMENT 'user''s id',
-	`wine_id` int(11) DEFAULT NULL COMMENT 'wines''s id',
-	`score` decimal(8,3) DEFAULT NULL COMMENT 'score given by the user_id user for the wine_id wine',
-	`timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-	FOREIGN KEY (`user_id`) REFERENCES users(`user_id`) ON DELETE CASCADE,
-	FOREIGN KEY (`wine_id`) REFERENCES wines(`wine_id`) ON DELETE CASCADE
-	) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='score data';
-	\end{lstlisting}
+\begin{lstlisting}[language=sql,label={lst:scores create}, caption={Az értékeléseket tartalmazó ($scores$) táblát létrehozó parancs}]
+CREATE TABLE IF NOT EXISTS `scores` (
+`user_id` int(11) DEFAULT NULL COMMENT 'user''s id',
+`wine_id` int(11) DEFAULT NULL COMMENT 'wines''s id',
+`score` decimal(8,3) DEFAULT NULL COMMENT 'score given by the user_id user for the wine_id wine',
+`timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+FOREIGN KEY (`user_id`) REFERENCES users(`user_id`) ON DELETE CASCADE,
+FOREIGN KEY (`wine_id`) REFERENCES wines(`wine_id`) ON DELETE CASCADE
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='score data';
+\end{lstlisting}
 \end{minipage}
 
 Ahogy az értékeléseket tartalmazó $scores$ táblát létrehozó szkript \ref{lst:scores create} is tükrözi látható, hogy a táblában a felhasználók azonosítóját ($user\_id$) tartalmazó oszlop és a borok azonosítóját ($wine\_id$) tartalmazó oszlop is mint $FOREIGN\_KEY$ szerepel amik természetesen a borokat ($wines$) és a felhasználókat ($users$) tartalmazó táblák megfelelõ oszlopaira hivatkozik, ezek segítik az adatbázis konzisztenciájának megõrzését, mivel amikor egy felhasználó vagy bor törlésre kerül akkor az $ON DELETE CASCADE$ megkötés hatására az értékeléseket tartalmazó ($scores$) táblából azok a sorok is törlõdni fognak amik így már nem létezõ azonosítókra hivatkoznának. Itt talán még érdemes kitérni arra is hogy takarékossági okokból az értékelések maximum nyolc számjegybõl állhatnak amiben a decimális pontosságot három tizedes jegyig engedélyezzük. Valamint az is jól látható hogy egy idõbélyeg oszlopban $timestamp$ nyomon követjük majd az értékelések módosításának idõpontját, ez elengedhetetlen a web és android alkalmazás között való effektív szinkronizációhoz.
-
-
 
 
 \begin{figure}[h]
