@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.11.23)  28 APR 2015 19:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.11.23)  28 APR 2015 19:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -989,6 +989,13 @@ Overfull \hbox (69.83475pt too wide) in paragraph at lines 389--390
  beál-lító e-mailt. A $\OML/cmm/m/it/12 user[]last[]failed[]login$
  []
 
+
+Overfull \hbox (22.29637pt too wide) in paragraph at lines 389--390
+\T1/ptm/m/n/12 nak el-len®rzésére szol-gáló hasht a $\OML/cmm/m/it/12 user[]act
+ivation[]hash$ \T1/ptm/m/n/12 tárol-ja. $\OML/cmm/m/it/12 user[]password[]eset[
+]hash$
+ []
+
 [17]
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
@@ -1094,7 +1101,7 @@ Here is how much of TeX's memory you used:
  24674 multiletter control sequences out of 15000+600000
  46927 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,16n,76p,2813b,1550s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,16n,76p,3401b,1550s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{cite.Bork\363stol\341s\040projekt} has been refer
 enced but does not exist, replaced by a fixed one
 
@@ -1115,7 +1122,7 @@ dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><x:/texlive/2014/texmf-dist/fonts
 e1/urw/courier/ucrr8a.pfb><x:/texlive/2014/texmf-dist/fonts/type1/urw/times/utm
 b8a.pfb><x:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><x:/texliv
 e/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on VargaTamas.pdf (29 pages, 234387 bytes).
+Output written on VargaTamas.pdf (29 pages, 234873 bytes).
 PDF statistics:
  560 PDF objects out of 1000 (max. 8388607)
  506 compressed objects within 6 object streams
