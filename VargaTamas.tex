@@ -304,7 +304,7 @@ Az android alkalmazást szolgáltatásokkal ellátó rész fõ feladata hogy a szervere
 
 \section{Iterációk}
 
-Az oldal megalkotásához egy iterációs dizájn megközelítést alkalmaztam, melyen során egy rövid kezdeti tervezés után elkezdtem a tényleges munkát ami abból állt, hogy implementáltam az adott feladatot, majd az így elkészült munkát tesztelve prezentáltam a megrendelõnek (konzulensnek) A következõ lépés a tesztek során elõkerülõ hibák megbeszélése és azok javításának lehetséges orvosolása valamint az alkalmazás új funkciókkal való bõvítése volt. Ez az utolsó három lépés, tehát az implementálás, tesztelés és hibajavítás valamint további funkciókkal való bõvítés képezte az iterációs dizájn megközelítésem ciklikus magját. Az iterációk során felhasznált eszközökre és technológiák ismertetésére majd csak az iterációs mérföldkövek ismertetése után fogok kitérni. 
+Az oldal megalkotásához egy agilis iterációs dizájn megközelítést alkalmaztam, melyen során egy rövid kezdeti tervezés után elkezdtem a tényleges munkát ami abból állt, hogy implementáltam az adott feladatot, majd az így elkészült munkát tesztelve prezentáltam a megrendelõnek (konzulensnek) A következõ lépés a tesztek során elõkerülõ hibák megbeszélése és azok javításának lehetséges orvosolása valamint az alkalmazás új funkciókkal való bõvítése volt. Ez az utolsó három lépés, tehát az implementálás, tesztelés és hibajavítás valamint további funkciókkal való bõvítés képezte az iterációs dizájn megközelítésem ciklikus magját. Az iterációk során felhasznált eszközökre és technológiák ismertetésére majd csak az iterációs mérföldkövek ismertetése után fogok kitérni. 
 
 \subsection{Elsõ mérföldkõ}Az elsõ mérföldkõ folyamán elõször megbeszéltem a megrendelõvel hogy milyen elvárásokkal rendelkezek illetve vázoltam az általam tervezett munkamenetet. Továbbá kiválasztottam a fejlesztéshez szükséges fejlesztõi környezeteket, valamint ezek és a használatukhoz elengedhetetlen eszközöket elõkészítettem a projekt munkában való felhasználáshoz. Ekkor történt meg még a felhasználói felület megjelenési terveinek elkészítése. Webszerver, domain és adatbázis létrehozás illetve telepítés. A kész oldalszerkezeti tervekkel \ref{fig:Wireframe} neki kezdtem a grafikus elemek vizualizációjának valamint implementáltam az oldalszerkezet statikus elemeit mint: Menü rendszer, fejléc, alsó információs sáv, kapcsolatok és egyéb hír csatornák megjelenítésért felelõs elemeket.
 
@@ -326,11 +326,20 @@ Táblázatok kettéválasztása. Vízszintes görgetõ sáv hozzáadása a borok táblázat f
 
 \subsection{Hatodik mérföldkõ}A hatodik mérföldkõ vissza hozta a régi grafikonrajzoló APIt (Google charts API), valamint megtörtént a grafikonokat megjelenítõ elemek stilizálásnak egységesítése. Fõ ok a visszaváltásra az volt, hogy az értékeket mint címkéket megjeleníthetõvé tegyük az oszlopok mellett. A borszakértõk személyiségi jogainak védése érdekében a nevük anonimizálásra került. A web alkalmazás új funkciókkal bõvült: Regisztráció, belépés. Ezt követte a demo oldal teljes átdolgozása így már az hozzá kapcsolódik a felhasználói rendszerhez. Ebbõl fakadóan a demo oldal már csak regisztráció illetve bejelentkezés után használható. így a felhasználók a neves borszakértõk által kóstolt borokat saját maguk is tudják értékelni.
 
-\subsection{Hetedik mérföldkõ}A hetedik és egyben utolsó mérföldkõ nagy részét a mobil android alkalmazás elkészítése tette ki, de itt valósult meg az õt kiszolgáló web szolgáltatások implementálása valamint egy alap adminisztrációs felület létrehozása. Legvégül pedig elvégeztem némely kód csinosítást és re-faktorizációt hogy a kódom könnyebben olvasható és általában véve jobb tetszést keltsen az emberben.
+\subsection{Hetedik mérföldkõ}A hetedik és egyben utolsó mérföldkõ nagy részét a mobil android alkalmazás elkészítése és tesztelése tette ki, de itt valósult meg az õt kiszolgáló web szolgáltatások implementálása valamint egy alap adminisztrációs felület létrehozása. Legvégül pedig elvégeztem némely kód csinosítást és re-faktorizációt hogy a kódom könnyebben olvasható és általában véve jobb tetszést keltsen az emberben.
 
 \section{Adatbázis}
+Annak ellenére hogy web oldal legelsõ változata perzisztens adat tárolás nélkül üzemelt és az implementált algoritmus tesztelése részben e nélkül zajlottak, nem jelenti azt hogy a végsõ változatból ez kimaradt volna, vagy esetleg egy nem teljesen kidolgozott adat tároló hierarchiával rendelkezne. Pontosan az ellenkezõje az igaz. Az adatbázis létrahozása elõtt jelentõs idõt fordítottam annak megtervezésére, szem elõtt tartva azt hogy a tervezett alkalmazásoknak milyen igényei lesznek. Az adatbázis relációs sémáját a \ref{fig:dbmodel} ábrázolja. Tudni kell még, hogy a $scores$ táblában a $user_id$ és a $wine_id$ is mint $FOREIGN_KEY$ szerepel ami segíti az adatbázis konzisztenciájának megõrzését, mivel 
 
-\section{PHP}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\linewidth]{../../Borkostolas_weblap/dbmodel}
+\caption[Adatbázis model]{Adatbázis model}
+\label{fig:dbmodel}
+\end{figure}
+
+
+\section{php}
 
 \section{JavaScript}
 
