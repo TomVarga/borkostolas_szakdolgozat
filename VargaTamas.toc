@@ -25,22 +25,23 @@
 \select@language {magyar} \contentsline {subsection}{\numberline {2.2.1}scores t\'abla}{16}{subsection.2.2.1}
 \select@language {magyar} \contentsline {subsection}{\numberline {2.2.2}wines t\'abla}{17}{subsection.2.2.2}
 \select@language {magyar} \contentsline {subsection}{\numberline {2.2.3}users t\'abla}{17}{subsection.2.2.3}
-\select@language {magyar} \contentsline {section}{\numberline {2.3}PHP}{18}{section.2.3}
-\select@language {magyar} \contentsline {section}{\numberline {2.4}JavaScript}{19}{section.2.4}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.4.1}numeric}{19}{subsection.2.4.1}
-\select@language {magyar} \contentsline {section}{\numberline {2.5}JQuery}{20}{section.2.5}
-\select@language {magyar} \contentsline {section}{\numberline {2.6}Grafikonok}{20}{section.2.6}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.6.1}Google Charts}{20}{subsection.2.6.1}
-\select@language {magyar} \contentsline {section}{\numberline {2.7}Statikus tartalom}{20}{section.2.7}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.7.1}index.php - F\H ooldal}{20}{subsection.2.7.1}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.7.2}borkostolasEredmenyek.php - Eredm\'enyek}{20}{subsection.2.7.2}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.7.3}modszerek.php - M\'odszerek}{20}{subsection.2.7.3}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.7.4}kapcsolat.php - Kapcsolat}{20}{subsection.2.7.4}
-\select@language {magyar} \contentsline {section}{\numberline {2.8}Dinamikus tartalom}{20}{section.2.8}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.8.1}php-login}{20}{subsection.2.8.1}
+\select@language {magyar} \contentsline {section}{\numberline {2.3}CSS}{18}{section.2.3}
+\select@language {magyar} \contentsline {section}{\numberline {2.4}PHP}{19}{section.2.4}
+\select@language {magyar} \contentsline {section}{\numberline {2.5}JavaScript}{20}{section.2.5}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.5.1}numeric}{20}{subsection.2.5.1}
+\select@language {magyar} \contentsline {section}{\numberline {2.6}JQuery}{20}{section.2.6}
+\select@language {magyar} \contentsline {section}{\numberline {2.7}Grafikonok}{20}{section.2.7}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.7.1}Google Charts}{20}{subsection.2.7.1}
+\select@language {magyar} \contentsline {section}{\numberline {2.8}Statikus tartalom}{20}{section.2.8}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.8.1}index.php - F\H ooldal}{20}{subsection.2.8.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.8.2}borkostolasEredmenyek.php - Eredm\'enyek}{20}{subsection.2.8.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.8.3}modszerek.php - M\'odszerek}{20}{subsection.2.8.3}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.8.4}kapcsolat.php - Kapcsolat}{20}{subsection.2.8.4}
+\select@language {magyar} \contentsline {section}{\numberline {2.9}Dinamikus tartalom}{20}{section.2.9}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.9.1}php-login}{20}{subsection.2.9.1}
 \select@language {magyar} \contentsline {paragraph}{Hashel\'es}{20}{section*.10}
 \select@language {magyar} \contentsline {paragraph}{Felhaszn\'al\'oi \'allapot nyomk\"ovet\'ese}{20}{section*.11}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.8.2}demo.php - Dem\'o}{20}{subsection.2.8.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.9.2}demo.php - Dem\'o}{20}{subsection.2.9.2}
 \select@language {magyar} \contentsline {chapter}{\numberline {3}A mobil alkalmaz\'as}{21}{chapter.3}
 \select@language {magyar} \contentsline {section}{\numberline {3.1}Android}{21}{section.3.1}
 \select@language {magyar} \contentsline {chapter}{\numberline {4}A weboldal \'es a mobil alkalmaz\'as \"osszef\H uz\'ese}{22}{chapter.4}
