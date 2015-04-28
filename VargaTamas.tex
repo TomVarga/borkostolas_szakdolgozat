@@ -9,21 +9,6 @@
 
 
 \documentclass[12pt]{report}
-\usepackage{setspace}
-\usepackage{todonotes}
-\usepackage{pgf, tikz}
-
-
-\usepackage{listings}
-\lstset{language=sql,
-	keywordstyle=\color{blue},
-	stringstyle=\color{red},
-	commentstyle=\color{green},
-	morecomment=[l][\color{teal}]{\#},
-	breaklines=true, postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{red}\hookrightarrow\space}}
-}
-
-\usetikzlibrary{arrows, automata}
 
 %Magyar nyelvi támogatás (Babel 3.7 vagy késõbbi kell!)
 \def\magyarOptions{defaults=hu-min}
@@ -49,6 +34,23 @@
 %ha nincs rájuk szükség természetesen kihagyhatók.
 \usepackage{graphicx}
 \usepackage{psfrag}
+
+\usepackage{setspace}
+\usepackage{todonotes}
+\usepackage{pgf, tikz}
+
+\usepackage{scrbase}
+\usepackage{listings}
+\newcaptionname{magyar}{\lstlistingname}{Kód részlet}
+\lstset{language=sql,
+	keywordstyle=\color{blue},
+	stringstyle=\color{red},
+	commentstyle=\color{green},
+	morecomment=[l][\color{teal}]{\#},
+	breaklines=true, postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{red}\hookrightarrow\space}}
+}
+
+\usetikzlibrary{arrows, automata}
 
 %Tételszerû környezetek definiálhatók, ezek most fejezetenkent egyutt szamozodnak, pl.
 \newtheorem{tét}{Tétel}[chapter]
@@ -338,7 +340,7 @@ Az oldal megalkotásához egy agilis iterációs dizájn megközelítést alkalmaztam, m
 \subsection{Hetedik mérföldkõ}A hetedik és egyben utolsó mérföldkõ nagy részét a mobil android alkalmazás elkészítése és tesztelése tette ki, de itt valósult meg az õt kiszolgáló web szolgáltatások implementálása valamint egy alap adminisztrációs felület létrehozása. Legvégül pedig elvégeztem némely kód csinosítást és re-faktorizációt a célból, hogy a kódom könnyebben olvasható és általában véve jobb tetszést keltsen az emberben.
 
 \section{Adatbázis}
-Annak ellenére hogy a web oldal legelsõ változata perzisztens adat tárolás nélkül üzemelt és az implementált algoritmus tesztelése részben e nélkül zajlottak, nem jelenti azt hogy a végsõ változatból ez kimaradt volna, vagy esetleg egy nem teljesen kidolgozott adat tároló hierarchiával rendelkezne. Pontosan az ellenkezõje az igaz. Az adatbázis táblák létrahozása elõtt jelentõs idõt fordítottam azok megtervezésére, szem elõtt tartva azt hogy a tervezett alkalmazásoknak milyen igényei lesznek. Az adatbázis relációs sémáját a \ref{fig:dbmodel} ábrázolja. 
+Annak ellenére hogy a web oldal legelsõ változata perzisztens adat tárolás nélkül üzemelt és az implementált algoritmus tesztelése részben e nélkül zajlottak, nem jelenti azt hogy a végsõ változatból ez kimaradt volna, vagy esetleg egy nem teljesen kidolgozott adat tároló hierarchiával rendelkezne. Pontosan az ellenkezõje az igaz. Az adatbázis táblák létrahozása elõtt jelentõs idõt fordítottam azok megtervezésére, szem elõtt tartva azt hogy a tervezett alkalmazásoknak milyen igényei lesznek. Az adatbázis relációs sémáját a \ref{fig:dbmodel} kód részlet ábrázolja. 
 
 \begin{minipage}{\linewidth}
 \begin{lstlisting}[language=sql,label={lst:scores create}, caption={Az értékeléseket tartalmazó ($scores$) táblát létrehozó parancs}]
@@ -353,7 +355,7 @@ FOREIGN KEY (`wine_id`) REFERENCES wines(`wine_id`) ON DELETE CASCADE
 \end{lstlisting}
 \end{minipage}
 
-Ahogy az értékeléseket tartalmazó $scores$ táblát létrehozó szkript \ref{lst:scores create} is tükrözi, látható, hogy a táblában a felhasználók azonosítóját $user\_id$ tartalmazó oszlop és a borok azonosítóját $wine\_id$ tartalmazó oszlop is mint $FOREIGN\_KEY$ szerepel amik természetesen a borokat $wines$ és a felhasználókat $users$ tartalmazó táblák megfelelõ oszlopaira hivatkoznak, ezek segítik az adatbázis konzisztenciájának megõrzését, mivel amikor egy felhasználó vagy bor törlésre kerül akkor az $ON DELETE CASCADE$ megkötés hatására az értékeléseket tartalmazó $scores$ táblából azok a sorok is törlõdni fognak amik így már nem létezõ azonosítókra hivatkoznának. Itt talán még érdemes kitérni arra is hogy takarékossági okokból az értékelések maximum nyolc számjegybõl állhatnak amiben a decimális pontosságot három tizedes jegyig engedélyezzük. Valamint az is jól látható hogy egy idõbélyeg oszlopban $timestamp$ nyomon követjük majd az értékelések módosításának idõpontját, ez elengedhetetlen a web és android alkalmazás között való effektív szinkronizációhoz. Végül talán még érdemes arra kitérni hogy melyik mezõ milyen értéket vehet föl és mik azok alapértelmezett értékei: a $user_id$ és a $wine_id$ helyzetét már tisztáztuk, nem maradt más mint az értékeléseket tartalmazó $score$ és a módosítások idõbélyegét nyomon követõ $timestamp$. A $score$ mezõ értéke akár $NULL$ is lehet így lehetõvé téve a felhasználók számára hogy ha esetleg meggondolták magukat akkor töröljék a már meglévõ értékelésüket. Ez lényegében csak egy praktikus megoldás mert így amikor az alkalmazás egyszerre több értékelés eredményét próbálja módosítani akkor azt meg tudja tenni egy $UPDATE$ SQL paranccsal, nem kell ennek az esetnek a külön kezelésére egy $DELETE$ utasítást írni. Valóban így több hely foglalódik le az adatbázisban, de ne felejtsük el, hogy olyan borok értékelésérõl beszélünk amiket az adott felhasználó egyszer már értékelt. Én valószínûbbnek tartom azt hogy valaki a kitörölt bort késõbb újra értékel mint az hogy soha többet nem tér vissza hozzá. A $timestamp$ mezõ alapértelmezett értéke a $CURRENT_TIMESTAMP$ ami másodperc pontossággal tartalmazza az idõt alábbi formátumban: $Y-m-d\ h:i:s$ ahol $Y$ az év $m$ a hónap $d$ a nap mindegyik numerikus, majd $h$ az óra $i$ a perc és $s$ a másodperc két karakteres formátumban. $NULL$ helyett pedig $0000-00-00 00:00:00$ fog szerepelni a mezõben.
+Ahogy az értékeléseket tartalmazó $scores$ táblát létrehozó szkript \ref{lst:scores create} is tükrözi, látható, hogy a táblában a felhasználók azonosítóját $user\_id$ tartalmazó oszlop és a borok azonosítóját $wine\_id$ tartalmazó oszlop is mint $FOREIGN\_KEY$ szerepel amik természetesen a borokat $wines$ és a felhasználókat $users$ tartalmazó táblák megfelelõ oszlopaira hivatkoznak, ezek segítik az adatbázis konzisztenciájának megõrzését, mivel amikor egy felhasználó vagy bor törlésre kerül akkor az $ON DELETE CASCADE$ megkötés hatására az értékeléseket tartalmazó $scores$ táblából azok a sorok is törlõdni fognak amik így már nem létezõ azonosítókra hivatkoznának. Itt talán még érdemes kitérni arra is hogy takarékossági okokból az értékelések maximum nyolc számjegybõl állhatnak amiben a decimális pontosságot három tizedes jegyig engedélyezzük. Valamint az is jól látható hogy egy idõbélyeg oszlopban $timestamp$ nyomon követjük majd az értékelések módosításának idõpontját, ez elengedhetetlen a web és android alkalmazás között való effektív szinkronizációhoz. Végül talán még érdemes arra kitérni hogy melyik mezõ milyen értéket vehet föl és mik azok alapértelmezett értékei: a $user\_id$ és a $wine\_id$ helyzetét már tisztáztuk, nem maradt más mint az értékeléseket tartalmazó $score$ és a módosítások idõbélyegét nyomon követõ $timestamp$. A $score$ mezõ értéke akár $NULL$ is lehet így lehetõvé téve a felhasználók számára hogy ha esetleg meggondolták magukat akkor töröljék a már meglévõ értékelésüket. Ez lényegében csak egy praktikus megoldás mert így amikor az alkalmazás egyszerre több értékelés eredményét próbálja módosítani akkor azt meg tudja tenni egy $UPDATE$ SQL paranccsal, nem kell ennek az esetnek a külön kezelésére egy $DELETE$ utasítást írni. Valóban így több hely foglalódik le az adatbázisban, de ne felejtsük el, hogy olyan borok értékelésérõl beszélünk amiket az adott felhasználó egyszer már értékelt. Én valószínûbbnek tartom azt hogy valaki a kitörölt bort késõbb újra értékel mint az hogy soha többet nem tér vissza hozzá. A $timestamp$ mezõ alapértelmezett értéke a $CURRENT\_TIMESTAMP$ ami másodperc pontossággal tartalmazza az idõt alábbi formátumban: $Y-m-d\ h:i:s$ ahol $Y$ az év $m$ a hónap $d$ a nap mindegyik numerikus, majd $h$ az óra $i$ a perc és $s$ a másodperc két karakteres formátumban. $NULL$ helyett pedig $0000-00-00 00:00:00$ fog szerepelni a mezõben.
 
 \begin{figure}[h]
 \centering
@@ -362,8 +364,24 @@ Ahogy az értékeléseket tartalmazó $scores$ táblát létrehozó szkript \ref{lst:sco
 \label{fig:dbmodel}
 \end{figure}
 
-A borokat tartalmazó $wines$ tábla egyáltalán nem bonyolult. A tábla indexelését a $wine_id$ segítségével történek amely minden egyes új bor hozzáadásánál automatikusan növekszik eggyel az $AUTO_INCREMENT$ -nek köszönhetõen.
-\todo finish this
+A borokat tartalmazó $wines$ tábla egyáltalán nem bonyolult. A tábla indexelését a $wine\_id$ segítségével történek amely minden egyes új bor hozzáadásánál automatikusan növekszik eggyel az $AUTO\_INCREMENT$ -nek köszönhetõen. Az évjáratot $wine\_year$ és az árat $wine\_price$ tartalmazó mezõkön kívül az összes többi megadása kötelezõ. Az évjárat egy maximum négy jegyû egész szám lehet, míg az ára akár hatvannégy hússzú is lehet. Jelenleg a borok ára Magyar Forintban értendõ. Ezek a megkötések fõképp a projekt fejlesztése alatt megismert borkóstolási versenyek és adatbázisok szerkezeti felépítése miatt lettek így meghatározva. A többi mezõ kötelezõ szöveggel való feltöltését az alábbi táblázat \ref{tbl:wines} határozza meg:
+
+
+\begin{table}
+\begin{center}
+\begin{tabular}{| l | l |}
+	\hline
+	\textbf{Mezõ} & \textbf{Tartalom} \\ \hline
+	wine\_name & A bor neve \\ \hline
+	wine\_winery & A pincészet neve \\ \hline
+	wine\_location & A bor származási helye \\ \hline
+	wine\_composition & A bor összetétele \\ \hline
+\end{tabular}
+\end{center}
+\label{tbl:wines}
+\caption{A borokat leíró tábla kötelezõ mezõinek felépítése}
+\end{table}
+
 
 
 \section{php}
