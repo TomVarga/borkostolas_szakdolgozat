@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.11.23)  28 APR 2015 18:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.11.23)  28 APR 2015 19:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -898,7 +898,7 @@ Overfull \hbox (13.23659pt too wide) in paragraph at lines 321--322
 áv, kapc-so-la-tok és egyéb hír csatornák
  []
 
-<Wireframe.png, id=362, 730.73pt x 530.98375pt>
+<Wireframe.png, id=372, 730.73pt x 530.98375pt>
 File: Wireframe.png Graphic file (type png)
  <use Wireframe.png>
 Package pdftex.def Info: Wireframe.png used on input line 325.
@@ -909,10 +909,10 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 330.
+(hyperref)                removing `\H' on input line 329.
 
 
-Overfull \hbox (25.57016pt too wide) in paragraph at lines 330--331
+Overfull \hbox (25.57016pt too wide) in paragraph at lines 329--330
 \T1/ptm/m/n/12 ($\OML/cmm/m/it/12 floatingsidebar$\T1/ptm/m/n/12 ), menüpon-tok
  át-n-evezése, fe-jléc logó fris-sítése, A $\OML/cmm/m/it/12 borkostolasEredmen
 yek$
@@ -921,124 +921,102 @@ yek$
 [12]
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 332.
+(hyperref)                removing `\H' on input line 331.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 334.
+(hyperref)                removing `\H' on input line 333.
 
 [13 <./Wireframe.png>]
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 336.
+(hyperref)                removing `\H' on input line 335.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 338.
+(hyperref)                removing `\H' on input line 337.
 
 
-Overfull \hbox (10.3999pt too wide) in paragraph at lines 338--339
+Overfull \hbox (10.3999pt too wide) in paragraph at lines 337--338
 \T1/ptm/m/n/12 A ha-todik mér-föld-k® vis-sza hoz-ta a ré-gi grafikon-ra-j-zoló
  API-t (Google charts API), valamint
  []
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 340.
+(hyperref)                removing `\H' on input line 339.
 
-[14]
-Overfull \hbox (17.62482pt too wide) in paragraph at lines 345--357
-[]$[]$ 
- []
-
-
-Overfull \hbox (4.76796pt too wide) in paragraph at lines 358--359
-[]\T1/ptm/m/n/12 Ahogy az értékeléseket tar-tal-mazó $\OML/cmm/m/it/12 scores$ 
-\T1/ptm/m/n/12 táblát létre-hozó szkript []2.1[] is tükrözi, látható,
- []
-
-
-Overfull \hbox (17.22383pt too wide) in paragraph at lines 358--359
-\T1/ptm/m/n/12 hogy a táblában a fel-használók azonosítóját $\OML/cmm/m/it/12 u
-ser[]id$ \T1/ptm/m/n/12 tar-tal-mazó os-zlop és a borok azonosítóját
- []
-
-
-Overfull \hbox (6.63382pt too wide) in paragraph at lines 358--359
-\T1/ptm/m/n/12 nak, ezek segítik az adat-bázis konzisz-ten-ciájá-nak meg®rzését
-, miv-el amikor egy fel-használó
- []
-
-
-Overfull \hbox (29.93057pt too wide) in paragraph at lines 358--359
-\T1/ptm/m/n/12 vagy bor tör-lésre kerül akkor az $\OML/cmm/m/it/12 ONDELETECASC
-ADE$ \T1/ptm/m/n/12 megkötés hatására az értékeléseket
- []
-
-[15] <../../Borkostolas_weblap/dbmodel.png, id=396, 415.5525pt x 420.57124pt>
+[14] <../../Borkostolas_weblap/dbmodel.png, id=391, 415.5525pt x 420.57124pt>
 File: ../../Borkostolas_weblap/dbmodel.png Graphic file (type png)
 
 <use ../../Borkostolas_weblap/dbmodel.png>
 Package pdftex.def Info: ../../Borkostolas_weblap/dbmodel.png used on input lin
-e 362.
+e 346.
 (pdftex.def)             Requested size: 298.75262pt x 302.37468pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (10.84587pt too wide) in paragraph at lines 367--368
-\T1/ptm/m/n/12 növek-szik eggyel az $\OML/cmm/m/it/12 AUTO[]INCREMENT$ \T1/ptm/
-m/n/12 -nek köszön-het®en. Az évjára-tot $\OML/cmm/m/it/12 wine[]year$
+ [15 <../../Borkostolas_weblap/dbmodel.png>]
+Overfull \hbox (3.07832pt too wide) in paragraph at lines 352--353
+\T1/ptm/m/n/12 Ahogy az értékeléseket tar-tal-mazó $\OML/cmm/m/it/12 scores$ \T
+1/ptm/m/n/12 táblát létre-hozó szkript []2.1[] kód rés-zlet is tükrözi,
  []
 
 
-Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 397.
+Overfull \hbox (11.81757pt too wide) in paragraph at lines 352--353
+\T1/ptm/m/n/12 zlopaira hi-vatkoz-nak, ezek segítik az adat-bázis konzisz-ten-c
+iájá-nak meg®rzését, miv-el amikor
+ []
 
-[16] [17 <../../Borkostolas_weblap/dbmodel.png>] [18]
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 354--366
+[]$[]$ 
+ []
+
+[16]
+Overfull \hbox (1.48114pt too wide) in paragraph at lines 371--372
+\T1/ptm/m/n/12 A borokat tar-tal-mazó $\OML/cmm/m/it/12 wines$ \T1/ptm/m/n/12 t
+ábla egyál-talán nem bony-olult. A tábla in-dex-elését a $\OML/cmm/m/it/12 wine
+[]id$
+ []
+
+
+Overfull \hbox (18.83102pt too wide) in paragraph at lines 389--390
+\OML/cmm/m/it/12 user[]registration[]datetime$\T1/ptm/m/n/12 . Néz-zük el®ször 
+az utób-bit, az id® bé-lyeg tí-pust tároló mez®ket.
+ []
+
+
+Overfull \hbox (69.83475pt too wide) in paragraph at lines 389--390
+\T1/ptm/m/n/12 fel-használó vagy es-etleges tá-madó mikor igényelt jel-szó újra
+ beál-lító e-mailt. A $\OML/cmm/m/it/12 user[]last[]failed[]login$
+ []
+
+[17]
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\H' on input line 401.
+
+[18] [19]
 3. fejezet.
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 413.
+ine 420.
 
-LaTeX Warning: Marginpar on page 19 moved.
-
-
-LaTeX Warning: Marginpar on page 19 moved.
+LaTeX Warning: Marginpar on page 20 moved.
 
 
-LaTeX Warning: Marginpar on page 19 moved.
+LaTeX Warning: Marginpar on page 20 moved.
 
 
-LaTeX Warning: Marginpar on page 19 moved.
+LaTeX Warning: Marginpar on page 20 moved.
 
 
-LaTeX Warning: Marginpar on page 19 moved.
+LaTeX Warning: Marginpar on page 20 moved.
 
-[19
 
-]
-4. fejezet.
-
-Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 420.
+LaTeX Warning: Marginpar on page 20 moved.
 
 [20
 
 ]
-5. fejezet.
-
-Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 424.
-
-
-Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 425.
-
-
-Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 426.
-
+4. fejezet.
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\H' on input line 427.
@@ -1046,57 +1024,77 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 [21
 
 ]
-6. fejezet.
+5. fejezet.
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\H' on input line 431.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\H' on input line 432.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\H' on input line 433.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\H' on input line 434.
+
 [22
+
+]
+6. fejezet.
+[23
 
 ]
 7. fejezet.
 
-Overfull \hbox (4.02876pt too wide) in paragraph at lines 439--440
+Overfull \hbox (4.02876pt too wide) in paragraph at lines 446--447
 \T1/ptm/m/n/12 tel és tel-jes revíz-iókövetési lehet®séggel, ame-ly nem függ a 
 hálózat elérését®l vagy közpon-
  []
 
-[23
+[24
 
-] [24] [25]
+] [25] [26]
 8. fejezet.
-[26
+[27
 
 ]
-Overfull \hbox (2.07404pt too wide) in paragraph at lines 647--649
+Overfull \hbox (2.07404pt too wide) in paragraph at lines 654--656
 \T1/ptm/m/n/12 Alulírott Var-ga Tamás pro-gramter-vez® in-for-matikus BSc sza-k
 os hall-gató, ki-je-len-tem, hogy
  []
 
 
-Overfull \hbox (4.59113pt too wide) in paragraph at lines 652--653
+Overfull \hbox (4.59113pt too wide) in paragraph at lines 659--660
 []\T1/ptm/m/n/12 Tudomásul veszem, hogy sza-k-dol-go-zatomat a Szege-di Tu-domá
 ny-e-gyetem In-for-matikai
  []
 
-[27
+[28
 
-] [28
+] [29
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 722.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 722.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 730.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 730.
  (./VargaTamas.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 722.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 722.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 730.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 730.
 Package rerunfilecheck Info: File `VargaTamas.out' has not changed.
-(rerunfilecheck)             Checksum: 6FB6B5B221650618E40E04883026684E;3466.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 722.
+(rerunfilecheck)             Checksum: 07B0B56CBBFD75A37E865A4899657DD0;3592.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 730.
  ) 
 Here is how much of TeX's memory you used:
- 21711 strings out of 493109
- 403143 string characters out of 6138586
- 547796 words of memory out of 5000000
- 24671 multiletter control sequences out of 15000+600000
+ 21720 strings out of 493109
+ 403273 string characters out of 6138586
+ 546920 words of memory out of 5000000
+ 24674 multiletter control sequences out of 15000+600000
  46927 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,16n,76p,2452b,1550s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,16n,76p,2813b,1550s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{cite.Bork\363stol\341s\040projekt} has been refer
 enced but does not exist, replaced by a fixed one
 
@@ -1117,10 +1115,10 @@ dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><x:/texlive/2014/texmf-dist/fonts
 e1/urw/courier/ucrr8a.pfb><x:/texlive/2014/texmf-dist/fonts/type1/urw/times/utm
 b8a.pfb><x:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><x:/texliv
 e/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on VargaTamas.pdf (28 pages, 227949 bytes).
+Output written on VargaTamas.pdf (29 pages, 234387 bytes).
 PDF statistics:
- 540 PDF objects out of 1000 (max. 8388607)
- 488 compressed objects within 5 object streams
- 121 named destinations out of 1000 (max. 500000)
- 439 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 560 PDF objects out of 1000 (max. 8388607)
+ 506 compressed objects within 6 object streams
+ 127 named destinations out of 1000 (max. 500000)
+ 455 words of extra memory for PDF output out of 10000 (max. 10000000)
 

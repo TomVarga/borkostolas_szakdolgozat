@@ -323,8 +323,7 @@ Az oldal megalkotásához egy agilis iterációs dizájn megközelítést alkalmaztam, m
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.7\linewidth]{Wireframe}
-\caption[Elsõ oldalszerkezeti terv]{Elsõ oldalszerkezeti terv}
-\label{fig:Wireframe}
+\caption[Elsõ oldalszerkezeti terv]{Elsõ oldalszerkezeti terv \label{fig:Wireframe}}
 \end{figure}
 
 \subsection{Második mérföldkõ}A második mérföldkõ során került sor a megrendelõtõl kapott dokumentumok és források feldolgozására majd azok feltöltése a projektbe fõként statikus HTML elemekként. Továbbá végrehajtása a megrendelõ által kért grafikus és szerkezeti változtatásokat mint: Alsó információs sáv átmozgatása és re-faktorizációja egy oldalsó lebegõ mozgó elemmé ($floating sidebar$), menüpontok átnevezése, fejléc logó frissítése, A $borkostolasEredmenyek$ oldal átdolgozása az alábbi módon: Táblázatok kettéválasztása. Vízszintes görgetõ sáv hozzáadása a borok táblázat felsõ és alsó részéhez, melyek együtt mozognak egymással így megoldva a táblázat nagyságából fakadó kezelhetõségi problémát. Az elõre láthatólag bekövetkezõ grafikai felépítés esetleges módosítása könnyítésének érdekében több stílus elemet is újabb osztályokba rendeztem, tehát egy átfogóbb re-faktorizáció történt mely mint késõbb kiderült a további stilisztikai elemek hozzáadását és stilizálását is megkönnyítette.
@@ -340,7 +339,17 @@ Az oldal megalkotásához egy agilis iterációs dizájn megközelítést alkalmaztam, m
 \subsection{Hetedik mérföldkõ}A hetedik és egyben utolsó mérföldkõ nagy részét a mobil android alkalmazás elkészítése és tesztelése tette ki, de itt valósult meg az õt kiszolgáló web szolgáltatások implementálása valamint egy alap adminisztrációs felület létrehozása. Legvégül pedig elvégeztem némely kód csinosítást és re-faktorizációt a célból, hogy a kódom könnyebben olvasható és általában véve jobb tetszést keltsen az emberben.
 
 \section{Adatbázis}
-Annak ellenére hogy a web oldal legelsõ változata perzisztens adat tárolás nélkül üzemelt és az implementált algoritmus tesztelése részben e nélkül zajlottak, nem jelenti azt hogy a végsõ változatból ez kimaradt volna, vagy esetleg egy nem teljesen kidolgozott adat tároló hierarchiával rendelkezne. Pontosan az ellenkezõje az igaz. Az adatbázis táblák létrahozása elõtt jelentõs idõt fordítottam azok megtervezésére, szem elõtt tartva azt hogy a tervezett alkalmazásoknak milyen igényei lesznek. Az adatbázis relációs sémáját a \ref{fig:dbmodel} kód részlet ábrázolja. 
+Annak ellenére hogy a web oldal legelsõ változata perzisztens adat tárolás nélkül üzemelt és az implementált algoritmus tesztelése részben e nélkül zajlottak, nem jelenti azt hogy a végsõ változatból ez kimaradt volna, vagy esetleg egy nem teljesen kidolgozott adat tároló hierarchiával rendelkezne. Pontosan az ellenkezõje az igaz. Az adatbázis táblák létrahozása elõtt jelentõs idõt fordítottam azok megtervezésére, szem elõtt tartva azt hogy a tervezett alkalmazásoknak milyen igényei lesznek. Az adatbázis relációs sémáját a \ref{fig:dbmodel} ábra ábrázolja. Fontos még megemlíteni, hogy az adatbázis összes táblája $utf8\_unicode\_ci$ alapértelmezett karakter kódolást alkalmaz, mely biztosítja, hogy többek közt a Magyar nyelvi sajátos karakteri is megfelelõen tárolódjanak.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../../Borkostolas_weblap/dbmodel}
+	\caption[Adatbázis model]{Adatbázis model \label{fig:dbmodel}}
+\end{figure}
+
+\subsection{scores tábla}
+
+Ahogy az értékeléseket tartalmazó $scores$ táblát létrehozó szkript  \ref{lst:scores create} kód részlet is tükrözi, látható, hogy a táblában a felhasználók azonosítóját $user\_id$ tartalmazó oszlop és a borok azonosítóját $wine\_id$ tartalmazó oszlop is mint $FOREIGN\_KEY$ szerepel amik természetesen a borokat $wines$ és a felhasználókat $users$ tartalmazó táblák megfelelõ oszlopaira hivatkoznak, ezek segítik az adatbázis konzisztenciájának megõrzését, mivel amikor egy felhasználó vagy bor törlésre kerül akkor az $ON\ DELETE\ CASCADE$ megkötés hatására az értékeléseket tartalmazó $scores$ táblából azok a sorok is törlõdni fognak amik így már nem létezõ azonosítókra hivatkoznának. Itt talán még érdemes kitérni arra is hogy takarékossági okokból az értékelések maximum nyolc számjegybõl állhatnak amiben a decimális pontosságot három tizedes jegyig engedélyezzük. 
 
 \begin{minipage}{\linewidth}
 \begin{lstlisting}[language=sql,label={lst:scores create}, caption={Az értékeléseket tartalmazó ($scores$) táblát létrehozó parancs}]
@@ -355,19 +364,13 @@ FOREIGN KEY (`wine_id`) REFERENCES wines(`wine_id`) ON DELETE CASCADE
 \end{lstlisting}
 \end{minipage}
 
-Ahogy az értékeléseket tartalmazó $scores$ táblát létrehozó szkript \ref{lst:scores create} is tükrözi, látható, hogy a táblában a felhasználók azonosítóját $user\_id$ tartalmazó oszlop és a borok azonosítóját $wine\_id$ tartalmazó oszlop is mint $FOREIGN\_KEY$ szerepel amik természetesen a borokat $wines$ és a felhasználókat $users$ tartalmazó táblák megfelelõ oszlopaira hivatkoznak, ezek segítik az adatbázis konzisztenciájának megõrzését, mivel amikor egy felhasználó vagy bor törlésre kerül akkor az $ON DELETE CASCADE$ megkötés hatására az értékeléseket tartalmazó $scores$ táblából azok a sorok is törlõdni fognak amik így már nem létezõ azonosítókra hivatkoznának. Itt talán még érdemes kitérni arra is hogy takarékossági okokból az értékelések maximum nyolc számjegybõl állhatnak amiben a decimális pontosságot három tizedes jegyig engedélyezzük. Valamint az is jól látható hogy egy idõbélyeg oszlopban $timestamp$ nyomon követjük majd az értékelések módosításának idõpontját, ez elengedhetetlen a web és android alkalmazás között való effektív szinkronizációhoz. Végül talán még érdemes arra kitérni hogy melyik mezõ milyen értéket vehet föl és mik azok alapértelmezett értékei: a $user\_id$ és a $wine\_id$ helyzetét már tisztáztuk, nem maradt más mint az értékeléseket tartalmazó $score$ és a módosítások idõbélyegét nyomon követõ $timestamp$. A $score$ mezõ értéke akár $NULL$ is lehet így lehetõvé téve a felhasználók számára hogy ha esetleg meggondolták magukat akkor töröljék a már meglévõ értékelésüket. Ez lényegében csak egy praktikus megoldás mert így amikor az alkalmazás egyszerre több értékelés eredményét próbálja módosítani akkor azt meg tudja tenni egy $UPDATE$ SQL paranccsal, nem kell ennek az esetnek a külön kezelésére egy $DELETE$ utasítást írni. Valóban így több hely foglalódik le az adatbázisban, de ne felejtsük el, hogy olyan borok értékelésérõl beszélünk amiket az adott felhasználó egyszer már értékelt. Én valószínûbbnek tartom azt hogy valaki a kitörölt bort késõbb újra értékel mint az hogy soha többet nem tér vissza hozzá. A $timestamp$ mezõ alapértelmezett értéke a $CURRENT\_TIMESTAMP$ ami másodperc pontossággal tartalmazza az idõt alábbi formátumban: $Y-m-d\ h:i:s$ ahol $Y$ az év $m$ a hónap $d$ a nap mindegyik numerikus, majd $h$ az óra $i$ a perc és $s$ a másodperc két karakteres formátumban. $NULL$ helyett pedig $0000-00-00 00:00:00$ fog szerepelni a mezõben.
+Valamint az is jól látható hogy egy idõbélyeg oszlopban $timestamp$ nyomon követjük majd az értékelések módosításának idõpontját, ez elengedhetetlen a web és android alkalmazás között való effektív szinkronizációhoz. Végül talán még érdemes arra kitérni hogy melyik mezõ milyen értéket vehet föl és mik azok alapértelmezett értékei: a $user\_id$ és a $wine\_id$ helyzetét már tisztáztuk, nem maradt más mint az értékeléseket tartalmazó $score$ és a módosítások idõbélyegét nyomon követõ $timestamp$. A $score$ mezõ értéke akár $NULL$ is lehet így lehetõvé téve a felhasználók számára hogy ha esetleg meggondolták magukat akkor töröljék a már meglévõ értékelésüket. Ez lényegében csak egy praktikus megoldás mert így amikor az alkalmazás egyszerre több értékelés eredményét próbálja módosítani akkor azt meg tudja tenni egy $UPDATE$ SQL paranccsal, nem kell ennek az esetnek a külön kezelésére egy $DELETE$ utasítást írni. Valóban így több hely foglalódik le az adatbázisban, de ne felejtsük el, hogy olyan borok értékelésérõl beszélünk amiket az adott felhasználó egyszer már értékelt. Én valószínûbbnek tartom azt hogy valaki a kitörölt bort késõbb újra értékel mint az hogy soha többet nem tér vissza hozzá. A $timestamp$ mezõ alapértelmezett értéke a $CURRENT\_TIMESTAMP$ ami másodperc pontossággal tartalmazza az idõt alábbi formátumban: $Y-m-d\ h:i:s$ ahol $Y$ az év $m$ a hónap $d$ a nap mindegyik numerikus, majd $h$ az óra $i$ a perc és $s$ a másodperc két karakteres formátumban. $NULL$ helyett pedig $0000-00-00 00:00:00$ fog szerepelni a mezõben.
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.7\linewidth]{../../Borkostolas_weblap/dbmodel}
-\caption[Adatbázis model]{Adatbázis model}
-\label{fig:dbmodel}
-\end{figure}
+\subsection{wines tábla}
 
-A borokat tartalmazó $wines$ tábla egyáltalán nem bonyolult. A tábla indexelését a $wine\_id$ segítségével történek amely minden egyes új bor hozzáadásánál automatikusan növekszik eggyel az $AUTO\_INCREMENT$ -nek köszönhetõen. Az évjáratot $wine\_year$ és az árat $wine\_price$ tartalmazó mezõkön kívül az összes többi megadása kötelezõ. Az évjárat egy maximum négy jegyû egész szám lehet, míg az ára akár hatvannégy hússzú is lehet. Jelenleg a borok ára Magyar Forintban értendõ. Ezek a megkötések fõképp a projekt fejlesztése alatt megismert borkóstolási versenyek és adatbázisok szerkezeti felépítése miatt lettek így meghatározva. A többi mezõ kötelezõ szöveggel való feltöltését az alábbi táblázat \ref{tbl:wines} határozza meg:
+A borokat tartalmazó $wines$ tábla egyáltalán nem bonyolult. A tábla indexelését a $wine\_id$ segítségével történek amely minden egyes új bor hozzáadásánál automatikusan növekszik eggyel az $AUTO\_INCREMENT$ -nek köszönhetõen. Az évjáratot $wine\_year$ és az árat $wine\_price$ tartalmazó mezõkön kívül az összes többi megadása kötelezõ. Az évjárat egy maximum négy jegyû egész szám lehet, míg az ára akár hatvannégy hússzú is lehet. Jelenleg a borok ára Magyar Forintban értendõ. Ezek a megkötések fõképp a projekt fejlesztése alatt megismert borkóstolási versenyek és adatbázisok szerkezeti felépítése miatt lettek így meghatározva. A többi mezõ kötelezõ szöveggel való feltöltését az alábbi táblázat \ref{tbl:wines-content} határozza meg:
 
-
-\begin{table}
+\begin{table}[h!]
 \begin{center}
 \begin{tabular}{| l | l |}
 	\hline
@@ -378,11 +381,12 @@ A borokat tartalmazó $wines$ tábla egyáltalán nem bonyolult. A tábla indexelését
 	wine\_composition & A bor összetétele \\ \hline
 \end{tabular}
 \end{center}
-\label{tbl:wines}
-\caption{A borokat leíró tábla kötelezõ mezõinek felépítése}
+\caption{A borokat leíró tábla kötelezõ mezõinek felépítése \label{tbl:wines-content}}
 \end{table}
 
+\subsection{users tábla}
 
+A felhasználókra vonatkozó adatokat nyomon követõ tábla neve az adatbázisban $users$. A tábla elsõre talán túl bonyolultnak tûnhet, de minden mezõnek fontos feladata van, melyek lehetõvé teszik egy kedvelt felhasználó kezelõ modul használatát \cite{php-login}. A borokat tároló $wines$ táblához hasonlóan itt is van egy azonosító még pedig a $user\_id$ amely a tábla indexelését látja el és automatikusan növekszik eggyel az $AUTO\_INCREMENT$ -nek köszönhetõen amikor egy új felhasználó regisztrál a rendszerbe. A $user\_id$ nem az egyetlen egyedi $UNIQUE$ azonosító a táblában, a felhasználó nevét tároló $user\_name$, valamint a regisztrált felhasználó által megadott e-mail címet tároló $user\_email$ mezõ is egyedi ezzel azt meggátolva, hogy valaki már egy létezõ e-mail címmel vagy felhasználó névvel újból regisztráljon. A regisztráció után már aktivált felhasználó státuszt a $user\_active$ követi nyom, úgy hogy azokhoz akik még nem látogatták meg a regisztrációt visszaigazoló e-mailben kapott linket, hozzájuk nullát rendel, akik pedig ezt már megetették egyet kapnak, ez arra szolgál hogy csak olyan e-mail címeket zároljon a rendszer amelyek már regisztráció után aktivált felhasználó fiókhoz tartoznak. A felhasználót azonosító süti kulcs a $user\_rememberme\_token$ mezõben tárolódik, mely két hétig érvényes, ezzel lehetõvé téve a web alkalmazás számára, hogy felismerje az ismételt látogatókat még akkor is ha már más $HttpSession$ be tartoznak. A hibás bejelentkezések számát a $user\_failed\_logins$ mezõ tárolja, többek között ennek pontos felhasználását késõbb fogom részletezni a felhasználó kezelõ rendszer részletes ismertetésénél. A regisztráció során használt ip cím a $user\_registration\_ip$ -ben tárolódik el. Adminisztrátori jogosultság megadását teszi lehetõvé a $user\_permission$ mezõ, melynek alapértelmezett értéke $0$, $1$ pedig az adminisztrátori jogosultságot szimbolizálja. A még nem tárgyalt mezõket két csoportra bonthatjuk, az egyik mely valamilyen hash stringet tartalmaznak mint a $user\_password\_hash$, $user\_activation\_hash$, $user\_password_reset\_hash$. A másik csoport pedig olyan mezõk amelyek valamilyen tevékenységet nyomon követõ idõ bélyeget tárolnak mint a: $user\_password\_reset\_timestamp$, $user\_last\_failed\_login$, $user\_registration\_datetime$. Nézzük elõször az utóbbit, az idõ bélyeg típust tároló mezõket. A $user\_password\_reset\_timestamp$ arra szolgál hogy nyomon tudjuk követni, hogy a felhasználó vagy esetleges támadó mikor igényelt jelszó újra beállító e-mailt. A $user\_last\_failed\_login$ mezõ a legutolsó hibás bejelentkezés idõpontját tárolja. A $user\_registration\_datetime$ -ben tárolt idõpontra pedig majd a regisztrációt visszaigazoló és aktiváló e-mail linkjének kezelésekor lesz szükség. Végül röviden azokról a mezõ típusokról amelyek valamilyen hash stringet tárolnak, mivel arra, hogy mi a hash és miért de fõképp milyen módon van használva, majd többek között késõbb térek ki a felhasználó kezelõ rendszer részletes ismertetésénél. A $user\_password\_hash$ tárolja a felhasználó jelszavát hashelt formátumban. A regisztráció után küldött aktivációs e-mailhez használt aktivációs link validitásának ellenõrzésére szolgáló hasht a  $user\_activation\_hash$ tárolja. $user\_password_reset\_hash$ pedig az új jelszót igénylõ e-mail link hitelesítésére használt hasht tárolja.
 
 \section{php}
 
@@ -400,8 +404,11 @@ A borokat tartalmazó $wines$ tábla egyáltalán nem bonyolult. A tábla indexelését
 \subsection{kapcsolat.php - Kapcsolat}
 
 \section{Dinamikus tartalom}
-\subsection{Regisztráció}
-\subsection{Bejelentkezés}
+\subsection{php-login}
+\paragraph{Hashelés}
+A hashelés
+\paragraph{Felhasználói állapot nyomkövetése}
+Nyomkövetés
 \subsection{demo.php - Demó}
 
 
@@ -685,7 +692,8 @@ vol. 30, no 1, 107-117, 1998
 
 \bibitem{CoHITS}London András és Csendes Tibor. HITS based network algorithm for evaluating the professional skills of wine tasters
 
-
+\bibitem{php-login}Panique. http://www.php-login.net
+\emph{http://opensource.org/licenses/MIT MIT License}
 
 %\begin{thebibliography}{99}
 % 10-nél több hivatkozás esetén
