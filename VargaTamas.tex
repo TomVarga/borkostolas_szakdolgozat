@@ -395,7 +395,7 @@ A CSS-t elõször Hakon Wium Lie terjesztette elõ 1994 Októbar 10. -én \cite{CSS-o
 
 Tagadhatatlan, hogy a CSS a webfejlesztés egyik fõ sarokköve. Létrehozásának fõ oka az volt, hogy a HTML oldalak tartalmi illetve prezentációs része könnyen szétválasztható legyen. Ez a szeparáció azért is fontos, mert így nagyobb flexibilitást nyerhetünk a prezentáció területén, valamint lehetõvé válik a HTML oldalak formázottságának megosztása egy egységes CSS fájlnak köszönhetõen. Ezzel csökken a tartalmi oldalak komplexitása, valamint kevesebb lesz bennük az ismétlõdés. Elõnyök között mindenképpen említésre méltó, hogy így könnyebben lehetséges ugyan azt a markup nyelv által leírt dokumentumot több különbözõ stílusban megjeleníteni attól függõen, hogy kinek, illetve milyen célra szánt az adott tartalom. Pontosabban ez alatt azt értjük hogy a megjelenítés különbözõ lehet akár egy képernyõn, nyomtatásban, hangosan (képernyõ felolvasáskor) vagy Braille billentyûs eszközökön. Továbbá az is lehetséges, hogy a megjelenítendõ tartalmat illeszkedjen az adott eszköz képernyõ méretéhez.
 
-Sajnos nem csak elõnye vannak a CSS használatának. Az ember könnyen bele tud futni néhány igen bosszantó limitációba, mint például elemek vertikális rendezése. Míg a vízszintes elrendezés általánosságban könnyen kezelhetõ, a vertikális sokszor nem túl intuitív módon valósítható csak meg, ha egyáltalán megvalósítható. Egyszerû feladatok mint például egy elem vertikálisan való középre zárása, vagy a lábléc limitálása hogy ne legyen magasabb mint a viewport alja, vagy nem intuitív komplikált szabályrendszert igényel, vagy olyan szabályokat igényel melyek nem túl bonyolultak viszont kevéssé támogatottak. Ezekbe konkrétan én is bele futottam és jelentõs kísérletezgetésbe telt mire sikerült olyan szabályrendszert alkotni a leíró nyelvben mely a számomra elfogadható megjelenítést tette lehetõvé. A kulcs az volt hogy minden fõ elemet egy konténerbe kellett tegyek amelyek egy $float:left;$ tulajdonsággal rendelkeznek. Ennek megértéséhez azt kell tudni, hogy a CSS -ben három fõ pozicionálási mód van. 
+Számomra mint már korábban említettem a CSS fõ elõnye az volt, hogy a web alkalmazás stilisztikai felépítést egy fájlból könnyedén tudtam módosítani. De sajnos nem csak elõnye vannak a CSS használatának. Az ember könnyen bele tud futni néhány igen bosszantó limitációba, mint például elemek vertikális rendezése. Míg a vízszintes elrendezés általánosságban könnyen kezelhetõ, a vertikális sokszor nem túl intuitív módon valósítható csak meg, ha egyáltalán megvalósítható. Egyszerû feladatok mint például egy elem vertikálisan való középre zárása, vagy a lábléc limitálása hogy ne legyen magasabb mint a viewport alja, vagy nem intuitív komplikált szabályrendszert igényel, vagy olyan szabályokat igényel melyek nem túl bonyolultak viszont kevéssé támogatottak. Viszont az kétségtelen, hogy használatának elõnyei túlnyomó részben vannak hátrányaihoz képest. Némelyikbe azért konkrétan én is bele futottam és jelentõs kísérletezgetésbe telt mire sikerült olyan szabályrendszert alkotni a leíró nyelvben mely a számomra elfogadható megjelenítést tette lehetõvé. A kulcs az volt hogy minden fõ elemet egy konténerbe kellett tegyek amelyek egy $clear:both;$ tulajdonsággal rendelkeznek majd ezeken belül már könnyebben tudtam pozicionálni a további elemeket. Ennek megértéséhez azt kell tudni, hogy a CSS -ben három fõ pozicionálási mód van. 
 
 \paragraph{Normal flow}Az $inline$ elemek úgy vannak elrendezve mint a betûk egy szavakat tartalmazó szövegben, tehát egymás után a rendelkezésre álló területen amíg van szabad hely, ha elfogy a hely akkor egy új sorban folytatódnak. $Block$ elemek vertikálisan rakhatók össze, mint a paragrafusok vagy mint a felsorolások egyes pontjai. A $Normal flow$ lehetõvé teszi $inline$ elemek vagy $blokkok$ relatív pozicionálást.
 
@@ -403,10 +403,34 @@ Sajnos nem csak elõnye vannak a CSS használatának. Az ember könnyen bele tud fut
 
 \paragraph{Absolute positioning}Egy abszolút módon elhelyezett elem nem foglal helyet és nincs hatással a $Normal flow$ típusú elemekre. Egy maghatározott saját területet foglal el a konténerében a többi elemtõl függetlenül.
 
-Viszont az kétségtelen, hogy használatának elõnyei túlnyomó részben vannak hátrányaihoz képest.
+\paragraph{Position}Nem meglepõ módon négy pozíció van: $top$ - fel, $bottom$ - le, $left$ - balra, $right$ - jobbra. Ugyan csak négy lehetséges értéke lehet a $positio$ tulajdonságnak. Amennyiben egy elem $static$ -tól eltérõ módon van elhelyezve akkor a további tulajdonságok $top$, $bottom$, $left$, $right$ eltolás illetve pozíció definiálásra szolgálnak. A négy lehetséges érték:
 
+\begin{enumerate}
+\item\textbf{Static}: Az alapértelmezett érték amely a $normal flow$ -ba teszi
+\item\textbf{Relative}: Az elem a $normal flow$ -ba kerül majd abból a pozícióból eltolódik. A további elemel úgy kerülnek elrendezésre mint ha az eredeti elem ott maradt volna.
+\item\textbf{Absolute}: Abszolút pozicionálást definiál. Az eleme a legközelebb nem $static$ elemû õséhez képest lesz pozicionálva.
+\item\textbf{Fixed}: Az elem abszolút pozicionálásra kerül egy fixált pozícióban a képernyõn még akkor is ha az egész dokumentum el van görgetve. az elemet	
+\end{enumerate}
 
-Számomra mint már korábban említettem a CSS fõ elõnye az volt, hogy a web alkalmazás stilisztikai felépítést egy fájlból könnyedén tudtam módosítani.
+\paragraph{Float és clear}A $float$ tulajdonságnak három különbözõ értéke lehet. Abszolút vagy fixen pozicionált elemek nem lehetnek $float$ típusúak. Más elemek normálisan lebegnek a többi $float$ típusú elem körül, hacsak azt az $clear$ tulajdonságuk meg nem gátolja.
+\begin{enumerate}
+	\item\textbf{left}: Az elem annak a vonalnak a bal oldalán jelenik meg ahol eredetileg jelent volna meg, a többi elem a jobb oldalán lesz.
+	\item\textbf{right}: Az elem annak a vonalnak a jobb oldalán jelenik meg ahol eredetileg jelent volna meg, a többi elem a bal oldalán lesz.
+	\item\textbf{clear}: Arra kényszerít egy elemet hogy az $clear$ által meghatározott elem bal oldalán legyen $clear:left$ vagy jobb oldalán $claer:right$ vagy esetleg mindkét oldalán $clear:both$.
+
+\end{enumerate}
+
+Kellõ kísérletezés és gyakorlás után azért elérhetõ egy olyan struktúra amely ezeket megfelelõen egymásba ágyazva a kívánt kinézetet nyújtja. 
+
+Érdemes még azért a CSS szintaktikájával is tisztában lenni. Röviden egy CSS szabály egy $selector$-ból és egy deklarációs blokkból épül fel.
+
+\begin{minipage}{\linewidth}
+	\begin{lstlisting}[language=html,label={lst:css syntax}, caption={CSS szintaxis}]
+	h2 {color: #bb1f42; font-size: 1.2em;}
+	\end{lstlisting}
+\end{minipage}
+
+Konkrétan a \ref{lst:css syntax} kód részletben látott CSS kódnál a $h2$ a $selector$ õt követi a deklarációs blokk amely két deklarációt tartalmaz. Egy deklarációnak két része van, egy a tulajdonságot megnevezõ része, ez van a $:$ elõtt, és egy azt követõ rész amely az értéket tartalmazza. Lehetséges még több $selector$ összecsoportosítsa, melynek köszönhetõen jócskán csökkenthetõ az ismétlõdõ kód. Ugyan ezt segíti elõ az is, hogy a CSS alapvetõen támogat öröklõdést, így egy felsõ konténeren definiált tulajdonság mindig lefelé a gyermekei felé propagál. Természetes a kevesebb kódnak más jó mellékhatása is van, mint a gyorsabban töltõdõ weboldal és kisebb sávszélesség használat. A $selector$ több típusú is lehet és ezeket kombinálni is lehet. A \ref{lst:css syntax} kód részletben látottat $element selector$ -nak hívják, mely egy adott típusú elemet választ ki. A $class selector$ az olyan elemekre fog vonatkozni amik az adott $class$ attribútummal rendelkeznek. Ilyenkor egy pontot teszünk a $selector$ elé. Némely elem rendelkezhet különbözõ típusokkal is, pl.: egy $checkbox$ típusú $input$ elemre a $selector$ az alábbi módon nézne ki: $input[type=checkbox]$.
 
 \section{PHP}
 A PHP ($PHP: Hypertext Preprocessor$) egy széles körben elterjedt nyílt forráskódú általános célokra kifejlesztett szkript nyelv amely különösképpen alkalmas webes fejlesztésre, valamint HTML -be ágyazható. Ezt az alábbi példa \ref{lst:php hello world} kód részlet szemlélteti.
