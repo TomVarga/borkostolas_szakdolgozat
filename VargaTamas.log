@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.11.23)  29 APR 2015 03:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.11.23)  29 APR 2015 03:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -902,7 +902,7 @@ Overfull \hbox (13.23659pt too wide) in paragraph at lines 323--324
 áv, kapc-so-la-tok és egyéb hír csatornák
  []
 
-<Wireframe.png, id=392, 730.73pt x 530.98375pt>
+<Wireframe.png, id=397, 730.73pt x 530.98375pt>
 File: Wireframe.png Graphic file (type png)
  <use Wireframe.png>
 Package pdftex.def Info: Wireframe.png used on input line 327.
@@ -950,7 +950,7 @@ Overfull \hbox (10.3999pt too wide) in paragraph at lines 339--340
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\H' on input line 341.
 
-[14] <../../Borkostolas_weblap/dbmodel.png, id=411, 415.5525pt x 420.57124pt>
+[14] <../../Borkostolas_weblap/dbmodel.png, id=416, 415.5525pt x 420.57124pt>
 File: ../../Borkostolas_weblap/dbmodel.png Graphic file (type png)
 
 <use ../../Borkostolas_weblap/dbmodel.png>
@@ -1015,50 +1015,51 @@ File: lstlang1.sty 2014/09/06 1.5e listings language file
 (x:/texlive/2014/texmf-dist/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2014/09/06 1.5e listings language file
 )
-Overfull \hbox (17.62482pt too wide) in paragraph at lines 465--485
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 465--482
 []$[]$ 
  []
 
 
-Overfull \hbox (20.45882pt too wide) in paragraph at lines 486--487
+Overfull \hbox (20.45882pt too wide) in paragraph at lines 483--484
 \T1/ptm/m/n/12 sz-eretnénk és ter-mészete-sen a hoz-zá tar-tozó jel-szót. Ezek 
 a kó-drés-zlet-ben sor-ra a $\OML/cmm/m/it/12 DB[]HOST$\T1/ptm/m/n/12 ,
  []
 
 [23]
-Overfull \hbox (17.62482pt too wide) in paragraph at lines 490--495
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 487--492
 []$[]$ 
  []
 
 
-Overfull \hbox (17.62482pt too wide) in paragraph at lines 498--503
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 495--500
 []$[]$ 
  []
 
 
-Overfull \hbox (8.82043pt too wide) in paragraph at lines 504--505
+Overfull \hbox (8.82043pt too wide) in paragraph at lines 501--502
 \T1/ptm/m/n/12 parancs-ban sz-eretnénk használ-ni. A har-madik és egy-ben utol-
 só na meg op-cionális paraméter
  []
 
-[24]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 508.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 505.
 
- (x:/texlive/2014/texmf-dist/tex/latex/psnfss/omsptm.fd
+(x:/texlive/2014/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 508.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 505.
 
-Overfull \hbox (17.62482pt too wide) in paragraph at lines 506--514
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 503--511
 []$[]$ 
  []
 
+[24]
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 516.
+ine 515.
+
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 528.
+(hyperref)                removing `\H' on input line 527.
 
 [25] [26]
 3. fejezet.
@@ -1083,12 +1084,16 @@ LaTeX Warning: Marginpar on page 27 moved.
 4. fejezet.
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 554.
+(hyperref)                removing `\H' on input line 553.
 
 [28
 
 ]
 5. fejezet.
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\H' on input line 557.
+
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\H' on input line 558.
@@ -1101,10 +1106,6 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\H' on input line 560.
 
-
-Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 561.
-
 [29
 
 ]
@@ -1114,7 +1115,7 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 ]
 7. fejezet.
 
-Overfull \hbox (4.02876pt too wide) in paragraph at lines 573--574
+Overfull \hbox (4.02876pt too wide) in paragraph at lines 572--573
 \T1/ptm/m/n/12 tel és tel-jes revíz-iókövetési lehet®séggel, ame-ly nem függ a 
 hálózat elérését®l vagy közpon-
  []
@@ -1122,14 +1123,14 @@ hálózat elérését®l vagy közpon-
 [31
 
 ]
-Overfull \hbox (43.1565pt too wide) in paragraph at lines 584--586
+Overfull \hbox (43.1565pt too wide) in paragraph at lines 583--585
 []\T1/ptm/m/n/12 Szakdolgozat: []$\T1/pcr/m/n/12 https :[] \OML/cmm/m/it/12 ==\
 T1/pcr/m/n/12 github . com\OML/cmm/m/it/12 =\T1/pcr/m/n/12 TomVarga\OML/cmm/m/i
 t/12 =\T1/pcr/m/n/12 borkostolas _ szakdolgozat$[] 
  []
 
 
-Overfull \hbox (45.29208pt too wide) in paragraph at lines 587--588
+Overfull \hbox (45.29208pt too wide) in paragraph at lines 586--587
 []\T1/ptm/m/n/12 Android al-ka-lmazás: []$\T1/pcr/m/n/12 https :[] \OML/cmm/m/i
 t/12 ==\T1/pcr/m/n/12 github . com\OML/cmm/m/it/12 =\T1/pcr/m/n/12 TomVarga\OML
 /cmm/m/it/12 =\T1/pcr/m/n/12 borkostolas _ android _
@@ -1140,13 +1141,13 @@ t/12 ==\T1/pcr/m/n/12 github . com\OML/cmm/m/it/12 =\T1/pcr/m/n/12 TomVarga\OML
 [34
 
 ]
-Overfull \hbox (2.07404pt too wide) in paragraph at lines 791--793
+Overfull \hbox (2.07404pt too wide) in paragraph at lines 790--792
 \T1/ptm/m/n/12 Alulírott Var-ga Tamás pro-gramter-vez® in-for-matikus BSc sza-k
 os hall-gató, ki-je-len-tem, hogy
  []
 
 
-Overfull \hbox (4.59113pt too wide) in paragraph at lines 796--797
+Overfull \hbox (4.59113pt too wide) in paragraph at lines 795--796
 []\T1/ptm/m/n/12 Tudomásul veszem, hogy sza-k-dol-go-zatomat a Szege-di Tu-domá
 ny-e-gyetem In-for-matikai
  []
@@ -1154,7 +1155,7 @@ ny-e-gyetem In-for-matikai
 [35
 
 ]
-Overfull \hbox (25.02411pt too wide) in paragraph at lines 839--840
+Overfull \hbox (25.02411pt too wide) in paragraph at lines 838--839
 []\T1/ptm/m/n/12 http://wiki.hashphp.org/PDO_Tutorial_for_MySQL_Developers#Conn
 ecting_to_MySQL 
  []
@@ -1162,27 +1163,20 @@ ecting_to_MySQL
 [36
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 873.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 873.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 872.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 872.
  (./VargaTamas.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 873.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 873.
-
-
-Package rerunfilecheck Warning: File `VargaTamas.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `VargaTamas.out':
-(rerunfilecheck)             Before: BC60CF77937A03B759DE53EE16C43D3B;3852
-(rerunfilecheck)             After:  ED1A06E3F386742B9725CAAE4F51AFEB;3852.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 873.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 872.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 872.
+Package rerunfilecheck Info: File `VargaTamas.out' has not changed.
+(rerunfilecheck)             Checksum: 385A53908EC07262AD4DA650F73BE988;3926.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 872.
  ) 
 Here is how much of TeX's memory you used:
- 24024 strings out of 493109
- 442306 string characters out of 6138586
- 884911 words of memory out of 5000000
- 26894 multiletter control sequences out of 15000+600000
+ 24019 strings out of 493109
+ 442197 string characters out of 6138586
+ 885928 words of memory out of 5000000
+ 26892 multiletter control sequences out of 15000+600000
  46927 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  48i,16n,76p,3523b,3176s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1192,9 +1186,6 @@ enced but does not exist, replaced by a fixed one
 pdfTeX warning (dest): name{http\\unskip\040\\penalty\040\\@M\040\\kern\040.1em
 ://bor.tvarga.hu/borkostolas.apk} has been referenced but does not exist, repla
 ced by a fixed one
-
-pdfTeX warning (dest): name{chapter*.28} has been referenced but does not exist
-, replaced by a fixed one
 
 {x:/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}<x:/texlive/2014/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><x:/texlive/2014/texmf-dist/font
@@ -1209,10 +1200,10 @@ dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><x:/texlive/2014/texmf-dist/fonts
 e1/urw/courier/ucrr8a.pfb><x:/texlive/2014/texmf-dist/fonts/type1/urw/times/utm
 b8a.pfb><x:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><x:/texliv
 e/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on VargaTamas.pdf (36 pages, 265240 bytes).
+Output written on VargaTamas.pdf (36 pages, 265278 bytes).
 PDF statistics:
- 696 PDF objects out of 1000 (max. 8388607)
- 634 compressed objects within 7 object streams
- 196 named destinations out of 1000 (max. 500000)
- 487 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 697 PDF objects out of 1000 (max. 8388607)
+ 635 compressed objects within 7 object streams
+ 193 named destinations out of 1000 (max. 500000)
+ 495 words of extra memory for PDF output out of 10000 (max. 10000000)
 

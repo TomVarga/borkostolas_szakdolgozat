@@ -33,19 +33,20 @@
 \select@language {magyar} \contentsline {paragraph}{Float \'es clear}{21}{section*.14}
 \select@language {magyar} \contentsline {section}{\numberline {2.4}PHP}{21}{section.2.4}
 \select@language {magyar} \contentsline {subsection}{\numberline {2.4.1}PHP Data Objects (PDO)}{23}{subsection.2.4.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.4.2}\'Allapotkezel\'es}{25}{subsection.2.4.2}
 \select@language {magyar} \contentsline {section}{\numberline {2.5}JavaScript}{25}{section.2.5}
 \select@language {magyar} \contentsline {subsection}{\numberline {2.5.1}numeric}{25}{subsection.2.5.1}
-\select@language {magyar} \contentsline {section}{\numberline {2.6}JQuery}{25}{section.2.6}
-\select@language {magyar} \contentsline {section}{\numberline {2.7}Grafikonok}{25}{section.2.7}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.7.1}Google Charts}{25}{subsection.2.7.1}
-\select@language {magyar} \contentsline {section}{\numberline {2.8}Statikus tartalom}{25}{section.2.8}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.8.1}index.php - F\H ooldal}{25}{subsection.2.8.1}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.8.2}borkostolasEredmenyek.php - Eredm\'enyek}{25}{subsection.2.8.2}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.8.3}modszerek.php - M\'odszerek}{25}{subsection.2.8.3}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.8.4}kapcsolat.php - Kapcsolat}{25}{subsection.2.8.4}
-\select@language {magyar} \contentsline {section}{\numberline {2.9}Dinamikus tartalom}{25}{section.2.9}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.9.1}php-login}{25}{subsection.2.9.1}
-\select@language {magyar} \contentsline {paragraph}{Hashel\'es}{25}{section*.16}
+\select@language {magyar} \contentsline {section}{\numberline {2.6}JQuery}{26}{section.2.6}
+\select@language {magyar} \contentsline {section}{\numberline {2.7}Grafikonok}{26}{section.2.7}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.7.1}Google Charts}{26}{subsection.2.7.1}
+\select@language {magyar} \contentsline {section}{\numberline {2.8}Statikus tartalom}{26}{section.2.8}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.8.1}index.php - F\H ooldal}{26}{subsection.2.8.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.8.2}borkostolasEredmenyek.php - Eredm\'enyek}{26}{subsection.2.8.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.8.3}modszerek.php - M\'odszerek}{26}{subsection.2.8.3}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.8.4}kapcsolat.php - Kapcsolat}{26}{subsection.2.8.4}
+\select@language {magyar} \contentsline {section}{\numberline {2.9}Dinamikus tartalom}{26}{section.2.9}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.9.1}php-login}{26}{subsection.2.9.1}
+\select@language {magyar} \contentsline {paragraph}{Hashel\'es}{26}{section*.16}
 \select@language {magyar} \contentsline {paragraph}{Felhaszn\'al\'oi \'allapot nyomk\"ovet\'ese}{26}{section*.17}
 \select@language {magyar} \contentsline {subsection}{\numberline {2.9.2}demo.php - Dem\'o}{26}{subsection.2.9.2}
 \select@language {magyar} \contentsline {chapter}{\numberline {3}A mobil alkalmaz\'as}{27}{chapter.3}

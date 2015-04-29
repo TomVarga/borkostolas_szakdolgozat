@@ -429,7 +429,7 @@ Kellõ kísérletezés és gyakorlás után azért elérhetõ egy olyan struktúra amely ez
 
 \begin{minipage}{\linewidth}
 	\begin{lstlisting}[language=html,label={lst:css syntax}, caption={CSS szintaxis}]
-	h2 {color: #bb1f42; font-size: 1.2em;}
+h2 {color: #bb1f42; font-size: 1.2em;}
 	\end{lstlisting}
 \end{minipage}
 
@@ -442,14 +442,14 @@ A PHP ($PHP:\ Hypertext\ Preprocessor$) egy széles körben elterjedt nyílt forrás
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-	<head>
-	<title>Példa</title>
-	</head>
-	<body>
-		<?php
-			echo "Hello Világ!";
-		?>	
-	</body>
+  <head>
+    <title>Példa</title>
+    </head>
+    <body>
+      <?php
+        echo "Hello Világ!";
+      ?>	
+    </body>
 </html>
 	\end{lstlisting}
 \end{minipage}
@@ -464,21 +464,18 @@ A PHP Data Objects (PDO) a PHP adatbázis elérést nyújtó interfésze. Minden adatb
 
 \begin{minipage}{\linewidth}
 	\begin{lstlisting}[language=php,label={lst:php pdo connection}, caption={PHP PDO Connector használata}]
-private function databaseConnection()
-{
-	// if connection already exists
-	if ($this->db_connection != null) {
-		return true;
-	} else {
-	try {
-		$this->db_connection = new PDO('mysql:host='. DB_HOST .';dbname='. DB_NAME . ';charset=utf8', DB_USER, DB_PASS);
-		return true;
-	} catch (PDOException $e) {
-	$this->errors[] = MESSAGE_DATABASE_ERROR . $e->getMessage();
-}
-}
-// default return
-return false;
+private function databaseConnection(){
+  if ($this->db_connection != null) {
+    return true;
+  } else {
+    try {
+      $this->db_connection = new PDO('mysql:host='. DB_HOST .';dbname='. DB_NAME . ';charset=utf8', DB_USER, DB_PASS);
+      return true;
+    } catch (PDOException $e) {
+      $this->errors[] = MESSAGE_DATABASE_ERROR . $e->getMessage();
+    }
+  }
+  return false;
 }
 	\end{lstlisting}
 \end{minipage}
@@ -489,7 +486,7 @@ Az adatbázis kapcsolatot nagyon egyszerû bezárni ahogy a \ref{lst:php pdo close 
 
 \begin{minipage}{\linewidth}
 	\begin{lstlisting}[language=php,label={lst:php pdo close connection}, caption={PHP PDO kapcsolat lezárása}]
-	db_connection = null;
+    db_connection = null;
 	\end{lstlisting}
 \end{minipage}
 
@@ -497,7 +494,7 @@ Miután sikeresen létre hoztunk egy aktív adatbázis kapcsolatot SQL utasításokat 
 
 \begin{minipage}{\linewidth}
 	\begin{lstlisting}[language=php,label={lst:php pdo result handling}, caption={PHP PDO eredmény kezelés}]
-	$user_id = $result_row->user_id;
+    $user_id = $result_row->user_id;
 	\end{lstlisting}
 \end{minipage}
 
@@ -505,10 +502,10 @@ Vegyük észre, hogy az SQL lekérdezésbe nem konkatenáljuk bele a változókat, ha i
 
 \begin{minipage}{\linewidth}
 	\begin{lstlisting}[language=php,label={lst:php pdo sql query}, caption={PHP PDO SQL lekérdezés}]
-	$query_user = $this->db_connection->prepare('SELECT * FROM users WHERE user_name = :user_name');
-	$query_user->bindValue(':user_name', $user_name, PDO::PARAM_STR);
-	$query_user->execute();
-	$result_row = $query_user->fetchObject();
+$query_user = $this->db_connection->prepare('SELECT * FROM users WHERE user_name = :user_name');
+$query_user->bindValue(':user_name', $user_name, PDO::PARAM_STR);
+$query_user->execute();
+$result_row = $query_user->fetchObject();
 	\end{lstlisting}
 \end{minipage}
 
