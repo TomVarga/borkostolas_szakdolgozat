@@ -493,18 +493,27 @@ Az adatbázis kapcsolatot nagyon egyszerû bezárni ahogy a \ref{lst:php pdo close 
 	\end{lstlisting}
 \end{minipage}
 
-Miután sikeresen létre hoztunk egy aktív adatbázis kapcsolatot SQL utasításokat a \ref{lst:php pdo sql query} kódrészletben látott módon indíthatunk. A példában éppen lekérjük egy felhasználó összes információját, majd az így kapott információkat egy tömbbe adja vissza a $fetchObject\left(\right)$ metódus. Vegyük észre, hogy az SQL lekérdezésbe nem konkatenáljuk bele a változókat, ha ilyesmit tennénk akkor az alkalmazásunkat nagyon könnyen feltörhetnék, hiszen éppen ilyen programozói hibákat kihasználva mûködnek az $sql injection$ jellegû támadások. Tehát ha változókat akarunk használni az SQL lekérdezésünkben, akkor a $prepare\left(\right)$ metódusban a behelyettesítendõ helyre kettõsponttal megelõzött változónevet kell írni, melyet majd a $bindValue\left(\right)$ metódussal fogunk ténylegesen a mi változónkhoz kötni. Ez elsõ paraméterként egy stringet vár, ami az SQL lekérdezésben szereplõ változó helyét határozza meg. A második paramétere a mi PHP változónk aminek az értékét az SQL parancsban szeretnénk használni. A harmadik és egyben utolsó na meg opcionális paraméter pedig az elsõ paraméterre vonatkozóan definiálja annak adat típusát. Az $execute\left(\right)$ -hez nem kell sokat hozzáfûzni, egyszerûen végre hajtja a fentiek szerint elõkészített SQL parancsot.
+Miután sikeresen létre hoztunk egy aktív adatbázis kapcsolatot SQL utasításokat a \ref{lst:php pdo sql query} kódrészletben látott módon indíthatunk. A példában éppen lekérjük egy felhasználó összes információját, majd az így kapott információkat egy objektumban adja vissza a $fetchObject\left(\right)$ metódus. Tehát például a $user\_id$ a \ref{lst:php pdo result handling} kódrészletben látottak szerint lesz elérhetõ. Használatos még többek között a $fetchAll\left(\right)$ ami az SQL lekérdezés által visszaadott összes sort egy egy tömbben adja vissza. Hasznos lehet még ismerni a $rowCount\left(\right)$ metódust, ami megadja az SQL parancs által érintett sorok számát.
 
 \begin{minipage}{\linewidth}
-	\begin{lstlisting}[language=php,label={lst:php pdo sql query}, caption={PHP PDO SQL lekérdezés}]
-    $query_user = $this->db_connection->prepare('SELECT * FROM users WHERE user_name = :user_name');
-    $query_user->bindValue(':user_name', $user_name, PDO::PARAM_STR);
-    $query_user->execute();
-    return $query_user->fetchObject();
+	\begin{lstlisting}[language=php,label={lst:php pdo result handling}, caption={PHP PDO eredmény kezelés}]
+	$user_id = $result_row->user_id;
 	\end{lstlisting}
 \end{minipage}
 
-\todo példa lekérdezésekre
+Vegyük észre, hogy az SQL lekérdezésbe nem konkatenáljuk bele a változókat, ha ilyesmit tennénk akkor az alkalmazásunkat nagyon könnyen feltörhetnék, hiszen éppen ilyen programozói hibákat kihasználva mûködnek az $sql injection$ jellegû támadások. Tehát ha változókat akarunk használni az SQL lekérdezésünkben, akkor a $prepare\left(\right)$ metódusban a behelyettesítendõ helyre kettõsponttal megelõzött változónevet kell írni, melyet majd a $bindValue\left(\right)$ metódussal fogunk ténylegesen a mi változónkhoz kötni. Ez elsõ paraméterként egy stringet vár, ami az SQL lekérdezésben szereplõ változó helyét határozza meg. A második paramétere a mi PHP változónk aminek az értékét az SQL parancsban szeretnénk használni. A harmadik és egyben utolsó na meg opcionális paraméter pedig az elsõ paraméterre vonatkozóan definiálja annak adat típusát. Az $execute\left(\right)$ -hez nem kell sokat hozzáfûzni, egyszerûen végre hajtja a fentiek szerint elõkészített SQL parancsot.
+
+\begin{minipage}{\linewidth}
+	\begin{lstlisting}[language=php,label={lst:php pdo sql query}, caption={PHP PDO SQL lekérdezés}]
+	$query_user = $this->db_connection->prepare('SELECT * FROM users WHERE user_name = :user_name');
+	$query_user->bindValue(':user_name', $user_name, PDO::PARAM_STR);
+	$query_user->execute();
+	$result_row = $query_user->fetchObject();
+	\end{lstlisting}
+\end{minipage}
+
+\subsection{Állapotkezelés}
+A PHP nyelveben az állapotkezelésnek két fõbb fajtáját használtam. 
 
 \todo session post/get/request
 
