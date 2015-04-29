@@ -35,6 +35,8 @@
 \usepackage{graphicx}
 \usepackage{psfrag}
 
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[draft]{pgf}
 \usepackage{setspace}
 \usepackage{todonotes}
 \usepackage{pgf, tikz}
@@ -43,10 +45,10 @@
 \usepackage{listings}
 \newcaptionname{magyar}{\lstlistingname}{Kód részlet}
 \lstset{language=sql,
-	keywordstyle=\color{blue},
-	stringstyle=\color{red},
-	commentstyle=\color{green},
-	morecomment=[l][\color{teal}]{\#},
+	keywordstyle=\color{BlueGreen},
+	stringstyle=\color{BrickRed},
+	commentstyle=\color{OliveGreen},
+	morecomment=[l][\color{OliveGreen}]{\#},
 	breaklines=true, postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{red}\hookrightarrow\space}}
 }
 
@@ -434,7 +436,7 @@ Kellõ kísérletezés és gyakorlás után azért elérhetõ egy olyan struktúra amely ez
 Konkrétan a \ref{lst:css syntax} kód részletben látott CSS kódnál a $h2$ a $selector$ õt követi a deklarációs blokk amely két deklarációt tartalmaz. Egy deklarációnak két része van, egy a tulajdonságot megnevezõ része, ez van a $:$ elõtt, és egy azt követõ rész amely az értéket tartalmazza. Lehetséges még több $selector$ összecsoportosítsa, melynek köszönhetõen jócskán csökkenthetõ az ismétlõdõ kód. Ugyan ezt segíti elõ az is, hogy a CSS alapvetõen támogat öröklõdést, így egy felsõ konténeren definiált tulajdonság mindig lefelé a gyermekei felé propagál. Természetes a kevesebb kódnak más jó mellékhatása is van, mint a gyorsabban töltõdõ weboldal és kisebb sávszélesség használat. A $selector$ több típusú is lehet és ezeket kombinálni is lehet. A \ref{lst:css syntax} kód részletben látottat $element selector$ -nak hívják, mely egy adott típusú elemet választ ki. A $class selector$ az olyan elemekre fog vonatkozni amik az adott $class$ attribútummal rendelkeznek. Ilyenkor egy pontot teszünk a $selector$ elé. Némely elem rendelkezhet különbözõ típusokkal is, pl.: egy $checkbox$ típusú $input$ elemre a $selector$ az alábbi módon nézne ki: $input[type=checkbox]$.
 
 \section{PHP}
-A PHP ($PHP: Hypertext Preprocessor$) egy széles körben elterjedt nyílt forráskódú általános célokra kifejlesztett szkript nyelv amely különösképpen alkalmas webes fejlesztésre, valamint HTML -be ágyazható. Ezt az alábbi példa \ref{lst:php hello world} kód részlet szemlélteti.
+A PHP ($PHP:\ Hypertext\ Preprocessor$) egy széles körben elterjedt nyílt forráskódú általános célokra kifejlesztett szkript nyelv amely különösképpen alkalmas webes fejlesztésre, valamint HTML -be ágyazható. Ezt az alábbi példa \ref{lst:php hello world} kód részlet szemlélteti.
 \begin{minipage}{\linewidth}
 	\begin{lstlisting}[language=html,label={lst:php hello world}, caption={PHP Hello World!}]
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
@@ -458,7 +460,7 @@ Annak ellenére, hogy a PHP egy szkript nyelv robusztus alkalmazások létrehozásár
 A PHP nyelv általános felépítésére és szintaxisára nem térek ki, egyrészt azért mert már egy elég régi nyelv melynek alapjai régóta ismertek, valamint azért is mert elég közel a $C$ nyelvhez, mely még ismertebb. Viszont mindenképpen ejtenék pár szót a nyelv sajátosságáról fõkép arra fókuszálva, hogy hogyan történik az állapotkövetés illetve adatbázis elérés.
 
 \subsection{PHP Data Objects (PDO)}
-A PHP Data Objects (PDO) a PHP adatbázis elérést nyújtó interfésze. Minden adatbázis meghajtó amely implementál egy PDO interfészt elérhetõvé tehet az adott adatbázisra specifikus funkciókat. Természetesen önmagában a PDO alkalmatlan adatbázis kezelésre, mindenképpen egy konkrét adatbázis meghajtót kell használni. Mivel a web alkalmazást egy $MySQL$ adatbázis szerver szolgálja ki ezért én a hozzá tartozó $PDO_MYSQL$-t használtam. A PDO alapértelmezetten együtt jár a PHP 5.1-el és elérhetõ PECL kiterjesztésként is PHP 5.0 alatt, de mivel a PDO -nak szükségen van PHP 5 magjában bemutatott objektum orientáltságra, ezért a PDO nem fut korábbi PHP verziókon. 
+A PHP Data Objects (PDO) a PHP adatbázis elérést nyújtó interfésze. Minden adatbázis meghajtó amely implementál egy PDO interfészt elérhetõvé tehet az adott adatbázisra specifikus funkciókat. Természetesen önmagában a PDO alkalmatlan adatbázis kezelésre, mindenképpen egy konkrét adatbázis meghajtót kell használni. Mivel a web alkalmazást egy $MySQL$ adatbázis szerver szolgálja ki ezért én a hozzá tartozó $PDO\_MYSQL$-t használtam. A PDO alapértelmezetten együtt jár a PHP 5.1-el és elérhetõ PECL kiterjesztésként is PHP 5.0 alatt, de mivel a PDO -nak szükségen van PHP 5 magjában bemutatott objektum orientáltságra, ezért a PDO nem fut korábbi PHP verziókon. 
 
 \begin{minipage}{\linewidth}
 	\begin{lstlisting}[language=php,label={lst:php pdo connection}, caption={PHP PDO Connector használata}]
@@ -481,12 +483,24 @@ return false;
 	\end{lstlisting}
 \end{minipage}
 
-A \ref{lst:php pdo connection} kódrészlet a bejelentkeztetõ modul egyik metódusán keresztül mutatja be, hogy hogyan lehet a PHP PDO -vel adatbázis kapcsolatot létrehozni. Elõször is ellenõrzésre kerül, hogy létezik -e már felépített adatbázis kapcsolat, nyilván ha már igen akkor nincs mit tenni, de ha még nem, akkor létrehozunk egy új PDO objektumot, úgy hogy a konstruktorának átadjuk az adatbázis címét, nevét, azt a felhasználót amelyikkel csatlakozni szeretnénk és természetesen a hozzá tartozó jelszót. Ezek a kódrészletben sorra a $DB\_HOST$, $DB\_NAME$, $DB\_USER$, $DB\_PASS$ melyek egy külön konfigurációs fájlban kerültek definiálásra. Itt fontos még megemlíteni, hogy az adatbázis nevének megadásakor egyben megadjuk a karakter kódolást is, mivel ennek elhanyagolása biztonsági problémákat okozhat \cite{PDO-charset-security}. Természetesen a kódunknak készen kell állni esetleges nem várt események bekövetkezésére, ezért mind ez egy $try catch$ blokkban zajlik le, a remélhetõleg nem fellépõ hibaüzeneteket pedig egy az azok tárolására létrehozott tömbben tároljuk, amibõl majd késõbb könnyen ki olvashatók, ha esetleg értesíteni akarunk valakit róluk.
+A \ref{lst:php pdo connection} kódrészlet a bejelentkeztetõ modul egyik metódusán keresztül mutatja be, hogy hogyan lehet a PHP PDO -vel adatbázis kapcsolatot létrehozni. Elõször is ellenõrzésre kerül, hogy létezik -e már felépített adatbázis kapcsolat, nyilván ha már igen akkor nincs mit tenni, de ha még nem, akkor létrehozunk egy új PDO objektumot, úgy hogy a konstruktorának átadjuk az adatbázis címét, nevét, azt a felhasználót amelyikkel csatlakozni szeretnénk és természetesen a hozzá tartozó jelszót. Ezek a kódrészletben sorra a $DB\_HOST$, $DB\_NAME$, $DB\_USER$, $DB\_PASS$ melyek egy külön konfigurációs fájlban kerültek definiálásra. Itt fontos még megemlíteni, hogy az adatbázis nevének megadásakor egyben megadjuk a karakter kódolást is, mivel ennek elhanyagolása biztonsági problémákat okozhat \cite{PDO-charset-security}. Természetesen a kódunknak készen kell állni esetleges nem várt események bekövetkezésére, ezért mind ez egy $try\ - catch$ blokkban zajlik le, a remélhetõleg nem fellépõ hibaüzeneteket pedig egy az azok tárolására létrehozott tömbben tároljuk, amibõl majd késõbb könnyen ki olvashatók, ha esetleg értesíteni akarunk valakit róluk.
 
 Az adatbázis kapcsolatot nagyon egyszerû bezárni ahogy a \ref{lst:php pdo close connection} kódrészlet is mutatja. Ez nagyon fontos is, hogy mindig bezárjuk miután befejeztük a használatát, mivel sok szolgáltató limitálja, hogy hány aktív kapcsolatot kezel az adatbázis szerverük.
+
 \begin{minipage}{\linewidth}
 	\begin{lstlisting}[language=php,label={lst:php pdo close connection}, caption={PHP PDO kapcsolat lezárása}]
 	db_connection = null;
+	\end{lstlisting}
+\end{minipage}
+
+Miután sikeresen létre hoztunk egy aktív adatbázis kapcsolatot SQL utasításokat a \ref{lst:php pdo sql query} kódrészletben látott módon indíthatunk. A példában éppen lekérjük egy felhasználó összes információját, majd az így kapott információkat egy tömbbe adja vissza a $fetchObject\left(\right)$ metódus. Vegyük észre, hogy az SQL lekérdezésbe nem konkatenáljuk bele a változókat, ha ilyesmit tennénk akkor az alkalmazásunkat nagyon könnyen feltörhetnék, hiszen éppen ilyen programozói hibákat kihasználva mûködnek az $sql injection$ jellegû támadások. Tehát ha változókat akarunk használni az SQL lekérdezésünkben, akkor a $prepare\left(\right)$ metódusban a behelyettesítendõ helyre kettõsponttal megelõzött változónevet kell írni, melyet majd a $bindValue\left(\right)$ metódussal fogunk ténylegesen a mi változónkhoz kötni. Ez elsõ paraméterként egy stringet vár, ami az SQL lekérdezésben szereplõ változó helyét határozza meg. A második paramétere a mi PHP változónk aminek az értékét az SQL parancsban szeretnénk használni. A harmadik és egyben utolsó na meg opcionális paraméter pedig az elsõ paraméterre vonatkozóan definiálja annak adat típusát. Az $execute\left(\right)$ -hez nem kell sokat hozzáfûzni, egyszerûen végre hajtja a fentiek szerint elõkészített SQL parancsot.
+
+\begin{minipage}{\linewidth}
+	\begin{lstlisting}[language=php,label={lst:php pdo sql query}, caption={PHP PDO SQL lekérdezés}]
+    $query_user = $this->db_connection->prepare('SELECT * FROM users WHERE user_name = :user_name');
+    $query_user->bindValue(':user_name', $user_name, PDO::PARAM_STR);
+    $query_user->execute();
+    return $query_user->fetchObject();
 	\end{lstlisting}
 \end{minipage}
 
