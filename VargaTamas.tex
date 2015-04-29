@@ -510,7 +510,43 @@ $result_row = $query_user->fetchObject();
 \end{minipage}
 
 \subsection{Állapotkezelés}
-A PHP nyelveben az állapotkezelésnek két fõbb fajtáját használtam. 
+Állapot kezelésre illetve nyomkövetésre minden kicsit is bonyolultabb felhasználókat kezelõ alkalmazásnak szüksége. Mivel a HTTP egy állapot nélküli protokoll ezért amikor egy web szerver végrehajtotta egy kliens kérését a kapcsolat a kettõ között megszakad. Tehát más szóval a szerver nem tudja felismerni hogy egy kérés sorozat ugyan attól a klienstõl származik, viszont ez egy nagyon fontos dolog fõképp akkor amikor különbözõ oldalak között navigálunk a web alkalmazásunkban. Ennek a problémának az orvosolására többféle megoldás is létezik. Konkrétan en a PHP nyelveben az állapotkezelésnek négy fõbb fajtáját használtam. 
+
+Sütik avagy $cookies$ alapvetõen olyan stringek amik több mezõt is tartalmazhatnak. A válasz fejlécében a szerver egy vagy több sütit küldhet a böngészõnek. A süti $value$ mezõje rejti a tényleges adatokat melyben bármilyen adat tárolható (azért van néhány limitáció), de teljesen alkalmas a felhasználó azonosítására és hasonló feladatokra. Egy sütit a $setcookie\left(\right)$ paranccsal küldhetünk a kliens böngészõje felé. Ennek a függvénynek a szignatúráját a \ref{lst:php setcookie} kódrészlet mutatja.
+
+\begin{minipage}{\linewidth}
+	\begin{lstlisting}[language=php,label={lst:php setcookie}, caption={PHP setcookie függvény}]
+setcookie(name [, value [, expire [, path [, domain [, secure ]]]]]);
+	\end{lstlisting}
+\end{minipage}
+
+Tehát ez parancs hozza létre magát a süti stringet a megadott argumentumok alapján, majd létre hogy egy $Cookie\ header$ -t is ezzel a stringgel és az értékével. Fontos megjegyezni, hogy mivel a sütik a válasz $header$ részében kerülnek elküldésére ezért a $setcookie\left(\right)$ parancsot még az elõtt meg kell hívni mielõtt a $body$ bármely része is elküldésre kerülne. A $setcookie\left(\right)$ paraméterei a következõk:
+
+\begin{itemize}
+	\item\textbf{name}: A süti egyedi neve. Nem tartalmazhat ürés karaktereket ($whitespace$) vagy $;$ -t. Természetesen használható több süti is, különbözõ névvel és attribútumokkal.
+	\item\textbf{value}: A string amely a süti tényleges tartalma.
+	\item\textbf{exipre}: A süti elévülésének idõpontja. Amennyiben ez nincs megadva, akkor a böngészõ a sütit a memóriában tárolja nem pedig a lemezen így amikor a böngészõ bezárásra kerül a süti is eltûnik. Az idõ formátum 1970 Január 1. -tõl számított másodpercekben értendõ GMT idõzónába. Például a web alkalmazás két hétig emlékezhet azokra a felhasználókra akik bepipálták a "Tarts bejelentkezve (2 hétig)" dobozkát. Az erre használatos elévülési érték a \ref{lst:php cookie expire} kódrészletben látottak alapján generálhatjuk.
+	\item\textbf{path}: A böngészõ csak azoknak az oldalaknak fogja oda adni a sütit amelyek ezen elérési útvonal alatt állnak. Alapértelmezetten ez az a könyvtár ahol a jelenlegi oldal van. Tehát ha a $/vahalo/valami/demo.php$ állítja be a sütit és nem definiáljuk ezt az elérési út változót akkor a süti visszaküldésre kerül a szervernek minden olyan oldalon amelynek az URL részében megtalálható a $/valahol/valami/$.
+	\item\textbf{domain}: A böngészõ csak az itt megadott domainnel rendelkezõ URL -ek számára fogja vissza adni a sütit. Alapértelmezett értéke a szerver host neve.
+	\item\textbf{secure}: Alapértelmezett értéke $false$. Viszont ha ez igazra van állítva akkor a süti csak $https$ kapcsolaton keresztül lesz elküldve.
+\end{itemize}
+
+\begin{minipage}{\linewidth}
+	\begin{lstlisting}[language=php,label={lst:php cookie expire}, caption={PHP cookie expire generálása 2 hét múlvára}]
+	$expire = time() + 1209600;
+	\end{lstlisting}
+\end{minipage}
+
+Láttuk hogyan lehet sütiket létre hozni, azoknak milyen a felépítése, már csak azt kell tudni, hogy ezeket hogyan kaphatjuk meg a kliens böngészõtõl. PHP -ban ez nagyon egyszerûen történik a $\_COOKIE$ tömb változó használatával. A kulcs a süti neve, az érték pedig a süti $value$ mezõjében tárolt tényleges érték. A web alkalmazás a sütiket arra használja, hogy lehetõvé tegye a felhasználók számára azt, hogy ne kelljen újra bejelentkezniük két hétig. 
+
+A felhasználók állapotának nyomkövetésére az egyik fõ módszer a $session$ követés. A $session$ lényegébe véve egy változó ami a szerveren tárolódik és alapértelmezetten az életciklusa addig tart amíg be nem zárjuk a böngészõnket. A legtöbb $session$ beállít a felhasználó számítógépén egy $user-key$ változót ami valahogy így szokott kinézni: $365211cf14ert0dede5a562e2f3a1e42$. Ez után amikor egy új oldal kérdezzük le a $session$-t akkor a felhasználó számítógépén tárolt kulcs egyezésének ellenõrzése fog megtörténni, amennyiben azok megegyeznek, akkor az a $session$ kerül felhasználásra, ha nem akkor egy új $session$ kezdõdik.
+A $session$ tartalma a $\_SESSION$ PHP globális tömbben tárolódik el, miután elindítottunk egy $session$ -t a $session\_start\left(\right)$ paranccsal. Ez után ezt nyugodtan kezelhetjük úgy mint egy globális változót. A $session$ befejezéséhez a $session\_destroy\left(\right)$ parancsa használandó, a $session\_unser\left(\right)$ pedig törli az összes $session$ változót. A web alkalmazás ezt a módszert használja a felhasználó állapotának nyomkövetésére. Más szóval a $session$ -ben tárolódnak a felhasználó adatai.
+
+Egy másik módszer a $hidden$ avagy rejtett ûrlap illetve mezõk használata. A PHP ugyan úgy kezeli a rejtette ûrlapokat mint a normálisakat, tehát azok értékei ugyan úgy elérhetõek a $\_GET$ illetve $\_POST$ tömbökbõl. Az algoritmusok számolásával foglalkozó androidos felülete ezt a módszert használja ki a felhasználó azonosítására.
+
+A harmadik általam használt állapotkövetési technika az URL újraírásos módszer volt. Ennek az az alapelve, hogy az URL tartalmaz dinamikusan módosítható extra információkat, mint például a felhasználó egyedi azonosítóját. Az android alkalmazás ezt a módszer használja a bor értékelések szinkronizációjára a mobil eszközön elérhetõ személyes adatbázis és a távoli szerveren lévõ nagy adatbázis között.
+
+
 
 \todo session post/get/request
 
@@ -523,9 +559,7 @@ http://numericjs.com/lib/numeric-1.2.6.min.js
 \section{JQuery}
 
 \section{Grafikonok}
-Az igényes megjelenítés megkövetelt valamilyen típusú grafikonkezelést. Mivel több nagyon könnyen és jól mûködõ $JavaScript$ publikus könyvtár létezik már ennek a feladatnak az ellátására, úgy gondoltam, hogy egy-kettõt kipróbálok mielõtt véglegesen valamelyik használata mellett döntenék. Kis kutató munka után arra jutottam, hogy a választásom a $Google Charts$\cite{Google Charts homepage} és a $Charts.js$\cite{Charts.js homepage} két API közül az egyikre fog esni.
-
-\todo finish intro
+Az eredmények igényes megjelenítés megkövetelt valamilyen típusú grafikonkezelést. Mivel több nagyon könnyen felhasználható és jól mûködõ $JavaScript$ publikus könyvtár létezik már ennek a feladatnak az ellátására, úgy gondoltam, hogy egy-kettõt kipróbálok mielõtt véglegesen valamelyik használata mellett döntenék. Kis kutató munka után arra jutottam, hogy a választásom a $Google Charts$ \cite{Google Charts homepage} és a $Charts.js$ \cite{Charts.js homepage} két grafikon készítõ API közül az egyikre fog esni. Míg számomra úgy tûnt, hogy a $Charts.js$ használata talán könnyebb, stílusosabban és személyre szabhatóbban reprezentálja az adatokat apróbb probléma volt, hogy az értékek mint címkék megjelenítése nem volt alapból támogatva az oszlop diagram osztályban. Persze akár kiterjeszthettem volna ezt az osztályt és saját magam implementálom az oszlopok adatokkal való címkézését, de mielõtt ebbe bele vágtam volna azért megnéztem hogy a $Google Charts$ rendelkezik -e hasonló szolgáltatással. Mint kiderült igen, így a végsõ választásom erre a grafikon kezelõ $JavaScript$ API -ra esett annak ellenére, hogy talán stilisztikai szempontból alapértelmezetten nem ajánl fel olyan nagy mértékû testre szabhatóságot mint a $Charts.js$.
 
 \subsection{Google Charts}
 
@@ -540,7 +574,7 @@ A Google Charts egy grafikonokat vizualizáló eszköz, amit leggyakrabban $JavaScr
 	\end{lstlisting}
 \end{minipage}	
 
-Majd a bemeneti adatokat úgy kell rendezni ahogy az a könyvtár osztályban definiálva van, ami konkrét esetünkben egy JavaScript tömböket tartalmazó tömböt jelent, melynek elsõ eleme az adatok típusainak megnevezését tartalmazza. A tömb többi eleme pedig az így definiált sorban megadott értékeket kell hogy tartalmazzak minden egyes megjelenítendõ grafikon elemre vonatkozóan. Ez nagyon intuitív ha a \ref{tbl:google charts data table} táblázatban látottak szerint gondolunk a Google Charts által várt bemeneti formátumra, csak sor folytonosan leírva.
+Majd a bemeneti adatokat úgy kell rendezni ahogy az a könyvtár osztályban definiálva van, ami konkrét esetünkben egy $JavaScript$ tömböket tartalmazó tömböt jelent, melynek elsõ eleme az adatok típusainak megnevezését tartalmazza. A tömb többi eleme pedig az így definiált sorban megadott értékeket kell hogy tartalmazzak minden egyes megjelenítendõ grafikon elemre vonatkozóan. Ez nagyon intuitív ha a \ref{tbl:google charts data table} táblázatban látottak szerint gondolunk a $Google Charts$ által várt bemeneti formátumra, csak sor folytonosan leírva.
 
 \begin{table}[h!]
 	\begin{center}
@@ -553,10 +587,10 @@ Majd a bemeneti adatokat úgy kell rendezni ahogy az a könyvtár osztályban defini
 			Kóstoló 4 & 70.482 \\ \hline
 		\end{tabular}
 	\end{center}
-	\caption{Példa a Google Chart által megjelenítendõ adatok szerkezetére \label{tbl:google charts data table}}
+	\caption{Példa a $Google Charts$ által megjelenítendõ adatok szerkezetére \label{tbl:google charts data table}}
 \end{table}
 
-Ez így leírt adatsor tényleges elõkészítését a Google Charts számára a \ref{lst:array to data table} kódrészletben látott utasítás végzi el.
+Ez így leírt adatsor tényleges elõkészítését a $Google Charts$ számára a \ref{lst:array to data table} kódrészletben látott utasítás végzi el.
 
 \begin{minipage}{\linewidth}
 	\begin{lstlisting}[language=php,label={lst:array to data table}, caption={Google Charts tömbbõl google data table készítés}]
