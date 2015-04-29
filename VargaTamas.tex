@@ -509,7 +509,7 @@ $result_row = $query_user->fetchObject();
 	\end{lstlisting}
 \end{minipage}
 
-\subsection{Állapotkezelés}
+\subsection{Állapotkezelés és követés}
 Állapot kezelésre illetve nyomkövetésre minden kicsit is bonyolultabb felhasználókat kezelõ alkalmazásnak szüksége. Mivel a HTTP egy állapot nélküli protokoll ezért amikor egy web szerver végrehajtotta egy kliens kérését a kapcsolat a kettõ között megszakad. Tehát más szóval a szerver nem tudja felismerni hogy egy kérés sorozat ugyan attól a klienstõl származik, viszont ez egy nagyon fontos dolog fõképp akkor amikor különbözõ oldalak között navigálunk a web alkalmazásunkban. Ennek a problémának az orvosolására többféle megoldás is létezik. Konkrétan en a PHP nyelveben az állapotkezelésnek négy fõbb fajtáját használtam. 
 
 Sütik avagy $cookies$ alapvetõen olyan stringek amik több mezõt is tartalmazhatnak. A válasz fejlécében a szerver egy vagy több sütit küldhet a böngészõnek. A süti $value$ mezõje rejti a tényleges adatokat melyben bármilyen adat tárolható (azért van néhány limitáció), de teljesen alkalmas a felhasználó azonosítására és hasonló feladatokra. Egy sütit a $setcookie\left(\right)$ paranccsal küldhetünk a kliens böngészõje felé. Ennek a függvénynek a szignatúráját a \ref{lst:php setcookie} kódrészlet mutatja.
