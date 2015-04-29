@@ -46,8 +46,8 @@
 \select@language {magyar} \contentsline {subsection}{\numberline {2.7.4}kapcsolat.php - Kapcsolat}{30}{subsection.2.7.4}
 \select@language {magyar} \contentsline {section}{\numberline {2.8}Dinamikus tartalom}{30}{section.2.8}
 \select@language {magyar} \contentsline {subsection}{\numberline {2.8.1}php-login}{30}{subsection.2.8.1}
-\select@language {magyar} \contentsline {paragraph}{Hashel\'es}{30}{section*.16}
-\select@language {magyar} \contentsline {paragraph}{Felhaszn\'al\'oi \'allapot nyomk\"ovet\'ese}{30}{section*.17}
+\select@language {magyar} \contentsline {paragraph}{Hashel\'es}{30}{section*.17}
+\select@language {magyar} \contentsline {paragraph}{Felhaszn\'al\'oi \'allapot nyomk\"ovet\'ese}{30}{section*.18}
 \select@language {magyar} \contentsline {subsection}{\numberline {2.8.2}demo.php - Dem\'o}{30}{subsection.2.8.2}
 \select@language {magyar} \contentsline {chapter}{\numberline {3}A mobil alkalmaz\'as}{31}{chapter.3}
 \select@language {magyar} \contentsline {section}{\numberline {3.1}Android}{31}{section.3.1}
@@ -68,5 +68,5 @@
 \select@language {magyar} \contentsline {chapter}{\numberline {8}F\"uggel\'ek}{38}{chapter.8}
 \select@language {magyar} \contentsline {section}{\numberline {8.1}A program forr\'ask\'odja}{38}{section.8.1}
 \select@language {magyar} \ 
-\select@language {magyar} \contentsline {section}{Nyilatkozat}{39}{chapter*.26}
-\select@language {magyar} \contentsline {section}{Irodalomjegyz\'ek}{40}{chapter*.27}
+\select@language {magyar} \contentsline {section}{Nyilatkozat}{39}{chapter*.27}
+\select@language {magyar} \contentsline {section}{Irodalomjegyz\'ek}{40}{chapter*.28}
