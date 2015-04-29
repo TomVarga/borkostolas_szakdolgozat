@@ -33,22 +33,22 @@
 \select@language {magyar} \contentsline {paragraph}{Float \'es clear}{21}{section*.14}
 \select@language {magyar} \contentsline {section}{\numberline {2.4}PHP}{21}{section.2.4}
 \select@language {magyar} \contentsline {subsection}{\numberline {2.4.1}PHP Data Objects (PDO)}{23}{subsection.2.4.1}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.4.2}\'Allapotkezel\'es}{25}{subsection.2.4.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.4.2}\'Allapotkezel\'es \'es k\"ovet\'es}{25}{subsection.2.4.2}
 \select@language {magyar} \contentsline {section}{\numberline {2.5}JavaScript}{27}{section.2.5}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.5.1}numeric}{27}{subsection.2.5.1}
-\select@language {magyar} \contentsline {section}{\numberline {2.6}JQuery}{27}{section.2.6}
-\select@language {magyar} \contentsline {section}{\numberline {2.7}Grafikonok}{27}{section.2.7}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.7.1}Google Charts}{28}{subsection.2.7.1}
-\select@language {magyar} \contentsline {section}{\numberline {2.8}Statikus tartalom}{30}{section.2.8}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.8.1}index.php - F\H ooldal}{30}{subsection.2.8.1}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.8.2}borkostolasEredmenyek.php - Eredm\'enyek}{30}{subsection.2.8.2}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.8.3}modszerek.php - M\'odszerek}{30}{subsection.2.8.3}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.8.4}kapcsolat.php - Kapcsolat}{30}{subsection.2.8.4}
-\select@language {magyar} \contentsline {section}{\numberline {2.9}Dinamikus tartalom}{30}{section.2.9}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.9.1}php-login}{30}{subsection.2.9.1}
-\select@language {magyar} \contentsline {paragraph}{Hashel\'es}{30}{section*.17}
-\select@language {magyar} \contentsline {paragraph}{Felhaszn\'al\'oi \'allapot nyomk\"ovet\'ese}{30}{section*.18}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.9.2}demo.php - Dem\'o}{30}{subsection.2.9.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.5.1}JQuery}{27}{subsection.2.5.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.5.2}numeric}{27}{subsection.2.5.2}
+\select@language {magyar} \contentsline {section}{\numberline {2.6}Grafikonok}{27}{section.2.6}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.6.1}Google Charts}{28}{subsection.2.6.1}
+\select@language {magyar} \contentsline {section}{\numberline {2.7}Statikus tartalom}{30}{section.2.7}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.7.1}index.php - F\H ooldal}{30}{subsection.2.7.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.7.2}borkostolasEredmenyek.php - Eredm\'enyek}{30}{subsection.2.7.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.7.3}modszerek.php - M\'odszerek}{30}{subsection.2.7.3}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.7.4}kapcsolat.php - Kapcsolat}{30}{subsection.2.7.4}
+\select@language {magyar} \contentsline {section}{\numberline {2.8}Dinamikus tartalom}{30}{section.2.8}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.8.1}php-login}{30}{subsection.2.8.1}
+\select@language {magyar} \contentsline {paragraph}{Hashel\'es}{30}{section*.16}
+\select@language {magyar} \contentsline {paragraph}{Felhaszn\'al\'oi \'allapot nyomk\"ovet\'ese}{30}{section*.17}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.8.2}demo.php - Dem\'o}{30}{subsection.2.8.2}
 \select@language {magyar} \contentsline {chapter}{\numberline {3}A mobil alkalmaz\'as}{31}{chapter.3}
 \select@language {magyar} \contentsline {section}{\numberline {3.1}Android}{31}{section.3.1}
 \select@language {magyar} \contentsline {chapter}{\numberline {4}A weboldal \'es a mobil alkalmaz\'as \"osszef\H uz\'ese}{32}{chapter.4}
@@ -68,5 +68,5 @@
 \select@language {magyar} \contentsline {chapter}{\numberline {8}F\"uggel\'ek}{38}{chapter.8}
 \select@language {magyar} \contentsline {section}{\numberline {8.1}A program forr\'ask\'odja}{38}{section.8.1}
 \select@language {magyar} \ 
-\select@language {magyar} \contentsline {section}{Nyilatkozat}{39}{chapter*.27}
-\select@language {magyar} \contentsline {section}{Irodalomjegyz\'ek}{40}{chapter*.28}
+\select@language {magyar} \contentsline {section}{Nyilatkozat}{39}{chapter*.26}
+\select@language {magyar} \contentsline {section}{Irodalomjegyz\'ek}{40}{chapter*.27}

@@ -547,16 +547,20 @@ Egy másik módszer a $hidden$ avagy rejtett ûrlap illetve mezõk használata. A PHP
 A harmadik általam használt állapotkövetési technika az URL újraírásos módszer volt. Ennek az az alapelve, hogy az URL tartalmaz dinamikusan módosítható extra információkat, mint például a felhasználó egyedi azonosítóját. Az android alkalmazás ezt a módszer használja a bor értékelések szinkronizációjára a mobil eszközön elérhetõ személyes adatbázis és a távoli szerveren lévõ nagy adatbázis között.
 
 
-
-\todo session post/get/request
-
 \section{JavaScript}
-\subsection{numeric}
-http://numericjs.com/lib/numeric-1.2.6.min.js
+A JavaScript mint ahogy a neve is sejteti egy szkript nyelv mely fõképp böngészõn belüli használatra lett tervezve. JavaScriptet általában felhasználói felülettel való interakció során használunk, de más használata is lehetséges többek között szerver oldali programoz, játék fejlesztés vagy asztali alkalmazás fejlesztés.
+
+Néhány szintaktikai, standard könyvtári és persze név beli hasonlóságon kívül a Java -nak nem rokona, a kettõ igen különbözõ szemantikával rendelkezik. A JavaScript szintaktikája igazából a $C$ nyelvbõl származik, míg a szemantikájára és tervezésére fõképp a $Self$ és $Scheme$ programozásik nyelvek voltak hatással \cite{ECMAScript Language Overview}
+
+\todo beginings at netscape from http://en.wikipedia.org/wiki/JavaScript#Beginnings_at_Netscape
 
 \todo what is AJAX
 
-\section{JQuery}
+\subsection{JQuery}
+\subsection{numeric}
+http://numericjs.com/lib/numeric-1.2.6.min.js
+
+
 
 \section{Grafikonok}
 Az eredmények igényes megjelenítés megkövetelt valamilyen típusú grafikonkezelést. Mivel több nagyon könnyen felhasználható és jól mûködõ $JavaScript$ publikus könyvtár létezik már ennek a feladatnak az ellátására, úgy gondoltam, hogy egy-kettõt kipróbálok mielõtt véglegesen valamelyik használata mellett döntenék. Kis kutató munka után arra jutottam, hogy a választásom a $Google Charts$ \cite{Google Charts homepage} és a $Charts.js$ \cite{Charts.js homepage} két grafikon készítõ API közül az egyikre fog esni. Míg számomra úgy tûnt, hogy a $Charts.js$ használata talán könnyebb, stílusosabban és személyre szabhatóbban reprezentálja az adatokat apróbb probléma volt, hogy az értékek mint címkék megjelenítése nem volt alapból támogatva az oszlop diagram osztályban. Persze akár kiterjeszthettem volna ezt az osztályt és saját magam implementálom az oszlopok adatokkal való címkézését, de mielõtt ebbe bele vágtam volna azért megnéztem hogy a $Google Charts$ rendelkezik -e hasonló szolgáltatással. Mint kiderült igen, így a végsõ választásom erre a grafikon kezelõ $JavaScript$ API -ra esett annak ellenére, hogy talán stilisztikai szempontból alapértelmezetten nem ajánl fel olyan nagy mértékû testre szabhatóságot mint a $Charts.js$.
@@ -933,6 +937,8 @@ vol. 30, no 1, 107-117, 1998
 \bibitem{Google Charts homepage}https://google-developers.appspot.com/chart/
 
 \bibitem{Charts.js homepage}http://www.chartjs.org/
+
+\bibitem{ECMAScript Language Overview}ECMAScript Language Overview. 2007-10-23. p. 4. \emph{http://www.ecmascript.org/es4/spec/overview.pdf}
 
 %\begin{thebibliography}{99}
 % 10-nél több hivatkozás esetén
