@@ -347,6 +347,8 @@ Annak ellenére hogy a web oldal legelsõ változata perzisztens adat tárolás nélkü
 	\caption[Adatbázis model]{Adatbázis model \label{fig:dbmodel}}
 \end{figure}
 
+Az adatbázist kiszolgáló szervernek az Oracle által fejlesztett MySQL-t választottam. Ezt ismerem a legjobban, valamint az sem elhanyagolható, hogy nyílt forráskódú talán ezért is rengeteg web szolgáltató által nagyon kedvelt gyakran alkalmazott megoldás. 
+
 \subsection{scores tábla}
 
 Ahogy az értékeléseket tartalmazó $scores$ táblát létrehozó szkript  \ref{lst:scores create} kód részlet is tükrözi, látható, hogy a táblában a felhasználók azonosítóját $user\_id$ tartalmazó oszlop és a borok azonosítóját $wine\_id$ tartalmazó oszlop is mint $FOREIGN\_KEY$ szerepel amik természetesen a borokat $wines$ és a felhasználókat $users$ tartalmazó táblák megfelelõ oszlopaira hivatkoznak, ezek segítik az adatbázis konzisztenciájának megõrzését, mivel amikor egy felhasználó vagy bor törlésre kerül akkor az $ON\ DELETE\ CASCADE$ megkötés hatására az értékeléseket tartalmazó $scores$ táblából azok a sorok is törlõdni fognak amik így már nem létezõ azonosítókra hivatkoznának. Itt talán még érdemes kitérni arra is hogy takarékossági okokból az értékelések maximum nyolc számjegybõl állhatnak amiben a decimális pontosságot három tizedes jegyig engedélyezzük. 
@@ -451,10 +453,46 @@ A PHP ($PHP: Hypertext Preprocessor$) egy széles körben elterjedt nyílt forráskó
 \end{minipage}
 A PHP kód egy különleges nyitó és záró $<?php\ ?>$ struktúrában helyezkedik el, ezzel lehetõvé téve, hogy ki és be lépjünk a PHP-ba. A PHP-t azt különbözteti meg a kliens oldali szkriptektõl mint például a JavaScript, hogy a kód a szerver oldalon hajtódik végre, itt generálódik a HTML tartalom melyet majd a webszerver küld a kliensnek. Az is megoldható, hogy egy webszervert úgy konfiguráljunk, hogy az a PHP-t tartalmazó HTML fájlokat is dolgozza fel. Ekkor a felhasználó nem fogja megtudni, hogy mi neki most éppen egy PHP által generált tartalmat mutatunk.
 
-Annak ellenére, hogy a PHP egy szkript nyelv robusztus alkalmazások létrehozására is használható, erre kiváló példa többek között a Facebook vagy akár a Wikipedia. Személy szerint ez elõtt nem sokat foglalkoztam a PHP -val csak kisebb weboldalak létrehozására használtam, nem igazán követtem nyomon a nyelv fejlõdését mely eredetileg a PHP/FI névvel lett létrehozva 1994 -ben Rasmus Lerdorf által. Ez az elsõ változat egy egyszerû Common Gateway Interface (CGI) bináris állomány volt a C programozási nyelven írva melynek fõ feladata az õ személyes honlapjának egy eszköze volt. Ez már nagyon régen volt és a nyelv rengeteg változtatáson és javításon esett át. Most már a PHP 5. verziójánál tartunk mely 2004 -ben lett kiadva, melynek fõ vezérlõ magja a $Zend\ Engine\ 2.0$ amely egy tucatnyi új szolgáltatás között egy új objektum modellt is tartalmaz. Jelenleg több tucatnyi fejlesztõ dolgozik a PHP továbbfejlesztésével mely még pár tucat fejlesztõnek ad munkát akinek a feladata a PHP -hez kapcsolódó támogató projektek fejlesztése és dokumentálása. Ez csak egy korábbi éveken alapuló becslés, de nyugodtan mondhatjuk, hogy a PHP több tíz vagy akár száz millió domain-re van telepítve világszerte \cite{php-history}.
+Annak ellenére, hogy a PHP egy szkript nyelv robusztus alkalmazások létrehozására is használható, erre kiváló példa többek között a Facebook vagy akár a Wikipedia. Személy szerint ez elõtt nem sokat foglalkoztam a PHP -val csak kisebb weboldalak létrehozására használtam, nem igazán követtem nyomon a nyelv fejlõdését mely eredetileg a PHP/FI névvel lett létrehozva 1994 -ben Rasmus Lerdorf által. Ez az elsõ változat egy egyszerû Common Gateway Interface (CGI) bináris állomány volt a C programozási nyelven írva melynek fõ feladata az õ személyes honlapjának egy eszköze volt. Ez már nagyon régen volt és a nyelv rengeteg változtatáson és javításon esett át. Most már a PHP 5. verziójánál tartunk. Én is ezt a verziót használtam, mely 2004 -ben lett kiadva. Fõ vezérlõ magja a $Zend\ Engine\ 2.0$ amely egy tucatnyi új szolgáltatás között egy új objektum modellt is tartalmaz. Jelenleg több tucatnyi fejlesztõ dolgozik a PHP továbbfejlesztésével mely továbbá pár tucat másik fejlesztõnek ad munkát akinek a feladata a PHP -hez kapcsolódó támogató projektek fejlesztése és dokumentálása. Ez csak egy korábbi éveken alapuló becslés, de nyugodtan mondhatjuk, hogy a PHP több tíz vagy akár száz millió domain-re van telepítve világszerte \cite{php-history}.
 
-\todo nyelvrõl általában
-\todo adatbázis elérés
+A PHP nyelv általános felépítésére és szintaxisára nem térek ki, egyrészt azért mert már egy elég régi nyelv melynek alapjai régóta ismertek, valamint azért is mert elég közel a $C$ nyelvhez, mely még ismertebb. Viszont mindenképpen ejtenék pár szót a nyelv sajátosságáról fõkép arra fókuszálva, hogy hogyan történik az állapotkövetés illetve adatbázis elérés.
+
+\subsection{PHP Data Objects (PDO)}
+A PHP Data Objects (PDO) a PHP adatbázis elérést nyújtó interfésze. Minden adatbázis meghajtó amely implementál egy PDO interfészt elérhetõvé tehet az adott adatbázisra specifikus funkciókat. Természetesen önmagában a PDO alkalmatlan adatbázis kezelésre, mindenképpen egy konkrét adatbázis meghajtót kell használni. Mivel a web alkalmazást egy $MySQL$ adatbázis szerver szolgálja ki ezért én a hozzá tartozó $PDO_MYSQL$-t használtam. A PDO alapértelmezetten együtt jár a PHP 5.1-el és elérhetõ PECL kiterjesztésként is PHP 5.0 alatt, de mivel a PDO -nak szükségen van PHP 5 magjában bemutatott objektum orientáltságra, ezért a PDO nem fut korábbi PHP verziókon. 
+
+\begin{minipage}{\linewidth}
+	\begin{lstlisting}[language=php,label={lst:php pdo connection}, caption={PHP PDO Connector használata}]
+private function databaseConnection()
+{
+	// if connection already exists
+	if ($this->db_connection != null) {
+		return true;
+	} else {
+	try {
+		$this->db_connection = new PDO('mysql:host='. DB_HOST .';dbname='. DB_NAME . ';charset=utf8', DB_USER, DB_PASS);
+		return true;
+	} catch (PDOException $e) {
+	$this->errors[] = MESSAGE_DATABASE_ERROR . $e->getMessage();
+}
+}
+// default return
+return false;
+}
+	\end{lstlisting}
+\end{minipage}
+
+A \ref{lst:php pdo connection} kódrészlet a bejelentkeztetõ modul egyik metódusán keresztül mutatja be, hogy hogyan lehet a PHP PDO -vel adatbázis kapcsolatot létrehozni. Elõször is ellenõrzésre kerül, hogy létezik -e már felépített adatbázis kapcsolat, nyilván ha már igen akkor nincs mit tenni, de ha még nem, akkor létrehozunk egy új PDO objektumot, úgy hogy a konstruktorának átadjuk az adatbázis címét, nevét, azt a felhasználót amelyikkel csatlakozni szeretnénk és természetesen a hozzá tartozó jelszót. Ezek a kódrészletben sorra a $DB\_HOST$, $DB\_NAME$, $DB\_USER$, $DB\_PASS$ melyek egy külön konfigurációs fájlban kerültek definiálásra. Itt fontos még megemlíteni, hogy az adatbázis nevének megadásakor egyben megadjuk a karakter kódolást is, mivel ennek elhanyagolása biztonsági problémákat okozhat \cite{PDO-charset-security}. Természetesen a kódunknak készen kell állni esetleges nem várt események bekövetkezésére, ezért mind ez egy $try catch$ blokkban zajlik le, a remélhetõleg nem fellépõ hibaüzeneteket pedig egy az azok tárolására létrehozott tömbben tároljuk, amibõl majd késõbb könnyen ki olvashatók, ha esetleg értesíteni akarunk valakit róluk.
+
+Az adatbázis kapcsolatot nagyon egyszerû bezárni ahogy a \ref{lst:php pdo close connection} kódrészlet is mutatja. Ez nagyon fontos is, hogy mindig bezárjuk miután befejeztük a használatát, mivel sok szolgáltató limitálja, hogy hány aktív kapcsolatot kezel az adatbázis szerverük.
+\begin{minipage}{\linewidth}
+	\begin{lstlisting}[language=php,label={lst:php pdo close connection}, caption={PHP PDO kapcsolat lezárása}]
+	db_connection = null;
+	\end{lstlisting}
+\end{minipage}
+
+\todo példa lekérdezésekre
+
+\todo session post/get/request
 
 \section{JavaScript}
 \subsection{numeric}
@@ -517,6 +555,16 @@ A \textbf{Git} egy nyílt forráskódú, elosztott verziókezelõ szoftver, amely a se
 A GitHubot eredetileg Tom Preston-Werner, Chris Wanstrath és PJ Hyett hozta létre a kódmegosztási procedúra szimplifikálásának érdekében, mára a világ legnagyobb kód távoli kód repository szolgáltatójává nõtt \cite{Github}.
 
 \subsection{A választás} Már a kezdetektõl nyilvánvaló volt számomra, hogy valamilyen verziókezelõ rendszer használata elengedhetetlen lesz, mivel gyakran nem csak egy specifikus munkaállomásról szoktam dolgozni. Ez nem csak azért jó, mert nagyobb flexibilitást nyújt térben és idõben, hanem azért is mert valamilyen szinten szimulálja azt amikor valaki egy projekt munkában egy közös kódbázison dolgozik. Korábbi munkáim és tanulmányaim során már néhány ilyen rendszerrel is megismerkedtem, többek között SVN, Git, Mercurial. A szakdolgozathoz tartozó alkalmazások készítéséhet végül a Git -et választottam mint verziókezelõ rendszer, melyhez távoli repository szolgáltatónak a GitHub társult. A választás fõ támpontjai között talán a felhasználó barátságot és könnyû automatizálhatóságot említeném meg. 
+
+\subsection{Repozitóriumok}
+A szakdolgozat, web és android alkalmazás forráskódja az alábbi linkeken érhetõk el:
+
+\begin{itemize}
+\item Szakdolgozat: 
+\url{https://github.com/TomVarga/borkostolas_szakdolgozat}
+\item Web alkalmazás: \url{https://github.com/TomVarga/borkostolas_web_interface}
+\item Android alkalmazás: \url{https://github.com/TomVarga/borkostolas_android_app}
+\end{itemize}
 
 
 \section{Környezetek}
@@ -747,16 +795,16 @@ Szeged, \today\
 
 \begin{thebibliography}{9}
 %10-nél kevesebb hivatkozás esetén
-\bibitem{Borkóstolás projekt} Borkóstolás projekt - http://www.inf.u-szeged.hu/~tnemeth/osa/
+\bibitem{Borkóstolás projekt}Borkóstolás projekt - http://www.inf.u-szeged.hu/~tnemeth/osa/
 
-\bibitem{PageRank} Sergey Brin and Lawrence Page. The anatomy of a large-scale hypertextual web search engine. 
+\bibitem{PageRank}Sergey Brin and Lawrence Page. The anatomy of a large-scale hypertextual web search engine. 
 \emph{ Computer Networks and ISDN Systems},
 vol. 30, no 1, 107-117, 1998
 
-\bibitem{HITS} J. Kleinberg. Authoritative sources in a hyperlinked environment.
+\bibitem{HITS}J. Kleinberg. Authoritative sources in a hyperlinked environment.
 \emph{Journal of the ACM}, vol. 46, no. 5, 604-632, 1999
 
-\bibitem{Github} GitHub - https://github.com/about
+\bibitem{Github}GitHub - https://github.com/about
 
 \bibitem{CoHITS}London András és Csendes Tibor. HITS based network algorithm for evaluating the professional skills of wine tasters
 
@@ -766,6 +814,8 @@ vol. 30, no 1, 107-117, 1998
 \bibitem{php-history}History of PHP. http://php.net/manual/en/history.php.php
 
 \bibitem{CSS-origin}Lie, Hakon W (10 Oct 1994). Cascading HTML style sheets - a proposal
+
+\bibitem{PDO-charset-security}http://wiki.hashphp.org/PDO\_Tutorial\_for\_MySQL\_Developers\#Connecting\_to\_MySQL
 
 %\begin{thebibliography}{99}
 % 10-nél több hivatkozás esetén
