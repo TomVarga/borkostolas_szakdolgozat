@@ -518,10 +518,65 @@ A PHP nyelveben az állapotkezelésnek két fõbb fajtáját használtam.
 \subsection{numeric}
 http://numericjs.com/lib/numeric-1.2.6.min.js
 
+\todo what is AJAX
+
 \section{JQuery}
 
 \section{Grafikonok}
 \subsection{Google Charts}
+
+A Google Charts egy grafikonokat vizualizáló eszköz, amit leggyakrabban $JavaScript$-tel szoktunk használni. Elõször be kell tölteni a Google Chart könyvtárat és a hozzá szükséges AJAX API-t mint az a \ref{lst:init google charts} kód részletben is látható.
+
+\begin{minipage}{\linewidth}
+	\begin{lstlisting}[language=php,label={lst:init google charts}, caption={Google Charts API betöltése}]
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script type="text/javascript">
+	google.load('visualization', '1.0', {'packages':['corechart']});
+	</script>
+	\end{lstlisting}
+\end{minipage}	
+
+Majd a bemeneti adatokat úgy kell rendezni ahogy az a könyvtár osztályban definiálva van, ami konkrét esetünkben egy JavaScript tömböket tartalmazó tömböt jelent, melynek elsõ eleme az adatok típusainak megnevezését tartalmazza. A tömb többi eleme pedig az így definiált sorban megadott értékeket kell hogy tartalmazzak minden egyes megjelenítendõ grafikon elemre vonatkozóan. Ez nagyon intuitív ha a \ref{tbl:google charts data table} táblázatban látottak szerint gondolunk a Google Charts által várt bemeneti formátumra, csak sor folytonosan leírva.
+
+\begin{table}[h!]
+	\begin{center}
+		\begin{tabular}{| l | l |}
+			\hline
+			\textbf{Kóstoló} & \textbf{CoHITS} \\ \hline
+			Kóstoló 1 & 100 \\ \hline
+			Kóstoló 2 & 99.853 \\ \hline
+			Kóstoló 3 & 92.123 \\ \hline
+			Kóstoló 4 & 70.482 \\ \hline
+		\end{tabular}
+	\end{center}
+	\caption{Példa a Google Chart által megjelenítendõ adatok szerkezetére \label{tbl:google charts data table}}
+\end{table}
+
+Ez így leírt adatsor tényleges elõkészítését a Google Charts számára a \ref{lst:array to data table} kódrészletben látott utasítás végzi el.
+
+\begin{minipage}{\linewidth}
+	\begin{lstlisting}[language=php,label={lst:array to data table}, caption={Google Charts tömbbõl google data table készítés}]
+var data = google.visualization.arrayToDataTable(graphData);
+	\end{lstlisting}
+\end{minipage}
+
+Végül példányosítás után megjeleníthetõ az általunk választott grafikon a kívánt HTML $<div>$ azonosítóban, de még mielõtt ezt megtennénk lehetõségünk van a megjelenítés módjának testreszabására mint az a \ref{lst:google chart view and instanciation} kódrészletben is látszik, konkrétan például az oszlopok által reprezentált értékek kirajzolására azok mellé. 
+
+\begin{minipage}{\linewidth}
+	\begin{lstlisting}[language=php,label={lst:google chart view and instanciation}, caption={Google Charts megjelenítésének beállítása és a példányosított objektum beszúrása a megfelelõ $<div>$-be}]
+var view = new google.visualization.DataView(data);
+view.setColumns([0, 1,
+  { calc: "stringify",
+    sourceColumn: 1,
+    type: "string",
+    role: "annotation" }
+]);
+var chart = new google.visualization.BarChart(document.getElementById("graph"));
+chart.draw(view);
+  	\end{lstlisting}
+  \end{minipage}
+  
+A különbözõ grafikon típusok mint $JavaScript$ osztályok vannak megvalósítva. Általában az alapértelmezett kinézet már önmagában is igényes megjelenítést biztosít, de lehetõség van ennek testreszabására is. Ez úgy történik meg, hogy a grafikonok eseményeket tesznek elérhetõvé amelyekre csatlakozva akár komplexebb adat táblákat is beágyazhatunk a web oldalunkba. A grafikonok a HTML5/SVG technológiájával kerülnek renderelésre így biztosítva a több akár régebbi böngészõ, vagy mobil eszköz támogatását. Minden grafikon típust adat táblájának feltöltéséért a már látott $DataTable$ osztály felelõs, ami megkönnyíti a grafikon típusok közötti váltogatást amíg a nekünk legjobban megfelelõ kinézetût keressük. A $DataTable$ rendelkezik olyan metódusokkal amelyek az adatok rendezését, módosítását vagy akár szûrését is lehetõvé teszik és közvetlenül a böngészõbõl fel lehet õket tölteni, de akár adatbázisból vagy bármilyen olyan forrásból ami támogatja a $Chart Tools Datasource$ protokollt. Ennek a protokollnak van egy SQL szerû lekérdezõ nyelve mely többek között az $Google Spreadsheet$ -ekben is implementálva van.
 
 \section{Statikus tartalom}
 \subsection{index.php - Fõoldal}
