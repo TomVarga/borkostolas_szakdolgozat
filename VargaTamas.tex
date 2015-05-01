@@ -614,7 +614,6 @@ $(window).on('load', function () {
 http://numericjs.com/lib/numeric-1.2.6.min.js
 
 
-
 \section{Grafikonok}
 Az eredmények igényes megjelenítés megkövetelt valamilyen típusú grafikonkezelést. Mivel több nagyon könnyen felhasználható és jól mûködõ $JavaScript$ publikus könyvtár létezik már ennek a feladatnak az ellátására, úgy gondoltam, hogy egy-kettõt kipróbálok mielõtt véglegesen valamelyik használata mellett döntenék. Kis kutató munka után arra jutottam, hogy a választásom a $Google Charts$ \cite{Google Charts homepage} és a $Charts.js$ \cite{Charts.js homepage} két grafikon készítõ API közül az egyikre fog esni. Míg számomra úgy tûnt, hogy a $Charts.js$ használata talán könnyebb, stílusosabban és személyre szabhatóbban reprezentálja az adatokat apróbb probléma volt, hogy az értékek mint címkék megjelenítése nem volt alapból támogatva az oszlop diagram osztályban. Persze akár kiterjeszthettem volna ezt az osztályt és saját magam implementálom az oszlopok adatokkal való címkézését, de mielõtt ebbe bele vágtam volna azért megnéztem hogy a $Google Charts$ rendelkezik -e hasonló szolgáltatással. Mint kiderült igen, így a végsõ választásom erre a grafikon kezelõ $JavaScript$ API -ra esett annak ellenére, hogy talán stilisztikai szempontból alapértelmezetten nem ajánl fel olyan nagy mértékû testre szabhatóságot mint a $Charts.js$.
 
@@ -964,39 +963,56 @@ Szeged, \today\
 
 %VAGY "kézzel" a következõ módon:
 
-\begin{thebibliography}{9}
+\begin{thebibliography}{99}
 %10-nél kevesebb hivatkozás esetén
 \bibitem{Borkóstolás projekt}Borkóstolás projekt - http://www.inf.u-szeged.hu/~tnemeth/osa/
 
-\bibitem{PageRank}Sergey Brin and Lawrence Page. The anatomy of a large-scale hypertextual web search engine. 
+\bibitem{PageRank}
+Sergey Brin and Lawrence Page. 
+The anatomy of a large-scale hypertextual web search engine. 
 \emph{ Computer Networks and ISDN Systems},
-vol. 30, no 1, 107-117, 1998
+\textbf{30}(1998), no 1, 107-117.
 
-\bibitem{HITS}J. Kleinberg. Authoritative sources in a hyperlinked environment.
-\emph{Journal of the ACM}, vol. 46, no. 5, 604-632, 1999
+\bibitem{HITS}
+J. Kleinberg. Authoritative sources in a hyperlinked environment.
+\emph{Journal of the ACM}, \textbf{46}(1999), no. 5, 604-632.
 
-\bibitem{Github}GitHub - https://github.com/about
+\bibitem{Github}
+GitHub - https://github.com/about
 
-\bibitem{CoHITS}London András és Csendes Tibor. HITS based network algorithm for evaluating the professional skills of wine tasters
+\bibitem{CoHITS}
+London András és Csendes Tibor. 
+HITS based network algorithm for evaluating the professional skills of wine tasters
 
-\bibitem{php-login}Panique. http://www.php-login.net
+\bibitem{php-login}
+Panique. http://www.php-login.net
 \emph{http://opensource.org/licenses/MIT MIT License}
 
-\bibitem{php-history}History of PHP. http://php.net/manual/en/history.php.php
+\bibitem{php-history}
+History of PHP. http://php.net/manual/en/history.php.php
 
-\bibitem{CSS-origin}Lie, Hakon W (10 Oct 1994). Cascading HTML style sheets - a proposal
+\bibitem{CSS-origin}
+Lie, Hakon W (10 Oct 1994). Cascading HTML style sheets - a proposal
 
-\bibitem{PDO-charset-security}http://wiki.hashphp.org/PDO\_Tutorial\_for\_MySQL\_Developers\#Connecting\_to\_MySQL
+\bibitem{PDO-charset-security}
+http://wiki.hashphp.org/PDO\_Tutorial\_for\_MySQL\_Developers\#Connecting\_to\_MySQL
 
-\bibitem{Google Charts homepage}https://google-developers.appspot.com/chart/
+\bibitem{Google Charts homepage}
+Google Charts homepage
+https://google-developers.appspot.com/chart/
 
-\bibitem{Charts.js homepage}http://www.chartjs.org/
+\bibitem{Charts.js homepage}
+Charts.js homepage
+http://www.chartjs.org/
 
-\bibitem{ECMAScript Language Overview}ECMAScript Language Overview. 2007-10-23. p. 4. \emph{http://www.ecmascript.org/es4/spec/overview.pdf}
+\bibitem{ECMAScript Language Overview}
+ECMAScript Language Overview. 2007-10-23. p. 4. \emph{http://www.ecmascript.org/es4/spec/overview.pdf}
 
-\bibitem{ECMAScript 5.1 release} http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf
+\bibitem{ECMAScript 5.1 release}
+ECMAScript Language Specification http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf
 
-\bibitem{deep linking for ajax}http://blog.onthewings.net/2009/04/08/deep-linking-for-ajax/
+\bibitem{deep linking for ajax}
+http://blog.onthewings.net/2009/04/08/deep-linking-for-ajax/
 
 %\begin{thebibliography}{99}
 % 10-nél több hivatkozás esetén

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.11.23)  1 MAY 2015 17:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.11.23)  1 MAY 2015 17:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1266,28 +1266,33 @@ ny-e-gyetem In-for-matikai
 [42
 
 ]
-Overfull \hbox (25.02411pt too wide) in paragraph at lines 988--989
+Overfull \hbox (31.02411pt too wide) in paragraph at lines 999--1000
 []\T1/ptm/m/n/12 http://wiki.hashphp.org/PDO_Tutorial_for_MySQL_Developers#Conn
 ecting_to_MySQL 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 994--995
+Underfull \hbox (badness 10000) in paragraph at lines 1010--1011
 []\T1/ptm/m/n/12 ECMAScript Lan-guage Overview. 2007-10-23. p. 4.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1013--1014
+[]\T1/ptm/m/n/12 ECMAScript Lan-guage Spec-i-fi-ca-tion http://www.ecma-
  []
 
 [43
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1032.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1032.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1050.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1050.
  (./VargaTamas.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1032.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1032.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1050.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1050.
 
 Package rerunfilecheck Info: File `VargaTamas.out' has not changed.
 (rerunfilecheck)             Checksum: C3E395D7DAA902184CB710AF2C9FAE97;4011.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1032.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1050.
  ) 
 Here is how much of TeX's memory you used:
  24124 strings out of 493109
@@ -1317,7 +1322,7 @@ dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><x:/texlive/2014/texmf-dist/fonts
 e1/urw/courier/ucrr8a.pfb><x:/texlive/2014/texmf-dist/fonts/type1/urw/times/utm
 b8a.pfb><x:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><x:/texliv
 e/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on VargaTamas.pdf (43 pages, 291197 bytes).
+Output written on VargaTamas.pdf (43 pages, 291386 bytes).
 PDF statistics:
  807 PDF objects out of 1000 (max. 8388607)
  737 compressed objects within 8 object streams
