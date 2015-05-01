@@ -43,7 +43,7 @@
 
 \usepackage{scrbase}
 \usepackage{listings}
-\newcaptionname{magyar}{\lstlistingname}{Kód részlet}
+\newcaptionname{magyar}{\lstlistingname}{Kódrészlet}
 \lstset{language=sql,
 	keywordstyle=\color{BlueGreen},
 	stringstyle=\color{BrickRed},
@@ -353,7 +353,7 @@ Az adatbázist kiszolgáló szervernek az Oracle által fejlesztett MySQL-t választo
 
 \subsection{scores tábla}
 
-Ahogy az értékeléseket tartalmazó $scores$ táblát létrehozó szkript  \ref{lst:scores create} kód részlet is tükrözi, látható, hogy a táblában a felhasználók azonosítóját $user\_id$ tartalmazó oszlop és a borok azonosítóját $wine\_id$ tartalmazó oszlop is mint $FOREIGN\_KEY$ szerepel amik természetesen a borokat $wines$ és a felhasználókat $users$ tartalmazó táblák megfelelõ oszlopaira hivatkoznak, ezek segítik az adatbázis konzisztenciájának megõrzését, mivel amikor egy felhasználó vagy bor törlésre kerül akkor az $ON\ DELETE\ CASCADE$ megkötés hatására az értékeléseket tartalmazó $scores$ táblából azok a sorok is törlõdni fognak amik így már nem létezõ azonosítókra hivatkoznának. Itt talán még érdemes kitérni arra is hogy takarékossági okokból az értékelések maximum nyolc számjegybõl állhatnak amiben a decimális pontosságot három tizedes jegyig engedélyezzük. 
+Ahogy az értékeléseket tartalmazó $scores$ táblát létrehozó szkript  \ref{lst:scores create} kódrészlet is tükrözi, látható, hogy a táblában a felhasználók azonosítóját $user\_id$ tartalmazó oszlop és a borok azonosítóját $wine\_id$ tartalmazó oszlop is mint $FOREIGN\_KEY$ szerepel amik természetesen a borokat $wines$ és a felhasználókat $users$ tartalmazó táblák megfelelõ oszlopaira hivatkoznak, ezek segítik az adatbázis konzisztenciájának megõrzését, mivel amikor egy felhasználó vagy bor törlésre kerül akkor az $ON\ DELETE\ CASCADE$ megkötés hatására az értékeléseket tartalmazó $scores$ táblából azok a sorok is törlõdni fognak amik így már nem létezõ azonosítókra hivatkoznának. Itt talán még érdemes kitérni arra is hogy takarékossági okokból az értékelések maximum nyolc számjegybõl állhatnak amiben a decimális pontosságot három tizedes jegyig engedélyezzük. 
 
 \begin{minipage}{\linewidth}
 \begin{lstlisting}[language=sql,label={lst:scores create}, caption={Az értékeléseket tartalmazó ($scores$) táblát létrehozó parancs}]
@@ -433,10 +433,10 @@ h2 {color: #bb1f42; font-size: 1.2em;}
 	\end{lstlisting}
 \end{minipage}
 
-Konkrétan a \ref{lst:css syntax} kód részletben látott CSS kódnál a $h2$ a $selector$ õt követi a deklarációs blokk amely két deklarációt tartalmaz. Egy deklarációnak két része van, egy a tulajdonságot megnevezõ része, ez van a $:$ elõtt, és egy azt követõ rész amely az értéket tartalmazza. Lehetséges még több $selector$ összecsoportosítsa, melynek köszönhetõen jócskán csökkenthetõ az ismétlõdõ kód. Ugyan ezt segíti elõ az is, hogy a CSS alapvetõen támogat öröklõdést, így egy felsõ konténeren definiált tulajdonság mindig lefelé a gyermekei felé propagál. Természetes a kevesebb kódnak más jó mellékhatása is van, mint a gyorsabban töltõdõ weboldal és kisebb sávszélesség használat. A $selector$ több típusú is lehet és ezeket kombinálni is lehet. A \ref{lst:css syntax} kód részletben látottat $element selector$ -nak hívják, mely egy adott típusú elemet választ ki. A $class selector$ az olyan elemekre fog vonatkozni amik az adott $class$ attribútummal rendelkeznek. Ilyenkor egy pontot teszünk a $selector$ elé. Némely elem rendelkezhet különbözõ típusokkal is, pl.: egy $checkbox$ típusú $input$ elemre a $selector$ az alábbi módon nézne ki: $input[type=checkbox]$.
+Konkrétan a \ref{lst:css syntax} kódrészletben látott CSS kódnál a $h2$ a $selector$ õt követi a deklarációs blokk amely két deklarációt tartalmaz. Egy deklarációnak két része van, egy a tulajdonságot megnevezõ része, ez van a $:$ elõtt, és egy azt követõ rész amely az értéket tartalmazza. Lehetséges még több $selector$ összecsoportosítsa, melynek köszönhetõen jócskán csökkenthetõ az ismétlõdõ kód. Ugyan ezt segíti elõ az is, hogy a CSS alapvetõen támogat öröklõdést, így egy felsõ konténeren definiált tulajdonság mindig lefelé a gyermekei felé propagál. Természetes a kevesebb kódnak más jó mellékhatása is van, mint a gyorsabban töltõdõ weboldal és kisebb sávszélesség használat. A $selector$ több típusú is lehet és ezeket kombinálni is lehet. A \ref{lst:css syntax} kódrészletben látottat $element selector$ -nak hívják, mely egy adott típusú elemet választ ki. A $class selector$ az olyan elemekre fog vonatkozni amik az adott $class$ attribútummal rendelkeznek. Ilyenkor egy pontot teszünk a $selector$ elé. Némely elem rendelkezhet különbözõ típusokkal is, pl.: egy $checkbox$ típusú $input$ elemre a $selector$ az alábbi módon nézne ki: $input[type=checkbox]$.
 
 \section{PHP}
-A PHP ($PHP:\ Hypertext\ Preprocessor$) egy széles körben elterjedt nyílt forráskódú általános célokra kifejlesztett szkript nyelv amely különösképpen alkalmas webes fejlesztésre, valamint HTML -be ágyazható. Ezt az alábbi példa \ref{lst:php hello world} kód részlet szemlélteti.
+A PHP ($PHP:\ Hypertext\ Preprocessor$) egy széles körben elterjedt nyílt forráskódú általános célokra kifejlesztett szkript nyelv amely különösképpen alkalmas webes fejlesztésre, valamint HTML -be ágyazható. Ezt az alábbi példa \ref{lst:php hello world} kódrészlet szemlélteti.
 \begin{minipage}{\linewidth}
 	\begin{lstlisting}[language=html,label={lst:php hello world}, caption={PHP Hello World!}]
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
@@ -550,13 +550,66 @@ A harmadik általam használt állapotkövetési technika az URL újraírásos módszer v
 \section{JavaScript}
 A JavaScript mint ahogy a neve is sejteti egy szkript nyelv mely fõképp böngészõn belüli használatra lett tervezve. JavaScriptet általában felhasználói felülettel való interakció során használunk, de más használata is lehetséges többek között szerver oldali programoz, játék fejlesztés vagy asztali alkalmazás fejlesztés.
 
-Néhány szintaktikai, standard könyvtári és persze név beli hasonlóságon kívül a Java -nak nem rokona, a kettõ igen különbözõ szemantikával rendelkezik. A JavaScript szintaktikája igazából a $C$ nyelvbõl származik, míg a szemantikájára és tervezésére fõképp a $Self$ és $Scheme$ programozásik nyelvek voltak hatással \cite{ECMAScript Language Overview}
+Néhány szintaktikai, standard könyvtári és persze névbeli hasonlóságon kívül a Java -nak nem rokona, a kettõ igen különbözõ szemantikával rendelkezik. A JavaScript szintaktikája igazából a $C$ nyelvbõl származik, míg a szemantikájára és tervezésére fõképp a $Self$ és $Scheme$ programozásik nyelvek voltak hatással \cite{ECMAScript Language Overview}.
 
-\todo beginings at netscape from http://en.wikipedia.org/wiki/JavaScript
+A JavaScriptet eredetileg Brendan Eich fejlesztette ki a Netscape -nél végzett munkája során. A fõ motiváció a nyelv megalkotásánál az volt hogy Microsofttal szemben konkurenciát teremtsenek a web technológiák és platformok között. A Netscape -nek egy olyan könnyûsúlyú interpretált nyelvre volt szüksége ehhez amely kiegészítette a Java-t és nem csak a professzionális programozókat vonzaná. A programozási nyelv a végleges JavaScript nevét akkor nyerte el amikor azt integrálták a Netscape böngészõ második verziójába. 1997 Júniusában végül az Ecma International (\textbf{E}uropean \textbf{C}omputer \textbf{M}anufacturers \textbf{A}ssociation egy non-profit szabvány alkotó szervezet) ECMAScript néven elfogadta a Netscape által beadott JavaScript-et. Késõbb bele került a $ISO/IEC-16262$ szabványba is. A jelenlegi is használt ECMAScript 5.1 kiadására 2011 Júniusában került sor \cite{ECMAScript 5.1 release}.
 
-\todo what is AJAX
+Mára a JavaScript az egyik legnépszerûbb webes programozási nyelvvé vált annak ellenére, hogy eredetileg sok hivatásos programozó bírálta a nyelvet többek között azért is mert annak a célközönsége fõképp web programozók és egyéb "amatõrök" voltak. Végül az $AJAX$ technológia megjelenése az õ érdeklõdésüket is felkeltette. Ennek eredményeként született több JavaScript alapú keretrendszer és külsõ könyvtár mely tovább finomította a JavaScript nyelv által nyújtott programozó praktikákat. 
 
-\subsection{JQuery}
+\subsection{AJAX}
+
+AJAX avagy \textbf{A}synchronous \textbf{J}avaScript \textbf{A}nd \textbf{X}ML -nak hívjuk azokat a kliens oldali web fejlesztési technológiákat amelyek segítségével aszinkron web alkalmazásokat hozhatunk létre. Ez alatta azt értjük, hogy az AJAX segítségével a web alkalmazások adatokat küldhetnek és fogadhatnak aszinkron módon (a háttérben) a szervertõl a nélkül hogy azok befolyásolnák a már létrehozott oldal kinézetét vagy mûködését. Adatok fogadhatók az $XMLHttpRequest$ objektumon használatával ami elnevezésének ellenére nem limitálja csak és kizárólag XML használatát, manapság sokszor inkább JSON (JavaScript Object Notion, JavaScript alapú nyílt szabvány ami ember által könnyen olvasható szöveges formátumban tartalmaz adatokat) használt. A technológiának napjaikban is van még néhány hátulütõje, ilyen a dinamikusan frissített web oldalak könyvjelzõzése. Tehát nehézkes lehet az alkalmazás egy adott állapotába visszatérni, ennek a megoldására több módszer is létezik, melyek között a legelterjedtebb az $URL\ fragment\ identifier$ (az URL "\#" utáni része) használata az alkalmazás állapotának nyomkövetésére \cite{deep linking for ajax}. 
+
+A \ref{lst:ajax example} kódrészletben bemutatott példán keresztül látható, hogy a borkóstolás web alkalmazáson belül hogyan használtam az AJAX technológiát.
+
+\begin{minipage}{\linewidth}
+	\begin{lstlisting}[language=php,label={lst:ajax example}, caption={AJAX példa kódrészlet}]
+var response;
+var xmlhttp=new XMLHttpRequest();
+xmlhttp.onreadystatechange=function(){
+  if (xmlhttp.readyState==4 && xmlhttp.status==200){
+    response = xmlhttp.responseText;
+  } else {
+    return;
+  }
+}
+xmlhttp.open("POST",url,false);
+xmlhttp.send();
+	\end{lstlisting}
+\end{minipage}
+
+A $xmlhttp.readyState==4$ azt jelenti, hogy a kérés sikeresen befejezõdött és arra válasz is érkezett, míg a $xmlhttp.status==200$ egyszerûen az "OK"-t jelenti (404 a nem található oldalt jelentené). Annak ellenére, hogy a $GET$ metódussal szemben a $POST$ lassabb, az jóval biztonságosabb olyan esetekben amikor felhasználók által megadott bemenetet továbbítunk a szerver felé, valamint a $POST$ -nak nincs méret béli korlátozása.
+
+\subsection{jQuery}
+A jQuery tagadhatatlanul a legnépszerûbb JavaScript könyvtár. Népszerûségének több oka is van, melyek közül nem elhanyagolható az hogy ingyenes és nyílt forráskódú. A jQuery létrehozásánál az egyik fõ szempont az volt, hogy lehetõvé tegye HTML dokumentumok elemei közti navigációt, mint a DOM (\textbf{D}ocument \textbf{O}bject \textbf{M}odel - többek közt HTML objektumok reprezentálására és interakciójára használt nyelv független konvenció) elemek kiválasztását, animációk létrehozását, események kezelését, na meg persze AJAX alkalmazások fejlesztését. Elõnyei közé sorolható még az is, hogy erõsen a HTML és JavaScrpt szeparálására buzdít az által, hogy nagyon könnyûvé teszik esemény kezelõk DOM -okhoz való csatolását a helyett hogy HTML esemény attribútumokkal kellene hogy küszködjünk, így könnyen elválhat a JavaScript kód a HTML markuptól.
+
+A könyvtár használatához a \ref{lst:include jquery} kódrészletben látott módon elõször be kell azt töltenünk.
+
+\begin{minipage}{\linewidth}
+	\begin{lstlisting}[language=php,label={lst:include jquery}, caption={AJAX példa kódrészlet}]
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	\end{lstlisting}
+\end{minipage}
+
+Természetesen más forrásból is betölthetjük, akár a saját szerverünkrõl is. 
+
+A jQuery-nek két felhasználási stílusa van:
+
+\begin{enumerate}
+	\item A "\$" függvényen keresztül, amely a jQuery objektum egy factory metódusa. Ezeket a függvényeket sokszor parancsoknak hívják és egymás után láncolhatók mivel mindegyikül jQuery objektumokkal tér vissza.
+	\item A "\$." prefixált függvényen keresztül. Ezek segéd függvények, amelyek nem közvetlen a jQuery objektummal érintkeznek.	
+\end{enumerate}
+
+jQuery -ben több DOM elem betöltése illetve manipulálása általában azzal kezdõdik, hogy meghívjuk a "\$" függvényt egy CSS selector stringgel. Ez majd egy jQuery objektumot fog referencia szerint visszaadni amely tartalmazza az összes erre illeszkedõ HTML elemet az oldalon. $\$\left("div.valami"\right)$ például egy olyan jQuery objektumot ad vissza amely tartalmazza a $valami$ CSS osztály összes $div$ elemét. Ez után akár közvetlenül a visszakapott halmazon hívhatjuk a jQuery függvényeket, vagy azok valamely elemén. Egy tipikus használati mód látható a \ref{lst:jquery typical use} kódrészletben, mely azt mutatja be hogyan indíthatunk parancsokat miután a böngészõ befejezte az oldal betöltését.
+
+\begin{minipage}{\linewidth}
+	\begin{lstlisting}[language=php,label={lst:jquery typical use}, caption={jQuery tipikus használat}]
+$(window).on('load', function () {
+  // jQuery kód
+});
+	\end{lstlisting}
+\end{minipage}
+
 \subsection{numeric}
 http://numericjs.com/lib/numeric-1.2.6.min.js
 
@@ -567,7 +620,7 @@ Az eredmények igényes megjelenítés megkövetelt valamilyen típusú grafikonkezelés
 
 \subsection{Google Charts}
 
-A Google Charts egy grafikonokat vizualizáló eszköz, amit leggyakrabban $JavaScript$-tel szoktunk használni. Elõször be kell tölteni a Google Chart könyvtárat és a hozzá szükséges AJAX API-t mint az a \ref{lst:init google charts} kód részletben is látható.
+A Google Charts egy grafikonokat vizualizáló eszköz, amit leggyakrabban $JavaScript$-tel szoktunk használni. Elõször be kell tölteni a Google Chart könyvtárat és a hozzá szükséges AJAX API-t mint az a \ref{lst:init google charts} kódrészletben is látható.
 
 \begin{minipage}{\linewidth}
 	\begin{lstlisting}[language=php,label={lst:init google charts}, caption={Google Charts API betöltése}]
@@ -900,6 +953,7 @@ Szeged, \today\
 \end{tabular}
 
 
+
 \vspace*{4cm}
 
 
@@ -939,6 +993,10 @@ vol. 30, no 1, 107-117, 1998
 \bibitem{Charts.js homepage}http://www.chartjs.org/
 
 \bibitem{ECMAScript Language Overview}ECMAScript Language Overview. 2007-10-23. p. 4. \emph{http://www.ecmascript.org/es4/spec/overview.pdf}
+
+\bibitem{ECMAScript 5.1 release} http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf
+
+\bibitem{deep linking for ajax}http://blog.onthewings.net/2009/04/08/deep-linking-for-ajax/
 
 %\begin{thebibliography}{99}
 % 10-nél több hivatkozás esetén
