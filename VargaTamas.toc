@@ -37,9 +37,9 @@
 \select@language {magyar} \contentsline {section}{\numberline {2.5}JavaScript}{27}{section.2.5}
 \select@language {magyar} \contentsline {subsection}{\numberline {2.5.1}AJAX}{28}{subsection.2.5.1}
 \select@language {magyar} \contentsline {subsection}{\numberline {2.5.2}jQuery}{29}{subsection.2.5.2}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.5.3}numeric}{30}{subsection.2.5.3}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.5.3}Numeric Javascript}{30}{subsection.2.5.3}
 \select@language {magyar} \contentsline {section}{\numberline {2.6}Grafikonok}{30}{section.2.6}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.6.1}Google Charts}{30}{subsection.2.6.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.6.1}Google Charts}{31}{subsection.2.6.1}
 \select@language {magyar} \contentsline {section}{\numberline {2.7}Statikus tartalom}{33}{section.2.7}
 \select@language {magyar} \contentsline {subsection}{\numberline {2.7.1}index.php - F\H ooldal}{33}{subsection.2.7.1}
 \select@language {magyar} \contentsline {subsection}{\numberline {2.7.2}borkostolasEredmenyek.php - Eredm\'enyek}{33}{subsection.2.7.2}

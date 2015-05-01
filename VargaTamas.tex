@@ -328,7 +328,7 @@ Az oldal megalkotásához egy agilis iterációs dizájn megközelítést alkalmaztam, m
 \caption[Elsõ oldalszerkezeti terv]{Elsõ oldalszerkezeti terv \label{fig:Wireframe}}
 \end{figure}
 
-\subsection{Második mérföldkõ}A második mérföldkõ során került sor a megrendelõtõl kapott dokumentumok és források feldolgozására majd azok feltöltése a projektbe fõként statikus HTML elemekként. Továbbá végrehajtása a megrendelõ által kért grafikus és szerkezeti változtatásokat mint: Alsó információs sáv átmozgatása és re-faktorizációja egy oldalsó lebegõ mozgó elemmé ($floating sidebar$), menüpontok átnevezése, fejléc logó frissítése, A $borkostolasEredmenyek$ oldal átdolgozása az alábbi módon: Táblázatok kettéválasztása. Vízszintes görgetõ sáv hozzáadása a borok táblázat felsõ és alsó részéhez, melyek együtt mozognak egymással így megoldva a táblázat nagyságából fakadó kezelhetõségi problémát. Az elõre láthatólag bekövetkezõ grafikai felépítés esetleges módosítása könnyítésének érdekében több stílus elemet is újabb osztályokba rendeztem, tehát egy átfogóbb re-faktorizáció történt mely mint késõbb kiderült a további stilisztikai elemek hozzáadását és stilizálását is megkönnyítette.
+\subsection{Második mérföldkõ}A második mérföldkõ során került sor a megrendelõtõl kapott dokumentumok és források feldolgozására majd azok feltöltése a projektbe fõként statikus HTML elemekként. Továbbá végrehajtása a megrendelõ által kért grafikus és szerkezeti változtatásokat mint: Alsó információs sáv átmozgatása és re-faktorizációja egy oldalsó lebegõ mozgó elemmé ($floating\ sidebar$), menüpontok átnevezése, fejléc logó frissítése, A $borkostolasEredmenyek$ oldal átdolgozása az alábbi módon: Táblázatok kettéválasztása. Vízszintes görgetõ sáv hozzáadása a borok táblázat felsõ és alsó részéhez, melyek együtt mozognak egymással így megoldva a táblázat nagyságából fakadó kezelhetõségi problémát. Az elõre láthatólag bekövetkezõ grafikai felépítés esetleges módosítása könnyítésének érdekében több stílus elemet is újabb osztályokba rendeztem, tehát egy átfogóbb re-faktorizáció történt mely mint késõbb kiderült a további stilisztikai elemek hozzáadását és stilizálását is megkönnyítette.
 
 \subsection{Harmadik mérföldkõ}A harmadik mérföldkõ fõ feladata az azt megelõzõ konzultáció során átbeszélt $demo$ oldal elkészítése volt. Tehát itt került sor a CoHITS algoritmus megismerése a hozzá tartozó szakirodalom áttanulmányozására majd az algoritmus implementálásának megkezdésére a projektbe. Ezt követte a korreláció és átlagtól való átlagos eltérés számolásának implementálása, de mint késõbb kiderült ezek az algoritmusok nem tûrték jól a hiányos bemeneti adatokat ezért végül az általuk generált kimenet nem került felhasználásra. A mérföldkõ végére a CoHITS algoritmus implementálásának befejezése és tesztelése maradt. Ezen mérföldkõ keretén belül ismerkedtem meg a Google grafikonkészítõ API-val, majd azt felhasználtam a CoHITS algoritmus, korreláció és átlagtól való átlagos eltérés adatsorok reprezentációjához.
 
@@ -586,7 +586,7 @@ A jQuery tagadhatatlanul a legnépszerûbb JavaScript könyvtár. Népszerûségének tö
 A könyvtár használatához a \ref{lst:include jquery} kódrészletben látott módon elõször be kell azt töltenünk.
 
 \begin{minipage}{\linewidth}
-	\begin{lstlisting}[language=php,label={lst:include jquery}, caption={AJAX példa kódrészlet}]
+	\begin{lstlisting}[language=php,label={lst:include jquery}, caption={jQuery betöltése}]
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 	\end{lstlisting}
 \end{minipage}
@@ -610,16 +610,23 @@ $(window).on('load', function () {
 	\end{lstlisting}
 \end{minipage}
 
-\subsection{numeric}
-http://numericjs.com/lib/numeric-1.2.6.min.js
+\subsection{Numeric Javascript}
+A $Numeric\ Javascript$ egy JavaScript könyvtár mely segítségével numerikus analízisbéli számításokat végeztethetünk kliens oldalon a web böngészõben. Annak köszönhetõen hogy csak a JavaScript nyelvet használja fel a könyvtár több típusú böngészõben is futtatható, természetesen feltéve, hogy azok támogatják a JavaScript-et. A $Numeric\ Javascript$ használata sokat segít abban hogy a számolás igényes feladatokat ne a szervert terheljék, kis kapacitással bíró szerverek esetén vagy esetleg olyankor amikor az alkalmazást egy limitált erõforrásokkal rendelkezõ felhasználó futtatja a szerven az ilyen megközelítés elengedhetetlen. A könyvtárat Sébastien Loisel készítette és MIT licenccel publikálta \cite{numericjs source}. A könyvtár használatához egyszerûen csak be kell töltenünk azt a már megszokott módon (\ref{lst:include numeric} kódrészlet) és máris használhatjuk a könyvtár által nyújtott metódusokat.
 
+\begin{minipage}{\linewidth}
+	\begin{lstlisting}[language=php,label={lst:include numeric}, caption={Numeric Javascript betöltése}]
+<script type="text/javascript" src="http://numericjs.com/numeric/lib/numeric-1.2.6.min.js"></script>
+	\end{lstlisting}
+\end{minipage} 
+
+A könyvtárcsomagból fõképp a sajátérték számítást végzõ $eig$ metódust használtam fel a $CoHITS$ algoritmus implementálása során.
 
 \section{Grafikonok}
 Az eredmények igényes megjelenítés megkövetelt valamilyen típusú grafikonkezelést. Mivel több nagyon könnyen felhasználható és jól mûködõ $JavaScript$ publikus könyvtár létezik már ennek a feladatnak az ellátására, úgy gondoltam, hogy egy-kettõt kipróbálok mielõtt véglegesen valamelyik használata mellett döntenék. Kis kutató munka után arra jutottam, hogy a választásom a $Google Charts$ \cite{Google Charts homepage} és a $Charts.js$ \cite{Charts.js homepage} két grafikon készítõ API közül az egyikre fog esni. Míg számomra úgy tûnt, hogy a $Charts.js$ használata talán könnyebb, stílusosabban és személyre szabhatóbban reprezentálja az adatokat apróbb probléma volt, hogy az értékek mint címkék megjelenítése nem volt alapból támogatva az oszlop diagram osztályban. Persze akár kiterjeszthettem volna ezt az osztályt és saját magam implementálom az oszlopok adatokkal való címkézését, de mielõtt ebbe bele vágtam volna azért megnéztem hogy a $Google Charts$ rendelkezik -e hasonló szolgáltatással. Mint kiderült igen, így a végsõ választásom erre a grafikon kezelõ $JavaScript$ API -ra esett annak ellenére, hogy talán stilisztikai szempontból alapértelmezetten nem ajánl fel olyan nagy mértékû testre szabhatóságot mint a $Charts.js$.
 
 \subsection{Google Charts}
 
-A Google Charts egy grafikonokat vizualizáló eszköz, amit leggyakrabban $JavaScript$-tel szoktunk használni. Elõször be kell tölteni a Google Chart könyvtárat és a hozzá szükséges AJAX API-t mint az a \ref{lst:init google charts} kódrészletben is látható.
+A Google Charts egy grafikonokat vizualizáló eszköz, amit leggyakrabban $JavaScript$-tel szoktak használni. Elõször be kell tölteni a Google Chart könyvtárat és a hozzá szükséges AJAX API-t mint az a \ref{lst:init google charts} kódrészletben is látható.
 
 \begin{minipage}{\linewidth}
 	\begin{lstlisting}[language=php,label={lst:init google charts}, caption={Google Charts API betöltése}]
@@ -965,7 +972,7 @@ Szeged, \today\
 
 \begin{thebibliography}{99}
 %10-nél kevesebb hivatkozás esetén
-\bibitem{Borkóstolás projekt}Borkóstolás projekt - http://www.inf.u-szeged.hu/~tnemeth/osa/
+\bibitem{Borkóstolás projekt}Borkóstolás projekt.  \url{http://www.inf.u-szeged.hu/~tnemeth/osa/}
 
 \bibitem{PageRank}
 Sergey Brin and Lawrence Page. 
@@ -978,41 +985,45 @@ J. Kleinberg. Authoritative sources in a hyperlinked environment.
 \emph{Journal of the ACM}, \textbf{46}(1999), no. 5, 604-632.
 
 \bibitem{Github}
-GitHub - https://github.com/about
+GitHub - \url{https://github.com/about}
 
 \bibitem{CoHITS}
 London András és Csendes Tibor. 
 HITS based network algorithm for evaluating the professional skills of wine tasters
 
 \bibitem{php-login}
-Panique. http://www.php-login.net
-\emph{http://opensource.org/licenses/MIT MIT License}
+Panique. \url{http://www.php-login.net}
 
 \bibitem{php-history}
-History of PHP. http://php.net/manual/en/history.php.php
+History of PHP. \url{http://php.net/manual/en/history.php.php}
 
 \bibitem{CSS-origin}
 Lie, Hakon W (10 Oct 1994). Cascading HTML style sheets - a proposal
 
 \bibitem{PDO-charset-security}
-http://wiki.hashphp.org/PDO\_Tutorial\_for\_MySQL\_Developers\#Connecting\_to\_MySQL
+\url{http://wiki.hashphp.org/PDO\_Tutorial\_for\_MySQL\_Developers\#Connecting\_to\_MySQL}
 
 \bibitem{Google Charts homepage}
 Google Charts homepage
-https://google-developers.appspot.com/chart/
+\url{https://google-developers.appspot.com/chart/}
 
 \bibitem{Charts.js homepage}
 Charts.js homepage
-http://www.chartjs.org/
+\url{http://www.chartjs.org/}
 
 \bibitem{ECMAScript Language Overview}
-ECMAScript Language Overview. 2007-10-23. p. 4. \emph{http://www.ecmascript.org/es4/spec/overview.pdf}
+ECMAScript Language Overview. 2007-10-23. p. 4. \url{http://www.ecmascript.org/es4/spec/overview.pdf}
 
 \bibitem{ECMAScript 5.1 release}
-ECMAScript Language Specification http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf
+ECMAScript Language Specification \url{http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf}
 
 \bibitem{deep linking for ajax}
-http://blog.onthewings.net/2009/04/08/deep-linking-for-ajax/
+\url{http://blog.onthewings.net/2009/04/08/deep-linking-for-ajax/}
+
+\bibitem{numericjs source}
+Sébastien Loisel.
+Numeric Javascript. 
+\url{http://www.numericjs.com/}
 
 %\begin{thebibliography}{99}
 % 10-nél több hivatkozás esetén
