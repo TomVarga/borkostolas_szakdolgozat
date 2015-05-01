@@ -689,7 +689,21 @@ Mivel a web alkalmazás bármely részén elérhetõ egy oldalsó felhasználó kezelõ le
 \paragraph{kapcsolat.php - Kapcsolat} Információs oldal melyen keresztül a látogató felveheti a kapcsolatot az alkalmazás készítõjével.
 
 \section{Dinamikus tartalom}
+
+A web alkalmazás dinamikus tartalmának generálását az alábbi alfejezetek szerint lehet csoportosítani. A két csoport lényegébe véve vagy a felhasználó kezeléssel foglalkozik vagy a kiválasztott algoritmust futtatja.
+
 \subsection{php-login}
+A php-login \cite{php-login} vagy újabb nevén "HUGE" egy egyszerû beléptetõ rendszer mely egy nagyon alap keretrendszerben található. A PHP 5.5 után hivatalossá vált bcrypt jelszó hashelést is használja. Fõbb szolgáltatás közé tartozik a regisztráció, belépés, kilépés, e-mail visszaigazolás, jelszó újraküldés, felhasználó adatok szerkesztése, gravatarok, kapcsa valamint "emlékezz rám" típusú bejelentkezve tartás sütik segítségével. Korábban is használtam már ezt a felhasználó kezelõ rendszert más projektekhez így kézenfekvõ volt számomra a használata most is. Használatának csupán néhány könnyen eleget tehetõ feltételnek kell teljesülni mint:
+
+\begin{itemize}
+	\item PHP legalább 5.3.7 verziója
+	\item MySQL 5 adatbázis (verzió 5.5, 5.6, 5.7 támogattott) 
+	\item A PHP GD (Graphic rpocessing \& generation) grafikus funkciójának be kell lennie kapcsolva a kapcsa használathoz
+	\item EGY SMTP e-mail fiók vagy olyan szerver amelyen helyesen van konfigurálva és használható a $sendmail$ funkció.
+\end{itemize}
+
+Amennyiben meggyõzõdtünk hogy a szerver ezen kritériumnak mind eleget tesz nincs más hátra mint az adatbázisunkban létrehozni egy $user$ táblát vagy a telepítõ könyvtárban talált fájl segítségével vagy saját kézzel. Itt jegyezném meg, hogy a php-login csomag ezen változata nem kezel különbözõ jogosultságokat (normal user / admin) ezért azt saját magam adtam a modulhoz. Az adatbázis elõkészítést a csomag konfigurálása követi a $config/config.php$ fájl segítségével. Meg kell adni az adatbázis szerver eléréshez szükséges információkat mint $DB\_HOST$, $DB\_NAME$, $DB\_USER$, $DB\_PASS$. A Sütik használatához a sütik érvényességét szabályzó domain-t, melyet minden esetben PHP szabvány szerint egy $.$ elõz meg, valamint egy titkos kulcsot amely tovább növeli az alkalmazás biztonságát. Ennek a kulcsnak a megváltoztatásakor a sütik vissza fognak állítódni. Ebben a fájlban kell még továbbá definiálni pár globális stringet melyek az e-mail küldések során lesznek használva. Fontos hogy ezek mindig a helyes domaint tartalmazzák, mert különben az e-mailekben szereplõ linkek valószínûleg olyan helyre fognak mutatni ami nem tartalmaz semmilyen tartalmat. Talán itt még érdemes megemlíteni, hogy annak ellenére, hogy a csomag támogatja $mail\left(\right)$ használatával való e-mail küldését, ez a való életben sokszor nem mûködik, vagy azért nem mert a szerveren nincs megfelelõen konfigurálva az e-mail küldés, vagy azért mert a szolgáltató limitálja annak használatát. A hasonló limitációk kiküszöbölése érdekében használható egy SMTP alapú e-mail küldés is. Természetesen ennek használatához szükség van a $EMAIL\_SMTP\_HOST$, $EMAIL\_SMTP\_USERNAME$, $EMAIL\_SMTP\_PASSWORD$ globális változók definiálására.
+
 \paragraph{Hashelés}
 A hashelés
 \paragraph{Felhasználói állapot nyomkövetése}
