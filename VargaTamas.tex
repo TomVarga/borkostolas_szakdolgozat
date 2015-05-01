@@ -653,7 +653,7 @@ Majd a bemeneti adatokat úgy kell rendezni ahogy az a könyvtár osztályban defini
 	\caption{Példa a $Google Charts$ által megjelenítendõ adatok szerkezetére \label{tbl:google charts data table}}
 \end{table}
 
-Ez így leírt adatsor tényleges elõkészítését a $Google Charts$ számára a \ref{lst:array to data table} kódrészletben látott utasítás végzi el.
+Az így leírt adatsor tényleges elõkészítését a $Google Charts$ számára a \ref{lst:array to data table} kódrészletben látott utasítás végzi el.
 
 \begin{minipage}{\linewidth}
 	\begin{lstlisting}[language=php,label={lst:array to data table}, caption={Google Charts tömbbõl google data table készítés}]
@@ -680,10 +680,13 @@ chart.draw(view);
 A különbözõ grafikon típusok mint $JavaScript$ osztályok vannak megvalósítva. Általában az alapértelmezett kinézet már önmagában is igényes megjelenítést biztosít, de lehetõség van ennek testreszabására is. Ez úgy történik meg, hogy a grafikonok eseményeket tesznek elérhetõvé amelyekre csatlakozva akár komplexebb adat táblákat is beágyazhatunk a web oldalunkba. A grafikonok a HTML5/SVG technológiájával kerülnek renderelésre így biztosítva a több akár régebbi böngészõ, vagy mobil eszköz támogatását. Minden grafikon típust adat táblájának feltöltéséért a már látott $DataTable$ osztály felelõs, ami megkönnyíti a grafikon típusok közötti váltogatást amíg a nekünk legjobban megfelelõ kinézetût keressük. A $DataTable$ rendelkezik olyan metódusokkal amelyek az adatok rendezését, módosítását vagy akár szûrését is lehetõvé teszik és közvetlenül a böngészõbõl fel lehet õket tölteni, de akár adatbázisból vagy bármilyen olyan forrásból ami támogatja a $Chart Tools Datasource$ protokollt. Ennek a protokollnak van egy SQL szerû lekérdezõ nyelve mely többek között az $Google Spreadsheet$ -ekben is implementálva van.
 
 \section{Statikus tartalom}
-\subsection{index.php - Fõoldal}
-\subsection{borkostolasEredmenyek.php - Eredmények}
-\subsection{modszerek.php - Módszerek}
-\subsection{kapcsolat.php - Kapcsolat}
+
+Mivel a web alkalmazás bármely részén elérhetõ egy oldalsó felhasználó kezelõ lebegõ menü ezért ténylegesen nem lehet egyik oldalra sem azt mondani, hogy teljes mértékben csak statikus tartalommal rendelkezik, mégis az alábbi oldalakat ebbe a kategóriába sorolnám fõképp azon okból kifolyólag, hogy tényleges felhasználó interakció csakis ezen a már említett lebegõ oldalsó  sávon történik, a többi tartalom még a felhasználó állapotától függõen sem változik.
+
+\paragraph{index.php - Fõoldal} Ez az oldal egy a Népszabadságban megjelent cikket tartalmaz.
+\paragraph{borkostolasEredmenyek.php - Eredmények} Az adatbázisban szereplõ adatok egy kivonatát mely neves borkóstolók értékeléseit mutatja. Az itt látható eredmények csak ezen értékek figyelembevételével lettek generálva a CoHITS algoritmus által, így ez az oldal mindenképpen csak mint egy példa jellegû bemutatóként szolgál.
+\paragraph{modszerek.php - Módszerek} Eredetileg a használt algoritmusok bemutatására szolgált volna, de végül idõ hiányában csak ezen szakdolgozatra mutató link lett belõle.
+\paragraph{kapcsolat.php - Kapcsolat} Információs oldal melyen keresztül a látogató felveheti a kapcsolatot az alkalmazás készítõjével.
 
 \section{Dinamikus tartalom}
 \subsection{php-login}
