@@ -853,9 +853,10 @@ A = Pr\left(x_{k} | x_{k - 1}\right) , sum(A , 2) = 1. \\
 PI = stationary\left(A\right);
 \end{split}
 \end{equation}
-Ahol $sum\left(A, 2\right) = 1$ azt jelenti, hogy az A mátrix második dimenzió szerinti oszlopösszege 1. Tehát a további számoláshoz szükséges lesz a legnagyobb sajátérték indexére, melyet a $tp$ változóban tárolunk el, valamint az ehhez az indexhez tartozó sajátvektorra ami a $tLastColWithMaxValueInIt$ -ba kerül. Ekkor a $PI$ értékeit úgy kapjuk, hogy $tLastColWithMaxValueInIt$ minden egyes értékét elosztjuk annak az elemenkénti összegével. Ezt a tömböt fogja vissza kapni az AJAX hívás.
+Ahol $sum\left(A, 2\right) = 1$ azt jelenti, hogy az A mátrix második dimenzió szerinti \linebreak oszlopösszege egy. Tehát a további számoláshoz szükséges lesz a legnagyobb sajátérték indexére, melyet a $tp$ változóban tárolunk el, valamint az ehhez az indexhez tartozó sajátvektorra ami a $tLastColWithMaxValueInIt$ -ba kerül. Ekkor a $PI$ értékeit úgy kapjuk, hogy $tLastColWithMaxValueInIt$ minden egyes értékét elosztjuk annak az elemenkénti összegével. Ezt a tömböt fogja vissza kapni az AJAX hívás.
 
 Ahhoz hogy az eredményt megjeleníthessük már csak százra kell azokat normálnunk, valamint az eredményeket maximum három tizedes jegy hosszúra vágni. Miután mind ez megtörtént a $clearResults\left( limitálni\right)$ JavaScript metódus kipucolja azokat a <div> -eket ahova az eredményeket fogjuk kiírni, így garantálva, hogy mindig csak az adott számolás eredményét prezentáljuk a felhasználó felé. Végül a két grafikont a $drawChart$ metódusok valamint a hozzájuk tartozó fõcímeket a $addTextResultHeader$ illesztik be a megfelelõ helyükre.
+
 
 \chapter{A mobil alkalmazás}
 Android alkalmazás fejlesztés
