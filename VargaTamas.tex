@@ -684,7 +684,26 @@ A különbözõ grafikon típusok mint $JavaScript$ osztályok vannak megvalósítva. Ál
 Mivel a web alkalmazás bármely részén elérhetõ egy oldalsó felhasználó kezelõ lebegõ menü ezért ténylegesen nem lehet egyik oldalra sem azt mondani, hogy teljes mértékben csak statikus tartalommal rendelkezik, mégis az alábbi oldalakat ebbe a kategóriába sorolnám fõképp azon okból kifolyólag, hogy tényleges felhasználó interakció csakis ezen a már említett lebegõ oldalsó  sávon történik, a többi tartalom még a felhasználó állapotától függõen sem változik.
 
 \paragraph{index.php - Fõoldal} Ez az oldal egy a Népszabadságban megjelent cikket tartalmaz.
-\paragraph{borkostolasEredmenyek.php - Eredmények} Az adatbázisban szereplõ adatok egy kivonatát mely neves borkóstolók értékeléseit mutatja. Az itt látható eredmények csak ezen értékek figyelembevételével lettek generálva a CoHITS algoritmus által, így ez az oldal mindenképpen csak mint egy példa jellegû bemutatóként szolgál.
+\paragraph{borkostolasEredmenyek.php - Eredmények} Az adatbázisban szereplõ adatok egy kivonatát mely neves borkóstolók értékeléseit mutatja. Az itt látható eredmények csak ezen értékek figyelembevételével lettek generálva a CoHITS algoritmus által, így ez az oldal mindenképpen csak mint egy példa jellegû bemutatóként szolgál. 
+
+Itt említenék meg egy a $demo.php$ oldalon is elõkerülõ érdekes kényelmi funkciót, mely a táblázatok görgethetõsége felül és alul egyaránt. Ezt úgy értem el, hogy a táblázatokat bele tettem egy konténerbe mely két részre van osztva, az egyik a bal a másik a jobb oldali táblázatot tartalmazza. A bal oldali táblázatot tartalmazó konténer rendelkezik egy másik konténerre mely közvetlen a táblázat felett helyezkedik el, itt található a felsõ görgetõ sáv. A \ref{lst:double scroll} kódrészletben látható jQuery szkript pedig azt teszi, hogy amikor bármelyik a táblázatokat mozgató görgõ elmozdul akkor a másikat is elmozdítja. Persze az egységes megjelenítés érdekében még elõször be kell állítani hogy a felsõ görgetõ sáv szélessége megegyezzen a táblázat, avagy az alsó görgetõ sáv szélességével.
+
+\begin{minipage}{\linewidth}
+	\begin{lstlisting}[language=php,label={lst:double scroll}, caption={Dupla görgetõ sáv jQuery -vel}]
+$(function () {
+  $('.topScrollingBlockWrapper').on('scroll', function () {
+    $('.leftTableContainer').scrollLeft($('.topScrollingBlockWrapper').scrollLeft());
+  });
+  $('.leftTableContainer').on('scroll', function () {
+    $('.topScrollingBlockWrapper').scrollLeft($('.leftTableContainer').scrollLeft());
+  });
+});
+$(window).on('load', function () {
+  $('.topScroll').width($('.leftTable').width());
+});
+	\end{lstlisting}
+\end{minipage}
+
 \paragraph{modszerek.php - Módszerek} Eredetileg a használt algoritmusok bemutatására szolgált volna, de végül idõ hiányában csak ezen szakdolgozatra mutató link lett belõle.
 \paragraph{kapcsolat.php - Kapcsolat} Információs oldal melyen keresztül a látogató felveheti a kapcsolatot az alkalmazás készítõjével.
 
@@ -858,12 +877,12 @@ Az Android Studio \cite{Android Studio} az Android alkalmazásfejlesztõknek szánt
 
 A korábbi Eclipse alapú fejlesztõ környezettel szemben itt már az SDK és Emulátor kezelõ alkalmazások közvetlenül beépültek az IDE -be, egyszerûbbé téve azok menedzselését és telepítését.
 
-Mivel most elõször használtam ezt a fejlesztõi környezetet, valamint Android fejlesztésben se voltam nagyon jártas ezért eltartott egy darabig mire rájöttem arra, hogy nem kell feltétlenül egy Nexus 5 alapú több gigabyte memóriával rendelkezõ emulátoron tesztelni az éppen fejlesztés alatt álló alkalmazást. Sokáig a Gradle build process akár egy két percet is igénybe vett. Mivel általában egy elég erõs gépen fejlesztettem az Android alkalmazást ez egy idõ után igen zavaróvá vált és jócskán hátráltatta a fejlesztés menetét. Csak miután rájöttem hogy a régebbi Android verziók kisebb memória igénnyel rendelkeznek, valamint az emulátor snapshot használatának bekapcsolásával nagy mértékben sikerült felgyorsítani a build process-t így közvetetten a fejlesztés menetét is.
+Mivel most elõször használtam ezt a fejlesztõi környezetet, valamint Android fejlesztésben se voltam nagyon jártas ezért eltartott egy darabig mire rájöttem arra, hogy nem kell feltétlenül egy Nexus 5 alapú több gigabyte memóriával rendelkezõ emulátoron tesztelni az éppen fejlesztés alatt álló alkalmazást. Sokáig a Gradle build process akár egy két percet is igénybe vett. Mivel általában egy elég erõs gépen fejlesztettem az Android alkalmazást ez egy idõ után igen zavaróvá vált és jócskán hátráltatta a fejlesztés menetét. Csak miután rájöttem hogy a régebbi Android verziók kisebb memória igénnyel rendelkeznek, valamint az emulátor snapshot használatának bekapcsolásával nagy mértékben sikerült felgyorsítani a build process-t így közvetetten a fejlesztés menetét is. Bár néhány nagyobb szolgáltatását mint például a keretrendszer támogatás még nem sikerült kipróbálnom, könnyen el tudom képzelni, hogy a jövõben is ezt a fejlesztõi környezetet fogom használni PHP projektet fejlesztéséhez.
 
 Bár az Android Studio is rendelkezik beépített verzió kezelõ támogatással, elsõ körben nem sikerült rávennem, hogy használja a szokásos módon megadott elérési úton lévõ publikus kulcsomat. Csak kisebb kutakodás után sikerült kiderítenem, hogy õ azt egy konkrét helyen keresi és ha nem találja akkor simán egy generikus hiba üzenettel fog visszatérni, mely szerint nem sikerült a távoli repozitóriumhoz csatlakozni, annak ellenére, hogy az nyílt és publikus is.
 
 \subsection{PhpStorm}
-
+A PhpStorm a JetBRAINS által fejlesztett PHP IDE mely harminc napig ingyenesen kipróbálható. A fõ ok amiért kipróbáltam az volt, hogy már megszoktam az Android Studio nagyon intelligens kód kiegészítõ szolgáltatását. Amikor vissza mentem a web alkalmazást csinosítgatni kicsit megterhelõ volt a régi eszköz használata ezért elkezdtem keresni hát ha létezik valamilyen IntelliJ alapú IDE amely támogatja PHP és a JavaScript nyelveket. Nagyon gyorsan sikerült is rátalálnom a PhpStorm -ra, mely teljes mértékben azt hozta amit vártam.
 
 
 Mivel a PhPStorm -ot csak az Android Studio megismerése után kezdtem el használni ezért különösebben nem találkoztam olyan dologgal benne ami nagy újdonság lett volna. A mentés utáni automatikus feltöltés beállítása könnyen ment elsõre is és pontosan az elvárt hierarchia szerint mûködött. Talán az egyetlen kisebb kényelmetlenség amely említésre méltó a fejlesztõi környezet használata során a refaktorizáció használata. Lehetséges, hogy valahol be lehet állítani hogy konstans stringebe is végezze el a refaktorizációt, de ezt az opciót nem találtam meg ezért kénytelen voltam mindig minden refaktorizáció után egy manuális projekt keretû keresést lefuttatni a már átnevezett vagy átmozgatott értékre, így meg tudtam gyõzõdni róla, hogy valóban minden példány ténylegesen átnevezõdött.
