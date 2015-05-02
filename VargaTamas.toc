@@ -67,8 +67,11 @@
 \select@language {magyar} \contentsline {subsection}{\numberline {7.1.4}Repozit\'oriumok}{42}{subsection.7.1.4}
 \select@language {magyar} \contentsline {section}{\numberline {7.2}K\"ornyezetek}{42}{section.7.2}
 \select@language {magyar} \contentsline {subsection}{\numberline {7.2.1}SublimeText - linterek}{42}{subsection.7.2.1}
-\select@language {magyar} \contentsline {chapter}{\numberline {8}F\"uggel\'ek}{44}{chapter.8}
-\select@language {magyar} \contentsline {section}{\numberline {8.1}A program forr\'ask\'odja}{44}{section.8.1}
+\select@language {magyar} \contentsline {paragraph}{Linterek}{43}{section*.29}
+\select@language {magyar} \contentsline {subsection}{\numberline {7.2.2}Android Studio}{43}{subsection.7.2.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {7.2.3}PhpStorm}{44}{subsection.7.2.3}
+\select@language {magyar} \contentsline {chapter}{\numberline {8}F\"uggel\'ek}{45}{chapter.8}
+\select@language {magyar} \contentsline {section}{\numberline {8.1}A program forr\'ask\'odja}{45}{section.8.1}
 \select@language {magyar} \ 
-\select@language {magyar} \contentsline {section}{Nyilatkozat}{45}{chapter*.29}
-\select@language {magyar} \contentsline {section}{Irodalomjegyz\'ek}{47}{chapter*.30}
+\select@language {magyar} \contentsline {section}{Nyilatkozat}{46}{chapter*.30}
+\select@language {magyar} \contentsline {section}{Irodalomjegyz\'ek}{48}{chapter*.31}

@@ -823,6 +823,8 @@ A szakdolgozat, web és android alkalmazás forráskódja az alábbi linkeken érhetõk
 
 
 \section{Környezetek}
+Itt szeretném bemutatni a fejlesztés során általam használt IDE (\textbf{I}ntegrated \textbf{D}evelopment \textbf{E}nvironment) és egyéb eszközöket és környezeteket. Valamint kitérnék a felhasználásuk során elõkerült kisebb-nagyobb kellemetlenségekbe vagy kedves meglepetésekbe.
+
 \subsection{SublimeText - linterek}
 A web alkalmazás fejlesztését a SublimieText 3 \cite{SublimeText} kód szerkesztõvel kezdtem meg, mivel ezt használtam már több szkript nyelv alapú projekt realizálásához is. Ez a fejlesztõi környezet jó néhány általam kedvelt szolgáltatással rendelkezik, csak hogy néhányat említsek a sok közül:
 
@@ -831,14 +833,36 @@ A web alkalmazás fejlesztését a SublimieText 3 \cite{SublimeText} kód szerkesztõ
 	\item \textbf{Command Palette}: $Ctrl+Shift+P$ segítségével sok idõt meg lehet spórolni amely egyébként menü rendszerekben való keresgéléssel menne el. Egyszerûen csak elkezdjük begépelni a parancs egy részét amit végre szeretnénk hajtani és a lenyíló paletta automatikusan csak azokat a parancsokat fogja megjeleníteni amelyek tartalmazzák a már általunk begépelt részt.
 	\item \textbf{Testre szabhatóság}: Szinte bármit személyre lehet szabni, legyen az: billentyû parancs, menük, jegyzetek, makrók, kód befejezés stb... Mind ehhez csak egy egyszerû JSON fájlt kell szerkeszteni amely lehetõvé teszi hogy az egyéni módosításaink csak fájl típusonként legyenek érvényesek vagy akár egész projektre vonatkozóan.
 	\item \textbf{Többszörös kijelölés}: A többszörös kijelölésnek köszönhetõen egyszerre tudunk elvégezni tíz módosítást a helyett hogy tízszer végeznének el ugyan azt az egy módosítást. Az oszlop kiválasztás is nagyon hatékonnyá teszi a kód rendezést, valamint a refaktorizációt, de persze itt említhetném meg az automatikus kód indentálást is.
-	\item {Plugin API}: A Sublime Text rendelkezik egy nagy erejû Python alapú plugin API-val ami lehetõvé teszi a környezet további kiváló szolgáltatásokkal való bõvítését, mint például linterekkel vagy automatikus fájl feltöltõ eszközökkel.
+	\item {Plugin API}: A Sublime Text rendelkezik egy nagy erejû Python alapú plugin API-val ami lehetõvé teszi a környezet további kiváló szolgáltatásokkal való bõvítését, mint például linterekkel vagy automatikus fájl feltöltõ eszközökkel de itt említeném meg még a verzió kezelõket támogató plugineket is.
 \end{itemize}
+
+A projekt automatikus FTP-re való feltöltéséhez a népszerû SFTP plugint használtam, amely ugyan úgy mint maga a Sublime Text egy $nagware$ termék (olyan shareware amely idõnként általában egy elõugró ablakkal arra kér minket hogy vásároljuk licencet a termékhez). Ez gyorsan zavaróvá válhat, de egy egyszerû szkript segítségével könnyen elérhetõ, hogy az ilyen jellegû elõugró ablakok automatikusan bezáródjanak.
+
+Bár a verzió kezelõ rendszereket a Sublime Text alól mint parancssoros utasítások is lehet használni létezik konkrét Github Sublime Text plugin mely kényelmesebbé teheti az elsõ beállításokat azok számára akik még nem jártasak a git verzió kezelõ rendszer használatában. Én már korábbi projektekbõl rendelkeztem kisebb git szkriptekkel így a plugin nem igazán nyújtott olyan szolgáltatást amelyet korábban már ne implementáltam volna magamnak valamilyen formában.
 
 \paragraph{Linterek} Lintereknek nevezzük az olyan eszközöket amelyek gyanús kódhasználatra hívják fel a figyelmünket. A $lint$ eredetileg egy olyan program volt ami a $C$ forrás kódon ment végig gyanús illetve valószínûleg bugos kódot keresve. Az ilyen jellegû eszközök általában statikus vizsgálják a forrás kódot. Nagyon hasznosak tudnak lenni szintaktikai hibák felderítésében, vagy a modernebb változatok akár arra is fel tudják hívni a figyelmet, ha az adott kód nem felel meg egy adott kódolási stílus irányelvnek.
 
-PhpStorm
+\subsection{Android Studio}
+Az Android Studio \cite{Android Studio} az Android alkalmazásfejlesztõknek szánt hivatalos IDE mely a népszerû IntelliJ IDEA -n alapul. Az IntelliJ által elvárt szolgáltatásokon felül rendelkezik jó néhány Android specifikus és egyéb kiegészítéssel amelyek könnyebbé teszik a fejlesztés menetét:
 
-Android Studio
+\begin{itemize}
+	\item Gradle alapú buildelõ rendszer
+	\item Több fajta $apk$ fájl generálás
+	\item Kód templatek és segítség népszerû alkalmazás szolgáltatások építéséhez
+	\item Kibõvített elrendezés szerkesztõ, mely fogd meg és húzd alapú téma szerkesztés is lehetõvé tesz
+	\item Linter eszközök melyek akár, teljesítmény, használhatóság vagy verzió kompatibilitási problémákra is fel tudják hívni a fejlesztõ figyelmét
+	\item ProGuard és alkalmazás aláíró képesség
+	\item Támogatja a hordható eszközöket is
+	\item Beépített Google Clout Platform támogatás
+\end{itemize}
+
+A korábbi Eclipse alapú fejlesztõ környezettel szemben itt már az SDK és Emulátor kezelõ alkalmazások közvetlenül beépültek az IDE -be, egyszerûbbé téve azok menedzselését és telepítését.
+
+Mivel most elõször használtam ezt a fejlesztõi környezetet, valamint Android fejlesztésben se voltam nagyon jártas ezért eltartott egy darabig mire rájöttem arra, hogy nem kell feltétlenül egy Nexus 5 alapú több gigabyte memóriával rendelkezõ emulátoron tesztelni az éppen fejlesztés alatt álló alkalmazást. Sokáig a Gradle build process akár egy két percet is igénybe vett. Mivel általában egy elég erõs gépen fejlesztettem az Android alkalmazást ez egy idõ után igen zavaróvá vált és jócskán hátráltatta a fejlesztés menetét. Csak miután rájöttem hogy a régebbi Android verziók kisebb memória igénnyel rendelkeznek, valamint az emulátor snapshot használatának bekapcsolásával nagy mértékben sikerült felgyorsítani a build process-t így közvetetten a fejlesztés menetét is.
+
+\subsection{PhpStorm}
+
+
 
 
 %\begin{tét}
@@ -1122,6 +1146,10 @@ Gravatar.
 \bibitem{SublimeText}
 SublimeText.
 \url{http://www.sublimetext.com/}
+
+\bibitem{Android Studio}
+Android Studio.
+\url{http://developer.android.com/tools/studio/index.html}
 
 %\begin{thebibliography}{99}
 % 10-nél több hivatkozás esetén
