@@ -68,7 +68,7 @@
 \select@language {magyar} \contentsline {section}{\numberline {7.2}K\"ornyezetek}{42}{section.7.2}
 \select@language {magyar} \contentsline {subsection}{\numberline {7.2.1}SublimeText - linterek}{42}{subsection.7.2.1}
 \select@language {magyar} \contentsline {paragraph}{Linterek}{43}{section*.29}
-\select@language {magyar} \contentsline {subsection}{\numberline {7.2.2}Android Studio}{43}{subsection.7.2.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {7.2.2}Android Studio}{44}{subsection.7.2.2}
 \select@language {magyar} \contentsline {subsection}{\numberline {7.2.3}PhpStorm}{44}{subsection.7.2.3}
 \select@language {magyar} \contentsline {chapter}{\numberline {8}F\"uggel\'ek}{45}{chapter.8}
 \select@language {magyar} \contentsline {section}{\numberline {8.1}A program forr\'ask\'odja}{45}{section.8.1}

@@ -860,9 +860,13 @@ A korábbi Eclipse alapú fejlesztõ környezettel szemben itt már az SDK és Emuláto
 
 Mivel most elõször használtam ezt a fejlesztõi környezetet, valamint Android fejlesztésben se voltam nagyon jártas ezért eltartott egy darabig mire rájöttem arra, hogy nem kell feltétlenül egy Nexus 5 alapú több gigabyte memóriával rendelkezõ emulátoron tesztelni az éppen fejlesztés alatt álló alkalmazást. Sokáig a Gradle build process akár egy két percet is igénybe vett. Mivel általában egy elég erõs gépen fejlesztettem az Android alkalmazást ez egy idõ után igen zavaróvá vált és jócskán hátráltatta a fejlesztés menetét. Csak miután rájöttem hogy a régebbi Android verziók kisebb memória igénnyel rendelkeznek, valamint az emulátor snapshot használatának bekapcsolásával nagy mértékben sikerült felgyorsítani a build process-t így közvetetten a fejlesztés menetét is.
 
+Bár az Android Studio is rendelkezik beépített verzió kezelõ támogatással, elsõ körben nem sikerült rávennem, hogy használja a szokásos módon megadott elérési úton lévõ publikus kulcsomat. Csak kisebb kutakodás után sikerült kiderítenem, hogy õ azt egy konkrét helyen keresi és ha nem találja akkor simán egy generikus hiba üzenettel fog visszatérni, mely szerint nem sikerült a távoli repozitóriumhoz csatlakozni, annak ellenére, hogy az nyílt és publikus is.
+
 \subsection{PhpStorm}
 
 
+
+Mivel a PhPStorm -ot csak az Android Studio megismerése után kezdtem el használni ezért különösebben nem találkoztam olyan dologgal benne ami nagy újdonság lett volna. A mentés utáni automatikus feltöltés beállítása könnyen ment elsõre is és pontosan az elvárt hierarchia szerint mûködött. Talán az egyetlen kisebb kényelmetlenség amely említésre méltó a fejlesztõi környezet használata során a refaktorizáció használata. Lehetséges, hogy valahol be lehet állítani hogy konstans stringebe is végezze el a refaktorizációt, de ezt az opciót nem találtam meg ezért kénytelen voltam mindig minden refaktorizáció után egy manuális projekt keretû keresést lefuttatni a már átnevezett vagy átmozgatott értékre, így meg tudtam gyõzõdni róla, hogy valóban minden példány ténylegesen átnevezõdött.
 
 
 %\begin{tét}
