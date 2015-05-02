@@ -520,7 +520,7 @@ setcookie(name [, value [, expire [, path [, domain [, secure ]]]]]);
 	\end{lstlisting}
 \end{minipage}
 
-Tehát ez parancs hozza létre magát a süti stringet a megadott argumentumok alapján, majd létre hogy egy $Cookie\ header$ -t is ezzel a stringgel és az értékével. Fontos megjegyezni, hogy mivel a sütik a válasz $header$ részében kerülnek elküldésére ezért a $setcookie\left(\right)$ parancsot még az elõtt meg kell hívni mielõtt a $body$ bármely része is elküldésre kerülne. A $setcookie\left(\right)$ paraméterei a következõk:
+Tehát ez parancs hozza létre magát a süti stringet a megadott argumentumok alapján, majd létre hogy egy $Cookie\ header$ -t is ezzel a stringgel és az értékével. Fontos megjegyezni, hogy mivel a sütik a válasz $header$ részében kerülnek elküldésére ezért a \linebreak $setcookie\left(\right)$ parancsot még az elõtt meg kell hívni mielõtt a $body$ bármely része is \linebreak elküldésre kerülne. A $setcookie\left(\right)$ paraméterei a következõk:
 
 \begin{itemize}
 	\item\textbf{name}: A süti egyedi neve. Nem tartalmazhat ürés karaktereket ($whitespace$) vagy $;$ -t. Természetesen használható több süti is, különbözõ névvel és attribútumokkal.
@@ -539,8 +539,8 @@ Tehát ez parancs hozza létre magát a süti stringet a megadott argumentumok alapj
 
 Láttuk hogyan lehet sütiket létre hozni, azoknak milyen a felépítése, már csak azt kell tudni, hogy ezeket hogyan kaphatjuk meg a kliens böngészõtõl. PHP -ban ez nagyon egyszerûen történik a $\_COOKIE$ tömb változó használatával. A kulcs a süti neve, az érték pedig a süti $value$ mezõjében tárolt tényleges érték. A web alkalmazás a sütiket arra használja, hogy lehetõvé tegye a felhasználók számára azt, hogy ne kelljen újra bejelentkezniük két hétig. 
 
-A felhasználók állapotának nyomkövetésére az egyik fõ módszer a $session$ követés. A $session$ lényegébe véve egy változó ami a szerveren tárolódik és alapértelmezetten az életciklusa addig tart amíg be nem zárjuk a böngészõnket. A legtöbb $session$ beállít a felhasználó számítógépén egy $user-key$ változót ami valahogy így szokott kinézni: $365211cf14ert0dede5a562e2f3a1e42$. Ez után amikor egy új oldal kérdezzük le a $session$-t akkor a felhasználó számítógépén tárolt kulcs egyezésének ellenõrzése fog megtörténni, amennyiben azok megegyeznek, akkor az a $session$ kerül felhasználásra, ha nem akkor egy új $session$ kezdõdik.
-A $session$ tartalma a $\_SESSION$ PHP globális tömbben tárolódik el, miután elindítottunk egy $session$ -t a $session\_start\left(\right)$ paranccsal. Ez után ezt nyugodtan kezelhetjük úgy mint egy globális változót. A $session$ befejezéséhez a $session\_destroy\left(\right)$ parancsa használandó, a $session\_unset\left(\right)$ pedig törli az összes $session$ változót. A web alkalmazás ezt a módszert használja a felhasználó állapotának nyomkövetésére. Más szóval a $session$ -ben tárolódnak a felhasználó adatai.
+A felhasználók állapotának nyomkövetésére az egyik fõ módszer a $session$ követés. A $session$ lényegébe véve egy változó ami a szerveren tárolódik és alapértelmezetten az életciklusa addig tart amíg be nem zárjuk a böngészõnket. A legtöbb $session$ beállít a felhasználó számítógépén egy $user-key$ változót ami valahogy így szokott kinézni: $365211cf14ert0dede5a562e2f3a1e42$. Ez után amikor egy új oldal kérdezzük le a \linebreak $session$-t akkor a felhasználó számítógépén tárolt kulcs egyezésének ellenõrzése fog megtörténni, amennyiben azok megegyeznek, akkor az a $session$ kerül felhasználásra, ha nem akkor egy új $session$ kezdõdik.
+A $session$ tartalma a $\_SESSION$ PHP globális tömbben tárolódik el, miután elindítottunk egy $session$ -t a $session\_start\left(\right)$ paranccsal. Ez után ezt nyugodtan kezelhetjük úgy mint egy globális változót. A $session$ befejezéséhez a $session\_destroy\left(\right)$ parancsa használandó, a $session\_unset\left(\right)$ pedig törli az összes \linebreak $session$ változót. A web alkalmazás ezt a módszert használja a felhasználó állapotának \linebreak nyomkövetésére. Más szóval a $session$ -ben tárolódnak a felhasználó adatai.
 
 Egy másik módszer a $hidden$ avagy rejtett ûrlap illetve mezõk használata. A PHP ugyan úgy kezeli a rejtette ûrlapokat mint a normálisakat, tehát azok értékei ugyan úgy elérhetõek a $\_GET$ illetve $\_POST$ tömbökbõl. Az algoritmusok számolásával foglalkozó androidos felülete ezt a módszert használja ki a felhasználó azonosítására.
 
@@ -597,7 +597,7 @@ A jQuery-nek két felhasználási stílusa van:
 
 \begin{enumerate}
 	\item A "\$" függvényen keresztül, amely a jQuery objektum egy factory metódusa. Ezeket a függvényeket sokszor parancsoknak hívják és egymás után láncolhatók mivel mindegyikül jQuery objektumokkal tér vissza.
-	\item A "\$." prefixált függvényen keresztül. Ezek segéd függvények, amelyek nem közvetlen a jQuery objektummal érintkeznek.	
+	\item A "\$." prefixált függvényen keresztül. Ezek segéd függvények, amelyek nem \linebreak közvetlen a jQuery objektummal érintkeznek.	
 \end{enumerate}
 
 jQuery -ben több DOM elem betöltése illetve manipulálása általában azzal kezdõdik, hogy meghívjuk a "\$" függvényt egy CSS selector stringgel. Ez majd egy jQuery objektumot fog referencia szerint visszaadni amely tartalmazza az összes erre illeszkedõ HTML elemet az oldalon. $\$\left("div.valami"\right)$ például egy olyan jQuery objektumot ad vissza amely tartalmazza a $valami$ CSS osztály összes $div$ elemét. Ez után akár közvetlenül a visszakapott halmazon hívhatjuk a jQuery függvényeket, vagy azok valamely elemén. Egy tipikus használati mód látható a \ref{lst:jquery typical use} kódrészletben, mely azt mutatja be hogyan indíthatunk parancsokat miután a böngészõ befejezte az oldal betöltését.
@@ -790,7 +790,39 @@ Mivel az oldalsó lebegõ menü a web alkalmazás minden dinamikus oldalán megtalálh
 \end{minipage}
 
 \subsection{demo.php - Demó}
+Ebbõl a PHP állományból indul minden olyan a felhasználó és az alkalmazás közötti interakció kezelése amely valamilyen kapcsolatban áll a borkóstolással, legyen az értékelések feldolgozása, kiíratása vagy magának az algoritmusoknak a futtatása és az eredmények megjelenítése. Az oldal használatának feltétele az hogy a felhasználó be legyen jelentkezve. A következõkben ismertetni fogom, hogyan épülnek fel és kapcsolódnak össze a demó oldal mögötti funkciókat ellátó segéd állományok.
 
+\subsubsection{dbUtils.php} 
+Egy olyan állomány mely gyakran használt adatbázis lekérdezéseket intézõ metódusokat tartalmaz, ide értve az általános adatbázis kapcsolatot építõ valamint a felhasználó \linebreak azonosítójából felhasználó név lekérdezéséért felelõs $getUserName\left(\$user\_id\right)$ \linebreak függvényeket is, továbbá egy $getWineCount\left(\right)$ nevû függvényt is mely a $wines$ tábla maximális indexélve tér vissza. A $dbUtils.php$ fájl felhasználásra kerül még más PHP állományokban is, mint az $admin.php$ vagy az  $androidCalculator.php$, de a \linebreak $getWineScoresForUser.php$ -ban is található rá referencia.
+\newline
+\newline
+Miután a $dbUtils.php$ segítségével felépítettük az adatbázis kapcsolatot, megkezdõdhet a bemenetet kezelõ felület létrehozásra. Ez két részbõl áll. Mindkettõ egy - egy táblázatban található. A bal oldali a $wines$ táblában található borokat listázza kis és a \linebreak$borkostolasEredemenyek.php$ oldalon látottak szerint itt is felül és alul is görgethetõ horizontálisan a táblázat a kényelmesebb kezelés érdekében. A jobb oldali táblázat felelõs a beveti input mezõk tárolásáért. Ezek a mezõk a borok azonosítói alapján jönnek létre és alapértelmezetten a felhasználó által már megadott értékeléseket tartalmazzák. Tehát például az 5. azonosítójú bor input mezõje a \ref{lst:wine score input} kódrészletben látottak szerint fog kinézni.
+
+\begin{minipage}{\linewidth}
+	\begin{lstlisting}[language=php,label={lst:wine score input}, caption={Példa input mezõre címkézésére}]
+<input id="wine_score_5" type="text" name="wine_score_5" class="columnInput" value="">
+	\end{lstlisting}
+\end{minipage}
+
+Innen is látható, hogy ezek külön stilisztikával rendelkeznek, erre fõképp azért volt szükség, hogy a két táblázat (a borok információt tartalmazó bal oldal, és az input mezõket tartalmazó jobb oldali) magassága szinkronban legyen egymással. A beviteli mezõk ilyen módon való megcímkézése nagyban megkönnyíti az értékelések begyûjtését.
+
+A bemeneti táblázatok alatt található $Elk\ddot{u}ld$ link felelõs az értékeléseket feldolgozó és számításokat megkezdõ JavaScript $submitMyScores\left(user\_name, nMaxSize\right)$ procedúra meghívására, mely a $Main.js$ állományban található. 
+
+A következõ lépés a bemeneti adatok formai ellenõrzése. Minden egyes megadott értékelésnek az alábbi feltételeket teljesítenie kell:
+
+\begin{itemize}
+	\item Számnak kell lennie, vagy üresen kell hagyni a bevitel mezõt
+	\begin{itemize}
+		\item A nem üres beviteli mezõ továbbá nem lehet se túl nagy, tehát kisebbnek kell lennie mint 99999.999
+		\item Maximum 3 decimális jegy pontosság engedélyezett	
+	\end{itemize}
+\end{itemize}
+
+Amennyiben ezek a feltételek teljesülnek akkor a bemeneti adatokat white spacek nélkül bele tesszük egy ideiglenes tömbbe. Mivel üres input mezõk is engedélyezettek így a felhasználónak lehetõsége van már egyszer kitöltött értékelésének törlésére.
+
+Most hogy kigyûjtöttük a friss értékeléseket azokkal ideje frissítenünk az adatbázist. Ehhez egy AJAX hívást használtam, ennek köszönhetõen a demó oldal nem kerül frissítésre, melynek köszönhetõen, ha bármilyen hiba lépne fel a beviteli mezõk nem vesztik el a tartalmukat, késõbb újból meg lehet próbálni az elküldést. A tényleges adatbázisba írást a $addWineScoresToDB.php$ állomány végzi, mely minden egyes értékelésre elõbb megnézi, hogy adott felhasználó értékelte -e már az adott bort, tehát a $scores$ táblában van -e már az õ $user\_id$ és a $wine\_id$ -hez tartozó $score$. Amennyiben igen, és az új értékelés egy szám akkor azt az újra cserélni, de ha az új értékelés nem szám, tehát a felhasználó törölte a már meglévõ értékelését, akkor a $score$ értékét $null$ -ra állítja. Azért ezt a megközelítést választottam, mert úgy gondoltam, ha valaki már egyszer értékelt egy bort, majd törölte annak értékelését, akkor valószínû, hogy elõbb utóbb vissza fog térni arra a borra és újra értékeli. Természetesen, ha az adatbázisban nem volt még az adott bor értékelve akkor simán csak beszúrjuk a bor értékelését a $score$ táblába a megfelelõ $user\_id$ illetve $wine\_id$ párossal. Végül, ha nem történt semmilyen hiba $success$ üzenettel térünk vissza az AJAX hívásból.
+
+Miután sikeresen frissült az adatbázis a felhasználó új értékelésével el kell hogy készítsük az algoritmusok számára azt a mátrixot amely azon értékeléseket tartalmazza melyek majd a számítás futtatandó. Az adatbázisból a többi értékelés begyûjtésért a $getTastersScores.php$ segéd állomány felelõs, mely azt egy JSON stringben adja vissza az AJAX hívásnak.
 
 \chapter{A mobil alkalmazás}
 Android alkalmazás fejlesztés
@@ -875,7 +907,7 @@ Az Android Studio \cite{Android Studio} az Android alkalmazásfejlesztõknek szánt
 	\item Beépített Google Clout Platform támogatás
 \end{itemize}
 
-A korábbi Eclipse alapú fejlesztõ környezettel szemben itt már az SDK és Emulátor kezelõ alkalmazások közvetlenül beépültek az IDE -be, egyszerûbbé téve azok menedzselését és telepítését.
+A korábbi Eclipse alapú fejlesztõ környezettel szemben itt már az SDK és Emulátor kezelõ alkalmazások közvetlenül beépültek az IDE -be, egyszerûbbé téve azok \linebreak menedzselését és telepítését.
 
 Mivel most elõször használtam ezt a fejlesztõi környezetet, valamint Android fejlesztésben se voltam nagyon jártas ezért eltartott egy darabig mire rájöttem arra, hogy nem kell feltétlenül egy Nexus 5 alapú több gigabyte memóriával rendelkezõ emulátoron tesztelni az éppen fejlesztés alatt álló alkalmazást. Sokáig a Gradle build process akár egy két percet is igénybe vett. Mivel általában egy elég erõs gépen fejlesztettem az Android alkalmazást ez egy idõ után igen zavaróvá vált és jócskán hátráltatta a fejlesztés menetét. Csak miután rájöttem hogy a régebbi Android verziók kisebb memória igénnyel rendelkeznek, valamint az emulátor snapshot használatának bekapcsolásával nagy mértékben sikerült felgyorsítani a build process-t így közvetetten a fejlesztés menetét is. Bár néhány nagyobb szolgáltatását mint például a keretrendszer támogatás még nem sikerült kipróbálnom, könnyen el tudom képzelni, hogy a jövõben is ezt a fejlesztõi környezetet fogom használni PHP projektet fejlesztéséhez.
 
@@ -883,7 +915,6 @@ Bár az Android Studio is rendelkezik beépített verzió kezelõ támogatással, elsõ 
 
 \subsection{PhpStorm}
 A PhpStorm a JetBRAINS által fejlesztett PHP IDE mely harminc napig ingyenesen kipróbálható. A fõ ok amiért kipróbáltam az volt, hogy már megszoktam az Android Studio nagyon intelligens kód kiegészítõ szolgáltatását. Amikor vissza mentem a web alkalmazást csinosítgatni kicsit megterhelõ volt a régi eszköz használata ezért elkezdtem keresni hát ha létezik valamilyen IntelliJ alapú IDE amely támogatja PHP és a JavaScript nyelveket. Nagyon gyorsan sikerült is rátalálnom a PhpStorm -ra, mely teljes mértékben azt hozta amit vártam.
-
 
 Mivel a PhPStorm -ot csak az Android Studio megismerése után kezdtem el használni ezért különösebben nem találkoztam olyan dologgal benne ami nagy újdonság lett volna. A mentés utáni automatikus feltöltés beállítása könnyen ment elsõre is és pontosan az elvárt hierarchia szerint mûködött. Talán az egyetlen kisebb kényelmetlenség amely említésre méltó a fejlesztõi környezet használata során a refaktorizáció használata. Lehetséges, hogy valahol be lehet állítani hogy konstans stringebe is végezze el a refaktorizációt, de ezt az opciót nem találtam meg ezért kénytelen voltam mindig minden refaktorizáció után egy manuális projekt keretû keresést lefuttatni a már átnevezett vagy átmozgatott értékre, így meg tudtam gyõzõdni róla, hogy valóban minden példány ténylegesen átnevezõdött.
 

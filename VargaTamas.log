@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.11.23)  2 MAY 2015 17:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.11.23)  2 MAY 2015 23:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1057,39 +1057,14 @@ Overfull \hbox (17.62482pt too wide) in paragraph at lines 517--522
 []$[]$ 
  []
 
-
-Overfull \hbox (14.04883pt too wide) in paragraph at lines 523--524
-\T1/ptm/m/n/12 gyezni, hogy miv-el a sütik a válasz $\OML/cmm/m/it/12 header$ \
-T1/ptm/m/n/12 részében kerül-nek elküldésére ezért a $\OML/cmm/m/it/12 setcooki
-e []$
- []
-
 [25]
 Overfull \hbox (17.62482pt too wide) in paragraph at lines 534--539
 []$[]$ 
  []
 
 
-Overfull \hbox (9.30403pt too wide) in paragraph at lines 542--544
-\OT1/cmr/m/n/12 365211\OML/cmm/m/it/12 cf\OT1/cmr/m/n/12 14\OML/cmm/m/it/12 ert
-\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 dede\OT1/cmr/m/n/12 5\OML/cmm/m/it/12 a\OT1/c
-mr/m/n/12 562\OML/cmm/m/it/12 e\OT1/cmr/m/n/12 2\OML/cmm/m/it/12 f\OT1/cmr/m/n/
-12 3\OML/cmm/m/it/12 a\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 e\OT1/cmr/m/n/12 42$\T1
-/ptm/m/n/12 . Ez után amikor egy új oldal kérdez-zük le a $\OML/cmm/m/it/12 ses
-sion$\T1/ptm/m/n/12 -
- []
-
-
-Overfull \hbox (9.45393pt too wide) in paragraph at lines 542--544
-\OML/cmm/m/it/12 session[]destroy []$ \T1/ptm/m/n/12 paranc-sa haszná-landó, a 
-$\OML/cmm/m/it/12 session[]unset []$ \T1/ptm/m/n/12 pedig tör-li az összes $\OM
-L/cmm/m/it/12 session$
- []
-
-
-Overfull \hbox (26.47154pt too wide) in paragraph at lines 542--544
-\T1/ptm/m/n/12 vál-tozót. A web al-ka-lmazás ezt a mód-sz-ert használ-ja a fel-
-használó ál-lapotá-nak ny-omkövetésére.
+Underfull \hbox (badness 10000) in paragraph at lines 542--544
+\T1/ptm/m/n/12 összes
  []
 
 [26]
@@ -1113,12 +1088,6 @@ Overfull \hbox (17.62482pt too wide) in paragraph at lines 588--593
 Overfull \hbox (0.64882pt too wide) in paragraph at lines 599--600
 []\T1/ptm/m/n/12 A "$" füg-gvényen keresztül, ame-ly a jQuery ob-jek-tum egy fa
 c-to-ry metó-dusa. Ezeket
- []
-
-
-Overfull \hbox (13.90921pt too wide) in paragraph at lines 600--601
-[]\T1/ptm/m/n/12 A "$." pre-fixált füg-gvényen keresztül. Ezek segéd füg-gvénye
-k, ame-lyek nem közvetlen
  []
 
 
@@ -1207,134 +1176,164 @@ Overfull \hbox (17.62482pt too wide) in paragraph at lines 785--791
 []$[]$ 
  []
 
+
+Underfull \hbox (badness 7907) in paragraph at lines 796--800
+\T1/ptm/m/n/12 azonosítójából fel-használó név lekérdezéséért felel®s $\OML/cmm
+/m/it/12 getUserName []$
+ []
+
+
+Underfull \hbox (badness 6157) in paragraph at lines 796--800
+\T1/ptm/m/n/12 lományok-ban is, mint az $\OML/cmm/m/it/12 admin:php$ \T1/ptm/m/
+n/12 vagy az $\OML/cmm/m/it/12 androidCalculator:php$\T1/ptm/m/n/12 , de a
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 796--800
+
+ []
+
+
+Underfull \hbox (badness 4303) in paragraph at lines 796--800
+\T1/ptm/m/n/12 talál-ható. A bal oldali a $\OML/cmm/m/it/12 wines$ \T1/ptm/m/n/
+12 táblában talál-ható borokat listáz-za kis és a
+ []
+
 [37]
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 801--806
+[]$[]$ 
+ []
+
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 816.
+[38] [39]
 3. fejezet.
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 800.
+ine 830.
 
-LaTeX Warning: Marginpar on page 38 moved.
-
-
-LaTeX Warning: Marginpar on page 38 moved.
+LaTeX Warning: Marginpar on page 40 moved.
 
 
-LaTeX Warning: Marginpar on page 38 moved.
+LaTeX Warning: Marginpar on page 40 moved.
 
 
-LaTeX Warning: Marginpar on page 38 moved.
+LaTeX Warning: Marginpar on page 40 moved.
 
 
-LaTeX Warning: Marginpar on page 38 moved.
+LaTeX Warning: Marginpar on page 40 moved.
 
-[38
+
+LaTeX Warning: Marginpar on page 40 moved.
+
+[40
 
 ]
 4. fejezet.
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 807.
+(hyperref)                removing `\H' on input line 837.
 
-[39
+[41
 
 ]
 5. fejezet.
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 811.
+(hyperref)                removing `\H' on input line 841.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 812.
+(hyperref)                removing `\H' on input line 842.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 813.
+(hyperref)                removing `\H' on input line 843.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 814.
-
-[40
-
-]
-6. fejezet.
-[41
-
-]
-7. fejezet.
-
-Overfull \hbox (4.02876pt too wide) in paragraph at lines 826--827
-\T1/ptm/m/n/12 tel és tel-jes revíz-iókövetési lehet®séggel, ame-ly nem függ a 
-hálózat elérését®l vagy közpon-
- []
+(hyperref)                removing `\H' on input line 844.
 
 [42
 
 ]
-Overfull \hbox (43.1565pt too wide) in paragraph at lines 837--839
+6. fejezet.
+[43
+
+]
+7. fejezet.
+
+Overfull \hbox (4.02876pt too wide) in paragraph at lines 856--857
+\T1/ptm/m/n/12 tel és tel-jes revíz-iókövetési lehet®séggel, ame-ly nem függ a 
+hálózat elérését®l vagy közpon-
+ []
+
+[44
+
+]
+Overfull \hbox (43.1565pt too wide) in paragraph at lines 867--869
 []\T1/ptm/m/n/12 Szakdolgozat: []$\T1/pcr/m/n/12 https :[] \OML/cmm/m/it/12 ==\
 T1/pcr/m/n/12 github . com\OML/cmm/m/it/12 =\T1/pcr/m/n/12 TomVarga\OML/cmm/m/i
 t/12 =\T1/pcr/m/n/12 borkostolas _ szakdolgozat$[] 
  []
 
 
-Overfull \hbox (45.29208pt too wide) in paragraph at lines 840--841
+Overfull \hbox (45.29208pt too wide) in paragraph at lines 870--871
 []\T1/ptm/m/n/12 Android al-ka-lmazás: []$\T1/pcr/m/n/12 https :[] \OML/cmm/m/i
 t/12 ==\T1/pcr/m/n/12 github . com\OML/cmm/m/it/12 =\T1/pcr/m/n/12 TomVarga\OML
 /cmm/m/it/12 =\T1/pcr/m/n/12 borkostolas _ android _
  []
 
-[43]
-Overfull \hbox (0.20798pt too wide) in paragraph at lines 853--854
+[45]
+Overfull \hbox (0.20798pt too wide) in paragraph at lines 883--884
 \T1/ptm/m/n/12 parancs, menük, je-gyzetek, makrók, kód be-fe-jezés stb... Mind 
 ehhez csak egy egysz-
  []
 
-[44]
-Overfull \hbox (15.53677pt too wide) in paragraph at lines 878--879
+[46]
+Underfull \hbox (badness 2856) in paragraph at lines 908--909
 \T1/ptm/m/n/12 kezel® al-ka-lmazá-sok közvetlenül beépül-tek az IDE -be, egysz-
-er¶b-bé téve azok menedzselését
+er¶b-bé téve azok
  []
 
-[45] [46]
+[47] [48]
 8. fejezet.
-[47
+[49
 
 ]
-Overfull \hbox (2.07404pt too wide) in paragraph at lines 1083--1085
+Overfull \hbox (2.07404pt too wide) in paragraph at lines 1112--1114
 \T1/ptm/m/n/12 Alulírott Var-ga Tamás pro-gramter-vez® in-for-matikus BSc sza-k
 os hall-gató, ki-je-len-tem, hogy
  []
 
 
-Overfull \hbox (4.59113pt too wide) in paragraph at lines 1088--1089
+Overfull \hbox (4.59113pt too wide) in paragraph at lines 1117--1118
 []\T1/ptm/m/n/12 Tudomásul veszem, hogy sza-k-dol-go-zatomat a Szege-di Tu-domá
 ny-e-gyetem In-for-matikai
  []
 
-[48
+[50
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1141--1142
+Underfull \hbox (badness 10000) in paragraph at lines 1170--1171
 [][]$\T1/pcr/m/n/12 http :[] \OML/cmm/m/it/12 ==\T1/pcr/m/n/12 wiki . hashphp .
  org\OML/cmm/m/it/12 =\T1/pcr/m/n/12 PDO _ Tutorial _ for _ MySQL _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1144--1146
+Underfull \hbox (badness 10000) in paragraph at lines 1173--1175
 []\T1/ptm/m/n/12 Google Charts home-page []$\T1/pcr/m/n/12 https :[] \OML/cmm/m
 /it/12 ==\T1/pcr/m/n/12 google \OMS/cmsy/m/n/12 ^^@[] \T1/pcr/m/n/12 developers
  . appspot .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1152--1153
+Underfull \hbox (badness 10000) in paragraph at lines 1181--1182
 []\T1/ptm/m/n/12 ECMAScript Lan-guage Overview. 2007-10-23. p. 4. []$\T1/pcr/m/
 n/12 http :[] \OML/cmm/m/it/12 ==\T1/pcr/m/n/12 www .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1158--1159
+Underfull \hbox (badness 10000) in paragraph at lines 1187--1188
 [][]$\T1/pcr/m/n/12 http :[] \OML/cmm/m/it/12 ==\T1/pcr/m/n/12 blog . onthewing
 s . net\OML/cmm/m/it/12 =\T1/pcr/m/n/12 2009\OML/cmm/m/it/12 =\T1/pcr/m/n/12 04
 \OML/cmm/m/it/12 =\T1/pcr/m/n/12 08\OML/cmm/m/it/12 =\T1/pcr/m/n/12 deep \OMS/c
@@ -1342,30 +1341,30 @@ msy/m/n/12 ^^@[] \T1/pcr/m/n/12 linking \OMS/cmsy/m/n/12 ^^@[] \T1/pcr/m/n/12 f
 or \OMS/cmsy/m/n/12 ^^@
  []
 
-[49
+[51
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1174--1176
+Underfull \hbox (badness 10000) in paragraph at lines 1203--1205
 []\T1/ptm/m/n/12 Android Stu-dio. []$\T1/pcr/m/n/12 http :[] \OML/cmm/m/it/12 =
 =\T1/pcr/m/n/12 developer . android .
  []
 
-[50]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1209.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1209.
+[52]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1238.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1238.
  (./VargaTamas.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1209.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1209.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1238.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1238.
 
 Package rerunfilecheck Info: File `VargaTamas.out' has not changed.
-(rerunfilecheck)             Checksum: 892C2FD1E07C54C8CF981CE9292534A8;3899.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1209.
+(rerunfilecheck)             Checksum: 3F028CA49FFDB47D5C32ACCFBC976C42;3899.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1238.
  ) 
 Here is how much of TeX's memory you used:
- 24201 strings out of 493109
- 444874 string characters out of 6138586
- 888981 words of memory out of 5000000
- 26972 multiletter control sequences out of 15000+600000
+ 24212 strings out of 493109
+ 445005 string characters out of 6138586
+ 889044 words of memory out of 5000000
+ 26978 multiletter control sequences out of 15000+600000
  46927 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  48i,16n,76p,3523b,3176s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1389,10 +1388,10 @@ dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><x:/texlive/2014/texmf-dist/fonts
 e1/urw/courier/ucrr8a.pfb><x:/texlive/2014/texmf-dist/fonts/type1/urw/times/utm
 b8a.pfb><x:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><x:/texliv
 e/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on VargaTamas.pdf (50 pages, 321297 bytes).
+Output written on VargaTamas.pdf (52 pages, 327953 bytes).
 PDF statistics:
- 914 PDF objects out of 1000 (max. 8388607)
- 836 compressed objects within 9 object streams
- 295 named destinations out of 1000 (max. 500000)
+ 927 PDF objects out of 1000 (max. 8388607)
+ 847 compressed objects within 9 object streams
+ 300 named destinations out of 1000 (max. 500000)
  495 words of extra memory for PDF output out of 10000 (max. 10000000)
 
