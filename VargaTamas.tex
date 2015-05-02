@@ -719,7 +719,7 @@ Az alábbi munkamenettel írható le a regisztráció és autentikáció $hash$ alapú be
 
 Fontos, hogy a 4. lépésben soha se mondjuk meg a felhasználónak hogy a jelszó vagy a felhasználó név volt -e helytelen. Mindig egy generikus hibaüzenetet írjunk csak "Hibás felhasználó név vagy jelszó". Ezzel meggátolhatjuk, hogy a támadók kitalálják milyen névvel léteznek már regisztrált felhasználók. Érdemes még azt megemlíteni, hogy most kriptografikus hashelõ eljárásokról beszélünk, mint a SHA256, SHA512, RipeMD vagy a WHIRLPOOL, nem pedig sima hash függvényekrõl.
 
-A mi esetünkben a jelszó hashelés PHP 5.5 alatt az alábbi módon végezhetõ el: A \ref{lst:generate password hash} kódrészletben látottak szerint generáljunk egy hasht a tényleges jelszóból ahol a $\$pass$ a jelszõ, $PASSWORD\_DEFAULT$ a PHP -ban definiált globális változó ami megadja a hasheléshez használt algoritmust (lehetséges, hogy ez változni fog ahogy a szerverek hardware felszereltsége javul).
+A mi esetünkben a jelszó hashelés PHP 5.5 alatt az alábbi módon végezhetõ el: A \ref{lst:generate password hash} kódrészletben látottak szerint generáljunk egy hasht a tényleges jelszóból ahol a $\$pass$ a jelszó, $PASSWORD\_DEFAULT$ a PHP -ban definiált globális változó ami megadja a hasheléshez használt algoritmust (lehetséges, hogy ez változni fog ahogy a szerverek hardware felszereltsége javul).
 
 \begin{minipage}{\linewidth}
 	\begin{lstlisting}[language=php,label={lst:generate password hash}, caption={Jelszó hash generálás PHP 5.5 alatt}]
@@ -823,7 +823,18 @@ A szakdolgozat, web és android alkalmazás forráskódja az alábbi linkeken érhetõk
 
 
 \section{Környezetek}
-SublimeText - linterek
+\subsection{SublimeText - linterek}
+A web alkalmazás fejlesztését a SublimieText 3 \cite{SublimeText} kód szerkesztõvel kezdtem meg, mivel ezt használtam már több szkript nyelv alapú projekt realizálásához is. Ez a fejlesztõi környezet jó néhány általam kedvelt szolgáltatással rendelkezik, csak hogy néhányat említsek a sok közül:
+
+\begin{itemize}
+	\item \textbf{Ugrás bárhová}: $Ctrl+P$ lenyomása után bármilyen már megnyitott fájlt könnyen fókuszba lehet hozni akár csak a nevének egy részletének begépelésével, vagy ugyan itt lehet a $@$ használatával szimbólumhoz ugrani, $:$ -vel pedig egy adott sorra ugrani.
+	\item \textbf{Command Palette}: $Ctrl+Shift+P$ segítségével sok idõt meg lehet spórolni amely egyébként menü rendszerekben való keresgéléssel menne el. Egyszerûen csak elkezdjük begépelni a parancs egy részét amit végre szeretnénk hajtani és a lenyíló paletta automatikusan csak azokat a parancsokat fogja megjeleníteni amelyek tartalmazzák a már általunk begépelt részt.
+	\item \textbf{Testre szabhatóság}: Szinte bármit személyre lehet szabni, legyen az: billentyû parancs, menük, jegyzetek, makrók, kód befejezés stb... Mind ehhez csak egy egyszerû JSON fájlt kell szerkeszteni amely lehetõvé teszi hogy az egyéni módosításaink csak fájl típusonként legyenek érvényesek vagy akár egész projektre vonatkozóan.
+	\item \textbf{Többszörös kijelölés}: A többszörös kijelölésnek köszönhetõen egyszerre tudunk elvégezni tíz módosítást a helyett hogy tízszer végeznének el ugyan azt az egy módosítást. Az oszlop kiválasztás is nagyon hatékonnyá teszi a kód rendezést, valamint a refaktorizációt, de persze itt említhetném meg az automatikus kód indentálást is.
+	\item {Plugin API}: A Sublime Text rendelkezik egy nagy erejû Python alapú plugin API-val ami lehetõvé teszi a környezet további kiváló szolgáltatásokkal való bõvítését, mint például linterekkel vagy automatikus fájl feltöltõ eszközökkel.
+\end{itemize}
+
+\paragraph{Linterek} Lintereknek nevezzük az olyan eszközöket amelyek gyanús kódhasználatra hívják fel a figyelmünket. A $lint$ eredetileg egy olyan program volt ami a $C$ forrás kódon ment végig gyanús illetve valószínûleg bugos kódot keresve. Az ilyen jellegû eszközök általában statikus vizsgálják a forrás kódot. Nagyon hasznosak tudnak lenni szintaktikai hibák felderítésében, vagy a modernebb változatok akár arra is fel tudják hívni a figyelmet, ha az adott kód nem felel meg egy adott kódolási stílus irányelvnek.
 
 PhpStorm
 
@@ -1107,6 +1118,10 @@ Numeric Javascript.
 \bibitem{Gravatar}
 Gravatar.
 \url{http://www.gravatar.com/}
+
+\bibitem{SublimeText}
+SublimeText.
+\url{http://www.sublimetext.com/}
 
 %\begin{thebibliography}{99}
 % 10-nél több hivatkozás esetén
