@@ -767,7 +767,7 @@ A felhasználó által megadott $\$pass$ jelszó és az adatbázisban tárolt jelszó ha
 \end{minipage}
  
 \paragraph{Felhasználók kezelés}
-Most, hogy tisztában vagyunk a felhasznált technológiákkal rá térhetünk azok konkrét használatának példáira. A $php-login$ könyvtár csomag két fõ osztályt definiál. 
+Most, hogy tisztában vagyunk a felhasznált technológiákkal rátérhetünk azok konkrét használatának példáira. A $php-login$ könyvtár csomag két fõ osztályt definiál. 
 
 Az egyik a $Registration.php$ -ban található $Registration$ mely a regisztrációs folyamatért felelõs. Fõ metódusa a \ref{lst:php register} kódrészletben látott szignatúrájú függvény.
 
@@ -880,7 +880,7 @@ Az alkalmazás megtervezéséhez és implementálásához a \textbf{M}odel-\textbf{V}ie
 \end{itemize}
 
 \section{Android}
-Egy Android alkalmazás mûködésének megértéséhez az alábbi fogalmakkal és forrásokkal okvetlenül tisztában kell lennünk:
+Mielõtt rátérnék az alkalmazás tényleges felépítésére, egy Android alkalmazás mûködésének megértéséhez az alábbi fogalmakkal és forrásokkal okvetlenül tisztában kell lennünk:
 
 \subsection*{Manifest}
 Talán a legfontosabb fájl, melynek feladatai közé tartozik többek között az alkalmazás belépési pontjának meghatározása. Itt kerül definiálásra az alkalmazás neve, ikonja és az ahhoz tartozó címke. Az itt definiált jogosultság kérések alapján kell majd a felhasználónak dönteni, hogy telepíti -e az alkalmazást és természetesen csakis ezen jogosultságok által engedélyezett szolgáltatások lesznek elérhetõek az alkalmazás számára. Most konkréten három ilyen szolgáltatás elérésére volt szükségem ezek a hálózat állapotának lekérdezése, internet hozzáférés valamint engedély a külsõ tárhelyre való írásra. Azon activity-k amik nem szerepelnek ebben a fájlban, nem lesznek elérhetõek az alkalmazásból. Nem utolsó sorban itt adhatjuk meg azt is, hogy milyen Android verziók alatt futtatható az alkalmazás, jelenleg az alkalmazás legalább 16 os SDK (software development kit) verziót követel meg, ami a $Jelly\ Bean$ fantázia nevû android 4.1 -nek felel meg.
@@ -910,16 +910,40 @@ Görgõzhetõ listák létrehozásához ez a leghatékonyabb elrendezés. Egy $Adapter$ -
 \subsection*{Activity}
 $Activity$ -nek nevezzük az alkalmazás azon részét, mely valamilyen képernyõ nézet létrehozásért felelõs. Ezek általában egymással valamilyen kapcsolatban vannak, valamint tipikusan a "main" activity-t használjuk az alkalmazás belépési pontjaként, mely akkor jelenik meg amikor a felhasználó elõször indítja el azt. Minden activity indíthat egy másik activity-t, minden alkalommal amikor egy új acitivity indul az elõzõ megáll, de annak állapot nem veszik el, mert az elmentõdik a "back stack" -en. A stack a "last in, first out" elv szerint mûködik, tehát az új activity mindig elõtérbe kerül és amikor annak használatát befejezi a felhasználó a vissza gomb megnyomásával, akkor az aktív activity ki kerül a stack-bõl és az azt megelõzõ activity kerül elõtérbe.
 
-Egy activity-nak a mûködését úgy a legegyszerûbb megérteni, ha megnézzük milyen életciklussal rendelkezik. Fontos azt észben tartani, hogy minden fõbb életciklus lépéshez létezik egy callback metódis mely segítségével az adott életciklushoz illõ mûveleteket végezhetünk el.
+Egy activity-nak a mûködését úgy a legegyszerûbb megérteni, ha megnézzük milyen életciklussal rendelkezik. Fontos azt észben tartani, hogy minden fõbb életciklus lépéshez létezik egy callback metódus mely segítségével az adott életciklushoz illõ mûveleteket végezhetünk el.
 
 Egy activity létrehozásához létre kell hozni egy az $Activity$ osztály egy alosztályát vagy annak valamely alosztályának egy alosztályát. Én az $ActionBarActivity$ osztályból származtattam az alkalmazás során felhasznált activity-ket. Ennek fõ oka az volt, hogy a menü rendszert könnyen tudjam implementálni, mivel ez az alosztály intelligensen kezeli a menürendszereket az olyan újabb készülékeken is amelyek nem rendelkeznek menü gombbal.
 
 \subsubsection{onCreate}
 Ezt a metódust minden activity-nak implementálnia kell. Ez kerül meghívásra amikor az activity létrejön. A legfontosabb hogy itt kerüljön meghívásra a $setContentView\left(\right)$ mely definiálja, hogy az adott activity melyik elrendezést fogja használni.
 
+\subsubsection{onPause}
+Ez kerül meghívásra amikor a rendszer azt érzékeli, hogy a felhasználó el akarja hagyni az adott activity-t. Itt érdemes végrehajtani az olyan utasításokat amelyek célja az alkalmazás perzisztenciájának megõrzése, tehát például adatok mentése, mert lehetséges hogy a felhasználó nem fog már ide visszatérni. 
+\newline
+\newline
+Fontos hogy minden egyes callback implementálásánál az elsõ dolgunk az hogy meghívjuk az õs $super$ osztály hozzá illõ metódusát.
+
+A létrehozás után egy activity három különbözõ állapotban lehet:
+\begin{itemize}
+	\item \textbf{Resumed} Az activity elõtérben van, más szóval jelenleg is fut.
+	\item \textbf{Paused} Egy másik activity van az elõtérben, de ez az activity még életben van és látszik, ez azért lehetséges, mert az vagy részlegesen áltátszó, vagy az aktív activity nem tölti ki a teljes képernyõt.
+	\item \textbf{Stopped} Az activity nem látszik, mert egy másik activity eltakarja. Ilyenkor lehetséges, hogy a rendszer bezárja azt ha máshol szükség lenne még memóriára.
+\end{itemize}
+
+Amikor egy activity-t bezár a rendszer akkor lényegébe véve annak  $finish\left(\right)$ metódusa kerül meghívásra, ez után amikor az activity-t újból meg akarjuk nyitni, azt újból létre kell hozni.
+
+\subsection*{Intent}
+Most hogy tisztába kerültünk az $Activity$ fogalmával, rátérhetünk a köztük való navigálásra. Az $Intent$ egy üzenet küldõ objektum mely segítségével bizonyos tevékenységek indítását kérhetjük egy másik alkalmazás elemtõl. Három alapvetõ használati esetet különböztetünk meg: szolgáltatás indítás, üzenet szórás valamint activity indítása. Most csak az utóbbira térnék ki, hiszen $intent$ -et csak erre használtam fel az alkalmazás fejlesztése során.
+
+Egy activity új példányát úgy indíthatjuk el, hogy egy intent-el meghívjuk a $startActivity\left(\right)$ metódust. Az intent fogja leírni, hogy melyik activity-t kell elindítani, valamint tartalmazza a szükséges adatokat. Talán ennél jobban most nem is érdemes bele mélyedni az intent használatába.
+
+\section{Az Android alkalmazás felépítése}
+Az alkalmazást képzõ elemeket olyan sorrendben fogom ismertetni, amilyen sorrendben a felhasználó beléjük futhat egy tipikus használat során.
+
+
 \todo bõvebben a listviewról majd a UserPage nél
 
-\todo ActionBarActivity
+
 \todo android register, passwordReset 
 \todo talk about threading UI/new thread mi futhat hol és mi nem
 \todo távoli adatbázis elérés
