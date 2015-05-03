@@ -62,38 +62,43 @@
 \select@language {magyar} \contentsline {subsubsection}{SQLite adatb\'azis}{47}{section*.34}
 \select@language {magyar} \contentsline {section}{\numberline {3.2}Az Android alkalmaz\'as fel\'ep\IeC {\'\i }t\'ese}{48}{section.3.2}
 \select@language {magyar} \contentsline {subsection}{\numberline {3.2.1}Model}{48}{subsection.3.2.1}
-\select@language {magyar} \contentsline {subsubsection}{Beans}{48}{section*.35}
-\select@language {magyar} \contentsline {paragraph}{Wine \'es Score oszt\'aly}{48}{section*.36}
-\select@language {magyar} \contentsline {paragraph}{User oszt\'aly}{48}{section*.37}
-\select@language {magyar} \contentsline {paragraph}{ScoredWine}{48}{section*.38}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.2.2}DAO}{48}{subsection.3.2.2}
-\select@language {magyar} \contentsline {subsubsection}{LocalDAO}{49}{section*.39}
+\select@language {magyar} \contentsline {subsubsection}{Beans}{48}{section*.36}
+\select@language {magyar} \contentsline {paragraph}{Wine \'es Score oszt\'aly}{48}{section*.37}
+\select@language {magyar} \contentsline {paragraph}{User oszt\'aly}{49}{section*.38}
+\select@language {magyar} \contentsline {paragraph}{ScoredWine}{49}{section*.39}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.2}DAO}{49}{subsection.3.2.2}
+\select@language {magyar} \contentsline {subsubsection}{LocalDAO}{49}{section*.40}
 \select@language {magyar} \contentsline {section}{\numberline {3.3}Controller}{49}{section.3.3}
-\select@language {magyar} \contentsline {subsubsection}{JSONParser}{49}{section*.40}
-\select@language {magyar} \contentsline {subsubsection}{WinesAdapter}{49}{section*.41}
-\select@language {magyar} \contentsline {subsubsection}{OnAdapterNeedsNotify}{49}{section*.42}
-\select@language {magyar} \contentsline {subsubsection}{NetworkChecker}{50}{section*.43}
-\select@language {magyar} \contentsline {subsubsection}{DBSyncContoller}{50}{section*.44}
+\select@language {magyar} \contentsline {subsubsection}{JSONParser}{50}{section*.41}
+\select@language {magyar} \contentsline {subsubsection}{WinesAdapter}{50}{section*.42}
+\select@language {magyar} \contentsline {subsubsection}{OnAdapterNeedsNotify}{50}{section*.43}
+\select@language {magyar} \contentsline {subsubsection}{NetworkChecker}{50}{section*.44}
+\select@language {magyar} \contentsline {subsubsection}{DBSyncContoller}{50}{section*.45}
 \select@language {magyar} \contentsline {section}{\numberline {3.4}View}{50}{section.3.4}
-\select@language {magyar} \contentsline {subsubsection}{Main Activity}{50}{section*.45}
-\select@language {magyar} \contentsline {chapter}{\numberline {4}A weboldal \'es a mobil alkalmaz\'as \"osszef\H uz\'ese}{52}{chapter.4}
-\select@language {magyar} \contentsline {chapter}{\numberline {5}Tesztel\'es}{53}{chapter.5}
-\select@language {magyar} \contentsline {section}{\numberline {5.1}Regisztr\'aci\'os \'es bejelentkeztet\H o rendszer}{53}{section.5.1}
-\select@language {magyar} \contentsline {section}{\numberline {5.2}Demo adatkezel\'es\'enek ellen\H orz\'ese}{53}{section.5.2}
-\select@language {magyar} \contentsline {section}{\numberline {5.3}Algoritmusok ellen\H orz\'ese kis adatokon}{53}{section.5.3}
-\select@language {magyar} \contentsline {section}{\numberline {5.4}Algoritmusok ellen\H orz\'ese ismert eredm\'enyekkel}{53}{section.5.4}
-\select@language {magyar} \contentsline {chapter}{\numberline {6}Egyebek}{54}{chapter.6}
-\select@language {magyar} \contentsline {section}{\numberline {6.1}Verzi\'okezel\'es}{54}{section.6.1}
-\select@language {magyar} \contentsline {subsection}{\numberline {6.1.1}Git}{54}{subsection.6.1.1}
-\select@language {magyar} \contentsline {subsection}{\numberline {6.1.2}GitHub}{54}{subsection.6.1.2}
-\select@language {magyar} \contentsline {subsection}{\numberline {6.1.3}A v\'alaszt\'as}{55}{subsection.6.1.3}
-\select@language {magyar} \contentsline {subsection}{\numberline {6.1.4}Repozit\'oriumok}{55}{subsection.6.1.4}
-\select@language {magyar} \contentsline {section}{\numberline {6.2}K\"ornyezetek}{55}{section.6.2}
-\select@language {magyar} \contentsline {subsection}{\numberline {6.2.1}SublimeText - linterek}{55}{subsection.6.2.1}
-\select@language {magyar} \contentsline {paragraph}{Linterek}{56}{section*.52}
-\select@language {magyar} \contentsline {subsection}{\numberline {6.2.2}Android Studio}{57}{subsection.6.2.2}
-\select@language {magyar} \contentsline {subsection}{\numberline {6.2.3}PhpStorm}{58}{subsection.6.2.3}
-\select@language {magyar} \contentsline {chapter}{\numberline {7}\"Osszefoglal\'as}{59}{chapter.7}
+\select@language {magyar} \contentsline {subsubsection}{Main Activity}{50}{section*.46}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.4.1}Register \'es ForgotPassword Activity}{51}{subsection.3.4.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.4.2}Menu}{51}{subsection.3.4.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.4.3}UserPage}{51}{subsection.3.4.3}
+\select@language {magyar} \contentsline {subsubsection}{winesList}{53}{section*.47}
+\select@language {magyar} \contentsline {subsubsection}{detailsContainer}{53}{section*.48}
+\select@language {magyar} \contentsline {chapter}{\numberline {4}A weboldal \'es a mobil alkalmaz\'as \"osszef\H uz\'ese}{54}{chapter.4}
+\select@language {magyar} \contentsline {chapter}{\numberline {5}Tesztel\'es}{55}{chapter.5}
+\select@language {magyar} \contentsline {section}{\numberline {5.1}Regisztr\'aci\'os \'es bejelentkeztet\H o rendszer}{55}{section.5.1}
+\select@language {magyar} \contentsline {section}{\numberline {5.2}Demo adatkezel\'es\'enek ellen\H orz\'ese}{55}{section.5.2}
+\select@language {magyar} \contentsline {section}{\numberline {5.3}Algoritmusok ellen\H orz\'ese kis adatokon}{55}{section.5.3}
+\select@language {magyar} \contentsline {section}{\numberline {5.4}Algoritmusok ellen\H orz\'ese ismert eredm\'enyekkel}{55}{section.5.4}
+\select@language {magyar} \contentsline {chapter}{\numberline {6}Egyebek}{56}{chapter.6}
+\select@language {magyar} \contentsline {section}{\numberline {6.1}Verzi\'okezel\'es}{56}{section.6.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {6.1.1}Git}{56}{subsection.6.1.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {6.1.2}GitHub}{56}{subsection.6.1.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {6.1.3}A v\'alaszt\'as}{57}{subsection.6.1.3}
+\select@language {magyar} \contentsline {subsection}{\numberline {6.1.4}Repozit\'oriumok}{57}{subsection.6.1.4}
+\select@language {magyar} \contentsline {section}{\numberline {6.2}K\"ornyezetek}{57}{section.6.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {6.2.1}SublimeText - linterek}{57}{subsection.6.2.1}
+\select@language {magyar} \contentsline {paragraph}{Linterek}{58}{section*.55}
+\select@language {magyar} \contentsline {subsection}{\numberline {6.2.2}Android Studio}{59}{subsection.6.2.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {6.2.3}PhpStorm}{60}{subsection.6.2.3}
+\select@language {magyar} \contentsline {chapter}{\numberline {7}\"Osszefoglal\'as}{61}{chapter.7}
 \select@language {magyar} \ 
-\select@language {magyar} \contentsline {section}{Nyilatkozat}{60}{chapter*.53}
-\select@language {magyar} \contentsline {section}{Irodalomjegyz\'ek}{62}{chapter*.54}
+\select@language {magyar} \contentsline {section}{Nyilatkozat}{62}{chapter*.56}
+\select@language {magyar} \contentsline {section}{Irodalomjegyz\'ek}{64}{chapter*.57}
