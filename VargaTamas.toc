@@ -80,7 +80,7 @@
 \select@language {magyar} \contentsline {subsection}{\numberline {3.4.2}Menu}{51}{subsection.3.4.2}
 \select@language {magyar} \contentsline {subsection}{\numberline {3.4.3}UserPage}{51}{subsection.3.4.3}
 \select@language {magyar} \contentsline {subsubsection}{winesList}{53}{section*.47}
-\select@language {magyar} \contentsline {subsubsection}{detailsContainer}{53}{section*.48}
+\select@language {magyar} \contentsline {subsubsection}{detailsContainer}{53}{section*.49}
 \select@language {magyar} \contentsline {chapter}{\numberline {4}A weboldal \'es a mobil alkalmaz\'as \"osszef\H uz\'ese}{54}{chapter.4}
 \select@language {magyar} \contentsline {chapter}{\numberline {5}Tesztel\'es}{55}{chapter.5}
 \select@language {magyar} \contentsline {section}{\numberline {5.1}Regisztr\'aci\'os \'es bejelentkeztet\H o rendszer}{55}{section.5.1}
