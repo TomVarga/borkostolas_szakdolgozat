@@ -169,6 +169,7 @@ Web és android alkalmazás fejlesztése, amely képes bor értékelések alapján már l
 A web alkalmazás a következõ címekrõl érhetõ el:
 \begin{itemize}
 	\item \url{http://bor.tvarga.hu}
+	\item \url{http://olga.inf.u-szeged.hu/borkostolas/} csak a Szegedi Tudományegyetem belsõ hálózatából.
 \end{itemize}
 
 Az android alkalmazás letölthetõ bármelyik fent említett URL -rõl a jobb oldali floating menün keresztül, vagy az alábbi közvetlen linken: \hyperlink{http://bor.tvarga.hu/borkostolas.apk}{borkostolas.apk}
@@ -824,8 +825,7 @@ A következõ lépés a bemeneti adatok formai ellenõrzése. Minden egyes megadott ér
 \begin{itemize}
 	\item Számnak kell lennie, vagy üresen kell hagyni a bevitel mezõt
 		\subitem A nem üres beviteli mezõ továbbá nem lehet se túl nagy, tehát kisebbnek kell lennie mint 99999.999
-		\subitem Maximum 3 decimális jegy pontosság engedélyezett	
-
+		\subitem Maximum 3 decimális jegy pontosság engedélyezett
 \end{itemize}
 
 Amennyiben ezek a feltételek teljesülnek akkor a bemeneti adatokat white spacek nélkül bele tesszük egy ideiglenes tömbbe. Mivel üres input mezõk is engedélyezettek így a felhasználónak lehetõsége van már egyszer kitöltött értékelésének törlésére.
@@ -869,11 +869,57 @@ Ahhoz hogy az eredményt megjeleníthessük már csak százra kell azokat normálnunk,
 
 
 \chapter{A mobil alkalmazás}
-Android alkalmazás fejlesztés
+Bár már fejlesztettem web alkalmazásokat melyek rendelkeztek mobil eszközre optimalizált megjelenítési móddal, natív mobil alkalmazást még eddig nem csináltam. Az android alkalmazás fejlesztés alapjait és magának egy android alkalmazás felépítésének megismerését fõképp egy nem túl naprakész videó ismertetõ sorozatból szereztem be, ez ugyan nem tért ki a legújabb technológiákra illetve külön az API szintek közti különbségere, de mint egy alapozó jellegû kurzus teljesen véleményem szerint helyt állt.
+
+Az alkalmazás megtervezéséhez és implementálásához a \textbf{M}odel-\textbf{V}iew-\textbf{C}ontrol (MVC) architekturális szoftver tervezési mintát használtam, mely az alkalmazást három egymással kapcsolatban álló részre bontja. Az MVC modell központi rését képzõ $model$ -nek feladata az alkalmazás viselkedésének leírása a definiált probléma domain felett a felhasználói felülettõl függetlenül. A $model$ közvetlenül kezeli az alkalmazás adatait, \linebreak logikáját és szabályait. A $view$ bármilyen kimenet reprezentációja lehet. Végül a \linebreak$controller$ dolgozza fel a bemenetet majd vezérli a $model$ -t vagy a $view$ -ot. A három komponens egymás közti kapcsolatát az alábbi módon szoktuk definiálni:
+
+\begin{itemize}
+	\item A \textbf{controller} parancsokat küldhet a $model$ számára, hogy frissítse annak állapotát, vagy akár a hozzá tartozó $view$ számára is.
+	\item A \textbf{model} értesíti a hozzá tartozó $view$ -okat és $controller$ -eket a $model$ állapotának megváltozásáról. Ennek köszönhetõen a $view$ frissítheti a kimeneti felületet, vagy a $controller$ megváltoztathatja az elérhetõ parancsok halmazát.
+	\item A \textbf{view} feladata a $model$ -tõl való adatok kérése, melyeket a felhasználó számra való kimenet generálásához használ fel.
+\end{itemize}
 
 \section{Android}
-Android
-\todo MVC
+Egy Android alkalmazás mûködésének megértéséhez az alábbi fogalmakkal és forrásokkal okvetlenül tisztában kell lennünk:
+
+\subsection*{Manifest}
+Talán a legfontosabb fájl, melynek feladatai közé tartozik többek között az alkalmazás belépési pontjának meghatározása. Itt kerül definiálásra az alkalmazás neve, ikonja és az ahhoz tartozó címke. Az itt definiált jogosultság kérések alapján kell majd a felhasználónak dönteni, hogy telepíti -e az alkalmazást és természetesen csakis ezen jogosultságok által engedélyezett szolgáltatások lesznek elérhetõek az alkalmazás számára. Most konkréten három ilyen szolgáltatás elérésére volt szükségem ezek a hálózat állapotának lekérdezése, internet hozzáférés valamint engedély a külsõ tárhelyre való írásra. Azon activity-k amik nem szerepelnek ebben a fájlban, nem lesznek elérhetõek az alkalmazásból. Nem utolsó sorban itt adhatjuk meg azt is, hogy milyen Android verziók alatt futtatható az alkalmazás, jelenleg az alkalmazás legalább 16 os SDK (software development kit) verziót követel meg, ami a $Jelly\ Bean$ fantázia nevû android 4.1 -nek felel meg.
+
+\subsection*{View és ViewGroup}
+Android fejlesztés során minden felhasználói felületi elem vagy $View$ vagy $ViewGroup$ objektum. A $View$ egy objektum amely felhasználói interakciót tesz lehetõvé míg a $ViewGroup$ a $View$ objektumokat (vagy más $ViewGroup$ -okat) tartalmazó objektum, mely a felhasználói felület elrendezésének definiálására szolgál. Nem kell megijedni, nem kell minden egyes felhasználói felületet nekünk definiálni, léteznek már kész felhasználható elemek, melyeknek csak azt kell megmondanunk, hogy milyen tartalmat jelenítsenek meg, ilyen például az $ActionBar$, $Dialog$ vagy a $Status\ Notification$.
+
+\subsection*{Layout}
+Ez egy XML fájl, mely definiálja a felhasználói felületen megjelenõ elemek vizuális elrendezését. Két módszer létezik egy elrendezés definiálására, melyek külön-külön, de akár egymással kombinálva is alkalmazhatók:
+
+\begin{itemize}
+	\item A felhasználói felület elemeit definiálhatjuk XML-ben.
+	\item Az elemeket futási idõben példányosíthatjuk. Az alkalmazás programmatikusan hozhat létre $View$ illetve $ViewGroup$ objektumokat, valamint módosíthatja azok tulajdonságait.
+\end{itemize}
+
+Most csak azon elrendezésekre térnék ki amelyeket ténylegesen felhasználtam az alkalmazás készítése során. Valamint nem térnék ki arra sem, hogy milyen módon lehet méret függõ elrendezéseket létrehozni, mert úgy gondolom az már nem tartozik az alapokhoz.
+
+\subsubsection{Linear Layout}
+Ez egy olyan elrendezés, mely az általa tartalmazott elemeket egy megadott irányban rendezi el egymás mellett. Az irány horizontális vagy vertikális lehet. Ez az elrendezési típus támogatja súlyok használatát. Ez azt jelenti, hogy a gyermekeknek a $android:layout\_weight$ attribútum segítségével definiálhatunk egy értéket, mely azt fogja megadni, hogy az adott elem mekkora mértékben töltheti ki a rendelkezésre álló szabad területet a többi gyerekhez képest. A nagyobb súly értékek, nagyobb terület felhasználást eredményeznek. Az alapértelmezett érték a nulla. Ennek a módszernek a használatával könnyen megadott arányokra osztható a rendelkezésre álló felhasználói felület, melynek köszönhetõen olyan alkalmazást tudunk készíteni amely több különbözõ méretû eszközön is hasonló vagy azonos megjelenést tud biztosítani.
+
+\subsubsection{Relative Layout}
+Ennél az elrendezésnél a gyerek elemek egymáshoz képesti relatív pozíciójuk alapján kerülnek elrendezésre. Ezt az elrendezési módot fõleg akkor érdemes használni, ha azon kapjuk magunkat, hogy sok $LinearLayout$ -ot ágyaztunk egymásba, mivel a mély egymásba ágyazás sebesség csökkenéssel járhat arról nem is beszélve, hogy megnehezíti a megjelenítési felület értelmezését. A gyerek elemek elrendezése mindig vagy egy olyan boolean tulajdonsággal van megadva amely a szülõhöz képesti viszonyt adja meg, vagy egy azonosítóval amely az adott azonosítóhoz tartozó elemhez képesti elrendezést fogja eredményezni a tulajdonság neve szerint.
+
+\subsubsection{List View}
+Görgõzhetõ listák létrehozásához ez a leghatékonyabb elrendezés. Egy $Adapter$ -nek köszönhetõen a lista elemek automatikusan kerülnek bele a listába. Az $Adapter$ feladata a tartalmi adatok begyûjtése mely származhat lehet egy szimpla tömbbõl, vagy akár adatbázis lekérdezésbõl is, majd az így begyûjtött adatokat a lista egy elemét leíró $view$ -ba formázza. Az elrendezés konkrét használatára, majd késõbb fogok kitérni.
+
+\subsection*{Activity}
+$Activity$ -nek nevezzük az alkalmazás azon részét, mely valamilyen képernyõ nézet létrehozásért felelõs. Ezek általában egymással valamilyen kapcsolatban vannak, valamint tipikusan a "main" activity-t használjuk az alkalmazás belépési pontjaként, mely akkor jelenik meg amikor a felhasználó elõször indítja el azt. Minden activity indíthat egy másik activity-t, minden alkalommal amikor egy új acitivity indul az elõzõ megáll, de annak állapot nem veszik el, mert az elmentõdik a "back stack" -en. A stack a "last in, first out" elv szerint mûködik, tehát az új activity mindig elõtérbe kerül és amikor annak használatát befejezi a felhasználó a vissza gomb megnyomásával, akkor az aktív activity ki kerül a stack-bõl és az azt megelõzõ activity kerül elõtérbe.
+
+Egy activity-nak a mûködését úgy a legegyszerûbb megérteni, ha megnézzük milyen életciklussal rendelkezik. Fontos azt észben tartani, hogy minden fõbb életciklus lépéshez létezik egy callback metódis mely segítségével az adott életciklushoz illõ mûveleteket végezhetünk el.
+
+Egy activity létrehozásához létre kell hozni egy az $Activity$ osztály egy alosztályát vagy annak valamely alosztályának egy alosztályát. Én az $ActionBarActivity$ osztályból származtattam az alkalmazás során felhasznált activity-ket. Ennek fõ oka az volt, hogy a menü rendszert könnyen tudjam implementálni, mivel ez az alosztály intelligensen kezeli a menürendszereket az olyan újabb készülékeken is amelyek nem rendelkeznek menü gombbal.
+
+\subsubsection{onCreate}
+Ezt a metódust minden activity-nak implementálnia kell. Ez kerül meghívásra amikor az activity létrejön. A legfontosabb hogy itt kerüljön meghívásra a $setContentView\left(\right)$ mely definiálja, hogy az adott activity melyik elrendezést fogja használni.
+
+\todo bõvebben a listviewról majd a UserPage nél
+
+\todo ActionBarActivity
 \todo android register, passwordReset 
 \todo talk about threading UI/new thread mi futhat hol és mi nem
 \todo távoli adatbázis elérés
@@ -1274,12 +1320,7 @@ Android Studio.
 %Plenum Publishing Corp., New York, 1986.
 
 
-
-
-
 \end{thebibliography}
-
-
 
 
 \end{document}
