@@ -71,8 +71,6 @@
 \select@language {magyar} \contentsline {paragraph}{Linterek}{49}{section*.30}
 \select@language {magyar} \contentsline {subsection}{\numberline {7.2.2}Android Studio}{50}{subsection.7.2.2}
 \select@language {magyar} \contentsline {subsection}{\numberline {7.2.3}PhpStorm}{51}{subsection.7.2.3}
-\select@language {magyar} \contentsline {chapter}{\numberline {8}F\"uggel\'ek}{52}{chapter.8}
-\select@language {magyar} \contentsline {section}{\numberline {8.1}A program forr\'ask\'odja}{52}{section.8.1}
 \select@language {magyar} \ 
-\select@language {magyar} \contentsline {section}{Nyilatkozat}{53}{chapter*.31}
-\select@language {magyar} \contentsline {section}{Irodalomjegyz\'ek}{55}{chapter*.32}
+\select@language {magyar} \contentsline {section}{Nyilatkozat}{52}{chapter*.31}
+\select@language {magyar} \contentsline {section}{Irodalomjegyz\'ek}{54}{chapter*.32}
