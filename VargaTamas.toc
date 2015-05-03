@@ -73,6 +73,9 @@
 \select@language {magyar} \contentsline {subsubsection}{WinesAdapter}{49}{section*.41}
 \select@language {magyar} \contentsline {subsubsection}{OnAdapterNeedsNotify}{49}{section*.42}
 \select@language {magyar} \contentsline {subsubsection}{NetworkChecker}{50}{section*.43}
+\select@language {magyar} \contentsline {subsubsection}{DBSyncContoller}{50}{section*.44}
+\select@language {magyar} \contentsline {section}{\numberline {3.4}View}{50}{section.3.4}
+\select@language {magyar} \contentsline {subsubsection}{Main Activity}{50}{section*.45}
 \select@language {magyar} \contentsline {chapter}{\numberline {4}A weboldal \'es a mobil alkalmaz\'as \"osszef\H uz\'ese}{51}{chapter.4}
 \select@language {magyar} \contentsline {chapter}{\numberline {5}Tesztel\'es}{52}{chapter.5}
 \select@language {magyar} \contentsline {section}{\numberline {5.1}Regisztr\'aci\'os \'es bejelentkeztet\H o rendszer}{52}{section.5.1}
@@ -87,10 +90,10 @@
 \select@language {magyar} \contentsline {subsection}{\numberline {6.1.4}Repozit\'oriumok}{54}{subsection.6.1.4}
 \select@language {magyar} \contentsline {section}{\numberline {6.2}K\"ornyezetek}{54}{section.6.2}
 \select@language {magyar} \contentsline {subsection}{\numberline {6.2.1}SublimeText - linterek}{54}{subsection.6.2.1}
-\select@language {magyar} \contentsline {paragraph}{Linterek}{55}{section*.50}
+\select@language {magyar} \contentsline {paragraph}{Linterek}{55}{section*.52}
 \select@language {magyar} \contentsline {subsection}{\numberline {6.2.2}Android Studio}{56}{subsection.6.2.2}
 \select@language {magyar} \contentsline {subsection}{\numberline {6.2.3}PhpStorm}{57}{subsection.6.2.3}
 \select@language {magyar} \contentsline {chapter}{\numberline {7}\"Osszefoglal\'as}{58}{chapter.7}
 \select@language {magyar} \ 
-\select@language {magyar} \contentsline {section}{Nyilatkozat}{59}{chapter*.51}
-\select@language {magyar} \contentsline {section}{Irodalomjegyz\'ek}{61}{chapter*.52}
+\select@language {magyar} \contentsline {section}{Nyilatkozat}{59}{chapter*.53}
+\select@language {magyar} \contentsline {section}{Irodalomjegyz\'ek}{61}{chapter*.54}

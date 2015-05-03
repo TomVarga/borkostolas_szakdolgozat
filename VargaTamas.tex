@@ -995,9 +995,22 @@ Egyetlen statikus publikus metódusának $haveNetworkConnection$ köszönhetõen bárh
 \subsubsection{DBSyncContoller}
 Az távoli és lokális adatbázis szinkronizációjáért felelõs osztály, melynek használatáról és mûködésérõl majd késõbb esik szó.
 
+\section{View}
+View avagy az alkalmazás kezelõfelületének megjelenítésért felelõs activity-k. Már korábban tisztáztunk, hogy általában az alkalmazás belépési pontja a $Main$ osztály által definiált $Activity$, ez most sincs másképp, nézzük is meg ez mibõl áll:
 
+\subsubsection{Main Activity}
+Ennek az activity-nek a feladata a bejelentkezés kezelése, valamint navigációs gombok létrehozása melyeken keresztül elérhetõ a regisztrációs illetve a jelszót visszaállító activity-k. Hibás bejelentkezés esetén már a tárgyaltak szerint egy generikus üzenetet írunk csak ki. Sikeres belépés esetén a web alkalmazás vissza adja a felhasználó azonosítóját, ez alapján létre hozunk egy $User$ objektumot mely $setPrefs$ metódusával elmentjük a felhasználó állapotát mielõtt tovább lépnénk a felhasználó adatait tartalmazó activity-re. Lényegébe véve ez a változó átadásának módja activity-k között.
 
+A \ref{lst:onBackPressed} kódrészletben látott egyszerû megoldásnak köszönhetõen nem lehet ebbõl az activity-bõl vissza lépni az õt megelõzõ activity-re így elkerülve azt az eshetõséget, hogy valaki kijelentkezés után a vissza gomb használatával vissza lépjen a felhasználói adatokat kezelõ activity-re.
 
+\begin{minipage}{\linewidth}
+	\begin{lstlisting}[language=java,label={lst:onBackPressed}, caption={Vissza gomb letiltása}]
+@Override
+public void onBackPressed() { return; }
+	\end{lstlisting}
+\end{minipage}
+
+Arra is figyeltem, hogy az $onResume$ callback függvényben mindig üres stringre állítsam a bemeneti mezõket, így biztos, hogy bármikor amikor ez az activity kerül elõtérben az nem fogja elárulni az elõzõ felhasználó bejelentkezési adatait.
 
 \todo bõvebben a listviewról majd a UserPage nél
 
