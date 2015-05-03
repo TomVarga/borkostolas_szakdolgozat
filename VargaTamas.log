@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.11.23)  3 MAY 2015 04:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.11.23)  3 MAY 2015 04:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1348,6 +1348,12 @@ er¶b-bé téve azok
 
 [49] [50]
 7. fejezet.
+
+Overfull \hbox (0.84792pt too wide) in paragraph at lines 968--969
+\T1/ptm/m/n/12 miképp lehet egy web al-ka-lmazás szol-gál-tatását elérhet®vé te
+n-ni egy natív mo-bil felületen.
+ []
+
 [51
 
 ]
@@ -1439,7 +1445,7 @@ dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><x:/texlive/2014/texmf-dist/fonts
 e1/urw/courier/ucrr8a.pfb><x:/texlive/2014/texmf-dist/fonts/type1/urw/times/utm
 b8a.pfb><x:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><x:/texliv
 e/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on VargaTamas.pdf (54 pages, 337995 bytes).
+Output written on VargaTamas.pdf (54 pages, 338830 bytes).
 PDF statistics:
  930 PDF objects out of 1000 (max. 8388607)
  848 compressed objects within 9 object streams
