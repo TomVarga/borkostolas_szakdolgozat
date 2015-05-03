@@ -937,8 +937,17 @@ Most hogy tisztába kerültünk az $Activity$ fogalmával, rátérhetünk a köztük való
 
 Egy activity új példányát úgy indíthatjuk el, hogy egy intent-el meghívjuk a $startActivity\left(\right)$ metódust. Az intent fogja leírni, hogy melyik activity-t kell elindítani, valamint tartalmazza a szükséges adatokat. Talán ennél jobban most nem is érdemes bele mélyedni az intent használatába.
 
+\subsection*{Adat tárolás}
+Több adat tárolási opció is létezek, én most ezek közül csak az általam használtak ismertetésére térnék ki.
+
+\subsubsection{Shared Preferences}
+Kulcs - érték primitív adat típus párok tárolását teszi lehetõvé. Az ilyen módon tárolt adatok akkor is megõrzésre kerülnek, ha az alkalmazás bezárásra kerülne. A $SharedPreferences$ objektum eléréséhez a $getSharedPreferences\left(\right)$ metódus használandó. Az $edit\left(\right)$ hívása után vissza kapunk egy $SharedPreferences.Editor$ -t mely az adatok szerkesztéséhez kell. Végül pedig a $commit\left(\right)$ paranccsal érvényesíthetjük a változtatásainkat. Ezt az adat tárolási megközelítést használtam a felhasználó állapotának és formációinak megõrzésére az activity-k navigálása között.
+
+\subsubsection{SQLite adatbázis}
+Az Android teljes SQLite adatbázis támogatással rendelkezik. Fontos megemlíteni, hogy bármely létrehozott adatbázis név szerint elérhetõ lesz az alkalmazás bármely osztálya által, de más alkalmazások nem fognak hozzájuk férni. Egy új SQLite adatbázist úgy hozhatunk létre, hogy implementáljuk az $SQLiteOpenHelper$ osztály $onCreatee\left(\right)$ metódusát. Az adatbázis hozzáférést pedig a $getWritableDatabase\left(\right)$ illetve $getReadableDatabasee\left(\right)$ metódusok biztosítják. A konkrét implementáció majd késõbb térek, egyelõre elõjáróban csak annyit említenék, hogy ez a megközelítés tette lehetõvé a felhasználók értékeléseinek lokális tárolását.
+
 \section{Az Android alkalmazás felépítése}
-Az alkalmazást képzõ elemeket olyan sorrendben fogom ismertetni, amilyen sorrendben a felhasználó beléjük futhat egy tipikus használat során.
+Az alkalmazást képzõ elemeket olyan sorrendben fogom ismertetni, amilyen sorrendben a felhasználó beléjük futhat egy tipikus használat során. 
 
 
 \todo bõvebben a listviewról majd a UserPage nél
