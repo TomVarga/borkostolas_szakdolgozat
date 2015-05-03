@@ -947,7 +947,41 @@ Kulcs - érték primitív adat típus párok tárolását teszi lehetõvé. Az ilyen módon
 Az Android teljes SQLite adatbázis támogatással rendelkezik. Fontos megemlíteni, hogy bármely létrehozott adatbázis név szerint elérhetõ lesz az alkalmazás bármely osztálya által, de más alkalmazások nem fognak hozzájuk férni. Egy új SQLite adatbázist úgy hozhatunk létre, hogy implementáljuk az $SQLiteOpenHelper$ osztály $onCreatee\left(\right)$ metódusát. Az adatbázis hozzáférést pedig a $getWritableDatabase\left(\right)$ illetve $getReadableDatabasee\left(\right)$ metódusok biztosítják. A konkrét implementáció majd késõbb térek, egyelõre elõjáróban csak annyit említenék, hogy ez a megközelítés tette lehetõvé a felhasználók értékeléseinek lokális tárolását.
 
 \section{Az Android alkalmazás felépítése}
-Az alkalmazást képzõ elemeket olyan sorrendben fogom ismertetni, amilyen sorrendben a felhasználó beléjük futhat egy tipikus használat során. 
+Az alkalmazást képzõ elemek ismertetését olyan sorrendben fogom elvégezni, mely követik az MVC tervezési minta elveit, ahol szükséges kitérve az esetleges támogató szolgáltatásokra vagy érdekességekre.
+
+\subsection{Model}
+
+Mielõtt rá térnék a model adatbázist kezelõ interfacére, elõbb röviden nézzük meg a model alapját adó osztályokat.
+
+\subsubsection{Beans}
+\paragraph{Wine és Score osztály}
+A $Wine$ és $Score$ osztályok egyszerûen csak az adatbázis séma szerint lettek megkonstruálva.
+
+\paragraph{User osztály}
+Ez az osztály felelõ a felhasználó objektumként való kezeléséért. Képes az adatbázisban megtalálható összes adattag tárolására, valamint rendelkezik két metódussal a $setPrefs\left(\right)$ és $populateFromPrefs\left(\right)$ melyek feladata az aktív felhasználó állapotának nyomkövetését segíteni miközben az activity-k között navigál az aktív felhasználó.
+
+\paragraph{ScoredWine}
+A $ScoredWine$ a $Wine$ osztálynak egy olyan leszármazottja, amely borok és értékelések felhasználóhoz való rendelését teszi lehetõvé. Ennek az osztálynak a létrehozásával könnyebben kezelhetõ lesz majd a késõbb bemutatásra kerülõ értékeléseket kezelõ activity.
+
+\subsection{DAO}
+A \textbf{D}atabase \textbf{A}ccess \textbf{O}bject (DAO) interface feladata az adatbázis elérés biztosítása. Két implementációja van. Az egyik a $LocalDAO$ mely a helyi SQLite adatbázishoz kapcsolódik. A másik pedig a $RemoteDAO$ mely a távoli adatbázis elérést teszi lehetõvé. Mindkét osztálynak implementálnia kell a \ref{lst:DAO interface} kódrészletben látott metódusokat. A két adatbázis összekapcsolásáról majd egy késõbbi fejezetben esik szó, itt csak a helyi adatbázis felépítésére térnék ki.
+
+\begin{minipage}{\linewidth}
+	\begin{lstlisting}[language=java,label={lst:DAO interface}, caption={DAO interface metódusai}]
+public ArrayList<Wine> getWines();    
+public ArrayList<Score> getScores(int user_id);    
+public boolean addOrUpdateScore(Score score);
+	\end{lstlisting}
+\end{minipage}
+
+\subsubsection{LocalDAO}
+Már láttuk, hogy Android alatt milyen segéd osztály használatával végezhetõ el az SQLite adatbázis használata, így arra nem térnék ki, de az mindenképpen említésre méltó, hogy a lokális adatbázis felépítése majdnem teljesen megegyezik a szerveren található adatbázis felépítésével, viszont itt csak két tábla kerül létrehozásra, hiszen az összes felhasználó adatát nincs értelme tárolnunk, arról nem is beszélve, hogy ez milyen biztonsági rést képezne.
+
+
+
+
+
+
 
 
 \todo bõvebben a listviewról majd a UserPage nél
@@ -956,8 +990,6 @@ Az alkalmazást képzõ elemeket olyan sorrendben fogom ismertetni, amilyen sorrend
 \todo android register, passwordReset 
 \todo talk about threading UI/new thread mi futhat hol és mi nem
 \todo távoli adatbázis elérés
-\todo local SQLLite adatbázis
-\todo lokális változok kezelése SQL/properties vagy mifene
 
 \chapter{A weboldal és a mobil alkalmazás összefûzése}
 A weboldal és a mobil alkalmazás összefûzése
