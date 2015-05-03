@@ -977,8 +977,23 @@ public boolean addOrUpdateScore(Score score);
 \subsubsection{LocalDAO}
 Már láttuk, hogy Android alatt milyen segéd osztály használatával végezhetõ el az SQLite adatbázis használata, így arra nem térnék ki, de az mindenképpen említésre méltó, hogy a lokális adatbázis felépítése majdnem teljesen megegyezik a szerveren található adatbázis felépítésével, viszont itt csak két tábla kerül létrehozásra, hiszen az összes felhasználó adatát nincs értelme tárolnunk, arról nem is beszélve, hogy ez milyen biztonsági rést képezne.
 
+\section{Controller}
+Többek között itt találhatók azon osztályok, melyek a felhasználó által megadott bemenetek olyan formátumra való hozásáért felelõsek, melyet a $model$ osztályai kezelni tudnak.
 
+\subsubsection{JSONParser}
+Ennek az osztálynak a $string$ és $java.util.Data$ közötti oda-vissza konverziókat kezelõ függvényen kívül két fõ metódusa van, melyek feladata a JSON objektumokból $Wine$ illetve $Score$ osztályok példányosítása.
 
+\subsubsection{WinesAdapter}
+Ez az osztály az $ArrayAdapter$ egy leszármaztatottja, mely $ScoredWine$ típusú objektumokat kezel. Feladata a borokat és felhasználó által hozzájuk tartozó értékelések megjelenítése a $ListView$ egy lista elemében.
+
+\subsubsection{OnAdapterNeedsNotify}
+Egy egyszerû eseményt figyelõ interface.
+
+\subsubsection{NetworkChecker}
+Egyetlen statikus publikus metódusának $haveNetworkConnection$ köszönhetõen bárhonnan ellenõrizhetõ, hogy pillanatnyilag a mobil eszköz rendelkezi -e wifi vagy mobil internet kapcsolattal. 
+
+\subsubsection{DBSyncContoller}
+Az távoli és lokális adatbázis szinkronizációjáért felelõs osztály, melynek használatáról és mûködésérõl majd késõbb esik szó.
 
 
 
