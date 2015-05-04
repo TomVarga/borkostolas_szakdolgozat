@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.11.23)  4 MAY 2015 01:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.11.23)  4 MAY 2015 21:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -891,7 +891,7 @@ Underfull \hbox (badness 5460) in paragraph at lines 323--324
 alamint ezek és a
  []
 
-<Wireframe.png, id=428, 730.73pt x 530.98375pt>
+<Wireframe.png, id=433, 730.73pt x 530.98375pt>
 File: Wireframe.png Graphic file (type png)
  <use Wireframe.png>
 Package pdftex.def Info: Wireframe.png used on input line 327.
@@ -944,7 +944,7 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\H' on input line 341.
 
-[14] <../../Borkostolas_weblap/dbmodel.png, id=447, 415.5525pt x 420.57124pt>
+[14] <../../Borkostolas_weblap/dbmodel.png, id=452, 415.5525pt x 420.57124pt>
 File: ../../Borkostolas_weblap/dbmodel.png Graphic file (type png)
 
 <use ../../Borkostolas_weblap/dbmodel.png>
@@ -1172,237 +1172,237 @@ Overfull \hbox (17.62482pt too wide) in paragraph at lines 797--803
  []
 
 
-Underfull \hbox (badness 7907) in paragraph at lines 808--812
+Underfull \hbox (badness 7907) in paragraph at lines 811--815
 \T1/ptm/m/n/12 azonosítójából fel-használó név lekérdezéséért felel®s $\OML/cmm
 /m/it/12 getUserName []$
  []
 
 
-Underfull \hbox (badness 6157) in paragraph at lines 808--812
+Underfull \hbox (badness 6157) in paragraph at lines 811--815
 \T1/ptm/m/n/12 lományok-ban is, mint az $\OML/cmm/m/it/12 admin:php$ \T1/ptm/m/
 n/12 vagy az $\OML/cmm/m/it/12 androidCalculator:php$\T1/ptm/m/n/12 , de a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 808--812
+Underfull \hbox (badness 10000) in paragraph at lines 811--815
 
  []
 
 
-Underfull \hbox (badness 4303) in paragraph at lines 808--812
+Underfull \hbox (badness 4303) in paragraph at lines 811--815
 \T1/ptm/m/n/12 talál-ható. A bal oldali a $\OML/cmm/m/it/12 wines$ \T1/ptm/m/n/
 12 táblában talál-ható borokat listáz-za kis és a
  []
 
 [38]
-Overfull \hbox (17.62482pt too wide) in paragraph at lines 813--818
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 816--821
 []$[]$ 
  []
 
 [39]
-Overfull \hbox (0.22046pt too wide) in paragraph at lines 835--836
+Overfull \hbox (0.22046pt too wide) in paragraph at lines 838--839
 []\T1/ptm/m/n/12 Miután sik-ere-sen fris-sült az adat-bázis a fel-használó új é
 rtékelésév-el el kell hogy készít-
  []
 
 
-Overfull \hbox (4.47154pt too wide) in paragraph at lines 835--836
+Overfull \hbox (4.47154pt too wide) in paragraph at lines 838--839
 \T1/ptm/m/n/12 sük az al-go-rit-mu-sok számára azt a mátrixot ame-ly azon érték
 eléseket tar-tal-maz-za melyeken
  []
 
 
-Underfull \hbox (badness 4518) in paragraph at lines 835--836
+Underfull \hbox (badness 4518) in paragraph at lines 838--839
 \T1/ptm/m/n/12 ma-jd a számítás fut-tatandó. Az adat-bázis-ból a töb-bi értékel
 és be-gy¶jtésért a
  []
 
 
-Underfull \hbox (badness 1097) in paragraph at lines 839--840
+Underfull \hbox (badness 1097) in paragraph at lines 842--843
 \T1/ptm/m/n/12 ada-tok alapján a grafikon ra-j-zoló füg-gvények meghívása. Az e
 l-s® AJAX hívás a
  []
 
 
-Underfull \hbox (badness 5460) in paragraph at lines 839--840
+Underfull \hbox (badness 5460) in paragraph at lines 842--843
 \T1/ptm/m/n/12 ál-ta-lam im-ple-men-tált $\OML/cmm/m/it/12 CoHITS$ \T1/ptm/m/n/
 12 al-go-rit-mus képzi az egyik cso-por-tot, mely a
  []
 
 [40]
-Underfull \hbox (badness 3386) in paragraph at lines 847--848
+Underfull \hbox (badness 3386) in paragraph at lines 850--851
 \T1/ptm/m/n/12 hozásánál, mely az adott bor-ra vonatkozó át-la-gos értékeléseke
 t tar-tal-maz-za. A
  []
 
 
-Underfull \hbox (badness 1484) in paragraph at lines 847--848
+Underfull \hbox (badness 1484) in paragraph at lines 850--851
 \T1/ptm/m/n/12 tar-tal-maz-za min-den a kós-toló ál-tal adott értékelésre a hoz
 -zá tar-tozó bor át-la-gos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 847--848
+Underfull \hbox (badness 10000) in paragraph at lines 850--851
 \T1/ptm/m/n/12 legkisebb el-emét és ezt min-den kós-tolóra elosztjuk a hoz-zá t
 ar-tozó
  []
 
 
-Underfull \hbox (badness 3260) in paragraph at lines 847--848
+Underfull \hbox (badness 3260) in paragraph at lines 850--851
 \OML/cmm/m/it/12 tSumOfDiffFromAvg$ \T1/ptm/m/n/12 értékkel, ahol ez nem létezi
 k ott az értéke nul-la. A
  []
 
 
-Overfull \hbox (17.62482pt too wide) in paragraph at lines 851--856
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 854--859
 []$[]$ 
  []
 
-
-Underfull \hbox (badness 1803) in paragraph at lines 857--858
+[41]
+Underfull \hbox (badness 1803) in paragraph at lines 860--861
 \OML/cmm/m/it/12 tWLeftTransposed$ \T1/ptm/m/n/12 nem más mint a $\OML/cmm/m/it
 /12 tWLeftData$ \T1/ptm/m/n/12 tran-szponál-ta, amit a tömb
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 857--858
+Underfull \hbox (badness 10000) in paragraph at lines 860--861
 \OML/cmm/m/it/12 flipDiaognally\OT1/cmr/m/n/12 ($\OML/cmm/m/it/12 arr\OT1/cmr/m
 /n/12 )$ \T1/ptm/m/n/12 metó-dus végez el. Végül a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 857--858
+Underfull \hbox (badness 10000) in paragraph at lines 860--861
 \OML/cmm/m/it/12 tWRightMultipliedBytWLeftTransposed$ \T1/ptm/m/n/12 egy a $\OM
 L/cmm/m/it/12 tWRightData$ \T1/ptm/m/n/12 és
  []
 
-[41]
-Underfull \hbox (badness 1117) in paragraph at lines 865--867
+
+Underfull \hbox (badness 1117) in paragraph at lines 868--870
 \T1/ptm/m/n/12 Ahol $\OML/cmm/m/it/12 sum [] \OT1/cmr/m/n/12 =[] 1$ \T1/ptm/m/n
 /12 azt je-len-ti, hogy az A mátrix má-sodik di-men-z-ió sz-er-in-ti
  []
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 868.
+LaTeX Warning: Command \' invalid in math mode on input line 871.
 
 Missing character: There is no á in font cmr12!
-[42]
+[42] [43]
 3. fejezet.
 
-Overfull \hbox (2.00903pt too wide) in paragraph at lines 874--875
+Overfull \hbox (2.00903pt too wide) in paragraph at lines 877--878
 []\T1/ptm/m/n/12 Az al-ka-lmazás megter-vezéséhez és im-ple-men-tálásához a \T1
 /ptm/b/n/12 M\T1/ptm/m/n/12 odel-\T1/ptm/b/n/12 V\T1/ptm/m/n/12 iew-\T1/ptm/b/n
 /12 C\T1/ptm/m/n/12 ontrol (MVC)
  []
 
 
-Underfull \hbox (badness 1033) in paragraph at lines 874--875
+Underfull \hbox (badness 1033) in paragraph at lines 877--878
 \T1/ptm/m/n/12 logikáját és sz-abályait. A $\OML/cmm/m/it/12 view$ \T1/ptm/m/n/
 12 bár-mi-lyen kimenet reprezen-tá-ció-ja lehet. Végül a
  []
 
 
-Overfull \hbox (12.06873pt too wide) in paragraph at lines 883--884
+Overfull \hbox (12.06873pt too wide) in paragraph at lines 886--887
 \T1/ptm/m/n/12 Miel®tt rátérnék az al-ka-lmazás tényleges felépítésére, egy An-
 droid al-ka-lmazás m¶ködésének
  []
 
-[43
+[44
 
-] [44]
-Overfull \hbox (2.27782pt too wide) in paragraph at lines 902--903
+] [45]
+Overfull \hbox (2.27782pt too wide) in paragraph at lines 905--906
 [] \OML/cmm/m/it/12 layout[]weight$ \T1/ptm/m/n/12 at-tribú-tum segít-ségév-el 
 definiál-hatunk egy értéket, mely azt fog-ja megad-
  []
 
 
-Overfull \hbox (11.50552pt too wide) in paragraph at lines 902--903
+Overfull \hbox (11.50552pt too wide) in paragraph at lines 905--906
 \T1/ptm/m/n/12 nyen megadott arányokra os-ztható a ren-delkezésre ál-ló fel-has
 ználói felület, melynek köszön-
  []
 
 
-Overfull \hbox (5.22063pt too wide) in paragraph at lines 905--906
+Overfull \hbox (5.22063pt too wide) in paragraph at lines 908--909
 \T1/ptm/m/n/12 kapjuk ma-gunkat, hogy sok $\OML/cmm/m/it/12 LinearLayout$ \T1/p
 tm/m/n/12 -ot ágyaz-tunk egymás-ba, miv-el a mé-ly egymás-
  []
 
 
-Overfull \hbox (15.7541pt too wide) in paragraph at lines 905--906
+Overfull \hbox (15.7541pt too wide) in paragraph at lines 908--909
 \T1/ptm/m/n/12 tu-la-j-don-ság-gal van megad-va ame-ly a szül®höz képesti vis-z
 onyt ad-ja meg, vagy egy azonosító-
  []
 
-[45]
-Underfull \hbox (badness 10000) in paragraph at lines 921--925
+[46]
+Underfull \hbox (badness 10000) in paragraph at lines 924--928
 
  []
 
 
-Overfull \hbox (3.03326pt too wide) in paragraph at lines 921--925
+Overfull \hbox (3.03326pt too wide) in paragraph at lines 924--928
 \T1/ptm/m/n/12 Fontos hogy min-den egyes call-back im-ple-men-tálásánál az el-s
 ® dol-gunk az hogy meghívjuk
  []
 
-[46]
-Overfull \hbox (1.03903pt too wide) in paragraph at lines 936--937
+[47]
+Overfull \hbox (1.03903pt too wide) in paragraph at lines 939--940
 \T1/ptm/m/n/12 igálás-ra. Az $\OML/cmm/m/it/12 Intent$ \T1/ptm/m/n/12 egy üzene
 t küld® ob-jek-tum mely segít-ségév-el bi-zonyos tevékenységek
  []
 
 
-Overfull \hbox (0.57597pt too wide) in paragraph at lines 936--937
+Overfull \hbox (0.57597pt too wide) in paragraph at lines 939--940
 \T1/ptm/m/n/12 in-dítását kérhetjük egy másik al-ka-lmazás el-emt®l. Három alap
 vet® használati es-etet külön-
  []
 
 
-Overfull \hbox (27.92307pt too wide) in paragraph at lines 938--939
+Overfull \hbox (27.92307pt too wide) in paragraph at lines 941--942
 []\T1/ptm/m/n/12 Egy ac-tiv-i-ty új példányát úgy in-díthatjuk el, hogy egy int
 ent-el meghívjuk a $\OML/cmm/m/it/12 startActivity []$
  []
 
 
-Overfull \hbox (21.90134pt too wide) in paragraph at lines 944--945
+Overfull \hbox (21.90134pt too wide) in paragraph at lines 947--948
 \T1/ptm/m/n/12 tok akkor is meg®rzésre kerül-nek, ha az al-ka-lmazás bezárás-ra
  kerülne. A $\OML/cmm/m/it/12 SharedPreferences$
  []
 
 
-Overfull \hbox (2.48367pt too wide) in paragraph at lines 944--945
+Overfull \hbox (2.48367pt too wide) in paragraph at lines 947--948
 \T1/ptm/m/n/12 ob-jek-tum eléréséhez a $\OML/cmm/m/it/12 getSharedPreferences [
 ]$ \T1/ptm/m/n/12 metó-dus haszná-landó. Az $\OML/cmm/m/it/12 edit []$ \T1/ptm/
 m/n/12 hívása
  []
 
 
-Overfull \hbox (6.6078pt too wide) in paragraph at lines 947--948
+Overfull \hbox (6.6078pt too wide) in paragraph at lines 950--951
 \T1/ptm/m/n/12 hozhatunk létre, hogy im-ple-men-táljuk az $\OML/cmm/m/it/12 SQL
 iteOpenHelper$ \T1/ptm/m/n/12 os-ztá-ly $\OML/cmm/m/it/12 onCreatee []$ \T1/ptm
 /m/n/12 metó-
  []
 
 
-Overfull \hbox (45.80606pt too wide) in paragraph at lines 947--948
+Overfull \hbox (45.80606pt too wide) in paragraph at lines 950--951
 \T1/ptm/m/n/12 dusát. Az adat-bázis hoz-záférést pedig a $\OML/cmm/m/it/12 getW
 ritableDatabase []$ \T1/ptm/m/n/12 il-letve $\OML/cmm/m/it/12 getReadableDataba
 see []$
  []
 
-[47]
-Overfull \hbox (19.81367pt too wide) in paragraph at lines 950--951
+[48]
+Overfull \hbox (19.81367pt too wide) in paragraph at lines 953--954
 \OML/cmm/m/it/12 ic[]launcher:png$ \T1/ptm/m/n/12 mely az az ikon amit a mo-bil
  es-zközön talál-ható al-ka-lmazá-sok kilistázásakor
  []
 
 
-Overfull \hbox (7.40099pt too wide) in paragraph at lines 953--954
+Overfull \hbox (7.40099pt too wide) in paragraph at lines 956--957
 \T1/ptm/m/n/12 Az al-ka-lmazást képz® el-e-mek is-mertetését olyan sor-rend-ben
  fo-gom elvégezni, mely követik
  []
 
-[48]
-Overfull \hbox (5.70515pt too wide) in paragraph at lines 967--968
+[49]
+Overfull \hbox (5.70515pt too wide) in paragraph at lines 970--971
  []\T1/ptm/b/n/12 ScoredWine [] [] \T1/ptm/m/n/12 A $\OML/cmm/m/it/12 ScoredWin
 e$ \T1/ptm/m/n/12 a $\OML/cmm/m/it/12 Wine$ \T1/ptm/m/n/12 os-ztá-ly-nak egy ol
 yan leszár-ma-zot-t-ja, ame-ly borok
@@ -1411,165 +1411,202 @@ yan leszár-ma-zot-t-ja, ame-ly borok
 (x:/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
-Overfull \hbox (17.62482pt too wide) in paragraph at lines 972--979
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 975--982
 []$[]$ 
  []
 
-[49]
-Overfull \hbox (5.89679pt too wide) in paragraph at lines 996--997
+[50]
+Overfull \hbox (5.89679pt too wide) in paragraph at lines 999--1000
 \T1/ptm/m/n/12 Egyetlen statikus pub-likus metó-dusá-nak $\OML/cmm/m/it/12 have
 NetworkConnection$ \T1/ptm/m/n/12 köszön-het®en bárhon-
  []
 
 
-Overfull \hbox (4.33864pt too wide) in paragraph at lines 1005--1006
+Overfull \hbox (4.33864pt too wide) in paragraph at lines 1008--1009
 \T1/ptm/m/n/12 létre-hozása melyeken keresztül elérhet® a reg-isztrá-ciós il-le
 tve a jel-szót vis-sza-ál-lító activity-
  []
 
-[50]
-Overfull \hbox (17.62482pt too wide) in paragraph at lines 1009--1015
+[51]
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 1012--1018
 []$[]$ 
  []
 
 
-Overfull \hbox (20.22073pt too wide) in paragraph at lines 1019--1020
+Overfull \hbox (20.22073pt too wide) in paragraph at lines 1022--1023
 \T1/ptm/m/n/12 betöl-teni a releváns oldalt a már el®z®-leg lá-tott $\OML/cmm/m
 /it/12 NetworkChecker:haveNetworkConnection$
  []
 
-[51]
-Overfull \hbox (15.20844pt too wide) in paragraph at lines 1027--1028
-[]\T1/ptm/m/n/12 A szinkro-nizá-ció mód-járól kés®bb ejtenék szót, itt most el-
-s®-sor-ban az ac-tiv-i-ty felépítésére
+[52]
+Overfull \hbox (19.10919pt too wide) in paragraph at lines 1030--1031
+\T1/ptm/m/n/12 térnék ki. El®ször is ar-ra hívnám fel a fi-gyel-met, hogy ez az
+ ac-tiv-i-ty már a $\OML/cmm/m/it/12 ActionBarActivity$
  []
 
 
-Overfull \hbox (51.2087pt too wide) in paragraph at lines 1027--1028
-\T1/ptm/m/n/12 il-letve térnék ki. El®ször is ar-ra hívnám fel a fi-gyel-met, h
-ogy ez az ac-tiv-i-ty már a $\OML/cmm/m/it/12 ActionBarActivity$
+Overfull \hbox (25.28465pt too wide) in paragraph at lines 1030--1031
+\T1/ptm/m/n/12 kiter-jesztet-tje. Ez azt je-len-ti, hogy ren-delkezik olyan met
+ó-du-sokkal ame-lyek a menü kezeléséért
  []
 
-<UserPage.png, id=841, 320.69812pt x 514.92375pt>
+
+Overfull \hbox (6.1889pt too wide) in paragraph at lines 1030--1031
+\T1/ptm/m/n/12 felel®sek. Az $\OML/cmm/m/it/12 onPrepareOptionsMenu$ \T1/ptm/m/
+n/12 készíti el® a menüt a meg-je-lenítésre, ez a tökéletes
+ []
+
+<UserPage.png, id=850, 320.69812pt x 514.92375pt>
 File: UserPage.png Graphic file (type png)
  <use UserPage.png>
-Package pdftex.def Info: UserPage.png used on input line 1032.
+Package pdftex.def Info: UserPage.png used on input line 1035.
 (pdftex.def)             Requested size: 160.34866pt x 257.46124pt.
 
-Overfull \hbox (9.59982pt too wide) in paragraph at lines 1037--1038
+Overfull \hbox (9.59982pt too wide) in paragraph at lines 1040--1041
 \T1/ptm/m/n/12 részre mely $\OML/cmm/m/it/12 RelativeView$ \T1/ptm/m/n/12 -ot h
 asznál a $\OML/cmm/m/it/12 winesList$ \T1/ptm/m/n/12 -ban kiválasz-tott bor rés
 -zletes adatainak
  []
 
 
-Overfull \hbox (7.56952pt too wide) in paragraph at lines 1037--1038
+Overfull \hbox (7.56952pt too wide) in paragraph at lines 1040--1041
 \T1/ptm/m/n/12 egész al-ka-lmazás megalkotása során azt mon-danám, hogy en-nek 
 a két résznek az összekötés
  []
 
-[52 <./UserPage.png>]
+[53 <./UserPage.png>]
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 1042--1047
+[]$[]$ 
+ []
+
+
+Overfull \hbox (31.45035pt too wide) in paragraph at lines 1051--1052
+[]\T1/ptm/m/n/12 A lista el-e-mekkel való feltöltéséért a $\OML/cmm/m/it/12 Win
+esAdapter$ \T1/ptm/m/n/12 os-ztá-ly felel®s, mely az $\OML/cmm/m/it/12 ArrayAda
+pter$
+ []
+
+
+Overfull \hbox (49.01816pt too wide) in paragraph at lines 1051--1052
+\T1/ptm/m/n/12 -ból szár-mazik és $\OML/cmm/m/it/12 ScoredWine$ \T1/ptm/m/n/12 
+tí-pusú ob-jek-tumokat kezel. A $\OML/cmm/m/it/12 getView []$ \T1/ptm/m/n/12 me
+tó-dus felüldefiniálására
+ []
+
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 1053--1069
+[]$[]$ 
+ []
+
+[54]
+Overfull \hbox (39.15526pt too wide) in paragraph at lines 1070--1071
+[]\T1/ptm/m/n/12 Látható, hogy a füg-gvény el-s® ar-gu-men-tumában kapott pozí-
+ció el-eméhez tar-tozó $\OML/cmm/m/it/12 ScoredWine$
+ []
+
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 1041.
+ine 1073.
 
+LaTeX Warning: Marginpar on page 55 moved.
 
-LaTeX Warning: Marginpar on page 53 moved.
-
-[53]
+[55]
 4. fejezet.
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 1051.
+(hyperref)                removing `\H' on input line 1082.
 
-[54
+
+LaTeX Warning: Marginpar on page 56 moved.
+
+[56
 
 ]
 5. fejezet.
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 1056.
+(hyperref)                removing `\H' on input line 1088.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 1057.
+(hyperref)                removing `\H' on input line 1089.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 1058.
+(hyperref)                removing `\H' on input line 1090.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 1059.
+(hyperref)                removing `\H' on input line 1091.
 
-[55
+[57
 
 ]
 6. fejezet.
 
-Overfull \hbox (4.02876pt too wide) in paragraph at lines 1069--1070
+Overfull \hbox (4.02876pt too wide) in paragraph at lines 1101--1102
 \T1/ptm/m/n/12 tel és tel-jes revíz-iókövetési lehet®séggel, ame-ly nem függ a 
 hálózat elérését®l vagy közpon-
  []
 
-[56
+[58
 
-] [57]
-Overfull \hbox (0.20798pt too wide) in paragraph at lines 1096--1097
+] [59]
+Overfull \hbox (0.20798pt too wide) in paragraph at lines 1128--1129
 \T1/ptm/m/n/12 parancs, menük, je-gyzetek, makrók, kód be-fe-jezés stb... Mind 
 ehhez csak egy egysz-
  []
 
-[58]
-Underfull \hbox (badness 2856) in paragraph at lines 1121--1122
+[60]
+Underfull \hbox (badness 2856) in paragraph at lines 1153--1154
 \T1/ptm/m/n/12 kezel® al-ka-lmazá-sok közvetlenül beépül-tek az IDE -be, egysz-
 er¶b-bé téve azok
  []
 
-[59] [60]
+[61] [62]
 7. fejezet.
 
-Overfull \hbox (0.84792pt too wide) in paragraph at lines 1135--1136
+Overfull \hbox (0.84792pt too wide) in paragraph at lines 1167--1168
 \T1/ptm/m/n/12 miképp lehet egy web al-ka-lmazás szol-gál-tatását elérhet®vé te
 n-ni egy natív mo-bil felületen.
  []
 
-[61
+[63
 
 ]
-Overfull \hbox (2.07404pt too wide) in paragraph at lines 1328--1330
+Overfull \hbox (2.07404pt too wide) in paragraph at lines 1360--1362
 \T1/ptm/m/n/12 Alulírott Var-ga Tamás pro-gramter-vez® in-for-matikus BSc sza-k
 os hall-gató, ki-je-len-tem, hogy
  []
 
 
-Overfull \hbox (4.59113pt too wide) in paragraph at lines 1333--1334
+Overfull \hbox (4.59113pt too wide) in paragraph at lines 1365--1366
 []\T1/ptm/m/n/12 Tudomásul veszem, hogy sza-k-dol-go-zatomat a Szege-di Tu-domá
 ny-e-gyetem In-for-matikai
  []
 
-[62
+[64
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1386--1387
+Underfull \hbox (badness 10000) in paragraph at lines 1418--1419
 [][]$\T1/pcr/m/n/12 http :[] \OML/cmm/m/it/12 ==\T1/pcr/m/n/12 wiki . hashphp .
  org\OML/cmm/m/it/12 =\T1/pcr/m/n/12 PDO _ Tutorial _ for _ MySQL _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1389--1391
+Underfull \hbox (badness 10000) in paragraph at lines 1421--1423
 []\T1/ptm/m/n/12 Google Charts home-page []$\T1/pcr/m/n/12 https :[] \OML/cmm/m
 /it/12 ==\T1/pcr/m/n/12 google \OMS/cmsy/m/n/12 ^^@[] \T1/pcr/m/n/12 developers
  . appspot .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1397--1398
+Underfull \hbox (badness 10000) in paragraph at lines 1429--1430
 []\T1/ptm/m/n/12 ECMAScript Lan-guage Overview. 2007-10-23. p. 4. []$\T1/pcr/m/
 n/12 http :[] \OML/cmm/m/it/12 ==\T1/pcr/m/n/12 www .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1403--1404
+Underfull \hbox (badness 10000) in paragraph at lines 1435--1436
 [][]$\T1/pcr/m/n/12 http :[] \OML/cmm/m/it/12 ==\T1/pcr/m/n/12 blog . onthewing
 s . net\OML/cmm/m/it/12 =\T1/pcr/m/n/12 2009\OML/cmm/m/it/12 =\T1/pcr/m/n/12 04
 \OML/cmm/m/it/12 =\T1/pcr/m/n/12 08\OML/cmm/m/it/12 =\T1/pcr/m/n/12 deep \OMS/c
@@ -1577,30 +1614,30 @@ msy/m/n/12 ^^@[] \T1/pcr/m/n/12 linking \OMS/cmsy/m/n/12 ^^@[] \T1/pcr/m/n/12 f
 or \OMS/cmsy/m/n/12 ^^@
  []
 
-[63
+[65
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1419--1421
+Underfull \hbox (badness 10000) in paragraph at lines 1451--1453
 []\T1/ptm/m/n/12 Android Stu-dio. []$\T1/pcr/m/n/12 http :[] \OML/cmm/m/it/12 =
 =\T1/pcr/m/n/12 developer . android .
  []
 
-[64]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1449.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1449.
+[66]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1481.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1481.
  (./VargaTamas.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1449.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1449.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1481.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1481.
 
 Package rerunfilecheck Info: File `VargaTamas.out' has not changed.
-(rerunfilecheck)             Checksum: 9E05EF7E7CB0862223FAA90EBBE99E6A;4302.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1449.
+(rerunfilecheck)             Checksum: DE0D4B668BC5106773D95FA4586C0E05;4365.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1481.
  ) 
 Here is how much of TeX's memory you used:
- 24322 strings out of 493109
- 446290 string characters out of 6138586
- 889891 words of memory out of 5000000
- 27031 multiletter control sequences out of 15000+600000
+ 24372 strings out of 493109
+ 447023 string characters out of 6138586
+ 890045 words of memory out of 5000000
+ 27063 multiletter control sequences out of 15000+600000
  46927 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  48i,19n,76p,2182b,3176s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1624,10 +1661,10 @@ dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><x:/texlive/2014/texmf-dist/fonts
 e1/urw/courier/ucrr8a.pfb><x:/texlive/2014/texmf-dist/fonts/type1/urw/times/utm
 b8a.pfb><x:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><x:/texliv
 e/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on VargaTamas.pdf (64 pages, 419647 bytes).
+Output written on VargaTamas.pdf (66 pages, 425077 bytes).
 PDF statistics:
- 1062 PDF objects out of 1200 (max. 8388607)
- 967 compressed objects within 10 object streams
- 354 named destinations out of 1000 (max. 500000)
- 548 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1096 PDF objects out of 1200 (max. 8388607)
+ 999 compressed objects within 10 object streams
+ 372 named destinations out of 1000 (max. 500000)
+ 556 words of extra memory for PDF output out of 10000 (max. 10000000)
 

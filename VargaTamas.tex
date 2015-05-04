@@ -1025,9 +1025,9 @@ Ez a két activity egy kalap alá vonható, mivel egyszerûen csak a hozzájuk tartoz
 A menü kezeléshez szükség van egy menü szerkezetét leíró XML-re, ez jelen esetben a $menu\_navigation.xml$. Itt nyílik lehetõség az egyes menü elemekhez kis ikonok hozzárendelésére. A \url{freepik.com} -ról használtam fel két ikont melyek csak akkor jelennek meg ha a menü sávon van elegendõ hely számukra. A menü mint egy navigációs felület mûködik az alkalmazás activity-jei között, tartalma dinamikusan változik attól függõen, hogy melyik éppen az aktív activity, annak az opciója nem kerül kilistázásra. Magának a menünek a létrehozása és kezelése minden anctivity-nak a saját feladata, szerencsére majd látni fogjuk, hogy az $ActionBarActivity$ osztálynak köszönhetõen ez könnyen megy.
 
 \subsection{UserPage}
-Végre elérkeztünk az Android alkalmazás legfontosabb részéhe, a felhasználó értékelését kezelõ activity-hez. Mivel a fõ cél az volt, hogy az alkalmazás ezen része internet kapcsolat nélkül is használható legyen, ezért úgy döntöttem, hogy az értékelhetõ borok adatbázisát nem szinkronizálom automatikusan. Ehhez a felhasználónak az activity tetején található gombot meg kell nyomnia. Természetesen ezt mindenképpen meg kell tenni legalább egyszer miután az alkalmazás telepítésre került, viszont nem kell minden egyes felhasználónak külön-külön letölteni az értékelhetõ borok tábláját, mert azok az SQLite adatbázisba tárolásra fognak kerülni.
+Végre elérkeztünk az Android alkalmazás legfontosabb részéhe, a felhasználó értékelését kezelõ activity-hez. Mivel a fõ cél az volt, hogy az alkalmazás ezen része internet kapcsolat nélkül is használható legyen, ezért úgy döntöttem, hogy az értékelhetõ borok adatbázisát nem szinkronizálom automatikusan. Ehhez a felhasználónak az activity tetején található gombot meg kell nyomnia. Természetesen ezt mindenképpen meg kell tenni legalább egyszer miután az alkalmazás telepítésre került, viszont nem kell minden egyes felhasználónak külön-külön letölteni az értékelhetõ borok tábláját, mert azok az SQLite adatbázisba tárolásra fognak kerülni az elsõ szinkronizáció után.
 
-A szinkronizáció módjáról késõbb ejtenék szót, itt most elsõsorban az activity felépítésére illetve térnék ki. Elõször is arra hívnám fel a figyelmet, hogy ez az activity már a $ActionBarActivity$ kiterjesztettje. Ez azt jelenti, hogy rendelkezik egy olyan metódusokkal amelyek a menü kezeléséért felelõsek. Az $onPrepareOptionsMenu$ készíti elõ a menüt a megjelenítésre, ez a tökéletes hely a nem kívánatos menü elemek eltávolításra, így egy letisztultabb dinamikus menüt hozhatunk létre. A $onOptionsItemSelected$ -ben kell definiálnunk, hogy az egyes menü pontokat választva mi történjen, mivel most a menü a navigáció feladatát látja el, ezért itt activity-k váltásáról van szó. Az "Értékelések szinkronizálása" gomb mögötti kód is majd csak késõbb fog elõkerülni.
+A szinkronizáció módjáról késõbb ejtenék szót, itt most fõképp az activity felépítésére térnék ki. Elõször is arra hívnám fel a figyelmet, hogy ez az activity már a $ActionBarActivity$ kiterjesztettje. Ez azt jelenti, hogy rendelkezik olyan metódusokkal amelyek a menü kezeléséért felelõsek. Az $onPrepareOptionsMenu$ készíti elõ a menüt a megjelenítésre, ez a tökéletes hely a nem kívánatos menü elemek eltávolításra, így egy letisztultabb dinamikus menüt hozhatunk létre. A $onOptionsItemSelected$ -ben kell definiálnunk, hogy az egyes menü pontokat választva mi történjen, mivel most a menü a navigáció feladatát látja el, ezért itt activity-k váltásáról van szó. Az "Értékelések szinkronizálása" gomb mögötti kód is majd csak késõbb fog elõkerülni.
 
 A felhasználó felületet a menü soron kívül további két fõ részre lehet osztani, mely könnyen látható \ref{fig:UserPage} alapján.
 \begin{figure}[h!]
@@ -1037,23 +1037,51 @@ A felhasználó felületet a menü soron kívül további két fõ részre lehet osztani, 
 \label{fig:UserPage}
 \end{figure}
 
-Az alsó $winesList$ részre mely egy $ListView$ -t tartalmaz és a bor adatbázis valamint a felhasználó értékeléseinek megjelenítése a feladata, illetve a felsõ $detailsContainer$ részre mely $RelativeView$ -ot használ a $winesList$ -ban kiválasztott bor részletes adatainak megjelenítésére, valamint az értékeléshez szükséges bemeneti mezõ létrehozására. Az egész alkalmazás megalkotása során azt mondanám, hogy ennek a két résznek az összekötés illetve kiszolgálása volt a legnehezebb feladat.
+Az alsó $winesList$ részre mely egy $ListView$ -t tartalmaz és a bor adatbázis valamint a felhasználó értékeléseinek megjelenítése a feladata, illetve a felsõ $detailsContainer$ részre mely $RelativeView$ -ot használ a $winesList$ -ban kiválasztott bor részletes adatainak megjelenítésére, valamint az értékeléshez szükséges bemeneti mezõ létrehozására. Az egész alkalmazás megalkotása során azt mondanám, hogy ennek a két résznek az összekötés illetve kiszolgálása volt a legnehezebb feladat. Az egyik ilyen nehézség az volt, hogy a bemeneti mezõ alapértelmezetten elõtérbe akar lenni az activity indításakor, ez pedig a virtuális billentyûzet elõhívásával jár, ami kitakarta a $wineList$ nagy részét. Ezért a bemeneti mezõhöz használt $TextView$ elemre meg kellett hívnom a $setFocusable\left(\right)$ és a $setFocusableInTouchMode\left(\right)$ metódusokat $false$ paraméterrel. Egy másik felületi kezelhetõséggel kapcsolatos probléma a $winesList$ lista elemeinél jött elõ, ugyanis nem lehetett rájuk kattintani, ezt a \ref{lst:ListView blocksDescendants} kódrészletben látott változó beállításával oldottam meg. Csak a fenti konfigurációs beállítások után sikerült elérni, hogy a felhasználói felület az elvárt szerint mûködjön, sajnos a két probléma kombinációja igen érdekes és számomra elõször nehezen értelmezhetõ tünetekkel kerültek elõ.
+
+\begin{minipage}{\linewidth}
+	\begin{lstlisting}[language=java,label={lst:ListView blocksDescendants}, caption={A $ListView$ elmeinek elõtérbehozhatóságnak beállítása}]
+android:descendantFocusability="blocksDescendants" 
+	\end{lstlisting}
+\end{minipage}
 
 \subsubsection{winesList}
-A $winesList$ 
+Ugyan a $ListView$ lista elemeihez van alapértelmezett elrendezés definiálva, ennek a kinézete nem illett a funkcióhoz. A bor neve és az értékelés egymás alá kerültek volna, ezért inkább definiáltam egy elrendezést saját magam a $winerow.xml$ állományban, mely lehetõvé teszi azt, hogy akkor is olvasható legyen a borok neve, ha azok hossza meghaladná az adott mobil eszközön egy sorban elférõ karakterek maximális szélességet. Ekkor a lista elem magassága a úgy fog megnõni, hogy a szükséges sorok mind elférjenek. A bor neve mellette jobb oldalon pedig a felhasználó által adott borra vonatkozó értékelés található, mely mindig vertikálisan középre van rendezve, így azon borok esetében is igényesen jelenik meg a pontszám, ha a nevük kiírásához több sorra lenne szükség. Súlyok használatával pedig azt értem el, hogy az értékelések ne csússzanak el a miatt hogy a boroknak változó hosszúságú nevük van.
+
+A lista elemekkel való feltöltéséért a $WinesAdapter$ osztály felelõs, mely az $ArrayAdapter$ -ból származik és $ScoredWine$ típusú objektumokat kezel. A $getView\left(\right)$ metódus felüldefiniálására azért van szükség, mert nem az alapértelmezett lista elem elrendezést használtam, az adott lista elem elrendezés adatokkal feltöltése a \ref{lst:ListView elem getView} kódrészletben látottak szerint történik.
+
+\begin{minipage}{\linewidth}
+	\begin{lstlisting}[language=java,label={lst:ListView elem getView}, caption={Lista elem tartalmma való feltöltése}]
+ public View getView(int position, View convertView, ViewGroup parent) {
+ ScoredWine wine = getItem(position);
+ if (convertView == null) {
+   convertView = LayoutInflater.from(getContext()).inflate(R.layout.winerow, parent, false);
+ }   
+  TextView tvName = (TextView) convertView.findViewById(R.id.wineRowName);
+  TextView tvScore = (TextView) convertView.findViewById(R.id.wineRowScore);  
+  tvName.setText(wine.getWine_name());
+  Double score = wine.getWine_score();
+  tvScore.setText(getFormattedScore(score));  
+  return convertView;
+}
+	\end{lstlisting}
+\end{minipage}
+
+Látható, hogy a függvény elsõ argumentumában kapott pozíció eleméhez tartozó $ScoredWine$ objektumot az $ArrayList$ -bõl a $getItem\left(\right)$ metódus másolja ki. A $LayoutInflater$ példányosítja az egyedi lista elem elrendezést, mely elemeire így már hivatkozhatunk és adatokkal tölthetünk fel.
+
+
 \todo finish this
+\todo bõvebben a listviewról majd a UserPage nél
 
 \subsubsection{detailsContainer}
 
-\todo bõvebben a listviewról majd a UserPage nél
 
-
-\todo talk about threading UI/new thread mi futhat hol és mi nem
 
 
 \chapter{A weboldal és a mobil alkalmazás összefûzése}
 A weboldal és a mobil alkalmazás összefûzése
 \todo távoli adatbázis elérés
+\todo talk about threading UI/new thread mi futhat hol és mi nem
 
 \chapter{Tesztelés}
 \section{Regisztrációs és bejelentkeztetõ rendszer}
