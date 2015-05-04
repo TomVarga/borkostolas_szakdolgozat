@@ -1131,17 +1131,38 @@ A \ref{lst:service access} kódrészletben látott példa mutatja be, hogyan lehet a
 A $Main$ activity-n megadott belépési információkat a $RemoteDAO$ -nál már ismertetett módon küldjük el a web alkalmazásnak, amely szerver oldalon ellenõrzi, hogy azok helyesek voltak -e, be lehet -e léptetni ezekkel az információkkal a felhasználót. Mint már tárgyaltuk, biztonsági megfontolásokból, hibás adatok esetén csak egy generikus hiba üzenetet írunk ki, de ha sikeres volt a belépés, akkor a $Main Activity$ ismertetésénél látottak szerint lép tovább az Android alkalmazás.
 
 \section{Adatbázis szinkronizáció}
+Mivel a \ref{lst:service access} kódrészletben már láttunk példát az értékelhetõ borok letöltésére, most nézzük meg hogyan történik a felhasználó értékeléseinek szinkronizációja.
 
+Az elsõ lépés az, hogy indítunk egy új szálat, hiszen hálózati mûveleteket készülünk csinálni, melyet egybõl követhet is a hálózat meglétének ellenõrzése a már megszokott módon. Eddig nincs semmi újdonság.
 
-Az algoritmusok eredményének megjelenítése is tekinthetõ egy fajta szolgáltatásnak.
+\subsection{syncScores}
+A $DBSyncController$ osztály $syncScores\left(\right)$ metódusa felelõs az értékelések szinkronizációjáért. Itt az elsõ lépés az adatbázis elérésekért biztosító osztályok példányosítása, majd azok respektív használatával az értékelés $ArrayList<Score>$ -ba való gyûjtése $remoteScores$, illetve $localScores$ változó nevek alatt.
 
-\todo adapterNotifyListener
+Amennyiben a $remoteScores$ tartalmazott értékeléseket azt átadjuk a $LocalDAO.addOrUpdateScore\left(\right)$ -nak, mely feladata a lokális adatbázis frissítése. Ez úgy történik meg, hogy minden egyes $remoteScores$ értékelésére megnézzük, hogy a lokális adatbázisban van -e bejegyzés az adott $user\_id$ és $wine\_id$ kombinációval. Amennyiben igen, meg kell vizsgálni, hogy az értékelések megegyeznek -e, illetve, hogy a távoli értékelés nem -e volt korábban létrehozva mint a lokális, mert ha a két feltétel közül bármelyik teljesül akkor nem kell frissíteni a lokális adatbázist. Viszont ha ezen feltételek nem teljesülnek, vagy nem volt még bejegyzés a lokális adatbázisban, akkor egyszerûen csak beszúrjuk azt. Ezzel be is fejeztük a helyi adatbázis frissítését.
+
+A következõ feladat egy olyan JavaScript tömb létrehozása lesz amely elsõ eleme a felhasználó neve, azt pedig a szinkronizált értékelések követnek olyan módon, hogy amennyiben a bor nem volt értékelve az a tömb elem üresen marad. Ezt a tömböt tovább adjuk a $RemoteDAO.addOrUpdateScore\left(()\right)$ metódusának, ahol máris láthatjuk miért volt szükség a JavaScript tömb használatára. A tömbre hívott $toString\left(\right)$ segítségével az adatok bele formázhatók az URL-be mely arra a szolgáltatásra mutat, ami a távoli adatbázisban való értékelések frissítéséért felelõs. Itt kerül újra felhasználásra ugyan az az állomány amely a web alkalmazásban ugyan ezt a feladatot látta el.
+
+\subsection{Felhasználói felület frissítése}
+Még mielõtt rátérnénk az adatok reprezentálásának tényleges frissítésére, röviden megemlíteném, hogy a szinkronizációs folyamat során egy $Dialog$ ugrik fel, amely zárolja a felhasználói felületet a szinkronizáció befejeztéig. A sikerességérõl vagy sikertelenségrõl pedig egy $Toast$ üzenetben értesítjük a felhasználót.
+
+Az értékelések sikeres szinkronizálása után nincs más dolgunk mint az Android alkalmazás felhasználói felületének frissítése. Amire oda kell figyelni az az, hogy ha $detailsContainer$ éppen egy olyan bor adataival van feltöltve amelynek megváltozott a helyi adatbázisban az értékelése, akkor az input mezõben azt frissíteni kell. Valamint értesítenünk kell a $winesList$ -et arról, hogy az általa reprezentált adatsor megváltozott. Ezt végzi el a már korábban röviden említésre került $OnAdapterNeedsNotify$ interface egy implementált osztályának példánya esemény tüzelés segítségéve.
+
+\section{Eredmények}
+Az algoritmusok eredményének megjelenítése is tekinthetõ egy fajta szolgáltatásnak, mely a felhasználó azonosítója alapján generálja a megjelenítendõ tartalmat az android alkalmazás számra. Nem szorosan tartozik ide, érdekes lehet talán az hogy az algoritmust választó legördülõ menü használata magával vonja a számolások indítását. Ez a \ref{lst:dropdown onSelectChange} kódrészletben látott kódnak köszönhetõ.
+
+\begin{minipage}{\linewidth}
+	\begin{lstlisting}[language=html,label={lst:dropdown onSelectChange}, caption={Legordülõ menübeli algoritmus választás egybõl indítja a számolást}]
+<select id='algoritmus' name='Algoritmus' onchange='onSelectChange()' style="width: 100%;">
+	\end{lstlisting}
+\end{minipage}
+
 
 \chapter{Tesztelés}
 \section{Regisztrációs és bejelentkeztetõ rendszer}
 \section{Demo adatkezelésének ellenõrzése}
 \section{Algoritmusok ellenõrzése kis adatokon}
 \section{Algoritmusok ellenõrzése ismert eredményekkel}
+\section{Adatbázis szinkronizáció}
 \todo mellékelni az excel filet és arra hivatkozni, valamint az oldal kezdetleges verziójáról egy kép
 
 \chapter{Egyebek}
