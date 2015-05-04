@@ -1091,10 +1091,50 @@ A weboldal és a mobil alkalmazás összekötése úgynevezett szolgáltatásokkal törté
 
 Mielõtt a mobil alkalmazás megpróbálja elérni ezeket a szolgáltatásokat, meg kell róla gyõzõdni, hogy az eszköz rendelkezik internet kapcsolattal. Ez már az elõzõ fejezetben ismertetett $NetworkChecker$ osztály segítségével történik.
 
+A szolgáltatások kialakításánál során kicsi, lényegre törõ kód írása volt a célom. A szolgáltatások csak az adatokat szolgáltatják, vagy a már elõkészített csomagot töltik be a web szerver adatbázisba. A feldolgozást maga az Android alkalmazás végzi az alfejezetekben látható módon.
+
+Még mielõtt bele mélyülnénk a szolgáltatások specifikus kezelésébe, mindenképpen érdemes néhány szót ejteni az Android alkalmazás szálkezelésérõl. A fejlesztés során nagyon könnyû bele futni a $NetworkOnMainThreadException$ -be, mely akkor következik be, amikor az alkalmazás hálózati mûveletet próbál végrehajtani a fõ szálában. Annak ellenére, hogy ez csak az Android $Honeycomb$ verziója után lett bevezetve, érdemes, mégis érdemes ezt elkerülnünk, feltéve hogy az alkalmazásunk támogatja ezt az SDK verziót. Ezt könnyen elkerülhetjük, ha minden hálózati mûveletet egy új szálon végzünk el, erre látható példa a \ref{lst:new thread for network} kódrészletben is.
+
+\begin{minipage}{\linewidth}
+	\begin{lstlisting}[language=java,label={lst:new thread for network}, caption={Új szál létrehozásra}]
+new Thread(new Runnable() {
+  public void run() {
+    // Hálózati mûvelet itt!
+  }
+}).start();
+	\end{lstlisting}
+\end{minipage}
+
+Ennek a megszorításnak a betartása könnyen vezet a másik hibához, mely abból fakad, hogy a felhasználói felület elemeit próbáljuk manipulálni egy olyan szálból ami nem az alkalmazás fõ szála. Ez pedig az activity-kben a  $runOnUiThread\left(\right)$ segítségével érhetõ el, mely a $Thread$ -nél látottakhoz hasonlóan egy $Runnable$ objektumot vár.
+
+\section{RemoteDAO}
+Az Android alkalmazás távoli adatbázis elérésért felelõs osztálya mely az elõzõ fejezetben látott $DAO$ interface metódusait implementálja. A $POST$ mûveletekért elvégzésért az $org.apache.http.client$ csomag felelõs.
+
+\begin{minipage}{\linewidth}
+	\begin{lstlisting}[language=java,label={lst:service access}, caption={Szolgáltatás használat példa}]
+httpclient=new DefaultHttpClient();
+httppost= new HttpPost("http://bor.tvarga.hu/services/getWineData.php"); // make sure the url is correct.
+ResponseHandler<String> responseHandler = new BasicResponseHandler();
+String result = httpclient.execute(httppost, responseHandler);
+JSONArray jsonArray = new JSONArray(result);
+for (int i=0; i < jsonArray.length(); i++ ){
+  JSONObject obj = (JSONObject) jsonArray.get(i);
+  Wine wine = JSONParser.getWineFromJSONObj(obj);
+  wines.add(wine);
+}
+	\end{lstlisting}
+\end{minipage}
+
+A \ref{lst:service access} kódrészletben látott példa mutatja be, hogyan lehet a web alkalmazás egy szolgáltatását használni. A példa konkrétan az értékelhetõ borok adatbázisát tölti le. Jól látható, hogy ez egy paraméter nélküli URL használatával történik, de léteznek olyan szolgáltatások is, amelyek például a $user\_id$ -t továbbítják a kéréssel. Ilyenkor a változókat egy $BasicNameValuePair$ -ba kell tenni, melyeket listába gyûjtve elõször bele kell formázni az URL-be a $UrlEncodedFormEntity\left(\right)$ segítségével, hogy aztán beállíthassuk $httpost$ entitását $setEntity\left(\right)$ -vel. Fontos, hogy a szolgáltatás által küldött válaszokat minden esetben fel kell dolgozni. 
+
+\section{Bejelentkezés}
+A $Main$ activity-n megadott belépési információkat a $RemoteDAO$ -nál már ismertetett módon küldjük el a web alkalmazásnak, amely szerver oldalon ellenõrzi, hogy azok helyesek voltak -e, be lehet -e léptetni ezekkel az információkkal a felhasználót. Mint már tárgyaltuk, biztonsági megfontolásokból, hibás adatok esetén csak egy generikus hiba üzenetet írunk ki, de ha sikeres volt a belépés, akkor a $Main Activity$ ismertetésénél látottak szerint lép tovább az Android alkalmazás.
+
+\section{Adatbázis szinkronizáció}
+
+
 Az algoritmusok eredményének megjelenítése is tekinthetõ egy fajta szolgáltatásnak.
 
-\todo távoli adatbázis elérés
-\todo talk about threading UI/new thread mi futhat hol és mi nem
 \todo adapterNotifyListener
 
 \chapter{Tesztelés}

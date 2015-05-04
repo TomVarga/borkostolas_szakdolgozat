@@ -84,23 +84,25 @@
 \select@language {magyar} \contentsline {subsubsection}{detailsContainer}{55}{section*.48}
 \select@language {magyar} \contentsline {subsection}{\numberline {3.4.4}Results}{56}{subsection.3.4.4}
 \select@language {magyar} \contentsline {chapter}{\numberline {4}A weboldal \'es a mobil alkalmaz\'as \"osszek\"ot\'ese}{57}{chapter.4}
-\select@language {magyar} \contentsline {chapter}{\numberline {5}Tesztel\'es}{58}{chapter.5}
-\select@language {magyar} \contentsline {section}{\numberline {5.1}Regisztr\'aci\'os \'es bejelentkeztet\H o rendszer}{58}{section.5.1}
-\select@language {magyar} \contentsline {section}{\numberline {5.2}Demo adatkezel\'es\'enek ellen\H orz\'ese}{58}{section.5.2}
-\select@language {magyar} \contentsline {section}{\numberline {5.3}Algoritmusok ellen\H orz\'ese kis adatokon}{58}{section.5.3}
-\select@language {magyar} \contentsline {section}{\numberline {5.4}Algoritmusok ellen\H orz\'ese ismert eredm\'enyekkel}{58}{section.5.4}
-\select@language {magyar} \contentsline {chapter}{\numberline {6}Egyebek}{59}{chapter.6}
-\select@language {magyar} \contentsline {section}{\numberline {6.1}Verzi\'okezel\'es}{59}{section.6.1}
-\select@language {magyar} \contentsline {subsection}{\numberline {6.1.1}Git}{59}{subsection.6.1.1}
-\select@language {magyar} \contentsline {subsection}{\numberline {6.1.2}GitHub}{59}{subsection.6.1.2}
-\select@language {magyar} \contentsline {subsection}{\numberline {6.1.3}A v\'alaszt\'as}{60}{subsection.6.1.3}
-\select@language {magyar} \contentsline {subsection}{\numberline {6.1.4}Repozit\'oriumok}{60}{subsection.6.1.4}
-\select@language {magyar} \contentsline {section}{\numberline {6.2}K\"ornyezetek}{60}{section.6.2}
-\select@language {magyar} \contentsline {subsection}{\numberline {6.2.1}SublimeText - linterek}{60}{subsection.6.2.1}
-\select@language {magyar} \contentsline {paragraph}{Linterek}{61}{section*.54}
-\select@language {magyar} \contentsline {subsection}{\numberline {6.2.2}Android Studio}{62}{subsection.6.2.2}
-\select@language {magyar} \contentsline {subsection}{\numberline {6.2.3}PhpStorm}{63}{subsection.6.2.3}
-\select@language {magyar} \contentsline {chapter}{\numberline {7}\"Osszefoglal\'as}{64}{chapter.7}
+\select@language {magyar} \contentsline {section}{\numberline {4.1}RemoteDAO}{58}{section.4.1}
+\select@language {magyar} \contentsline {section}{\numberline {4.2}Bejelentkez\'es}{59}{section.4.2}
+\select@language {magyar} \contentsline {chapter}{\numberline {5}Tesztel\'es}{60}{chapter.5}
+\select@language {magyar} \contentsline {section}{\numberline {5.1}Regisztr\'aci\'os \'es bejelentkeztet\H o rendszer}{60}{section.5.1}
+\select@language {magyar} \contentsline {section}{\numberline {5.2}Demo adatkezel\'es\'enek ellen\H orz\'ese}{60}{section.5.2}
+\select@language {magyar} \contentsline {section}{\numberline {5.3}Algoritmusok ellen\H orz\'ese kis adatokon}{60}{section.5.3}
+\select@language {magyar} \contentsline {section}{\numberline {5.4}Algoritmusok ellen\H orz\'ese ismert eredm\'enyekkel}{60}{section.5.4}
+\select@language {magyar} \contentsline {chapter}{\numberline {6}Egyebek}{61}{chapter.6}
+\select@language {magyar} \contentsline {section}{\numberline {6.1}Verzi\'okezel\'es}{61}{section.6.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {6.1.1}Git}{61}{subsection.6.1.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {6.1.2}GitHub}{61}{subsection.6.1.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {6.1.3}A v\'alaszt\'as}{62}{subsection.6.1.3}
+\select@language {magyar} \contentsline {subsection}{\numberline {6.1.4}Repozit\'oriumok}{62}{subsection.6.1.4}
+\select@language {magyar} \contentsline {section}{\numberline {6.2}K\"ornyezetek}{62}{section.6.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {6.2.1}SublimeText - linterek}{62}{subsection.6.2.1}
+\select@language {magyar} \contentsline {paragraph}{Linterek}{63}{section*.53}
+\select@language {magyar} \contentsline {subsection}{\numberline {6.2.2}Android Studio}{64}{subsection.6.2.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {6.2.3}PhpStorm}{65}{subsection.6.2.3}
+\select@language {magyar} \contentsline {chapter}{\numberline {7}\"Osszefoglal\'as}{66}{chapter.7}
 \select@language {magyar} \ 
-\select@language {magyar} \contentsline {section}{Nyilatkozat}{65}{chapter*.55}
-\select@language {magyar} \contentsline {section}{Irodalomjegyz\'ek}{67}{chapter*.56}
+\select@language {magyar} \contentsline {section}{Nyilatkozat}{67}{chapter*.54}
+\select@language {magyar} \contentsline {section}{Irodalomjegyz\'ek}{69}{chapter*.55}
