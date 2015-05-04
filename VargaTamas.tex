@@ -1077,8 +1077,18 @@ Annak ellenére, hogy szerintem elég intuitív a felhasználói felület használata, 
 
 Még egy kisebb dolog megvalósítására térnék ki: Amikor a felhasználó befejezte a bemeneti mezõ használatát, akkor az eredményeket a virtuális billentyûzeten az enter gomb megnyomásával véglegesítheti ami elvégzi a virtuális billentyûzet elrejtését. Viszont ha a felhasználó nem használ virtuális billentyûzetet, mert mondjuk egy bluetooth billentyûzetet használ, akkor vannak olyan Android verziók, melyeken az enter gomb megnyomása után nem tûnne el a virtuális billentyûzet. Ennek orvosolásáért felül kell definiálni a bemeneti mezõ $OnEditorActionListener$ -jét és saját magunknak lekezelni az enter gomb lenyomását.
 
+\subsection{Results}
+A $Results$ az algoritmusok futtatásáért felelõ activity egy egyszerû $WebView$ mely a web alkalmazás egy ennek a feladatnak az ellátására létrehozott és optimalizált állományát tölti be. Ebbõl következik, hogy az eredmények megtekintésnek feltétele aktív internet kapcsolat, valamint a mobil eszközön található értékelések elõzõleges szinkronizációja. Ennek a megközelítésnek köszönhetõen a web alkalmazással egységes eredmény reprezentálásra van lehetõség, ahogy az a \ref{fig:TabletResults} ábrán is látszik.
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{TabletResults}
+\caption[Results activity egy fektetett tableten]{Results activity egy fektetett tableten}
+\label{fig:TabletResults}
+\end{figure}
+
 \chapter{A weboldal és a mobil alkalmazás összefûzése}
 A weboldal és a mobil alkalmazás összefûzése
+
 \todo távoli adatbázis elérés
 \todo talk about threading UI/new thread mi futhat hol és mi nem
 \todo adapterNotifyListener
