@@ -83,7 +83,7 @@
 \select@language {magyar} \contentsline {subsubsection}{winesList}{54}{section*.47}
 \select@language {magyar} \contentsline {subsubsection}{detailsContainer}{55}{section*.48}
 \select@language {magyar} \contentsline {subsection}{\numberline {3.4.4}Results}{56}{subsection.3.4.4}
-\select@language {magyar} \contentsline {chapter}{\numberline {4}A weboldal \'es a mobil alkalmaz\'as \"osszef\H uz\'ese}{57}{chapter.4}
+\select@language {magyar} \contentsline {chapter}{\numberline {4}A weboldal \'es a mobil alkalmaz\'as \"osszek\"ot\'ese}{57}{chapter.4}
 \select@language {magyar} \contentsline {chapter}{\numberline {5}Tesztel\'es}{58}{chapter.5}
 \select@language {magyar} \contentsline {section}{\numberline {5.1}Regisztr\'aci\'os \'es bejelentkeztet\H o rendszer}{58}{section.5.1}
 \select@language {magyar} \contentsline {section}{\numberline {5.2}Demo adatkezel\'es\'enek ellen\H orz\'ese}{58}{section.5.2}
