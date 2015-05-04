@@ -1069,19 +1069,19 @@ A lista elemekkel való feltöltéséért a $WinesAdapter$ osztály felelõs, mely az $
 
 Látható, hogy a függvény elsõ argumentumában kapott pozíció eleméhez tartozó $ScoredWine$ objektumot az $ArrayList$ -bõl a $getItem\left(\right)$ metódus másolja ki. A $LayoutInflater$ példányosítja az egyedi lista elem elrendezést, mely elemeire így már hivatkozhatunk és adatokkal tölthetünk fel.
 
-
-\todo finish this
-\todo bõvebben a listviewról majd a UserPage nél
+Intuitívan ahhoz egy adott bort a felhasználó értékeljen, azt ki fogja választja a listából, de ahhoz hogy a lista elemek gombként mûködjenek meg kell hívni a $wineList$ $setOnItemClickListener\left(\right)$ metódusát mely egy olyan $AdapterView.OnItemClickListener\left(\right)$ vár amely legalább annak az $onItemClick\left(\right)$ metódusát felüldefiniálja. Ennek természetesen az egyik argumentuma a lista elem indexe, mely felhasználható az adatgyûjtésre a borokat tartalmazó $ArrayList$ -bõl. Az így begyûjtött bor 
+objektum alapján fog feltöltõdni a $detailsContainer$ tartalma. Egy talán kicsit sziszifuszi módon a bor objektum átadás az értékelõ mezõ $setTag\left(\right)$ metódusán keresztül történik. Fontos hogy itt kell engedélyezni azt is, hogy az értékeléseket fogadó bemeneti mezõ elõtérbe kerülhessen, különben a felhasználó nem tudná majd értékelni a bort.
 
 \subsubsection{detailsContainer}
+Annak ellenére, hogy szerintem elég intuitív a felhasználói felület használata, mégis alapértelmezett esetben amikor az activity elindul ez az elrendezés üres és ahol a borok neve fog megjelenni az áll, hogy "Válasszon bort a listából". Miután a felhasználó kiválasztott egy értékelendõ bort, annak attribútumai alapján kitöltõdnek a $detailsContainer$ releváns szövegmezei. A $winesList$ értékeléssel való frissítésre a legátfogóbb megközelítésnek az tûnt, hogy akkor frissítem a $winesList$ -ben az adott bor értékelését, ha a bemeneti mezõ kikerül az elõtérbõl, majd utána értesítem a $winesList$ adapterét, hogy frissítse a nézetet. 
 
-
-
+Még egy kisebb dolog megvalósítására térnék ki: Amikor a felhasználó befejezte a bemeneti mezõ használatát, akkor az eredményeket a virtuális billentyûzeten az enter gomb megnyomásával véglegesítheti ami elvégzi a virtuális billentyûzet elrejtését. Viszont ha a felhasználó nem használ virtuális billentyûzetet, mert mondjuk egy bluetooth billentyûzetet használ, akkor vannak olyan Android verziók, melyeken az enter gomb megnyomása után nem tûnne el a virtuális billentyûzet. Ennek orvosolásáért felül kell definiálni a bemeneti mezõ $OnEditorActionListener$ -jét és saját magunknak lekezelni az enter gomb lenyomását.
 
 \chapter{A weboldal és a mobil alkalmazás összefûzése}
 A weboldal és a mobil alkalmazás összefûzése
 \todo távoli adatbázis elérés
 \todo talk about threading UI/new thread mi futhat hol és mi nem
+\todo adapterNotifyListener
 
 \chapter{Tesztelés}
 \section{Regisztrációs és bejelentkeztetõ rendszer}
