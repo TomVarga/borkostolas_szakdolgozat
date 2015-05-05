@@ -1179,52 +1179,70 @@ Itt szeretném bemutatni az általam végzett néhány teszt esetet és azok eredményé
 \setcounter{TPTCStart}{\value{TC}}
 
 \subsubsection{ID: TC\_\arabic{TC}}\addtocounter{TC}{1}
-\paragraph{Teszteljárás} TP\_\arabic{TP}
-\paragraph{Leírás} Regisztráció megfelelõ adatok megadásával.
-\paragraph{Bemenet} $user\_name = "tom"$ $user\_password_new = "tom123"$ $user\_password\_repeat = "tom123"$ $user\_email = "tom@tvarga.hu"$ $captcha = korrekt$
-\paragraph{Action} Az adatok beírása után a "Regisztráció" gombra kattintok.
-\paragraph{Elvárt kimenet} Hibaüzenet nélkül tér vissza.
+\textbf{Teszteljárás:} TP\_\arabic{TP}
+\newline 
+\textbf{Leírás:} Regisztráció megfelelõ adatok megadásával.
+\newline 
+\textbf{Bemenet:} $user\_name = "tom"$ $user\_password_new = "tom123"$ $user\_password\_repeat = "tom123"$ $user\_email = "tom@tvarga.hu"$ $captcha = korrekt$
+\newline 
+\textbf{Action:} Az adatok beírása után a "Regisztráció" gombra kattintok.
+\newline 
+\textbf{Elvárt kimenet:} Hibaüzenet nélkül tér vissza.
 
 \subsubsection{ID: TC\_\arabic{TC}}\addtocounter{TC}{1}
-\paragraph{Teszteljárás} TP\_\arabic{TP}
-\paragraph{Leírás} Regisztráció nem megfelelõ adatok megadásával.
-\paragraph{Bemenet} $user\_name = "t"$ $user\_password_new = "tom123"$ $user\_password\_repeat = "tom123"$ $user\_email = "tom@tvarga.hu"$ $captcha = korrekt$
-\paragraph{Action} Az adatok beírása után a "Regisztráció" gombra kattintok.
-\paragraph{Elvárt kimenet} Hibaüzenettel tér vissza.
+\textbf{Teszteljárás:} TP\_\arabic{TP}
+\newline 
+\textbf{Leírás:} Regisztráció nem megfelelõ adatok megadásával.
+\newline 
+\textbf{Bemenet:} $user\_name = "t"$ $user\_password_new = "tom123"$ $user\_password\_repeat = "tom123"$ $user\_email = "tom@tvarga.hu"$ $captcha = korrekt$
+\newline 
+\textbf{Action:} Az adatok beírása után a "Regisztráció" gombra kattintok.
+\newline 
+\textbf{Elvárt kimenet:} Hibaüzenettel tér vissza.
 
 \subsubsection{ID: TC\_\arabic{TC}}\addtocounter{TC}{1}
-\paragraph{Teszteljárás} TP\_\arabic{TP}
-\paragraph{Leírás} Regisztráció hiányos adat mezõkkel.
-\paragraph{Bemenet} $user\_name = ""$ $user\_password_new = "tom123"$ $user\_password\_repeat = "tom123"$ $user\_email = "tom@tvarga.hu"$ $captcha = korrekt$
-\paragraph{Action} Az adatok beírása után a "Regisztráció" gombra kattintok.
-\paragraph{Elvárt kimenet} Hibaüzenettel tér vissza.
+\textbf{Teszteljárás:} TP\_\arabic{TP}
+\newline 
+\textbf{Leírás:} Regisztráció hiányos adat mezõkkel.
+\newline 
+\textbf{Bemenet:} $user\_name = ""$ $user\_password_new = "tom123"$ $user\_password\_repeat = "tom123"$ $user\_email = "tom@tvarga.hu"$ $captcha = korrekt$
+\newline 
+\textbf{Action:} Az adatok beírása után a "Regisztráció" gombra kattintok.
+\newline 
+\textbf{Elvárt kimenet:} Hibaüzenettel tér vissza.
 
 \subsubsection{ID: TC\_\arabic{TC}}\addtocounter{TC}{1}
-\paragraph{Teszteljárás} TP\_\arabic{TP}
-\paragraph{Leírás} Regisztráció hibás captcha megadásával.
-\paragraph{Bemenet} $user\_name = "tom1"$ $user\_password_new = "tom123"$ $user\_password\_repeat = "tom123"$ $user\_email = "tom@tvarga.hu"$ $captcha = hibás$
-\paragraph{Action} Az adatok beírása után a "Regisztráció" gombra kattintok.
-\paragraph{Elvárt kimenet} Hibaüzenettel tér vissza.
+\textbf{Teszteljárás:} TP\_\arabic{TP}
+\newline 
+\textbf{Leírás:} Regisztráció hibás captcha megadásával.
+\newline 
+\textbf{Bemenet:} $user\_name = "tom1"$ $user\_password_new = "tom123"$ $user\_password\_repeat = "tom123"$ $user\_email = "tom@tvarga.hu"$ $captcha = hibás$
+\newline 
+\textbf{Action:} Az adatok beírása után a "Regisztráció" gombra kattintok.
+\newline 
+\textbf{Elvárt kimenet:} Hibaüzenettel tér vissza.
 
 \setcounter{TPTCStop}{\value{TC}}
 \addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
 \subsection{Teszteljárás}
 \addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
-\begin{itemize}	
-\item ID: TP\_\arabic{TP}\addtocounter{TP}{1}
-\item Tesztesetek: 
+\textbf{ID:} TP\_\arabic{TP}\addtocounter{TP}{1}
+\newline
+\textbf{Tesztesetek:} 
 \forloop{TPTCStart}{\value{TPTCStart}}{\value{TPTCStart} < \value{TPTCStop}}{
-	TC\_\arabic{TPTCStart}, 
+	TC\_\arabic{TPTCStart} 
 }
-\item Leírás: Ez a teszteljárás a regisztráció tesztelésének lépéseit írja le.
-\item Lépések:
+\newline
+\textbf{Leírás:} Ez a teszteljárás a regisztráció tesztelésének lépéseit írja le.
+\newline
+\textbf{Lépések:}
 \begin{enumerate}
 	\item Regisztrációs oldal betöltése.
 	\item Felhasználónév, e-mail, jelszó, kapcsa megadása
 	\item Regisztráció gomb megnyomása
 	\item Visszajelzés értékelése	
 \end{enumerate}
-\end{itemize}
+
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
@@ -1234,49 +1252,164 @@ Itt szeretném bemutatni az általam végzett néhány teszt esetet és azok eredményé
 \setcounter{TPTCStart}{\value{TC}}
 
 \subsubsection{ID: TC\_\arabic{TC}}\addtocounter{TC}{1}
-\paragraph{Teszteljárás} TP\_\arabic{TP}
-\paragraph{Leírás} Belépés megfelelõ adatok megadásával.
-\paragraph{Bemenet} $user\_name = "tom"$ $user\_password = "tom123"$
-\paragraph{Action} Az adatok beírása után a "Bejelentkezés" gombra kattintok.
-\paragraph{Elvárt kimenet} Hibaüzenet nélkül tér vissza.
+\textbf{Teszteljárás:} TP\_\arabic{TP}
+\newline 
+\textbf{Leírás:} Belépés megfelelõ adatok megadásával.
+\newline 
+\textbf{Bemenet:} $user\_name = "tom"$ $user\_password = "tom123"$
+\newline 
+\textbf{Action:} Az adatok beírása után a "Bejelentkezés" gombra kattintok.
+\newline 
+\textbf{Elvárt kimenet:} Hibaüzenet nélkül tér vissza.
 
 \subsubsection{ID: TC\_\arabic{TC}}\addtocounter{TC}{1}
-\paragraph{Teszteljárás} TP\_\arabic{TP}
-\paragraph{Leírás} Belépés nem megfelelõ adatok megadásával.
-\paragraph{Bemenet} $user\_name = "t"$ $user\_password = "tom123"$
-\paragraph{Action} Az adatok beírása után a "Bejelentkezés" gombra kattintok.
-\paragraph{Elvárt kimenet} Hibaüzenettel tér vissza.
+\textbf{Teszteljárás:} TP\_\arabic{TP}
+\newline 
+\textbf{Leírás:} Belépés nem megfelelõ adatok megadásával.
+\newline 
+\textbf{Bemenet:} $user\_name = "t"$ $user\_password = "tom123"$
+\newline 
+\textbf{Action:} Az adatok beírása után a "Bejelentkezés" gombra kattintok.
+\newline 
+\textbf{Elvárt kimenet:} Hibaüzenettel tér vissza.
 
 \subsubsection{ID: TC\_\arabic{TC}}\addtocounter{TC}{1}
-\paragraph{Teszteljárás} TP\_\arabic{TP}
-\paragraph{Leírás} Belépés megfelelõ adatok megadásával.
-\paragraph{Bemenet} $user\_name = "tom"$ $user\_password = "tom123"$
-\paragraph{Action} Az adatok beírása után a "Bejelentkezés" gombra kattintok.
-\paragraph{Elvárt kimenet} Hibaüzenet nélkül tér vissza.
+\textbf{Teszteljárás:} TP\_\arabic{TP}
+\newline 
+\textbf{Leírás:} Belépés megfelelõ adatok megadásával.
+\newline 
+\textbf{Bemenet:} $user\_name = "tom"$ $user\_password = "tom123"$
+\newline 
+\textbf{Action:} Az adatok beírása után a "Bejelentkezés" gombra kattintok.
+\newline 
+\textbf{Elvárt kimenet:} Hibaüzenet nélkül tér vissza.
 
 \setcounter{TPTCStop}{\value{TC}}
 \addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
 \subsection{Teszteljárás}
 \addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
-\begin{itemize}	
-	\item ID: TP\_\arabic{TP}\addtocounter{TP}{1}
-	\item Tesztesetek: 
-	\forloop{TPTCStart}{\value{TPTCStart}}{\value{TPTCStart} < \value{TPTCStop}}{
-		TC\_\arabic{TPTCStart}, 
-	}
-	\item Leírás: Ez a teszteljárás a bejelentkezés tesztelésének lépéseit írja le.
-	\item Lépések:
-	\begin{enumerate}
-		\item Felhasználónév, jelszó megadása
-		\item Belépés gomb megnyomása
-		\item Visszajelzés értékelése	
-	\end{enumerate}
-\end{itemize}
+
+\textbf{ID:}  TP\_\arabic{TP}\addtocounter{TP}{1}
+\newline
+\textbf{Tesztesetek:} 
+\forloop{TPTCStart}{\value{TPTCStart}}{\value{TPTCStart} < \value{TPTCStop}}{
+	TC\_\arabic{TPTCStart}  
+}
+\newline
+\textbf{Leírás:} Ez a teszteljárás a bejelentkezés tesztelésének lépéseit írja le.
+\newline
+\textbf{Lépések:}
+\begin{enumerate}
+	\item Felhasználónév, jelszó megadása
+	\item Belépés gomb megnyomása
+	\item Visszajelzés értékelése	
+\end{enumerate}
+
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
 
 \section{Demo adatkezelésének ellenõrzése}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
+\subsection{Tesztesetek}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
+\setcounter{TPTCStart}{\value{TC}}
+
+\subsubsection{ID: TC\_\arabic{TC}}\addtocounter{TC}{1}
+\textbf{Teszteljárás:} TP\_\arabic{TP}
+\newline 
+\textbf{Leírás:} Egy megfelelõ bor értékelés megadás.
+\newline 
+\textbf{Bemenet:} $wine\_score\_1 = 15$
+\newline 
+\textbf{Action:} Az adatok beírása után az "Elküld" gombra kattintok.
+\newline 
+\textbf{Elvárt kimenet:} Hibaüzenet nélkül tér vissza.
+
+\subsubsection{ID: TC\_\arabic{TC}}\addtocounter{TC}{1}
+\textbf{Teszteljárás:} TP\_\arabic{TP}
+\newline 
+\textbf{Leírás:} Egy nem megfelelõ bor értékelés megadás.
+\newline 
+\textbf{Bemenet:} $wine\_score\_1 = "a15"$
+\newline 
+\textbf{Action:} Az adatok beírása után az "Elküld" gombra kattintok.
+\newline 
+\textbf{Elvárt kimenet:} Hibaüzenettel tér vissza.
+
+\subsubsection{ID: TC\_\arabic{TC}}\addtocounter{TC}{1}
+\textbf{Teszteljárás:} TP\_\arabic{TP}
+\newline 
+\textbf{Leírás:} Több megfelelõ bor értékelés megadás.
+\newline 
+\textbf{Bemenet:} $wine\_score\_1 = 15$ $wine\_score\_2 = 4$
+\newline 
+\textbf{Action:} Az adatok beírása után az "Elküld" gombra kattintok.
+\newline 
+\textbf{Elvárt kimenet:} Hibaüzenet nélkül tér vissza.
+
+\subsubsection{ID: TC\_\arabic{TC}}\addtocounter{TC}{1}
+\textbf{Teszteljárás:} TP\_\arabic{TP}
+\newline 
+\textbf{Leírás:} Több nem megfelelõ bor értékelés megadás.
+\newline 
+\textbf{Bemenet:} $wine\_score\_1 = "a15"$ $wine\_score\_2 = "b4"$
+\newline 
+\textbf{Action:} Az adatok beírása után az "Elküld" gombra kattintok.
+\newline 
+\textbf{Elvárt kimenet:} Hibaüzenettel tér vissza.
+
+\subsubsection{ID: TC\_\arabic{TC}}\addtocounter{TC}{1}
+\textbf{Teszteljárás:} TP\_\arabic{TP}
+\newline 
+\textbf{Leírás:} Egy bor értékelésének törlése.
+\newline 
+\textbf{Bemenet:} $wine\_score\_1 = ""$
+\newline 
+\textbf{Action:} Az adatok beírása után az "Elküld" gombra kattintok.
+\newline 
+\textbf{Elvárt kimenet:} Hibaüzenet nélkül tér vissza.
+
+\subsubsection{ID: TC\_\arabic{TC}}\addtocounter{TC}{1}
+\textbf{Teszteljárás:} TP\_\arabic{TP}
+\newline 
+\textbf{Leírás:} Több bor értékelésének törlése.
+\newline 
+\textbf{Bemenet:} $wine\_score\_1 = ""$ $wine\_score\_2 = ""$
+\newline 
+\textbf{Action:} Az adatok beírása után az "Elküld" gombra kattintok.
+\newline 
+\textbf{Elvárt kimenet:} Hibaüzenet nélkül tér vissza.
+
+\setcounter{TPTCStop}{\value{TC}}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
+\subsection{Teszteljárás}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
+
+\textbf{ID:}  TP\_\arabic{TP}\addtocounter{TP}{1}
+\newline
+\textbf{Tesztesetek:} 
+\forloop{TPTCStart}{\value{TPTCStart}}{\value{TPTCStart} < \value{TPTCStop}}{
+	TC\_\arabic{TPTCStart}  
+}
+\newline
+\textbf{Leírás:} Ez a teszteljárás $demo.php$ tesztelésének lépéseit írja le.
+\newline
+\textbf{Lépések:}
+\begin{enumerate}
+	\item $demo.php$ betöltése
+	\item Értékelés megadása
+	\item Értékel gomb megnyomása
+	\item Visszajelzés értékelése	
+\end{enumerate}
+
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
+
 \section{Algoritmusok ellenõrzése kis adatokon}
 \section{Algoritmusok ellenõrzése ismert eredményekkel}
 \section{Adatbázis szinkronizáció}
