@@ -358,14 +358,14 @@
 	
 	\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=sql,label={lst:scores create}, caption={Az értékeléseket tartalmazó ($scores$) táblát létrehozó parancs}]
-		CREATE TABLE IF NOT EXISTS `scores` (
-		`user_id` int(11) DEFAULT NULL COMMENT 'user''s id',
-		`wine_id` int(11) DEFAULT NULL COMMENT 'wines''s id',
-		`score` decimal(8,3) DEFAULT NULL COMMENT 'score given by the user_id user for the wine_id wine',
-		`timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-		FOREIGN KEY (`user_id`) REFERENCES users(`user_id`) ON DELETE CASCADE,
-		FOREIGN KEY (`wine_id`) REFERENCES wines(`wine_id`) ON DELETE CASCADE
-		) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='score data';
+CREATE TABLE IF NOT EXISTS `scores` (
+`user_id` int(11) DEFAULT NULL COMMENT 'user''s id',
+`wine_id` int(11) DEFAULT NULL COMMENT 'wines''s id',
+`score` decimal(8,3) DEFAULT NULL COMMENT 'score given by the user_id user for the wine_id wine',
+`timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+FOREIGN KEY (`user_id`) REFERENCES users(`user_id`) ON DELETE CASCADE,
+FOREIGN KEY (`wine_id`) REFERENCES wines(`wine_id`) ON DELETE CASCADE
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='score data';
 		\end{lstlisting}
 	\end{minipage}
 	
@@ -442,7 +442,7 @@
 	
 	\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=html,label={lst:css syntax}, caption={CSS szintaxis}]
-		h2 {color: #bb1f42; font-size: 1.2em;}
+h2 {color: #bb1f42; font-size: 1.2em;}
 		\end{lstlisting}
 	\end{minipage}
 	
@@ -452,18 +452,18 @@
 	A PHP ($PHP:\ Hypertext\ Preprocessor$) egy széles körben elterjedt nyílt forráskódú általános célokra kifejlesztett szkript nyelv amely különösképpen alkalmas webes fejlesztésre, valamint HTML -be ágyazható. Ezt az alábbi példa \ref{lst:php hello world} kódrészlet szemlélteti.
 	\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=html,label={lst:php hello world}, caption={PHP Hello World!}]
-		<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-		"http://www.w3.org/TR/html4/loose.dtd">
-		<html>
-		<head>
-		<title>Példa</title>
-		</head>
-		<body>
-		<?php
-		echo "Hello Világ!";
-		?>  
-		</body>
-		</html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Példa</title>
+</head>
+<body>
+  <?php
+  echo "Hello Világ!";
+  ?>
+</body>
+</html>
 		\end{lstlisting}
 	\end{minipage}
 	A PHP kód egy különleges nyitó és záró $<?php\ ?>$ struktúrában helyezkedik el, ezzel lehetõvé téve, hogy ki és be lépjünk a PHP-ba. A PHP-t azt különbözteti meg a kliens oldali szkriptektõl mint például a JavaScript, hogy a kód a szerver oldalon hajtódik végre, itt generálódik a HTML tartalom melyet majd a webszerver küld a kliensnek. Az is megoldható, hogy egy webszervert úgy konfiguráljunk, hogy az a PHP-t tartalmazó HTML fájlokat is dolgozza fel. Ekkor a felhasználó nem fogja megtudni, hogy mi neki most éppen egy PHP által generált tartalmat mutatunk.
@@ -477,19 +477,19 @@
 	
 	\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:php pdo connection}, caption={PHP PDO Connector használata}]
-		private function databaseConnection(){
-		if ($this->db_connection != null) {
-		return true;
-		} else {
-		try {
-		$this->db_connection = new PDO('mysql:host='. DB_HOST .';dbname='. DB_NAME . ';charset=utf8', DB_USER, DB_PASS);
-		return true;
-		} catch (PDOException $e) {
-		$this->errors[] = MESSAGE_DATABASE_ERROR . $e->getMessage();
-		}
-		}
-		return false;
-		}
+private function databaseConnection(){
+  if ($this->db_connection != null) {
+    return true;
+  } else {
+    try {
+      $this->db_connection = new PDO('mysql:host='. DB_HOST .';dbname='. DB_NAME . ';charset=utf8', DB_USER, DB_PASS);
+      return true;
+    } catch (PDOException $e) {
+      $this->errors[] = MESSAGE_DATABASE_ERROR . $e->getMessage();
+    }
+  }
+  return false;
+}
 		\end{lstlisting}
 	\end{minipage}
 	
@@ -499,7 +499,7 @@
 	
 	\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:php pdo close connection}, caption={PHP PDO kapcsolat lezárása}]
-		db_connection = null;
+db_connection = null;
 		\end{lstlisting}
 	\end{minipage}
 	
@@ -507,7 +507,7 @@
 	
 	\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:php pdo result handling}, caption={PHP PDO eredmény kezelés}]
-		$user_id = $result_row->user_id;
+$user_id = $result_row->user_id;
 		\end{lstlisting}
 	\end{minipage}
 	
@@ -515,10 +515,10 @@
 	
 	\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:php pdo sql query}, caption={PHP PDO SQL lekérdezés}]
-		$query_user = $this->db_connection->prepare('SELECT * FROM users WHERE user_name = :user_name');
-		$query_user->bindValue(':user_name', $user_name, PDO::PARAM_STR);
-		$query_user->execute();
-		$result_row = $query_user->fetchObject();
+$query_user = $this->db_connection->prepare('SELECT * FROM users WHERE user_name = :user_name');
+$query_user->bindValue(':user_name', $user_name, PDO::PARAM_STR);
+$query_user->execute();
+$result_row = $query_user->fetchObject();
 		\end{lstlisting}
 	\end{minipage}
 	
@@ -529,7 +529,7 @@
 	
 	\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:php setcookie}, caption={PHP setcookie függvény}]
-		setcookie(name [, value [, expire [, path [, domain [, secure ]]]]]);
+setcookie(name [, value [, expire [, path [, domain [, secure ]]]]]);
 		\end{lstlisting}
 	\end{minipage}
 	
@@ -546,7 +546,7 @@
 	
 	\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:php cookie expire}, caption={PHP cookie expire generálása 2 hét múlvára}]
-		$expire = time() + 1209600;
+$expire = time() + 1209600;
 		\end{lstlisting}
 	\end{minipage}
 	
@@ -577,17 +577,17 @@
 	
 	\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:ajax example}, caption={AJAX példa kódrészlet}]
-		var response;
-		var xmlhttp=new XMLHttpRequest();
-		xmlhttp.onreadystatechange=function(){
-		if (xmlhttp.readyState==4 && xmlhttp.status==200){
-		response = xmlhttp.responseText;
-		} else {
-		return;
-		}
-		}
-		xmlhttp.open("POST",url,false);
-		xmlhttp.send();
+var response;
+var xmlhttp=new XMLHttpRequest();
+xmlhttp.onreadystatechange=function(){
+  if (xmlhttp.readyState==4 && xmlhttp.status==200){
+    response = xmlhttp.responseText;
+  } else {
+    return;
+  }
+}
+xmlhttp.open("POST",url,false);
+xmlhttp.send();
 		\end{lstlisting}
 	\end{minipage}
 	
@@ -600,7 +600,7 @@
 	
 	\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:include jquery}, caption={jQuery betöltése}]
-		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 		\end{lstlisting}
 	\end{minipage}
 	
@@ -617,9 +617,9 @@
 	
 	\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:jquery typical use}, caption={jQuery tipikus használat}]
-		$(window).on('load', function () {
-		// jQuery kód
-		});
+$(window).on('load', function () {
+  // jQuery kód
+});
 		\end{lstlisting}
 	\end{minipage}
 	
@@ -628,7 +628,7 @@
 	
 	\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:include numeric}, caption={Numeric Javascript betöltése}]
-		<script type="text/javascript" src="http://numericjs.com/numeric/lib/numeric-1.2.6.min.js"></script>
+<script type="text/javascript" src="http://numericjs.com/numeric/lib/numeric-1.2.6.min.js"></script>
 		\end{lstlisting}
 	\end{minipage} 
 	
@@ -643,10 +643,10 @@
 	
 	\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:init google charts}, caption={Google Charts API betöltése}]
-		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-		<script type="text/javascript">
-		google.load('visualization', '1.0', {'packages':['corechart']});
-		</script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+  google.load('visualization', '1.0', {'packages':['corechart']});
+</script>
 		\end{lstlisting}
 	\end{minipage}  
 	
@@ -670,7 +670,7 @@
 	
 	\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:array to data table}, caption={Google Charts tömbbõl google data table készítés}]
-		var data = google.visualization.arrayToDataTable(graphData);
+var data = google.visualization.arrayToDataTable(graphData);
 		\end{lstlisting}
 	\end{minipage}
 	
@@ -678,15 +678,15 @@
 	
 	\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:google chart view and instanciation}, caption={Google Charts megjelenítésének beállítása és a példányosított objektum beszúrása a megfelelõ $<div>$-be}]
-		var view = new google.visualization.DataView(data);
-		view.setColumns([0, 1,
-		{ calc: "stringify",
-		sourceColumn: 1,
-		type: "string",
-		role: "annotation" }
-		]);
-		var chart = new google.visualization.BarChart(document.getElementById("graph"));
-		chart.draw(view);
+var view = new google.visualization.DataView(data);
+view.setColumns([0, 1,
+  { calc: "stringify",
+  sourceColumn: 1,
+  type: "string",
+  role: "annotation" }
+  ]);
+var chart = new google.visualization.BarChart(document.getElementById("graph"));
+chart.draw(view);
 		\end{lstlisting}
 	\end{minipage}
 	
@@ -703,17 +703,17 @@
 	
 	\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:double scroll}, caption={Dupla görgetõ sáv jQuery -vel}]
-		$(function () {
-		$('.topScrollingBlockWrapper').on('scroll', function () {
-		$('.leftTableContainer').scrollLeft($('.topScrollingBlockWrapper').scrollLeft());
-		});
-		$('.leftTableContainer').on('scroll', function () {
-		$('.topScrollingBlockWrapper').scrollLeft($('.leftTableContainer').scrollLeft());
-		});
-		});
-		$(window).on('load', function () {
-		$('.topScroll').width($('.leftTable').width());
-		});
+$(function () {
+  $('.topScrollingBlockWrapper').on('scroll', function () {
+    $('.leftTableContainer').scrollLeft($('.topScrollingBlockWrapper').scrollLeft());
+  });
+  $('.leftTableContainer').on('scroll', function () {
+    $('.topScrollingBlockWrapper').scrollLeft($('.leftTableContainer').scrollLeft());
+  });
+});
+$(window).on('load', function () {
+  $('.topScroll').width($('.leftTable').width());
+});
 		\end{lstlisting}
 	\end{minipage}
 	
@@ -755,7 +755,7 @@
 	
 	\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:generate password hash}, caption={Jelszó hash generálás PHP 5.5 alatt}]
-		password_hash($pass, PASSWORD_DEFAULT);
+password_hash($pass, PASSWORD_DEFAULT);
 		\end{lstlisting}
 	\end{minipage}
 	
@@ -763,7 +763,7 @@
 	
 	\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:verify password hash}, caption={Jelszó hash verifikálása PHP 5.5 alatt}]
-		password_verify($pass, $hash);
+password_verify($pass, $hash);
 		\end{lstlisting}
 	\end{minipage}
 	
@@ -774,7 +774,7 @@
 	
 	\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:php register}, caption={php-login registerNewUser szignatúra}]
-		registerNewUser($user_name, $user_email, $user_password, $user_password_repeat, $captcha)
+registerNewUser($user_name, $user_email, $user_password, $user_password_repeat, $captcha)
 		\end{lstlisting}
 	\end{minipage}
 	
@@ -786,10 +786,10 @@
 	
 	\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:php login}, caption={példal a Login osztály használatára}]
-		$login = new Login();
-		if ($login->isUserLoggedIn() == true) {
-		echo '<h3>' . $_SESSION['user_name'] . '&rsaquo;</h3>';
-		}
+$login = new Login();
+if ($login->isUserLoggedIn() == true) {
+  echo '<h3>' . $_SESSION['user_name'] . '&rsaquo;</h3>';
+}
 		\end{lstlisting}
 	\end{minipage}
 	
@@ -797,8 +797,8 @@
 	
 	\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:load sidebar}, caption={Sidebar betöltése a dinamikus oldalakon}]
-		<!--SIDE BAR CONTENT-->
-		<?php include('sidebar.php'); ?>
+<!--SIDE BAR CONTENT-->
+<?php include('sidebar.php'); ?>
 		\end{lstlisting}
 	\end{minipage}
 	
@@ -816,7 +816,7 @@
 	
 	\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:wine score input}, caption={Példa input mezõre címkézésére}]
-		<input id="wine_score_5" type="text" name="wine_score_5" class="columnInput" value="">
+<input id="wine_score_5" type="text" name="wine_score_5" class="columnInput" value="">
 		\end{lstlisting}
 	\end{minipage}
 	
@@ -854,7 +854,7 @@
 	
 	\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:tWLeft}, caption={tWLeft értékének kiszámítása}]
-		$tWLeft[$sTaster][$sItem] = (array_sum($tDiffFromAvgByItem[$sItem])-$nScore)/((count($tItemScores[$sItem])-1)*array_sum($tDiffFromAvgByItem[$sItem]));
+$tWLeft[$sTaster][$sItem] = (array_sum($tDiffFromAvgByItem[$sItem])-$nScore)/((count($tItemScores[$sItem])-1)*array_sum($tDiffFromAvgByItem[$sItem]));
 		\end{lstlisting}
 	\end{minipage}
 	
@@ -975,9 +975,9 @@
 	
 	\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=java,label={lst:DAO interface}, caption={DAO interface metódusai}]
-		public ArrayList<Wine> getWines();    
-		public ArrayList<Score> getScores(int user_id);    
-		public boolean addOrUpdateScore(Score score);
+public ArrayList<Wine> getWines();    
+public ArrayList<Score> getScores(int user_id);    
+public boolean addOrUpdateScore(Score score);
 		\end{lstlisting}
 	\end{minipage}
 	
@@ -1013,7 +1013,7 @@
 	\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=java,label={lst:onBackPressed}, caption={Vissza gomb letiltása}]
 		@Override
-		public void onBackPressed() { return; }
+public void onBackPressed() { return; }
 		\end{lstlisting}
 	\end{minipage}
 	
@@ -1042,7 +1042,7 @@
 	
 	\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=java,label={lst:ListView blocksDescendants}, caption={A $ListView$ elmeinek elõtérbehozhatóságnak beállítása}]
-		android:descendantFocusability="blocksDescendants" 
+android:descendantFocusability="blocksDescendants" 
 		\end{lstlisting}
 	\end{minipage}
 	
@@ -1053,18 +1053,18 @@
 	
 	\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=java,label={lst:ListView elem getView}, caption={Lista elem tartalmma való feltöltése}]
-		public View getView(int position, View convertView, ViewGroup parent) {
-		ScoredWine wine = getItem(position);
-		if (convertView == null) {
-		convertView = LayoutInflater.from(getContext()).inflate(R.layout.winerow, parent, false);
-		}   
-		TextView tvName = (TextView) convertView.findViewById(R.id.wineRowName);
-		TextView tvScore = (TextView) convertView.findViewById(R.id.wineRowScore);  
-		tvName.setText(wine.getWine_name());
-		Double score = wine.getWine_score();
-		tvScore.setText(getFormattedScore(score));  
-		return convertView;
-		}
+public View getView(int position, View convertView, ViewGroup parent) {
+  ScoredWine wine = getItem(position);
+  if (convertView == null) {
+    convertView = LayoutInflater.from(getContext()).inflate(R.layout.winerow, parent, false);
+  }   
+  TextView tvName = (TextView) convertView.findViewById(R.id.wineRowName);
+  TextView tvScore = (TextView) convertView.findViewById(R.id.wineRowScore);  
+  tvName.setText(wine.getWine_name());
+  Double score = wine.getWine_score();
+  tvScore.setText(getFormattedScore(score));  
+  return convertView;
+}
 		\end{lstlisting}
 	\end{minipage}
 	
@@ -1098,11 +1098,11 @@
 	
 	\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=java,label={lst:new thread for network}, caption={Új szál létrehozásra}]
-		new Thread(new Runnable() {
-		public void run() {
-		// Hálózati mûvelet itt!
-		}
-		}).start();
+new Thread(new Runnable() {
+  public void run() {
+    // Hálózati mûvelet itt!
+  }
+}).start();
 		\end{lstlisting}
 	\end{minipage}
 	
@@ -1113,16 +1113,16 @@
 	
 	\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=java,label={lst:service access}, caption={Szolgáltatás használat példa}]
-		httpclient=new DefaultHttpClient();
-		httppost= new HttpPost("http://bor.tvarga.hu/services/getWineData.php"); // make sure the url is correct.
-		ResponseHandler<String> responseHandler = new BasicResponseHandler();
-		String result = httpclient.execute(httppost, responseHandler);
-		JSONArray jsonArray = new JSONArray(result);
-		for (int i=0; i < jsonArray.length(); i++ ){
-		JSONObject obj = (JSONObject) jsonArray.get(i);
-		Wine wine = JSONParser.getWineFromJSONObj(obj);
-		wines.add(wine);
-		}
+httpclient=new DefaultHttpClient();
+httppost= new HttpPost("http://bor.tvarga.hu/services/getWineData.php"); // make sure the url is correct.
+ResponseHandler<String> responseHandler = new BasicResponseHandler();
+String result = httpclient.execute(httppost, responseHandler);
+JSONArray jsonArray = new JSONArray(result);
+for (int i=0; i < jsonArray.length(); i++ ){
+  JSONObject obj = (JSONObject) jsonArray.get(i);
+  Wine wine = JSONParser.getWineFromJSONObj(obj);
+  wines.add(wine);
+}
 		\end{lstlisting}
 	\end{minipage}
 	
@@ -1153,7 +1153,7 @@
 	
 	\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=html,label={lst:dropdown onSelectChange}, caption={Legordülõ menübeli algoritmus választás egybõl indítja a számolást}]
-		<select id='algoritmus' name='Algoritmus' onchange='onSelectChange()' style="width: 100%;">
+<select id='algoritmus' name='Algoritmus' onchange='onSelectChange()' style="width: 100%;">
 		\end{lstlisting}
 	\end{minipage}
 	
@@ -1829,6 +1829,7 @@
 	%      i++;
 	%   }
 	%\end{verbatim}
+	
 	
 	
 	\chapter*{Nyilatkozat}

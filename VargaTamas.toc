@@ -24,12 +24,12 @@
 \select@language {magyar} \contentsline {section}{\numberline {2.2}Adatb\'azis}{15}{section.2.2}
 \select@language {magyar} \contentsline {subsection}{\numberline {2.2.1}scores t\'abla}{16}{subsection.2.2.1}
 \select@language {magyar} \contentsline {subsection}{\numberline {2.2.2}wines t\'abla}{17}{subsection.2.2.2}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.2.3}users t\'abla}{18}{subsection.2.2.3}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.2.3}users t\'abla}{17}{subsection.2.2.3}
 \select@language {magyar} \contentsline {section}{\numberline {2.3}CSS}{19}{section.2.3}
 \select@language {magyar} \contentsline {paragraph}{Normal flow}{20}{section*.10}
 \select@language {magyar} \contentsline {paragraph}{Flaot}{20}{section*.11}
 \select@language {magyar} \contentsline {paragraph}{Absolute positioning}{20}{section*.12}
-\select@language {magyar} \contentsline {paragraph}{Position}{21}{section*.13}
+\select@language {magyar} \contentsline {paragraph}{Position}{20}{section*.13}
 \select@language {magyar} \contentsline {paragraph}{Float \'es clear}{21}{section*.14}
 \select@language {magyar} \contentsline {section}{\numberline {2.4}PHP}{22}{section.2.4}
 \select@language {magyar} \contentsline {subsection}{\numberline {2.4.1}PHP Data Objects (PDO)}{23}{subsection.2.4.1}
@@ -43,15 +43,15 @@
 \select@language {magyar} \contentsline {section}{\numberline {2.7}Statikus tartalom}{33}{section.2.7}
 \select@language {magyar} \contentsline {paragraph}{index.php - F\H ooldal}{34}{section*.15}
 \select@language {magyar} \contentsline {paragraph}{borkostolasEredmenyek.php - Eredm\'enyek}{34}{section*.16}
-\select@language {magyar} \contentsline {paragraph}{modszerek.php - M\'odszerek}{35}{section*.17}
-\select@language {magyar} \contentsline {paragraph}{kapcsolat.php - Kapcsolat}{35}{section*.18}
+\select@language {magyar} \contentsline {paragraph}{modszerek.php - M\'odszerek}{34}{section*.17}
+\select@language {magyar} \contentsline {paragraph}{kapcsolat.php - Kapcsolat}{34}{section*.18}
 \select@language {magyar} \contentsline {section}{\numberline {2.8}Dinamikus tartalom}{35}{section.2.8}
 \select@language {magyar} \contentsline {subsection}{\numberline {2.8.1}php-login}{35}{subsection.2.8.1}
 \select@language {magyar} \contentsline {paragraph}{R\"oviden a hashel\'esr\H ol}{36}{section*.19}
 \select@language {magyar} \contentsline {paragraph}{Felhaszn\'al\'ok kezel\'es}{37}{section*.20}
 \select@language {magyar} \contentsline {subsection}{\numberline {2.8.2}admin.php}{38}{subsection.2.8.2}
 \select@language {magyar} \contentsline {subsection}{\numberline {2.8.3}demo.php - Dem\'o}{38}{subsection.2.8.3}
-\select@language {magyar} \contentsline {subsubsection}{dbUtils.php}{39}{section*.21}
+\select@language {magyar} \contentsline {subsubsection}{dbUtils.php}{38}{section*.21}
 \select@language {magyar} \contentsline {chapter}{\numberline {3}A mobil alkalmaz\'as}{44}{chapter.3}
 \select@language {magyar} \contentsline {section}{\numberline {3.1}Android}{45}{section.3.1}
 \select@language {magyar} \contentsline {subsubsection}{Linear Layout}{46}{section*.25}
@@ -69,17 +69,17 @@
 \select@language {magyar} \contentsline {paragraph}{ScoredWine}{50}{section*.39}
 \select@language {magyar} \contentsline {subsection}{\numberline {3.2.2}DAO}{50}{subsection.3.2.2}
 \select@language {magyar} \contentsline {subsubsection}{LocalDAO}{50}{section*.40}
-\select@language {magyar} \contentsline {section}{\numberline {3.3}Controller}{51}{section.3.3}
+\select@language {magyar} \contentsline {section}{\numberline {3.3}Controller}{50}{section.3.3}
 \select@language {magyar} \contentsline {subsubsection}{JSONParser}{51}{section*.41}
 \select@language {magyar} \contentsline {subsubsection}{WinesAdapter}{51}{section*.42}
 \select@language {magyar} \contentsline {subsubsection}{OnAdapterNeedsNotify}{51}{section*.43}
 \select@language {magyar} \contentsline {subsubsection}{NetworkChecker}{51}{section*.44}
 \select@language {magyar} \contentsline {subsubsection}{DBSyncContoller}{51}{section*.45}
 \select@language {magyar} \contentsline {section}{\numberline {3.4}View}{51}{section.3.4}
-\select@language {magyar} \contentsline {subsubsection}{Main Activity}{52}{section*.46}
+\select@language {magyar} \contentsline {subsubsection}{Main Activity}{51}{section*.46}
 \select@language {magyar} \contentsline {subsection}{\numberline {3.4.1}Register \'es ForgotPassword Activity}{52}{subsection.3.4.1}
 \select@language {magyar} \contentsline {subsection}{\numberline {3.4.2}Men\"u}{52}{subsection.3.4.2}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.4.3}UserPage}{53}{subsection.3.4.3}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.4.3}UserPage}{52}{subsection.3.4.3}
 \select@language {magyar} \contentsline {subsubsection}{winesList}{54}{section*.47}
 \select@language {magyar} \contentsline {subsubsection}{detailsContainer}{55}{section*.48}
 \select@language {magyar} \contentsline {subsection}{\numberline {3.4.4}Results}{56}{subsection.3.4.4}
