@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.11.23)  5 MAY 2015 23:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.11.23)  6 MAY 2015 00:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1764,7 +1764,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1896.
 Here is how much of TeX's memory you used:
  24511 strings out of 493109
  448357 string characters out of 6138586
- 890203 words of memory out of 5000000
+ 890201 words of memory out of 5000000
  27118 multiletter control sequences out of 15000+600000
  46927 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1789,7 +1789,7 @@ dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><x:/texlive/2014/texmf-dist/fonts
 e1/urw/courier/ucrr8a.pfb><x:/texlive/2014/texmf-dist/fonts/type1/urw/times/utm
 b8a.pfb><x:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><x:/texliv
 e/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on VargaTamas.pdf (77 pages, 502867 bytes).
+Output written on VargaTamas.pdf (77 pages, 502866 bytes).
 PDF statistics:
  1421 PDF objects out of 1440 (max. 8388607)
  1305 compressed objects within 14 object streams
