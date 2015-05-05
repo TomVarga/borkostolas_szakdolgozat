@@ -104,10 +104,10 @@
 \select@language {magyar} \contentsline {subsection}{\numberline {6.1.4}Repozit\'oriumok}{63}{subsection.6.1.4}
 \select@language {magyar} \contentsline {section}{\numberline {6.2}K\"ornyezetek}{63}{section.6.2}
 \select@language {magyar} \contentsline {subsection}{\numberline {6.2.1}SublimeText - linterek}{63}{subsection.6.2.1}
-\select@language {magyar} \contentsline {paragraph}{Linterek}{64}{section*.52}
+\select@language {magyar} \contentsline {paragraph}{Linterek}{64}{section*.51}
 \select@language {magyar} \contentsline {subsection}{\numberline {6.2.2}Android Studio}{65}{subsection.6.2.2}
 \select@language {magyar} \contentsline {subsection}{\numberline {6.2.3}PhpStorm}{66}{subsection.6.2.3}
 \select@language {magyar} \contentsline {chapter}{\numberline {7}\"Osszefoglal\'as}{67}{chapter.7}
 \select@language {magyar} \ 
-\select@language {magyar} \contentsline {section}{Nyilatkozat}{68}{chapter*.53}
-\select@language {magyar} \contentsline {section}{Irodalomjegyz\'ek}{70}{chapter*.54}
+\select@language {magyar} \contentsline {section}{Nyilatkozat}{68}{chapter*.52}
+\select@language {magyar} \contentsline {section}{Irodalomjegyz\'ek}{70}{chapter*.53}
