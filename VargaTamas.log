@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.11.23)  5 MAY 2015 23:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.11.23)  5 MAY 2015 23:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -894,7 +894,7 @@ Underfull \hbox (badness 5460) in paragraph at lines 325--326
 alamint ezek és a
  []
 
-<Wireframe.png, id=640, 730.73pt x 530.98375pt>
+<Wireframe.png, id=671, 730.73pt x 530.98375pt>
 File: Wireframe.png Graphic file (type png)
  <use Wireframe.png>
 Package pdftex.def Info: Wireframe.png used on input line 329.
@@ -947,7 +947,7 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\H' on input line 343.
 
-[15] <../../Borkostolas_weblap/dbmodel.png, id=660, 415.5525pt x 420.57124pt>
+[15] <../../Borkostolas_weblap/dbmodel.png, id=690, 415.5525pt x 420.57124pt>
 File: ../../Borkostolas_weblap/dbmodel.png Graphic file (type png)
 
 <use ../../Borkostolas_weblap/dbmodel.png>
@@ -1472,7 +1472,7 @@ Overfull \hbox (6.1889pt too wide) in paragraph at lines 1032--1033
 n/12 készíti el® a menüt a meg-je-lenítésre, ez a tökéletes
  []
 
-<UserPage.png, id=1041, 320.69812pt x 514.92375pt>
+<UserPage.png, id=1071, 320.69812pt x 514.92375pt>
 File: UserPage.png Graphic file (type png)
  <use UserPage.png>
 Package pdftex.def Info: UserPage.png used on input line 1037.
@@ -1538,7 +1538,7 @@ Overfull \hbox (45.51216pt too wide) in paragraph at lines 1078--1079
 ói felület használa-ta, mégis alapértelmezett
  []
 
-[56] <TabletResults.png, id=1076, 767.86874pt x 447.17062pt>
+[56] <TabletResults.png, id=1106, 767.86874pt x 447.17062pt>
 File: TabletResults.png Graphic file (type png)
 
 <use TabletResults.png>
@@ -1647,93 +1647,94 @@ r/m/n/12 =[] "\OML/cmm/m/it/12 tom\OT1/cmr/m/n/12 123"$ $\OML/cmm/m/it/12 user[
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\H' on input line 1312.
 
-[64] [65]
+[64] [65] [66]
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 1414.
+(hyperref)                removing `\H' on input line 1494.
 
-<algoritmus_kis_adatok.png, id=1146, 491.58656pt x 304.88907pt>
+<algoritmus_kis_adatok.png, id=1185, 491.58656pt x 304.88907pt>
 File: algoritmus_kis_adatok.png Graphic file (type png)
 
 <use algoritmus_kis_adatok.png>
-Package pdftex.def Info: algoritmus_kis_adatok.png used on input line 1421.
+Package pdftex.def Info: algoritmus_kis_adatok.png used on input line 1501.
 (pdftex.def)             Requested size: 298.75262pt x 185.29817pt.
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 1429.
- [66 <./algoritmus_kis_adatok.png>]
-
-LaTeX Warning: Marginpar on page 67 moved.
 
 
-LaTeX Warning: Marginpar on page 67 moved.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[67]
+
+Overfull \hbox (8.4073pt too wide) in paragraph at lines 1507--1508
+\T1/ptm/m/n/12 Az al-go-rit-mus el-len®rzése a mel-lék-let-ben talál-ható "júli
+usi vörös sor-ban.xls" alapján történt. 
+ []
+
+[67] [68 <./algoritmus_kis_adatok.png>]
 6. fejezet.
 
-Overfull \hbox (4.02876pt too wide) in paragraph at lines 1442--1443
+Overfull \hbox (4.02876pt too wide) in paragraph at lines 1516--1517
 \T1/ptm/m/n/12 tel és tel-jes revíz-iókövetési lehet®séggel, ame-ly nem függ a 
 hálózat elérését®l vagy közpon-
  []
 
-[68
+[69
 
-] [69]
-Overfull \hbox (0.20798pt too wide) in paragraph at lines 1469--1470
+] [70]
+Overfull \hbox (0.20798pt too wide) in paragraph at lines 1543--1544
 \T1/ptm/m/n/12 parancs, menük, je-gyzetek, makrók, kód be-fe-jezés stb... Mind 
 ehhez csak egy egysz-
  []
 
-[70]
-Underfull \hbox (badness 2856) in paragraph at lines 1494--1495
+[71]
+Underfull \hbox (badness 2856) in paragraph at lines 1568--1569
 \T1/ptm/m/n/12 kezel® al-ka-lmazá-sok közvetlenül beépül-tek az IDE -be, egysz-
 er¶b-bé téve azok
  []
 
-[71] [72]
+[72] [73]
 7. fejezet.
 
-Overfull \hbox (0.84792pt too wide) in paragraph at lines 1508--1509
+Overfull \hbox (0.84792pt too wide) in paragraph at lines 1582--1583
 \T1/ptm/m/n/12 miképp lehet egy web al-ka-lmazás szol-gál-tatását elérhet®vé te
 n-ni egy natív mo-bil felületen.
- []
-
-[73
-
-]
-Overfull \hbox (2.07404pt too wide) in paragraph at lines 1701--1703
-\T1/ptm/m/n/12 Alulírott Var-ga Tamás pro-gramter-vez® in-for-matikus BSc sza-k
-os hall-gató, ki-je-len-tem, hogy
- []
-
-
-Overfull \hbox (4.59113pt too wide) in paragraph at lines 1706--1707
-[]\T1/ptm/m/n/12 Tudomásul veszem, hogy sza-k-dol-go-zatomat a Szege-di Tu-domá
-ny-e-gyetem In-for-matikai
  []
 
 [74
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1759--1760
+Overfull \hbox (2.07404pt too wide) in paragraph at lines 1775--1777
+\T1/ptm/m/n/12 Alulírott Var-ga Tamás pro-gramter-vez® in-for-matikus BSc sza-k
+os hall-gató, ki-je-len-tem, hogy
+ []
+
+
+Overfull \hbox (4.59113pt too wide) in paragraph at lines 1780--1781
+[]\T1/ptm/m/n/12 Tudomásul veszem, hogy sza-k-dol-go-zatomat a Szege-di Tu-domá
+ny-e-gyetem In-for-matikai
+ []
+
+[75
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 1833--1834
 [][]$\T1/pcr/m/n/12 http :[] \OML/cmm/m/it/12 ==\T1/pcr/m/n/12 wiki . hashphp .
  org\OML/cmm/m/it/12 =\T1/pcr/m/n/12 PDO _ Tutorial _ for _ MySQL _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1762--1764
+Underfull \hbox (badness 10000) in paragraph at lines 1836--1838
 []\T1/ptm/m/n/12 Google Charts home-page []$\T1/pcr/m/n/12 https :[] \OML/cmm/m
 /it/12 ==\T1/pcr/m/n/12 google \OMS/cmsy/m/n/12 ^^@[] \T1/pcr/m/n/12 developers
  . appspot .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1770--1771
+Underfull \hbox (badness 10000) in paragraph at lines 1844--1845
 []\T1/ptm/m/n/12 ECMAScript Lan-guage Overview. 2007-10-23. p. 4. []$\T1/pcr/m/
 n/12 http :[] \OML/cmm/m/it/12 ==\T1/pcr/m/n/12 www .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1776--1777
+Underfull \hbox (badness 10000) in paragraph at lines 1850--1851
 [][]$\T1/pcr/m/n/12 http :[] \OML/cmm/m/it/12 ==\T1/pcr/m/n/12 blog . onthewing
 s . net\OML/cmm/m/it/12 =\T1/pcr/m/n/12 2009\OML/cmm/m/it/12 =\T1/pcr/m/n/12 04
 \OML/cmm/m/it/12 =\T1/pcr/m/n/12 08\OML/cmm/m/it/12 =\T1/pcr/m/n/12 deep \OMS/c
@@ -1741,37 +1742,30 @@ msy/m/n/12 ^^@[] \T1/pcr/m/n/12 linking \OMS/cmsy/m/n/12 ^^@[] \T1/pcr/m/n/12 f
 or \OMS/cmsy/m/n/12 ^^@
  []
 
-[75
+[76
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1792--1794
+Underfull \hbox (badness 10000) in paragraph at lines 1866--1868
 []\T1/ptm/m/n/12 Android Stu-dio. []$\T1/pcr/m/n/12 http :[] \OML/cmm/m/it/12 =
 =\T1/pcr/m/n/12 developer . android .
  []
 
-[76]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1822.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1822.
+[77]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1896.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1896.
  (./VargaTamas.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1822.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1822.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1896.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1896.
 
-
-
-Package rerunfilecheck Warning: File `VargaTamas.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `VargaTamas.out':
-(rerunfilecheck)             Before: 419470E363F8613ED51DB133E053B271;7224
-(rerunfilecheck)             After:  263A57D392E0C52A6F609AD3E34E54F9;7224.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1822.
+Package rerunfilecheck Info: File `VargaTamas.out' has not changed.
+(rerunfilecheck)             Checksum: 9FD76330C5C182659CC26591921D32A4;7631.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1896.
  ) 
 Here is how much of TeX's memory you used:
- 24547 strings out of 493109
- 449282 string characters out of 6138586
- 890430 words of memory out of 5000000
- 27163 multiletter control sequences out of 15000+600000
+ 24511 strings out of 493109
+ 448357 string characters out of 6138586
+ 890203 words of memory out of 5000000
+ 27118 multiletter control sequences out of 15000+600000
  46927 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  48i,19n,76p,2182b,3176s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1781,9 +1775,6 @@ enced but does not exist, replaced by a fixed one
 pdfTeX warning (dest): name{http\\unskip\040\\penalty\040\\@M\040\\kern\040.1em
 ://bor.tvarga.hu/borkostolas.apk} has been referenced but does not exist, repla
 ced by a fixed one
-
-pdfTeX warning (dest): name{chapter*.68} has been referenced but does not exist
-, replaced by a fixed one
 
 {x:/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}<x:/texlive/2014/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><x:/texlive/2014/texmf-dist/font
@@ -1798,10 +1789,10 @@ dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><x:/texlive/2014/texmf-dist/fonts
 e1/urw/courier/ucrr8a.pfb><x:/texlive/2014/texmf-dist/fonts/type1/urw/times/utm
 b8a.pfb><x:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><x:/texliv
 e/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on VargaTamas.pdf (76 pages, 501149 bytes).
+Output written on VargaTamas.pdf (77 pages, 502867 bytes).
 PDF statistics:
- 1383 PDF objects out of 1440 (max. 8388607)
- 1269 compressed objects within 13 object streams
- 441 named destinations out of 1000 (max. 500000)
- 918 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1421 PDF objects out of 1440 (max. 8388607)
+ 1305 compressed objects within 14 object streams
+ 450 named destinations out of 1000 (max. 500000)
+ 966 words of extra memory for PDF output out of 10000 (max. 10000000)
 

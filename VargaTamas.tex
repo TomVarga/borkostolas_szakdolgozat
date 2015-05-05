@@ -1411,6 +1411,86 @@ Itt szeretném bemutatni az általam végzett néhány teszt esetet és azok eredményé
 
 \section{Adatbázis szinkronizáció}
 
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
+\subsection{Tesztesetek}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
+\setcounter{TPTCStart}{\value{TC}}
+
+\subsubsection{ID: TC\_\arabic{TC}}\addtocounter{TC}{1}
+\textbf{Teszteljárás:} TP\_\arabic{TP}
+\newline 
+\textbf{Leírás:} Egy megfelelõ bor értékelés megadás.
+\newline 
+\textbf{Bemenet:} Értékelésem = 15
+\newline 
+\textbf{Action:} Az adatok beírása után az "Értékelések szinkronizálása" gombra kattintok.
+\newline 
+\textbf{Elvárt kimenet:} Az értékelések helyesen szinkronizálódnak.
+
+\subsubsection{ID: TC\_\arabic{TC}}\addtocounter{TC}{1}
+\textbf{Teszteljárás:} TP\_\arabic{TP}
+\newline 
+\textbf{Leírás:} Több megfelelõ bor értékelés megadás.
+\newline 
+\textbf{Bemenet:} Értékelésem1 = 15, Értékelésem2 = 4
+\newline 
+\textbf{Action:} Az adatok beírása után az "Értékelések szinkronizálása" gombra kattintok.
+\newline 
+\textbf{Elvárt kimenet:} Az értékelések helyesen szinkronizálódnak.
+
+\subsubsection{ID: TC\_\arabic{TC}}\addtocounter{TC}{1}
+\textbf{Teszteljárás:} TP\_\arabic{TP}
+\newline 
+\textbf{Leírás:} Egy megfelelõ bor értékelés törlése.
+\newline 
+\textbf{Bemenet:} Értékelésem = ""
+\newline 
+\textbf{Action:} Az adatok beírása után az "Értékelések szinkronizálása" gombra kattintok.
+\newline 
+\textbf{Elvárt kimenet:} Az értékelések helyesen szinkronizálódnak.
+
+\subsubsection{ID: TC\_\arabic{TC}}\addtocounter{TC}{1}
+\textbf{Teszteljárás:} TP\_\arabic{TP}
+\newline 
+\textbf{Leírás:} Több megfelelõ bor értékelés törlése.
+\newline 
+\textbf{Bemenet:} Értékelésem1 = "" Értékelésem2 = ""
+\newline 
+\textbf{Action:} Az adatok beírása után az "Értékelések szinkronizálása" gombra kattintok.
+\newline 
+\textbf{Elvárt kimenet:} Az értékelések helyesen szinkronizálódnak.
+
+
+\setcounter{TPTCStop}{\value{TC}}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
+\subsection{Teszteljárás}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
+
+\textbf{ID:}  TP\_\arabic{TP}\addtocounter{TP}{1}
+\newline
+\textbf{Tesztesetek:} 
+\forloop{TPTCStart}{\value{TPTCStart}}{\value{TPTCStart} < \value{TPTCStop}}{
+	TC\_\arabic{TPTCStart}  
+}
+\newline
+\textbf{Leírás:} Ez a teszteljárás az adatbázis szinkronizáció tesztelésének lépéseit írja le.
+\newline
+\textbf{Lépések:}
+\begin{enumerate}
+	\item Android alkalmazás elindítása
+	\item Bejelentkezés
+	\item Értékelés megadása
+	\item Szinkronizáció gomb megnyomása
+	\item Web alkalmazás $demo.php$ oldalának megnyitása
+	\item Visszajelzés értékelése	
+\end{enumerate}
+
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
 \section{Algoritmusok ellenõrzése}
 A tesztelés ezen része még a web oldal egy korai verziója során történt meg, ezért az itt látható képek eltérhetnek a web oldal jelenlegi megjelenésétõl.
 
