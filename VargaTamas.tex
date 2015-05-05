@@ -35,6 +35,8 @@
 \usepackage{graphicx}
 \usepackage{psfrag}
 
+\usepackage{forloop}
+
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage[draft]{pgf}
 \usepackage{setspace}
@@ -346,7 +348,7 @@ Annak ellenére hogy a web oldal legelsõ változata perzisztens adat tárolás nélkü
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{../../Borkostolas_weblap/dbmodel}
-	\caption[Adatbázis model]{Adatbázis model \label{fig:dbmodel}}
+	\caption[Adatbázis modell]{Adatbázis modell \label{fig:dbmodel}}
 \end{figure}
 
 Az adatbázist kiszolgáló szervernek az Oracle által fejlesztett MySQL-t választottam. Ezt ismerem a legjobban, valamint az sem elhanyagolható, hogy nyílt forráskódú talán ezért is rengeteg web szolgáltató által nagyon kedvelt gyakran alkalmazott megoldás. 
@@ -1021,7 +1023,7 @@ Arra is figyeltem, hogy az $onResume$ callback függvényben mindig üres stringre 
 \subsection{Register és ForgotPassword Activity}
 Ez a két activity egy kalap alá vonható, mivel egyszerûen csak a hozzájuk tartozó web oldalakat nyitják meg egy $WebView$ widget-ben. Természetesen mielõtt megpróbálnák betölteni a releváns oldalt a már elõzõleg látott $NetworkChecker.haveNetworkConnection$ segítségével ellenõrzik hogy a mobil eszközön van -e használható internet kapcsolat.
 
-\subsection{Menu}
+\subsection{Menü}
 A menü kezeléshez szükség van egy menü szerkezetét leíró XML-re, ez jelen esetben a $menu\_navigation.xml$. Itt nyílik lehetõség az egyes menü elemekhez kis ikonok hozzárendelésére. A \url{freepik.com} -ról használtam fel két ikont melyek csak akkor jelennek meg ha a menü sávon van elegendõ hely számukra. A menü mint egy navigációs felület mûködik az alkalmazás activity-jei között, tartalma dinamikusan változik attól függõen, hogy melyik éppen az aktív activity, annak az opciója nem kerül kilistázásra. Magának a menünek a létrehozása és kezelése minden anctivity-nak a saját feladata, szerencsére majd látni fogjuk, hogy az $ActionBarActivity$ osztálynak köszönhetõen ez könnyen megy.
 
 \subsection{UserPage}
@@ -1158,9 +1160,122 @@ Az algoritmusok eredményének megjelenítése is tekinthetõ egy fajta szolgáltatásn
 
 
 \chapter{Tesztelés}
-Itt szeretném bemutatni az általam végzett néhány teszt esetet és azok eredményét.
+Itt szeretném bemutatni az általam végzett néhány teszt esetet és azok eredményét, teszt procedúrákra bontva.
+
+\newcounter{TP}
+\setcounter{TP}{1}
+\newcounter{TC}
+\setcounter{TC}{1}
+\newcounter{TPTCStart}
+\newcounter{TPTCStop}
 
 \section{Regisztrációs és bejelentkeztetõ rendszer}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
+\subsection{Tesztesetek}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
+\setcounter{TPTCStart}{\value{TC}}
+
+\subsubsection{ID: TC\_\arabic{TC}}\addtocounter{TC}{1}
+\paragraph{Teszteljárás} TP\_\arabic{TP}
+\paragraph{Leírás} Regisztráció megfelelõ adatok megadásával.
+\paragraph{Bemenet} $user\_name = "tom"$ $user\_password_new = "tom123"$ $user\_password\_repeat = "tom123"$ $user\_email = "tom@tvarga.hu"$ $captcha = korrekt$
+\paragraph{Action} Az adatok beírása után a "Regisztráció" gombra kattintok.
+\paragraph{Elvárt kimenet} Hibaüzenet nélkül tér vissza.
+
+\subsubsection{ID: TC\_\arabic{TC}}\addtocounter{TC}{1}
+\paragraph{Teszteljárás} TP\_\arabic{TP}
+\paragraph{Leírás} Regisztráció nem megfelelõ adatok megadásával.
+\paragraph{Bemenet} $user\_name = "t"$ $user\_password_new = "tom123"$ $user\_password\_repeat = "tom123"$ $user\_email = "tom@tvarga.hu"$ $captcha = korrekt$
+\paragraph{Action} Az adatok beírása után a "Regisztráció" gombra kattintok.
+\paragraph{Elvárt kimenet} Hibaüzenettel tér vissza.
+
+\subsubsection{ID: TC\_\arabic{TC}}\addtocounter{TC}{1}
+\paragraph{Teszteljárás} TP\_\arabic{TP}
+\paragraph{Leírás} Regisztráció hiányos adat mezõkkel.
+\paragraph{Bemenet} $user\_name = ""$ $user\_password_new = "tom123"$ $user\_password\_repeat = "tom123"$ $user\_email = "tom@tvarga.hu"$ $captcha = korrekt$
+\paragraph{Action} Az adatok beírása után a "Regisztráció" gombra kattintok.
+\paragraph{Elvárt kimenet} Hibaüzenettel tér vissza.
+
+\subsubsection{ID: TC\_\arabic{TC}}\addtocounter{TC}{1}
+\paragraph{Teszteljárás} TP\_\arabic{TP}
+\paragraph{Leírás} Regisztráció hibás captcha megadásával.
+\paragraph{Bemenet} $user\_name = "tom1"$ $user\_password_new = "tom123"$ $user\_password\_repeat = "tom123"$ $user\_email = "tom@tvarga.hu"$ $captcha = hibás$
+\paragraph{Action} Az adatok beírása után a "Regisztráció" gombra kattintok.
+\paragraph{Elvárt kimenet} Hibaüzenettel tér vissza.
+
+\setcounter{TPTCStop}{\value{TC}}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
+\subsection{Teszteljárás}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
+\begin{itemize}	
+\item ID: TP\_\arabic{TP}\addtocounter{TP}{1}
+\item Tesztesetek: 
+\forloop{TPTCStart}{\value{TPTCStart}}{\value{TPTCStart} < \value{TPTCStop}}{
+	TC\_\arabic{TPTCStart}, 
+}
+\item Leírás: Ez a teszteljárás a regisztráció tesztelésének lépéseit írja le.
+\item Lépések:
+\begin{enumerate}
+	\item Regisztrációs oldal betöltése.
+	\item Felhasználónév, e-mail, jelszó, kapcsa megadása
+	\item Regisztráció gomb megnyomása
+	\item Visszajelzés értékelése	
+\end{enumerate}
+\end{itemize}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
+\subsection{Tesztesetek}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
+\setcounter{TPTCStart}{\value{TC}}
+
+\subsubsection{ID: TC\_\arabic{TC}}\addtocounter{TC}{1}
+\paragraph{Teszteljárás} TP\_\arabic{TP}
+\paragraph{Leírás} Belépés megfelelõ adatok megadásával.
+\paragraph{Bemenet} $user\_name = "tom"$ $user\_password = "tom123"$
+\paragraph{Action} Az adatok beírása után a "Bejelentkezés" gombra kattintok.
+\paragraph{Elvárt kimenet} Hibaüzenet nélkül tér vissza.
+
+\subsubsection{ID: TC\_\arabic{TC}}\addtocounter{TC}{1}
+\paragraph{Teszteljárás} TP\_\arabic{TP}
+\paragraph{Leírás} Belépés nem megfelelõ adatok megadásával.
+\paragraph{Bemenet} $user\_name = "t"$ $user\_password = "tom123"$
+\paragraph{Action} Az adatok beírása után a "Bejelentkezés" gombra kattintok.
+\paragraph{Elvárt kimenet} Hibaüzenettel tér vissza.
+
+\subsubsection{ID: TC\_\arabic{TC}}\addtocounter{TC}{1}
+\paragraph{Teszteljárás} TP\_\arabic{TP}
+\paragraph{Leírás} Belépés megfelelõ adatok megadásával.
+\paragraph{Bemenet} $user\_name = "tom"$ $user\_password = "tom123"$
+\paragraph{Action} Az adatok beírása után a "Bejelentkezés" gombra kattintok.
+\paragraph{Elvárt kimenet} Hibaüzenet nélkül tér vissza.
+
+\setcounter{TPTCStop}{\value{TC}}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
+\subsection{Teszteljárás}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
+\begin{itemize}	
+	\item ID: TP\_\arabic{TP}\addtocounter{TP}{1}
+	\item Tesztesetek: 
+	\forloop{TPTCStart}{\value{TPTCStart}}{\value{TPTCStart} < \value{TPTCStop}}{
+		TC\_\arabic{TPTCStart}, 
+	}
+	\item Leírás: Ez a teszteljárás a bejelentkezés tesztelésének lépéseit írja le.
+	\item Lépések:
+	\begin{enumerate}
+		\item Felhasználónév, jelszó megadása
+		\item Belépés gomb megnyomása
+		\item Visszajelzés értékelése	
+	\end{enumerate}
+\end{itemize}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
+
 \section{Demo adatkezelésének ellenõrzése}
 \section{Algoritmusok ellenõrzése kis adatokon}
 \section{Algoritmusok ellenõrzése ismert eredményekkel}
