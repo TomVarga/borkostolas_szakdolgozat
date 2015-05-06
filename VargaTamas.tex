@@ -355,8 +355,9 @@
 	\subsection{scores tábla}
 	
 	Ahogy az értékeléseket tartalmazó $scores$ táblát létrehozó szkript  \ref{lst:scores create} kódrészlet is tükrözi, látható, hogy a táblában a felhasználók azonosítóját $user\_id$ tartalmazó oszlop és a borok azonosítóját $wine\_id$ tartalmazó oszlop is mint $FOREIGN\_KEY$ szerepel, amik természetesen a borokat $wines$ és a felhasználókat $users$ tartalmazó táblák megfelelõ oszlopaira hivatkoznak. Ezek segítik az adatbázis konzisztenciájának megõrzését. Amikor egy felhasználó vagy bor törlésre kerül akkor az $ON\ DELETE\ CASCADE$ megkötés hatására az értékeléseket tartalmazó $scores$ táblából azok a sorok is törlõdni fognak amik így már nem létezõ azonosítókra hivatkoznának. Itt talán még érdemes kitérni arra is, hogy takarékossági okokból az értékelések maximum nyolc számjegybõl állhatnak, amiben a decimális pontosságot három tizedes jegyig engedélyezzük. 
-	
-	\begin{minipage}{\linewidth}
+
+ 	
+	\noindent\noindent\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=sql,label={lst:scores create}, caption={Az értékeléseket tartalmazó ($scores$) táblát létrehozó parancs}]
 CREATE TABLE IF NOT EXISTS `scores` (
 `user_id` int(11) DEFAULT NULL COMMENT 'user''s id',
@@ -440,7 +441,7 @@ FOREIGN KEY (`wine_id`) REFERENCES wines(`wine_id`) ON DELETE CASCADE
 	
 	Érdemes még azért a CSS szintaktikájával is tisztában lenni. Röviden egy CSS szabály egy $selector$-ból és egy deklarációs blokkból épül fel.
 	
-	\begin{minipage}{\linewidth}
+	\noindent\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=html,label={lst:css syntax}, caption={CSS szintaxis}]
 h2 {color: #bb1f42; font-size: 1.2em;}
 		\end{lstlisting}
@@ -450,7 +451,7 @@ h2 {color: #bb1f42; font-size: 1.2em;}
 	
 	\section{PHP}
 	A PHP ($PHP:\ Hypertext\ Preprocessor$) egy széles körben elterjedt nyílt forráskódú általános célokra kifejlesztett szkript nyelv amely különösképpen alkalmas webes fejlesztésre, valamint HTML -be ágyazható. Ezt az alábbi példa \ref{lst:php hello world} kódrészlet szemlélteti.
-	\begin{minipage}{\linewidth}
+	\noindent\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=html,label={lst:php hello world}, caption={PHP Hello World!}]
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
@@ -475,7 +476,7 @@ h2 {color: #bb1f42; font-size: 1.2em;}
 	\subsection{PHP Data Objects (PDO)}
 	A PHP Data Objects (PDO) a PHP adatbázis elérést nyújtó interfésze. Minden adatbázis meghajtó amely implementál egy PDO interfészt elérhetõvé tehet az adott adatbázisra specifikus funkciókat. Természetesen önmagában a PDO alkalmatlan adatbázis kezelésre, mindenképpen egy konkrét adatbázis meghajtót kell használni. Mivel a web alkalmazást egy $MySQL$ adatbázis szerver szolgálja ki ezért én a hozzá tartozó $PDO\_MYSQL$-t használtam. A PDO alapértelmezetten együtt jár a PHP 5.1-el és elérhetõ PECL kiterjesztésként is PHP 5.0 alatt, de mivel a PDO -nak szükségen van PHP 5 magjában bemutatott objektum orientáltságra, ezért a PDO nem fut korábbi PHP verziókon. 
 	
-	\begin{minipage}{\linewidth}
+	\noindent\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:php pdo connection}, caption={PHP PDO Connector használata}]
 private function databaseConnection(){
   if ($this->db_connection != null) {
@@ -497,7 +498,7 @@ private function databaseConnection(){
 	
 	Az adatbázis kapcsolatot nagyon egyszerû bezárni ahogy a \ref{lst:php pdo close connection} kódrészlet is mutatja. Ez nagyon fontos is, hogy mindig bezárjuk miután befejeztük a használatát, mivel sok szolgáltató limitálja, hogy hány aktív kapcsolatot kezel az adatbázis szerverük.
 	
-	\begin{minipage}{\linewidth}
+	\noindent\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:php pdo close connection}, caption={PHP PDO kapcsolat lezárása}]
 db_connection = null;
 		\end{lstlisting}
@@ -505,7 +506,7 @@ db_connection = null;
 	
 	Miután sikeresen létre hoztunk egy aktív adatbázis kapcsolatot SQL utasításokat a \ref{lst:php pdo sql query} kódrészletben látott módon indíthatunk. A példában éppen lekérjük egy felhasználó összes információját, majd az így kapott információkat egy objektumban adja vissza a $fetchObject\left(\right)$ metódus. Tehát például a $user\_id$ a \ref{lst:php pdo result handling} kódrészletben látottak szerint lesz elérhetõ. Használatos még többek között a $fetchAll\left(\right)$ ami az SQL lekérdezés által visszaadott összes sort egy egy tömbben adja vissza. Hasznos lehet még ismerni a $rowCount\left(\right)$ metódust, ami megadja az SQL parancs által érintett sorok számát.
 	
-	\begin{minipage}{\linewidth}
+	\noindent\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:php pdo result handling}, caption={PHP PDO eredmény kezelés}]
 $user_id = $result_row->user_id;
 		\end{lstlisting}
@@ -513,7 +514,7 @@ $user_id = $result_row->user_id;
 	
 	Vegyük észre, hogy az SQL lekérdezésbe nem konkatenáljuk bele a változókat, ha ilyesmit tennénk, akkor az alkalmazásunkat nagyon könnyen feltörhetnék, hiszen éppen ilyen programozói hibákat kihasználva mûködnek az $sql injection$ jellegû támadások. Tehát ha változókat akarunk használni az SQL lekérdezésünkben, akkor a $prepare\left(\right)$ metódusban a behelyettesítendõ helyre kettõsponttal megelõzött változónevet kell írni, amelyet majd a $bindValue\left(\right)$ metódussal fogunk ténylegesen a mi változónkhoz kötni. Ez elsõ paraméterként egy stringet vár, ami az SQL lekérdezésben szereplõ változó helyét határozza meg. A második paramétere a mi PHP változónk aminek az értékét az SQL parancsban szeretnénk használni. A harmadik és egyben utolsó na meg opcionális paraméter pedig az elsõ paraméterre vonatkozóan definiálja annak adat típusát. Az $execute\left(\right)$ -hez nem kell sokat hozzáfûzni, egyszerûen végre hajtja a fentiek szerint elõkészített SQL parancsot.
 	
-	\begin{minipage}{\linewidth}
+	\noindent\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:php pdo sql query}, caption={PHP PDO SQL lekérdezés}]
 $query_user = $this->db_connection->prepare('SELECT * FROM users WHERE user_name = :user_name');
 $query_user->bindValue(':user_name', $user_name, PDO::PARAM_STR);
@@ -527,7 +528,7 @@ $result_row = $query_user->fetchObject();
 	
 	Sütik avagy $cookies$ alapvetõen olyan stringek amik több mezõt is tartalmazhatnak. A válasz fejlécében a szerver egy vagy több sütit küldhet a böngészõnek. A süti $value$ mezõje rejti a tényleges adatokat amelyben bármilyen adat tárolható (azért van néhány limitáció), de teljesen alkalmas a felhasználó azonosítására és hasonló feladatokra. Egy sütit a $setcookie\left(\right)$ paranccsal küldhetünk a kliens böngészõje felé. Ennek a függvénynek a szignatúráját a \ref{lst:php setcookie} kódrészlet mutatja.
 	
-	\begin{minipage}{\linewidth}
+	\noindent\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:php setcookie}, caption={PHP setcookie függvény}]
 setcookie(name [, value [, expire [, path [, domain [, secure ]]]]]);
 		\end{lstlisting}
@@ -544,7 +545,7 @@ setcookie(name [, value [, expire [, path [, domain [, secure ]]]]]);
 		\item\textbf{secure}: Alapértelmezett értéke $false$. Viszont ha ez igazra van állítva, akkor a süti csak $https$ kapcsolaton keresztül lesz elküldve.
 	\end{itemize}
 	
-	\begin{minipage}{\linewidth}
+	\noindent\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:php cookie expire}, caption={PHP cookie expire generálása 2 hét múlvára}]
 $expire = time() + 1209600;
 		\end{lstlisting}
@@ -575,7 +576,7 @@ $expire = time() + 1209600;
 	
 	A \ref{lst:ajax example} kódrészletben bemutatott példán keresztül látható, hogy a borkóstolás web alkalmazáson belül hogyan használtam az AJAX technológiát.
 	
-	\begin{minipage}{\linewidth}
+	\noindent\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:ajax example}, caption={AJAX példa kódrészlet}]
 var response;
 var xmlhttp=new XMLHttpRequest();
@@ -598,7 +599,7 @@ xmlhttp.send();
 	
 	A könyvtár használatához a \ref{lst:include jquery} kódrészletben látott módon elõször be kell azt töltenünk.
 	
-	\begin{minipage}{\linewidth}
+	\noindent\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:include jquery}, caption={jQuery betöltése}]
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 		\end{lstlisting}
@@ -615,18 +616,18 @@ xmlhttp.send();
 	
 	jQuery -ben több DOM elem betöltése, illetve manipulálása általában azzal kezdõdik, hogy meghívjuk a "\$" függvényt egy CSS selector stringgel. Ez majd egy jQuery objektumot fog referencia szerint visszaadni amely tartalmazza az összes erre illeszkedõ HTML elemet az oldalon. $\$\left("div.valami"\right)$ például egy olyan jQuery objektumot ad vissza amely tartalmazza a $valami$ CSS osztály összes $div$ elemét. Ez után akár közvetlenül a visszakapott halmazon hívhatjuk a jQuery függvényeket, vagy azok valamely elemén. Egy tipikus használati mód látható a \ref{lst:jquery typical use} kódrészletben, amely azt mutatja be hogyan indíthatunk parancsokat miután a böngészõ befejezte az oldal betöltését.
 	
-	\begin{minipage}{\linewidth}
+	\noindent\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:jquery typical use}, caption={jQuery tipikus használat}]
 $(window).on('load', function () {
   // jQuery kód
 });
 		\end{lstlisting}
 	\end{minipage}
-	
+		
 	\subsection{Numeric Javascript}
 	A $Numeric\ Javascript$ egy JavaScript könyvtár amely segítségével numerikus analízisbéli számításokat végeztethetünk kliens oldalon a web böngészõben. Annak köszönhetõen, hogy csak a JavaScript nyelvet használja fel a könyvtár több típusú böngészõben is futtatható, természetesen feltéve, hogy azok támogatják a JavaScript-et. A szkript használata sokat segít abban, hogy a számolás igényes feladatokat ne a szervert terheljék, kis kapacitással bíró szerverek esetén vagy esetleg olyankor amikor az alkalmazást egy limitált erõforrásokkal rendelkezõ felhasználó futtatja a szerven az ilyen megközelítés elengedhetetlen. A könyvtárat Sébastien Loisel készítette és MIT licenccel publikálta \cite{numericjs source}. A könyvtár használatához egyszerûen csak be kell töltenünk azt a már megszokott módon (\ref{lst:include numeric} kódrészlet) és máris használhatjuk a könyvtár által nyújtott metódusokat.
 	
-	\begin{minipage}{\linewidth}
+	\noindent\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:include numeric}, caption={Numeric Javascript betöltése}]
 <script type="text/javascript" src="http://numericjs.com/numeric/lib/numeric-1.2.6.min.js"></script>
 		\end{lstlisting}
@@ -641,7 +642,7 @@ $(window).on('load', function () {
 	
 	A Google Charts egy grafikonokat vizualizáló eszköz, amit leggyakrabban $JavaScript$-tel szoktak használni. Elõször be kell tölteni a Google Chart könyvtárat és a hozzá szükséges AJAX API-t mint az a \ref{lst:init google charts} kódrészletben is látható.
 	
-	\begin{minipage}{\linewidth}
+	\noindent\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:init google charts}, caption={Google Charts API betöltése}]
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script type="text/javascript">
@@ -668,7 +669,7 @@ $(window).on('load', function () {
 	
 	Az így leírt adatsor tényleges elõkészítését a $Google Charts$ számára a \ref{lst:array to data table} kódrészletben látott utasítás végzi el.
 	
-	\begin{minipage}{\linewidth}
+	\noindent\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:array to data table}, caption={Google Charts tömbbõl google data table készítés}]
 var data = google.visualization.arrayToDataTable(graphData);
 		\end{lstlisting}
@@ -676,7 +677,7 @@ var data = google.visualization.arrayToDataTable(graphData);
 	
 	Végül példányosítás után megjeleníthetõ az általunk választott grafikon a kívánt HTML $<div>$ azonosítóban, de még mielõtt ezt megtennénk lehetõségünk van a megjelenítés módjának testreszabására mint az a \ref{lst:google chart view and instanciation} kódrészletben is látszik, konkrétan például az oszlopok által reprezentált értékek kirajzolására azok mellé. 
 	
-	\begin{minipage}{\linewidth}
+	\noindent\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:google chart view and instanciation}, caption={Google Charts megjelenítésének beállítása és a példányosított objektum beszúrása a megfelelõ $<div>$-be}]
 var view = new google.visualization.DataView(data);
 view.setColumns([0, 1,
@@ -701,7 +702,7 @@ chart.draw(view);
 	
 	Itt említenék meg egy a $demo.php$ oldalon is elõkerülõ érdekes kényelmi funkciót, amely a táblázatok görgethetõsége felül és alul egyaránt. Ezt úgy értem el, hogy a táblázatokat bele tettem egy konténerbe amely két részre van osztva, az egyik a bal a másik a jobb oldali táblázatot tartalmazza. A bal oldali táblázatot tartalmazó konténer rendelkezik egy másik konténerre amely közvetlen a táblázat felett helyezkedik el, itt található a felsõ görgetõ sáv. A \ref{lst:double scroll} kódrészletben látható jQuery szkript pedig azt teszi, hogy amikor bármelyik a táblázatokat mozgató görgõ elmozdul, akkor a másikat is elmozdítja. Persze az egységes megjelenítés érdekében még elõször be kell állítani, hogy a felsõ görgetõ sáv szélessége megegyezzen a táblázat, avagy az alsó görgetõ sáv szélességével.
 	
-	\begin{minipage}{\linewidth}
+	\noindent\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:double scroll}, caption={Dupla görgetõ sáv jQuery -vel}]
 $(function () {
   $('.topScrollingBlockWrapper').on('scroll', function () {
@@ -753,7 +754,7 @@ $(window).on('load', function () {
 	
 	A mi esetünkben a jelszó hashelés PHP 5.5 alatt az alábbi módon végezhetõ el: A \ref{lst:generate password hash} kódrészletben látottak szerint generáljunk egy hasht a tényleges jelszóból ahol a $\$pass$ a jelszó, $PASSWORD\_DEFAULT$ a PHP -ban definiált globális változó ami megadja a hasheléshez használt algoritmust (lehetséges, hogy ez változni fog ahogy a szerverek hardware felszereltsége javul).
 	
-	\begin{minipage}{\linewidth}
+	\noindent\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:generate password hash}, caption={Jelszó hash generálás PHP 5.5 alatt}]
 password_hash($pass, PASSWORD_DEFAULT);
 		\end{lstlisting}
@@ -761,7 +762,7 @@ password_hash($pass, PASSWORD_DEFAULT);
 	
 	A felhasználó által megadott $\$pass$ jelszó és az adatbázisban tárolt jelszó hash ($\$hash$) egyezését a kódrészletben látott paranccsal tehetjük meg.
 	
-	\begin{minipage}{\linewidth}
+	\noindent\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:verify password hash}, caption={Jelszó hash verifikálása PHP 5.5 alatt}]
 password_verify($pass, $hash);
 		\end{lstlisting}
@@ -772,7 +773,7 @@ password_verify($pass, $hash);
 	
 	Az egyik a $Registration.php$ -ban található $Registration$ amely a regisztrációs folyamatért felelõs. Fõ metódusa a \ref{lst:php register} kódrészletben látott szignatúrájú függvény.
 	
-	\begin{minipage}{\linewidth}
+	\noindent\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:php register}, caption={php-login registerNewUser szignatúra}]
 registerNewUser($user_name, $user_email, $user_password, $user_password_repeat, $captcha)
 		\end{lstlisting}
@@ -784,7 +785,7 @@ registerNewUser($user_name, $user_email, $user_password, $user_password_repeat, 
 	
 	Míg a $Registration$ osztály csak közvetlenül a regisztrációs oldalról használt, addig a $Login$ metódusai az osztály példányosítása után több helyen is elõkerülnek, de fõképp a $sideBarProfile.php$ fájl ahol találkozhatunk vele. Ez felelõs a felhasználó állapotának nyomkövetéséért és interakció biztosításért a lebegõ oldalsó menübáron. Használatakor mindig elõször ellenõrizni kell, hogy a felhasználó már be van -e jelentkezve, ezt a \ref{lst:php login} kódrészletben látott módon tehetjük meg. Ez után már biztosak lehetünk benne, hogy a $\_SESSION\left['user\_name'\right]$ változó tartalmazza az aktív felhasználó nevét, amely mivel egy egyedi mezõként van reprezentálva az adatbázisban így alkalmas a felhasználó egyértelmû azonosítására.
 	
-	\begin{minipage}{\linewidth}
+	\noindent\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:php login}, caption={példal a Login osztály használatára}]
 $login = new Login();
 if ($login->isUserLoggedIn() == true) {
@@ -795,7 +796,7 @@ if ($login->isUserLoggedIn() == true) {
 	
 	Mivel az oldalsó lebegõ menü a web alkalmazás minden dinamikus oldalán megtalálható ezért biztosak lehetünk benne, hogy az oldalon a $Login$ osztály egy példánya már létre lett hozva, így annak metódusai szabad használhatóvá válnak bárhol a \ref{lst:load sidebar} kódrészlet alatt.
 	
-	\begin{minipage}{\linewidth}
+	\noindent\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:load sidebar}, caption={Sidebar betöltése a dinamikus oldalakon}]
 <!--SIDE BAR CONTENT-->
 <?php include('sidebar.php'); ?>
@@ -814,7 +815,7 @@ if ($login->isUserLoggedIn() == true) {
 	\newline
 	Miután a $dbUtils.php$ segítségével felépítettük az adatbázis kapcsolatot, megkezdõdhet a bemenetet kezelõ felület létrehozásra. Ez két részbõl áll. Mindkettõ egy - egy táblázatban található. A bal oldali a $wines$ táblában található borokat listázza kis és a \linebreak$borkostolasEredemenyek.php$ oldalon látottak szerint itt is felül és alul is görgethetõ horizontálisan a táblázat a kényelmesebb kezelés érdekében. A jobb oldali táblázat felelõs a beveti input mezõk tárolásáért. Ezek a mezõk a borok azonosítói alapján jönnek létre és alapértelmezetten a felhasználó által már megadott értékeléseket tartalmazzák. Tehát például az 5. azonosítójú bor input mezõje a \ref{lst:wine score input} kódrészletben látottak szerint fog kinézni.
 	
-	\begin{minipage}{\linewidth}
+	\noindent\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:wine score input}, caption={Példa input mezõre címkézésére}]
 <input id="wine_score_5" type="text" name="wine_score_5" class="columnInput" value="">
 		\end{lstlisting}
@@ -852,7 +853,7 @@ if ($login->isUserLoggedIn() == true) {
 	
 	Az így elõkészített segéd tömbök felhasználásával az algoritmus a következõ képen mûködik: Kelleni fog a $tWRight$ amely a kóstolók boronkénti minden egyes borra a $nScore/tSumBytaster\left[sTaster\right]$ értéket tárolja feltéve, hogy az adott bort értékelte a kóstoló, mert különben ez az érték nulla. A $tWLeft$ hasonlóan minden kóstolóra és minden egyes borra tárol kiszámolt értékeket amelyeknél szintén, ha a kóstoló nem értékelte az adott bort akkor a tárolt érték nulla ként van definiálva, de ha értékelte az adott bort, akkor azt a \ref{lst:tWLeft} kódrészletben látottak szerint kapjuk meg.
 	
-	\begin{minipage}{\linewidth}
+	\noindent\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:tWLeft}, caption={tWLeft értékének kiszámítása}]
 $tWLeft[$sTaster][$sItem] = (array_sum($tDiffFromAvgByItem[$sItem])-$nScore)/((count($tItemScores[$sItem])-1)*array_sum($tDiffFromAvgByItem[$sItem]));
 		\end{lstlisting}
@@ -973,7 +974,7 @@ $tWLeft[$sTaster][$sItem] = (array_sum($tDiffFromAvgByItem[$sItem])-$nScore)/((c
 	\subsection{DAO}
 	A \textbf{D}atabase \textbf{A}ccess \textbf{O}bject (DAO) interface feladata az adatbázis elérés biztosítása. Két implementációja van. Az egyik a $LocalDAO$ amely a helyi SQLite adatbázishoz kapcsolódik. A másik pedig a $RemoteDAO$ amely a távoli adatbázis elérést teszi lehetõvé. Mindkét osztálynak implementálnia kell a \ref{lst:DAO interface} kódrészletben látott metódusokat. A két adatbázis összekapcsolásáról majd egy késõbbi fejezetben esik szó, itt csak a helyi adatbázis felépítésére térnék ki.
 	
-	\begin{minipage}{\linewidth}
+	\noindent\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=java,label={lst:DAO interface}, caption={DAO interface metódusai}]
 public ArrayList<Wine> getWines();    
 public ArrayList<Score> getScores(int user_id);    
@@ -1010,7 +1011,7 @@ public boolean addOrUpdateScore(Score score);
 	
 	A \ref{lst:onBackPressed} kódrészletben látott egyszerû megoldásnak köszönhetõen nem lehet ebbõl az activity-bõl vissza lépni az õt megelõzõ activity-re így elkerülve azt az eshetõséget, hogy valaki kijelentkezés után a vissza gomb használatával vissza lépjen a felhasználói adatokat kezelõ activity-re.
 	
-	\begin{minipage}{\linewidth}
+	\noindent\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=java,label={lst:onBackPressed}, caption={Vissza gomb letiltása}]
 		@Override
 public void onBackPressed() { return; }
@@ -1040,7 +1041,7 @@ public void onBackPressed() { return; }
 	
 	Az alsó $winesList$ részre amely egy $ListView$ -t tartalmaz és a bor adatbázis, valamint a felhasználó értékeléseinek megjelenítése a feladata, illetve a felsõ $detailsContainer$ részre amely $RelativeView$ -ot használ a $winesList$ -ban kiválasztott bor részletes adatainak megjelenítésére, valamint az értékeléshez szükséges bemeneti mezõ létrehozására. Az egész alkalmazás megalkotása során azt mondanám, hogy ennek a két résznek az összekötés, illetve kiszolgálása volt a legnehezebb feladat. Az egyik ilyen nehézség az volt, hogy a bemeneti mezõ alapértelmezetten elõtérbe akar lenni az activity indításakor, ez pedig a virtuális billentyûzet elõhívásával jár, ami kitakarta a $wineList$ nagy részét. Ezért a bemeneti mezõhöz használt $TextView$ elemre meg kellett hívnom a $setFocusable\left(\right)$ és a $setFocusableInTouchMode\left(\right)$ metódusokat $false$ paraméterrel. Egy másik felületi kezelhetõséggel kapcsolatos probléma a $winesList$ lista elemeinél jött elõ, ugyanis nem lehetett rájuk kattintani, ezt a \ref{lst:ListView blocksDescendants} kódrészletben látott változó beállításával oldottam meg. Csak a fenti konfigurációs beállítások után sikerült elérni, hogy a felhasználói felület az elvárt szerint mûködjön, sajnos a két probléma kombinációja igen érdekes és számomra elõször nehezen értelmezhetõ tünetekkel kerültek elõ.
 	
-	\begin{minipage}{\linewidth}
+	\noindent\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=java,label={lst:ListView blocksDescendants}, caption={A $ListView$ elmeinek elõtérbehozhatóságnak beállítása}]
 android:descendantFocusability="blocksDescendants" 
 		\end{lstlisting}
@@ -1051,7 +1052,7 @@ android:descendantFocusability="blocksDescendants"
 	
 	A lista elemekkel való feltöltéséért a $WinesAdapter$ osztály felelõs, amely az $ArrayAdapter$ -ból származik és $ScoredWine$ típusú objektumokat kezel. A $getView\left(\right)$ metódus felüldefiniálására azért van szükség, mert nem az alapértelmezett lista elem elrendezést használtam, az adott lista elem elrendezés adatokkal feltöltése a \ref{lst:ListView elem getView} kódrészletben látottak szerint történik.
 	
-	\begin{minipage}{\linewidth}
+	\noindent\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=java,label={lst:ListView elem getView}, caption={Lista elem tartalmma való feltöltése}]
 public View getView(int position, View convertView, ViewGroup parent) {
   ScoredWine wine = getItem(position);
@@ -1096,7 +1097,7 @@ public View getView(int position, View convertView, ViewGroup parent) {
 	
 	Még mielõtt bele mélyülnénk a szolgáltatások specifikus kezelésébe, mindenképpen érdemes néhány szót ejteni az Android alkalmazás szálkezelésérõl. A fejlesztés során nagyon könnyû bele futni a $NetworkOnMainThreadException$ -be, amely akkor következik be, amikor az alkalmazás hálózati mûveletet próbál végrehajtani a fõ szálában. Annak ellenére, hogy ez csak az Android $Honeycomb$ verziója után lett bevezetve, érdemes, mégis érdemes ezt elkerülnünk, feltéve, hogy az alkalmazásunk támogatja ezt az SDK verziót. Ezt könnyen elkerülhetjük, ha minden hálózati mûveletet egy új szálon végzünk el, erre látható példa a \ref{lst:new thread for network} kódrészletben is.
 	
-	\begin{minipage}{\linewidth}
+	\noindent\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=java,label={lst:new thread for network}, caption={Új szál létrehozásra}]
 new Thread(new Runnable() {
   public void run() {
@@ -1111,7 +1112,7 @@ new Thread(new Runnable() {
 	\section{RemoteDAO}
 	Az Android alkalmazás távoli adatbázis elérésért felelõs osztálya amely az elõzõ fejezetben látott $DAO$ interface metódusait implementálja. A $POST$ mûveletekért elvégzésért az $org.apache.http.client$ csomag felelõs.
 	
-	\begin{minipage}{\linewidth}
+	\noindent\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=java,label={lst:service access}, caption={Szolgáltatás használat példa}]
 httpclient=new DefaultHttpClient();
 httppost= new HttpPost("http://bor.tvarga.hu/services/getWineData.php"); // make sure the url is correct.
@@ -1151,7 +1152,7 @@ for (int i=0; i < jsonArray.length(); i++ ){
 	\section{Eredmények}
 	Az algoritmusok eredményének megjelenítése is tekinthetõ egy fajta szolgáltatásnak, amely a felhasználó azonosítója alapján generálja a megjelenítendõ tartalmat az android alkalmazás számra. Nem szorosan tartozik ide, érdekes lehet talán az, hogy az algoritmust választó legördülõ menü használata magával vonja a számolások indítását. Ez a \ref{lst:dropdown onSelectChange} kódrészletben látott kódnak köszönhetõ.
 	
-	\begin{minipage}{\linewidth}
+	\noindent\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=html,label={lst:dropdown onSelectChange}, caption={Legordülõ menübeli algoritmus választás egybõl indítja a számolást}]
 <select id='algoritmus' name='Algoritmus' onchange='onSelectChange()' style="width: 100%;">
 		\end{lstlisting}
