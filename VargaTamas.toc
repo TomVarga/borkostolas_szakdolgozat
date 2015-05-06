@@ -139,7 +139,7 @@
 \select@language {magyar} \contentsline {subsection}{\numberline {5.3.3}Tesztesetek}{65}{subsection.5.3.3}
 \select@language {magyar} \setcounter {tocdepth}{2}
 \select@language {magyar} \contentsline {subsubsection}{ID: TC\_18}{65}{section*.66}
-\select@language {magyar} \contentsline {subsubsection}{ID: TC\_19}{65}{section*.67}
+\select@language {magyar} \contentsline {subsubsection}{ID: TC\_19}{66}{section*.67}
 \select@language {magyar} \contentsline {subsubsection}{ID: TC\_20}{66}{section*.68}
 \select@language {magyar} \contentsline {subsubsection}{ID: TC\_21}{66}{section*.69}
 \select@language {magyar} \setcounter {tocdepth}{1}
