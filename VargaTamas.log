@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2015.5.6)  6 MAY 2015 02:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2015.5.6)  6 MAY 2015 03:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1337,7 +1337,7 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\H' on input line 1569.
 
-[66] <algoritmus_kis_adatok.png, id=1080, 491.58656pt x 304.88907pt>
+[66] <algoritmus_kis_adatok.png, id=1081, 491.58656pt x 304.88907pt>
 File: algoritmus_kis_adatok.png Graphic file (type png)
 
 <use algoritmus_kis_adatok.png>
@@ -1440,10 +1440,10 @@ dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><x:/texlive/2014/texmf-dist/fonts
 e1/urw/courier/ucrr8a.pfb><x:/texlive/2014/texmf-dist/fonts/type1/urw/times/utm
 b8a.pfb><x:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><x:/texliv
 e/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on VargaTamas.pdf (76 pages, 500818 bytes).
+Output written on VargaTamas.pdf (76 pages, 500895 bytes).
 PDF statistics:
- 1308 PDF objects out of 1440 (max. 8388607)
- 1195 compressed objects within 12 object streams
+ 1309 PDF objects out of 1440 (max. 8388607)
+ 1196 compressed objects within 12 object streams
  463 named destinations out of 1000 (max. 500000)
  702 words of extra memory for PDF output out of 10000 (max. 10000000)
 
