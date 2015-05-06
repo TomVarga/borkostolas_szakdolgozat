@@ -81,6 +81,7 @@
 
 %Hyperlinkek:
 \usepackage{hyperref}
+\hypersetup{unicode=true}
 
 
 \begin{document}
@@ -221,7 +222,7 @@
 	
 	A két kóstoló közti súly $x_i$ és $x_j$ úgy definiálható, mint egy rejtett átmeneti valószínûség 1 által definiálva. Ekkor a $p=W_{xp}$ HITS egyenlet  $p=\left(p_1,p_2,...,p_m\right)$ megoldás megadja a kóstolók rangsorát.
 	
-	\begin{figure}[!h]
+	\begin{figure}[!ht]
 		\begin{center}
 			\begin{tikzpicture}[
 			> = stealth, % arrow head style
@@ -343,7 +344,7 @@
 	\section{Adatbázis}
 	Annak ellenére, hogy a weboldal legelsõ változata perzisztens adat tárolás nélkül üzemelt és az implementált algoritmus tesztelése részben -e nélkül zajlottak, nem jelenti azt, hogy a végsõ változatból ez kimaradt volna, vagy esetleg egy nem teljesen kidolgozott adat tároló hierarchiával rendelkezne. Pontosan az ellenkezõje az igaz. Az adatbázis táblák létrehozása elõtt jelentõs idõt fordítottam azok megtervezésére, szem elõtt tartva azt, hogy a tervezett alkalmazásoknak milyen igényei lesznek. Az adatbázis relációs sémáját a \ref{fig:dbmodel} ábra ábrázolja. Fontos még megemlíteni, hogy az adatbázis összes táblája $utf8\_unicode\_ci$ alapértelmezett karakter kódolást alkalmaz, amely biztosítja, hogy többek közt a magyar nyelvi sajátos karakteri is megfelelõen tárolódjanak.
 	
-	\begin{figure}[h!]
+	\begin{figure}[!ht]
 		\centering
 		\includegraphics[width=0.7\linewidth]{../../Borkostolas_weblap/dbmodel}
 		\caption[Adatbázis modell]{Adatbázis modell \label{fig:dbmodel}}
@@ -375,7 +376,7 @@ FOREIGN KEY (`wine_id`) REFERENCES wines(`wine_id`) ON DELETE CASCADE
 	
 	A borokat tartalmazó $wines$ tábla egyáltalán nem bonyolult. A tábla indexelését a \linebreak$wine\_id$ segítségével történek amely minden egyes új bor hozzáadásánál automatikusan növekszik eggyel az $AUTO\_INCREMENT$ -nek köszönhetõen. Az évjáratot \linebreak$wine\_year$ és az árat $wine\_price$ tartalmazó mezõkön kívül az összes többi megadása kötelezõ. Az évjárat egy, maximum négy jegyû egész szám lehet, míg az ára akár hatvannégy jegyû is lehet. Jelenleg a borok ára magyar Forintban értendõ. Ezek a megkötések fõképp a projekt fejlesztése alatt megismert borkóstolási versenyek és adatbázisok szerkezeti felépítése miatt lettek így meghatározva. A többi mezõ kötelezõ szöveggel való feltöltését az alábbi táblázat \ref{tbl:wines-content} határozza meg:
 	
-	\begin{table}[h!]
+	\begin{table}[!ht]
 		\begin{center}
 			\begin{tabular}{| l | l |}
 				\hline
@@ -652,7 +653,7 @@ $(window).on('load', function () {
 	
 	Majd a bemeneti adatokat úgy kell rendezni ahogy az a könyvtár osztályban definiálva van, ami konkrét esetünkben egy $JavaScript$ tömböket tartalmazó tömböt jelent, amelynek elsõ eleme az adatok típusainak megnevezését tartalmazza. A tömb többi eleme pedig az így definiált sorban megadott értékeket kell, hogy tartalmazzak minden egyes megjelenítendõ grafikon elemre vonatkozóan. Ez nagyon intuitív ha a \ref{tbl:google charts data table} táblázatban látottak szerint gondolunk a $Google Charts$ által várt bemeneti formátumra, csak sor folytonosan leírva.
 	
-	\begin{table}[h!]
+	\begin{table}[!ht]
 		\begin{center}
 			\begin{tabular}{| l | l |}
 				\hline
@@ -1031,7 +1032,7 @@ public void onBackPressed() { return; }
 	A szinkronizáció módjáról késõbb ejtenék szót, itt most fõképp az activity felépítésére térnék ki. Elõször is arra hívnám fel a figyelmet, hogy ez az activity már a \linebreak$ActionBarActivity$ kiterjesztettje. Ez azt jelenti, hogy rendelkezik olyan metódusokkal amelyek a menü kezeléséért felelõsek. Az $onPrepareOptionsMenu$ készíti elõ a menüt a megjelenítésre, ez a tökéletes hely a nem kívánatos menü elemek eltávolításra, így egy letisztultabb dinamikus menüt hozhatunk létre. A $onOptionsItemSelected$ -ben kell definiálnunk, hogy az egyes menü pontokat választva mi történjen, mivel most a menü a navigáció feladatát látja el, ezért itt activity-k váltásáról van szó. Az "Értékelések szinkronizálása" gomb mögötti kód is majd csak késõbb fog elõkerülni.
 	
 	A felhasználó felületet a menü soron kívül további két fõ részre lehet osztani, amely könnyen látható \ref{fig:UserPage} alapján.
-	\begin{figure}[h!]
+	\begin{figure}[!ht]
 		\centering
 		\includegraphics[scale=0.5]{UserPage}
 		\caption[UserPage]{UserPage}
@@ -1080,7 +1081,7 @@ public View getView(int position, View convertView, ViewGroup parent) {
 	
 	\subsection{Results}
 	A $Results$ az algoritmusok futtatásáért felelõ activity egy egyszerû $WebView$ amely a web alkalmazás egy ennek a feladatnak az ellátására létrehozott és optimalizált állományát tölti be. Ebbõl következik, hogy az eredmények megtekintésnek feltétele aktív internet kapcsolat, valamint a mobil eszközön található értékelések elõzõleges szinkronizációja. Ennek a megközelítésnek köszönhetõen a web alkalmazással egységes eredmény reprezentálásra van lehetõség, ahogy az a \ref{fig:TabletResults} ábrán is látszik.
-	\begin{figure}[h!]
+	\begin{figure}[!ht]
 		\centering
 		\includegraphics[scale=0.5]{TabletResults}
 		\caption[Results activity egy fektetett tableten]{Results activity egy fektetett tableten}
@@ -1571,7 +1572,7 @@ for (int i=0; i < jsonArray.length(); i++ ){
 	
 	\subsection*{Kis adatokon}
 	Az \ref{fig:algoritmus_kis_adatok} ábrán látható kis bemeneti adatokon akár kézzel is könnyen ellenõrizhetõ az implementált algoritmus mûködésének helyessége.
-	\begin{figure}[h!]
+	\begin{figure}[!ht]
 		\centering
 		\includegraphics[width=0.7\linewidth]{algoritmus_kis_adatok}
 		\caption[CoHITS kis adatokon futtatva]{CoHITS kis adatokon futtatva}
