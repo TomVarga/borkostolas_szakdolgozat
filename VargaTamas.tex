@@ -174,8 +174,8 @@
 		\item \url{http://olga.inf.u-szeged.hu/borkostolas/} csak a Szegedi Tudományegyetem belsõ hálózatából.
 	\end{itemize}
 	
-	Az android alkalmazás letölthetõ bármelyik fent említett URL -rõl a jobb oldali floating menün keresztül, vagy az alábbi közvetlen linken: \hyperlink{http://bor.tvarga.hu/borkostolas.apk}{borkostolas.apk}
-	
+	Az android alkalmazás letölthetõ bármelyik fent említett URL -rõl a jobb oldali floating menün keresztül, vagy az alábbi közvetlen linken: \href{http://bor.tvarga.hu/borkostolas.apk}{borkostolas.apk}
+		
 	\paragraph{Alkalmazott eszközök, módszerek}
 	\begin{itemize}
 		\item Web alkalmazás: 
@@ -201,7 +201,7 @@
 	
 	\chapter{Borkóstoló algoritmusok}
 	
-	Ezen szakdolgozat keretében a CoHITS algoritmus került implementálásra, amely mellé csatlakozott néhány Borkóstolás projekt \cite{Borkóstolás projekt} keretében használt már Szilárd Iván által implementált algoritmus, mint a Hamming, Koszinusz, Precedencia, Összefüggõségi. Ezeknél az algoritmusoknál a PageRank egy hasonlósági mátrixon propagál, ennek elemeit a borkóstolók páronkénti értékeléseinek inverz távolságából kapjuk, a hozzájuk illõ távolság mértékek alkalmazásával (Hamming távolság, koszinusz távolság, precedencia távolság, összefüggõsségi távolság) \cite{Borkóstolás projekt}.
+	Ezen szakdolgozat keretében a CoHITS algoritmus került implementálásra, amely mellé csatlakozott néhány Borkóstolás projekt \cite{Borkostolas projekt} keretében használt már Szilárd Iván által implementált algoritmus, mint a Hamming, Koszinusz, Precedencia, Összefüggõségi. Ezeknél az algoritmusoknál a PageRank egy hasonlósági mátrixon propagál, ennek elemeit a borkóstolók páronkénti értékeléseinek inverz távolságából kapjuk, a hozzájuk illõ távolság mértékek alkalmazásával (Hamming távolság, koszinusz távolság, precedencia távolság, összefüggõsségi távolság) \cite{Borkostolas projekt}.
 	
 	\section{CoHITS}
 	A CoHITS algoritmus a PageRank és a HITS algoritmuson egy kiterjesztett változata \cite{CoHITS}. A PageRank algoritmust Sergey Brin és Larry Page fejlesztette ki a Google keresõ használatához \cite{PageRank} keresési találatok fontossági rangsorolásnak meghatározása céljából. Tõlük függetlenül Jon Kleinberg egy hasonló koncepcióval állt elõ amely ugyan ilyen jellegû feladatot látott el \cite{HITS}.
@@ -297,7 +297,7 @@
 	\begin{equation} \label{Összeföggõségi-távolság}
 	D_{adj}\left(\pi^1,\pi^2\right)=n-n_{adj}-1
 	\end{equation}
-	\cite{Borkóstolás projekt}
+	\cite{Borkostolas projekt}
 	
 	\chapter{A weboldal}
 	
@@ -333,7 +333,7 @@
 	
 	\subsection{Harmadik mérföldkõ}A harmadik mérföldkõ fõ feladata az azt megelõzõ konzultáció során átbeszélt $demo$ oldal elkészítése volt. Itt került sor a CoHITS algoritmus megismerése, a hozzá tartozó szakirodalom áttanulmányozására majd az algoritmus implementálásának megkezdésére a projektbe. Ezt követte a korreláció és átlagtól való átlagos eltérés számolásának implementálása, de mint késõbb kiderült ezek az algoritmusok nem tûrték jól a hiányos bemeneti adatokat ezért végül az általuk generált kimenet nem került felhasználásra. A mérföldkõ végére a CoHITS algoritmus implementálásának befejezése és tesztelése maradt. Ezen mérföldkõ keretén belül ismerkedtem meg a Google grafikonkészítõ API-val, majd azt felhasználtam a CoHITS algoritmus, korreláció és átlagtól való átlagos eltérés adatsorok reprezentációjához.
 	
-	\subsection{Negyedik mérföldkõ}A negyedik mérföldkõ során egy másik projektbõl\cite{Borkóstolás projekt} származó algoritmusok és azok már kész implementálásának feldolgozása és megismerése volt a fõ feladat. Át kellett tekinteni a kapott kódbázist abból a célból, hogy ezeket is, mint majd további opciókat integráljam a rendszerbe. Az említett algoritmusok: Hamming, Koszinusz, Precedencia, Összefüggõségi. De még mielõtt ebbe bele kezdtem, kísérleteztem egy kicsit egy új grafikonrajzoló API (Charts.js) használata amely könnyebben, stílusosabban és személyre szabhatóbban reprezentálja az adatokat. Miután megkaptam a fent említett már implementált algoritmusokat, elkezdtem azokat integrálni az én projektem kódbázisába. Sajnos ez nem ment teljesen gördülékenyen, szükség volt a kapott kódbázisból elõkerülõ implementációs és mûködési problémákkal kapcsolatos kérdések átgondolására valamit konzultálásra ezekkel kapcsolatban, majd a hibák javítása. A sikeres hibaelhárítás és javítások után jött az algoritmusok és demo oldal mûködésének tesztelése.
+	\subsection{Negyedik mérföldkõ}A negyedik mérföldkõ során egy másik projektbõl\cite{Borkostolas projekt} származó algoritmusok és azok már kész implementálásának feldolgozása és megismerése volt a fõ feladat. Át kellett tekinteni a kapott kódbázist abból a célból, hogy ezeket is, mint majd további opciókat integráljam a rendszerbe. Az említett algoritmusok: Hamming, Koszinusz, Precedencia, Összefüggõségi. De még mielõtt ebbe bele kezdtem, kísérleteztem egy kicsit egy új grafikonrajzoló API (Charts.js) használata amely könnyebben, stílusosabban és személyre szabhatóbban reprezentálja az adatokat. Miután megkaptam a fent említett már implementált algoritmusokat, elkezdtem azokat integrálni az én projektem kódbázisába. Sajnos ez nem ment teljesen gördülékenyen, szükség volt a kapott kódbázisból elõkerülõ implementációs és mûködési problémákkal kapcsolatos kérdések átgondolására valamit konzultálásra ezekkel kapcsolatban, majd a hibák javítása. A sikeres hibaelhárítás és javítások után jött az algoritmusok és demo oldal mûködésének tesztelése.
 	
 	\subsection{Ötödik mérföldkõ}Az ötödik mérföldkõ bebizonyította, hogy érdemes volt jól megtervezni és szétválasztani az egyes stilisztikai elemeket, mivel a megrendelõ ismét a menü rendszer, valamint a fejléc kép ismételt átrendezését és szerkesztését kérte. Továbbá új teszt adatok használatát javasolta a $demo$ menüpontban, amelyek már a friss adatokat tükrözik. Implementálásra került egy visszaigazolást kérõ felhasználói felület amely fõ célja a beviteli mátrix véletlen felülírásának meggátolása volt. Késõbb a bevitel metódus megváltoztatása miatt ennek a funkcionalitása elévült. A korrelációt számoló kód mûködésébõl fakadó hiba ki lett javítva, így már nem állt meg a számolás, ha a kapott hiányos adatsoron nem lehetett egyszerûen korrelációt számolni. Valamint megtörtént a tesztelések során elõkerült további hibák kijavítása is.
 	
@@ -843,7 +843,7 @@ if ($login->isUserLoggedIn() == true) {
 	
 	Az így elõkészített adatsorok feldolgozását a $getData$ JavaScript függvény folytatja, amelynek feladata több AJAX híváson keresztül a számítások elvégzése, majd a kinyert adatok alapján a grafikon rajzoló függvények meghívása. Az elsõ AJAX hívás a $selectAlgorithm.php$ állományra irányul, amely feladata a munka kétfelé ágaztatása az alapján, hogy amelyik típusú algoritmus lett kiválasztva a demó oldalon. A két kategória egyszerûen az alapján van meghatározva, hogy ki implementálta az adott algoritmust. Az általam implementált $CoHITS$ algoritmus képzi az egyik csoportot, amely a $HITSstart.php$ állományból indul ki, míg a kapott kód alapján mûködõ többi algoritmus kezelésért a $calculateGivenAlgorithm.php$ felelõs.
 	
-	A $calculateGivenAlgorithm.php$ -csak röviden térnék ki, hiszen ez fõképp nem az én munkám (forrás: \cite{Borkóstolás projekt}). Amit én írtam bele az az a kódrészlet amely megjegyzések között szerepel a forráskódban, ennek a bemeneti adatok olyan formátumban hozása a feladata amelyet ezek az algoritmusok elvárnak. Végeztem még két kisebb javítást is, az egyik az volt, hogy a bemeneti adatok során való feldolgozáskor az egyik ciklus rosszul volt indexelve ezért egy elem mindig kimaradt a feldolgozásból. A másik kis javítás pedig egy nullával való osztás elkerülésére irányult.
+	A $calculateGivenAlgorithm.php$ -csak röviden térnék ki, hiszen ez fõképp nem az én munkám (forrás: \cite{Borkostolas projekt}). Amit én írtam bele az az a kódrészlet amely megjegyzések között szerepel a forráskódban, ennek a bemeneti adatok olyan formátumban hozása a feladata amelyet ezek az algoritmusok elvárnak. Végeztem még két kisebb javítást is, az egyik az volt, hogy a bemeneti adatok során való feldolgozáskor az egyik ciklus rosszul volt indexelve ezért egy elem mindig kimaradt a feldolgozásból. A másik kis javítás pedig egy nullával való osztás elkerülésére irányult.
 	
 	A $HITSstart.php$ már sokkal érdekesebb. Az algoritmus implementálása során még tervben volt az is, hogy a kapott eredményeket össze vessük a normál eloszlással, illetve a kóstolókra vette korrelációval, de mint kiderült ezek az algoritmusok nem tûrik jól a hézagos bemeneti mátrixokat így a végsõ verzióban ezek mégsem került felhasználásra.
 	
@@ -1216,7 +1216,7 @@ for (int i=0; i < jsonArray.length(); i++ ){
 	\newline 
 	\textbf{Leírás:} Regisztráció hibás captcha megadásával.
 	\newline 
-	\textbf{Bemenet:} $user\_name = "tom1"$ $user\_password_new = "tom123"$ \linebreak$user\_password\_repeat = "tom123"$ $user\_email = "tom@tvarga.hu"$ $captcha = hibás$
+	\textbf{Bemenet:} $user\_name = "tom1"$ $user\_password\_new = "tom123"$ \linebreak$user\_password\_repeat = "tom123"$ $user\_email = "tom@tvarga.hu"$ $captcha = hibás$
 	\newline 
 	\textbf{Action:} Az adatok beírása után a "Regisztráció" gombra kattintok.
 	\newline 
@@ -1878,7 +1878,7 @@ for (int i=0; i < jsonArray.length(); i++ ){
 	
 	\begin{thebibliography}{99}
 		%10-nél kevesebb hivatkozás esetén
-		\bibitem{Borkóstolás projekt}Borkóstolás projekt.  \url{http://www.inf.u-szeged.hu/~tnemeth/osa/}
+		\bibitem{Borkostolas projekt}Borkóstolás projekt.  \url{http://www.inf.u-szeged.hu/~tnemeth/osa/}
 		
 		\bibitem{PageRank}
 		Sergey Brin and Lawrence Page. 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2015.5.6)  6 MAY 2015 03:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2015.5.6)  6 MAY 2015 03:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -839,7 +839,7 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 2. fejezet.
 [11
 
-] <Wireframe.png, id=509, 730.73pt x 530.98375pt>
+] <Wireframe.png, id=508, 730.73pt x 530.98375pt>
 File: Wireframe.png Graphic file (type png)
  <use Wireframe.png>
 Package pdftex.def Info: Wireframe.png used on input line 328.
@@ -855,7 +855,7 @@ tok át-ne-ve-zé-se, fej-léc lo-gó fris-sí-té-se.
  []
 
 [12] [13 <./Wireframe.png>] [14]
-<../../Borkostolas_weblap/dbmodel.png, id=528, 415.5525pt x 420.57124pt>
+<../../Borkostolas_weblap/dbmodel.png, id=527, 415.5525pt x 420.57124pt>
 File: ../../Borkostolas_weblap/dbmodel.png Graphic file (type png)
 
 <use ../../Borkostolas_weblap/dbmodel.png>
@@ -1004,7 +1004,7 @@ Underfull \hbox (badness 2310) in paragraph at lines 1032--1033
  az ac-ti-vity már a
  []
 
-<UserPage.png, id=921, 320.69812pt x 514.92375pt>
+<UserPage.png, id=920, 320.69812pt x 514.92375pt>
 File: UserPage.png Graphic file (type png)
  <use UserPage.png>
 Package pdftex.def Info: UserPage.png used on input line 1037.
@@ -1021,7 +1021,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1074--1076
 gy olyan $\OML/cmm/m/it/12 AdapterView$
  []
 
-[54] <TabletResults.png, id=957, 767.86874pt x 447.17062pt>
+[54] <TabletResults.png, id=956, 767.86874pt x 447.17062pt>
 File: TabletResults.png Graphic file (type png)
 
 <use TabletResults.png>
@@ -1080,12 +1080,12 @@ Missing character: There is no á in font cmr12!
 
 Underfull \hbox (badness 10000) in paragraph at lines 1215--1224
 \T1/ptm/b/n/12 Bemenet: $\OML/cmm/m/it/12 user[]name \OT1/cmr/m/n/12 =[] "\OML/
-cmm/m/it/12 tom\OT1/cmr/m/n/12 1"$ $\OML/cmm/m/it/12 user[]password[]ew \OT1/cm
-r/m/n/12 =[] "\OML/cmm/m/it/12 tom\OT1/cmr/m/n/12 123"$
+cmm/m/it/12 tom\OT1/cmr/m/n/12 1"$ $\OML/cmm/m/it/12 user[]password[]new \OT1/c
+mr/m/n/12 =[] "\OML/cmm/m/it/12 tom\OT1/cmr/m/n/12 123"$
  []
 
 [61] [62] [63] [64] [65] [66]
-<algoritmus_kis_adatok.png, id=1079, 491.58656pt x 304.88907pt>
+<algoritmus_kis_adatok.png, id=1078, 491.58656pt x 304.88907pt>
 File: algoritmus_kis_adatok.png Graphic file (type png)
 
 <use algoritmus_kis_adatok.png>
@@ -1161,37 +1161,30 @@ Package rerunfilecheck Info: File `VargaTamas.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1973.
  ) 
 Here is how much of TeX's memory you used:
- 27941 strings out of 493109
- 493059 string characters out of 6138588
- 918054 words of memory out of 5000000
+ 27939 strings out of 493109
+ 492937 string characters out of 6138588
+ 918052 words of memory out of 5000000
  30529 multiletter control sequences out of 15000+600000
  46927 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  48i,19n,76p,2184b,3177s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{cite.Bork\363stol\341s\040projekt} has been refer
-enced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{http\\unskip\040\\penalty\040\\@M\040\\kern\040.1em
-://bor.tvarga.hu/borkostolas.apk} has been referenced but does not exist, repla
-ced by a fixed one
-
-{x:/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}<x:/texlive/2014/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><x:/texlive/2014/texmf-dist/font
-s/type1/public/amsfonts/cm/cmmi12.pfb><x:/texlive/2014/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmmi6.pfb><x:/texlive/2014/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmmi8.pfb><x:/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r12.pfb><x:/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><x:
-/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><x:/texlive/20
-14/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><x:/texlive/2014/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><x:/texlive/2014/texmf-dist/fonts
-/type1/public/amsfonts/symbols/msam10.pfb><x:/texlive/2014/texmf-dist/fonts/typ
-e1/urw/courier/ucrr8a.pfb><x:/texlive/2014/texmf-dist/fonts/type1/urw/times/utm
-b8a.pfb><x:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><x:/texliv
-e/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on VargaTamas.pdf (76 pages, 501550 bytes).
+{x:/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}<x:/texlive/2014/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><x:/texlive/2014/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi12.pfb><x:/texlive/2014/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi6.pfb><x:/texlive/2014/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi8.pfb><x:/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr12.pfb><x:/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><
+x:/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><x:/texlive/
+2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><x:/texlive/2014/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><x:/texlive/2014/texmf-dist/fon
+ts/type1/public/amsfonts/symbols/msam10.pfb><x:/texlive/2014/texmf-dist/fonts/t
+ype1/urw/courier/ucrr8a.pfb><x:/texlive/2014/texmf-dist/fonts/type1/urw/times/u
+tmb8a.pfb><x:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><x:/texl
+ive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on VargaTamas.pdf (76 pages, 501339 bytes).
 PDF statistics:
- 1309 PDF objects out of 1440 (max. 8388607)
- 1196 compressed objects within 12 object streams
- 463 named destinations out of 1000 (max. 500000)
+ 1306 PDF objects out of 1440 (max. 8388607)
+ 1193 compressed objects within 12 object streams
+ 461 named destinations out of 1000 (max. 500000)
  702 words of extra memory for PDF output out of 10000 (max. 10000000)
 
