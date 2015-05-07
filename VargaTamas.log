@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2015.5.6)  7 MAY 2015 23:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2015.5.6)  8 MAY 2015 00:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1349,27 +1349,35 @@ Package pdftex.def Info: algoritmus_kis_adatok.png used on input line 1577.
 ] [75
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1910--1911
-[][]$\T1/cmtt/m/n/12 http : \OML/cmm/m/it/12 ==\T1/cmtt/m/n/12 wiki . hashphp .
- org\OML/cmm/m/it/12 =\T1/cmtt/m/n/12 PDO _ Tutorial _ for _ MySQL _ Developers
- #
+Underfull \hbox (badness 1642) in paragraph at lines 1893--1895
+[]\T1/qtm/m/n/12 Deep Link-ing for AJAX []$\T1/cmtt/m/n/12 http : \OML/cmm/m/it
+/12 ==\T1/cmtt/m/n/12 blog . onthewings . net\OML/cmm/m/it/12 =\T1/cmtt/m/n/12 
+2009\OML/cmm/m/it/12 =\T1/cmtt/m/n/12 04\OML/cmm/m/it/12 =\T1/cmtt/m/n/12 08\OM
+L/cmm/m/it/12 =\T1/cmtt/m/n/12 deep \OMS/qtm/m/n/12 ^^@
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1924--1925
+Underfull \hbox (badness 10000) in paragraph at lines 1900--1901
 []\T1/qtm/m/n/12 ECMAScript Lan-gu-age Spe-ci-fi-ca-ti-on []$\T1/cmtt/m/n/12 ht
 tp : \OML/cmm/m/it/12 ==\T1/cmtt/m/n/12 www . ecma \OMS/qtm/m/n/12 ^^@[] \T1/cm
 tt/m/n/12 international .
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1931--1933
+[]\T1/qtm/m/n/12 PDO Tuto-ri-al for MySQL De-vel-opers []$\T1/cmtt/m/n/12 http 
+: \OML/cmm/m/it/12 ==\T1/cmtt/m/n/12 wiki . hashphp . org\OML/cmm/m/it/12 =\T1/
+cmtt/m/n/12 PDO _
+ []
+
 [76
 
 ] [77]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1973.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1973.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1979.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1979.
  (./VargaTamas.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1973.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1973.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1979.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1979.
 
 Package rerunfilecheck Info: File `VargaTamas.out' has not changed.
 (rerunfilecheck)             Checksum: B9126C6B5E8E6F3AD90214FDB0967758;10933.
@@ -1377,12 +1385,12 @@ Package rerunfilecheck Info: File `VargaTamas.out' has not changed.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1973.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1979.
  ) 
 Here is how much of TeX's memory you used:
  28138 strings out of 493109
  495320 string characters out of 6138588
- 919673 words of memory out of 5000000
+ 919669 words of memory out of 5000000
  30714 multiletter control sequences out of 15000+600000
  51231 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1401,10 +1409,10 @@ ype1/public/amsfonts/symbols/msam10.pfb><x:/texlive/2014/texmf-dist/fonts/type1
 /public/tex-gyre/qtmb.pfb><x:/texlive/2014/texmf-dist/fonts/type1/public/tex-gy
 re/qtmr.pfb><x:/texlive/2014/texmf-dist/fonts/type1/public/tex-gyre/qtmri.pfb><
 x:/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on VargaTamas.pdf (77 pages, 563978 bytes).
+Output written on VargaTamas.pdf (77 pages, 564116 bytes).
 PDF statistics:
- 1322 PDF objects out of 1440 (max. 8388607)
- 1194 compressed objects within 12 object streams
+ 1323 PDF objects out of 1440 (max. 8388607)
+ 1195 compressed objects within 12 object streams
  462 named destinations out of 1000 (max. 500000)
  702 words of extra memory for PDF output out of 10000 (max. 10000000)
 
