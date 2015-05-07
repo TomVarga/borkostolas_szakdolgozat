@@ -1,39 +1,39 @@
-\select@language {magyar} \contentsline {section}{Feladatki\IeC {\'\i }r\'as}{2}{chapter*.1}
-\select@language {magyar} \contentsline {section}{Tartalmi \"osszefoglal\'o}{3}{chapter*.2}
-\select@language {magyar} \contentsline {paragraph}{A t\'ema megnevez\'ese}{3}{section*.3}
-\select@language {magyar} \contentsline {paragraph}{A feladat megfogalmaz\'asa}{3}{section*.4}
-\select@language {magyar} \contentsline {paragraph}{A megold\'asi m\'od}{3}{section*.5}
-\select@language {magyar} \contentsline {paragraph}{Alkalmazott eszk\"oz\"ok, m\'odszerek}{3}{section*.6}
+\select@language {magyar} \contentsline {section}{Feladatki\IeC {\'\i }r\IeC {\'a}s}{2}{chapter*.1}
+\select@language {magyar} \contentsline {section}{Tartalmi \IeC {\"o}sszefoglal\IeC {\'o}}{3}{chapter*.2}
+\select@language {magyar} \contentsline {paragraph}{A t\IeC {\'e}ma megnevez\IeC {\'e}se}{3}{section*.3}
+\select@language {magyar} \contentsline {paragraph}{A feladat megfogalmaz\IeC {\'a}sa}{3}{section*.4}
+\select@language {magyar} \contentsline {paragraph}{A megold\IeC {\'a}si m\IeC {\'o}d}{3}{section*.5}
+\select@language {magyar} \contentsline {paragraph}{Alkalmazott eszk\IeC {\"o}z\IeC {\"o}k, m\IeC {\'o}dszerek}{3}{section*.6}
 \select@language {magyar} \contentsline {paragraph}{Kulcsszavak}{3}{section*.7}
-\select@language {magyar} \contentsline {section}{Bevezet\'es}{7}{chapter*.9}
-\select@language {magyar} \contentsline {chapter}{\numberline {1}Bork\'ostol\'o algoritmusok}{8}{chapter.1}
+\select@language {magyar} \contentsline {section}{Bevezet\IeC {\'e}s}{7}{chapter*.9}
+\select@language {magyar} \contentsline {chapter}{\numberline {1}Bork\IeC {\'o}stol\IeC {\'o} algoritmusok}{8}{chapter.1}
 \select@language {magyar} \contentsline {section}{\numberline {1.1}CoHITS}{8}{section.1.1}
 \select@language {magyar} \contentsline {section}{\numberline {1.2}Hamming}{10}{section.1.2}
 \select@language {magyar} \contentsline {section}{\numberline {1.3}Koszinusz}{10}{section.1.3}
 \select@language {magyar} \contentsline {section}{\numberline {1.4}Precedencia}{10}{section.1.4}
-\select@language {magyar} \contentsline {section}{\numberline {1.5}\"Osszef\"ugg\H os\'egi}{11}{section.1.5}
+\select@language {magyar} \contentsline {section}{\numberline {1.5}\IeC {\"O}sszef\IeC {\"u}gg\IeC {\H o}s\IeC {\'e}gi}{11}{section.1.5}
 \select@language {magyar} \contentsline {chapter}{\numberline {2}A weboldal}{12}{chapter.2}
-\select@language {magyar} \contentsline {section}{\numberline {2.1}Iter\'aci\'ok}{13}{section.2.1}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.1.1}Els\H o m\'erf\"oldk\H o}{13}{subsection.2.1.1}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.1.2}M\'asodik m\'erf\"oldk\H o}{13}{subsection.2.1.2}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.1.3}Harmadik m\'erf\"oldk\H o}{14}{subsection.2.1.3}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.1.4}Negyedik m\'erf\"oldk\H o}{15}{subsection.2.1.4}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.1.5}\"Ot\"odik m\'erf\"oldk\H o}{15}{subsection.2.1.5}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.1.6}Hatodik m\'erf\"oldk\H o}{15}{subsection.2.1.6}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.1.7}Hetedik m\'erf\"oldk\H o}{16}{subsection.2.1.7}
-\select@language {magyar} \contentsline {section}{\numberline {2.2}Adatb\'azis}{16}{section.2.2}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.2.1}scores t\'abla}{17}{subsection.2.2.1}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.2.2}wines t\'abla}{18}{subsection.2.2.2}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.2.3}users t\'abla}{18}{subsection.2.2.3}
+\select@language {magyar} \contentsline {section}{\numberline {2.1}Iter\IeC {\'a}ci\IeC {\'o}k}{13}{section.2.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.1.1}Els\IeC {\H o} m\IeC {\'e}rf\IeC {\"o}ldk\IeC {\H o}}{13}{subsection.2.1.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.1.2}M\IeC {\'a}sodik m\IeC {\'e}rf\IeC {\"o}ldk\IeC {\H o}}{13}{subsection.2.1.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.1.3}Harmadik m\IeC {\'e}rf\IeC {\"o}ldk\IeC {\H o}}{14}{subsection.2.1.3}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.1.4}Negyedik m\IeC {\'e}rf\IeC {\"o}ldk\IeC {\H o}}{15}{subsection.2.1.4}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.1.5}\IeC {\"O}t\IeC {\"o}dik m\IeC {\'e}rf\IeC {\"o}ldk\IeC {\H o}}{15}{subsection.2.1.5}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.1.6}Hatodik m\IeC {\'e}rf\IeC {\"o}ldk\IeC {\H o}}{15}{subsection.2.1.6}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.1.7}Hetedik m\IeC {\'e}rf\IeC {\"o}ldk\IeC {\H o}}{16}{subsection.2.1.7}
+\select@language {magyar} \contentsline {section}{\numberline {2.2}Adatb\IeC {\'a}zis}{16}{section.2.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.2.1}scores t\IeC {\'a}bla}{17}{subsection.2.2.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.2.2}wines t\IeC {\'a}bla}{18}{subsection.2.2.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.2.3}users t\IeC {\'a}bla}{18}{subsection.2.2.3}
 \select@language {magyar} \contentsline {section}{\numberline {2.3}CSS}{20}{section.2.3}
 \select@language {magyar} \contentsline {paragraph}{Normal flow}{21}{section*.10}
 \select@language {magyar} \contentsline {paragraph}{Flaot}{21}{section*.11}
 \select@language {magyar} \contentsline {paragraph}{Absolute positioning}{21}{section*.12}
 \select@language {magyar} \contentsline {paragraph}{Position}{21}{section*.13}
-\select@language {magyar} \contentsline {paragraph}{Float \'es clear}{22}{section*.14}
+\select@language {magyar} \contentsline {paragraph}{Float \IeC {\'e}s clear}{22}{section*.14}
 \select@language {magyar} \contentsline {section}{\numberline {2.4}PHP}{23}{section.2.4}
 \select@language {magyar} \contentsline {subsection}{\numberline {2.4.1}PHP Data Objects (PDO)}{24}{subsection.2.4.1}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.4.2}\'Allapotkezel\'es \'es k\"ovet\'es}{26}{subsection.2.4.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.4.2}\IeC {\'A}llapotkezel\IeC {\'e}s \IeC {\'e}s k\IeC {\"o}vet\IeC {\'e}s}{26}{subsection.2.4.2}
 \select@language {magyar} \contentsline {section}{\numberline {2.5}JavaScript}{28}{section.2.5}
 \select@language {magyar} \contentsline {subsection}{\numberline {2.5.1}AJAX}{29}{subsection.2.5.1}
 \select@language {magyar} \contentsline {subsection}{\numberline {2.5.2}jQuery}{30}{subsection.2.5.2}
@@ -41,18 +41,18 @@
 \select@language {magyar} \contentsline {section}{\numberline {2.6}Grafikonok}{32}{section.2.6}
 \select@language {magyar} \contentsline {subsection}{\numberline {2.6.1}Google Charts}{32}{subsection.2.6.1}
 \select@language {magyar} \contentsline {section}{\numberline {2.7}Statikus tartalom}{34}{section.2.7}
-\select@language {magyar} \contentsline {paragraph}{index.php - F\H ooldal}{34}{section*.15}
-\select@language {magyar} \contentsline {paragraph}{borkostolasEredmenyek.php - Eredm\'enyek}{34}{section*.16}
-\select@language {magyar} \contentsline {paragraph}{modszerek.php - M\'odszerek}{35}{section*.17}
+\select@language {magyar} \contentsline {paragraph}{index.php - F\IeC {\H o}oldal}{34}{section*.15}
+\select@language {magyar} \contentsline {paragraph}{borkostolasEredmenyek.php - Eredm\IeC {\'e}nyek}{34}{section*.16}
+\select@language {magyar} \contentsline {paragraph}{modszerek.php - M\IeC {\'o}dszerek}{35}{section*.17}
 \select@language {magyar} \contentsline {paragraph}{kapcsolat.php - Kapcsolat}{35}{section*.18}
 \select@language {magyar} \contentsline {section}{\numberline {2.8}Dinamikus tartalom}{35}{section.2.8}
 \select@language {magyar} \contentsline {subsection}{\numberline {2.8.1}php-login}{35}{subsection.2.8.1}
-\select@language {magyar} \contentsline {paragraph}{R\"oviden a hashel\'esr\H ol}{36}{section*.19}
-\select@language {magyar} \contentsline {paragraph}{Felhaszn\'al\'ok kezel\'es}{37}{section*.20}
+\select@language {magyar} \contentsline {paragraph}{R\IeC {\"o}viden a hashel\IeC {\'e}sr\IeC {\H o}l}{36}{section*.19}
+\select@language {magyar} \contentsline {paragraph}{Felhaszn\IeC {\'a}l\IeC {\'o}k kezel\IeC {\'e}s}{37}{section*.20}
 \select@language {magyar} \contentsline {subsection}{\numberline {2.8.2}admin.php}{39}{subsection.2.8.2}
-\select@language {magyar} \contentsline {subsection}{\numberline {2.8.3}demo.php - Dem\'o}{39}{subsection.2.8.3}
+\select@language {magyar} \contentsline {subsection}{\numberline {2.8.3}demo.php - Dem\IeC {\'o}}{39}{subsection.2.8.3}
 \select@language {magyar} \contentsline {subsubsection}{dbUtils.php}{39}{section*.21}
-\select@language {magyar} \contentsline {chapter}{\numberline {3}A mobil alkalmaz\'as}{44}{chapter.3}
+\select@language {magyar} \contentsline {chapter}{\numberline {3}A mobil alkalmaz\IeC {\'a}s}{44}{chapter.3}
 \select@language {magyar} \contentsline {section}{\numberline {3.1}Android}{45}{section.3.1}
 \select@language {magyar} \contentsline {subsubsection}{Linear Layout}{46}{section*.25}
 \select@language {magyar} \contentsline {subsubsection}{Relative Layout}{46}{section*.26}
@@ -60,38 +60,38 @@
 \select@language {magyar} \contentsline {subsubsection}{onCreate}{47}{section*.29}
 \select@language {magyar} \contentsline {subsubsection}{onPause}{47}{section*.30}
 \select@language {magyar} \contentsline {subsubsection}{Shared Preferences}{48}{section*.33}
-\select@language {magyar} \contentsline {subsubsection}{SQLite adatb\'azis}{49}{section*.34}
-\select@language {magyar} \contentsline {section}{\numberline {3.2}Az Android alkalmaz\'as fel\'ep\IeC {\'\i }t\'ese}{49}{section.3.2}
+\select@language {magyar} \contentsline {subsubsection}{SQLite adatb\IeC {\'a}zis}{48}{section*.34}
+\select@language {magyar} \contentsline {section}{\numberline {3.2}Az Android alkalmaz\IeC {\'a}s fel\IeC {\'e}p\IeC {\'\i }t\IeC {\'e}se}{49}{section.3.2}
 \select@language {magyar} \contentsline {subsection}{\numberline {3.2.1}Model}{49}{subsection.3.2.1}
-\select@language {magyar} \contentsline {subsubsection}{Beans}{50}{section*.36}
-\select@language {magyar} \contentsline {paragraph}{Wine \'es Score oszt\'aly}{50}{section*.37}
-\select@language {magyar} \contentsline {paragraph}{User oszt\'aly}{50}{section*.38}
+\select@language {magyar} \contentsline {subsubsection}{Beans}{49}{section*.36}
+\select@language {magyar} \contentsline {paragraph}{Wine \IeC {\'e}s Score oszt\IeC {\'a}ly}{49}{section*.37}
+\select@language {magyar} \contentsline {paragraph}{User oszt\IeC {\'a}ly}{50}{section*.38}
 \select@language {magyar} \contentsline {paragraph}{ScoredWine}{50}{section*.39}
 \select@language {magyar} \contentsline {subsection}{\numberline {3.2.2}DAO}{50}{subsection.3.2.2}
 \select@language {magyar} \contentsline {subsubsection}{LocalDAO}{50}{section*.40}
-\select@language {magyar} \contentsline {section}{\numberline {3.3}Controller}{51}{section.3.3}
+\select@language {magyar} \contentsline {section}{\numberline {3.3}Controller}{50}{section.3.3}
 \select@language {magyar} \contentsline {subsubsection}{JSONParser}{51}{section*.41}
 \select@language {magyar} \contentsline {subsubsection}{WinesAdapter}{51}{section*.42}
 \select@language {magyar} \contentsline {subsubsection}{OnAdapterNeedsNotify}{51}{section*.43}
 \select@language {magyar} \contentsline {subsubsection}{NetworkChecker}{51}{section*.44}
 \select@language {magyar} \contentsline {subsubsection}{DBSyncContoller}{51}{section*.45}
 \select@language {magyar} \contentsline {section}{\numberline {3.4}View}{51}{section.3.4}
-\select@language {magyar} \contentsline {subsubsection}{Main Activity}{52}{section*.46}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.4.1}Register \'es ForgotPassword Activity}{52}{subsection.3.4.1}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.4.2}Men\"u}{52}{subsection.3.4.2}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.4.3}UserPage}{53}{subsection.3.4.3}
+\select@language {magyar} \contentsline {subsubsection}{Main Activity}{51}{section*.46}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.4.1}Register \IeC {\'e}s ForgotPassword Activity}{52}{subsection.3.4.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.4.2}Men\IeC {\"u}}{52}{subsection.3.4.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.4.3}UserPage}{52}{subsection.3.4.3}
 \select@language {magyar} \contentsline {subsubsection}{winesList}{54}{section*.47}
 \select@language {magyar} \contentsline {subsubsection}{detailsContainer}{55}{section*.48}
 \select@language {magyar} \contentsline {subsection}{\numberline {3.4.4}Results}{56}{subsection.3.4.4}
-\select@language {magyar} \contentsline {chapter}{\numberline {4}A weboldal \'es a mobil alkalmaz\'as \"osszek\"ot\'ese}{57}{chapter.4}
+\select@language {magyar} \contentsline {chapter}{\numberline {4}A weboldal \IeC {\'e}s a mobil alkalmaz\IeC {\'a}s \IeC {\"o}sszek\IeC {\"o}t\IeC {\'e}se}{57}{chapter.4}
 \select@language {magyar} \contentsline {section}{\numberline {4.1}RemoteDAO}{58}{section.4.1}
-\select@language {magyar} \contentsline {section}{\numberline {4.2}Bejelentkez\'es}{59}{section.4.2}
-\select@language {magyar} \contentsline {section}{\numberline {4.3}Adatb\'azis szinkroniz\'aci\'o}{59}{section.4.3}
+\select@language {magyar} \contentsline {section}{\numberline {4.2}Bejelentkez\IeC {\'e}s}{59}{section.4.2}
+\select@language {magyar} \contentsline {section}{\numberline {4.3}Adatb\IeC {\'a}zis szinkroniz\IeC {\'a}ci\IeC {\'o}}{59}{section.4.3}
 \select@language {magyar} \contentsline {subsection}{\numberline {4.3.1}syncScores}{59}{subsection.4.3.1}
-\select@language {magyar} \contentsline {subsection}{\numberline {4.3.2}Felhaszn\'al\'oi fel\"ulet friss\IeC {\'\i }t\'ese}{60}{subsection.4.3.2}
-\select@language {magyar} \contentsline {section}{\numberline {4.4}Eredm\'enyek}{60}{section.4.4}
-\select@language {magyar} \contentsline {chapter}{\numberline {5}Tesztel\'es}{61}{chapter.5}
-\select@language {magyar} \contentsline {section}{\numberline {5.1}Regisztr\'aci\'os \'es bejelentkeztet\H o rendszer}{61}{section.5.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {4.3.2}Felhaszn\IeC {\'a}l\IeC {\'o}i fel\IeC {\"u}let friss\IeC {\'\i }t\IeC {\'e}se}{60}{subsection.4.3.2}
+\select@language {magyar} \contentsline {section}{\numberline {4.4}Eredm\IeC {\'e}nyek}{60}{section.4.4}
+\select@language {magyar} \contentsline {chapter}{\numberline {5}Tesztel\IeC {\'e}s}{61}{chapter.5}
+\select@language {magyar} \contentsline {section}{\numberline {5.1}Regisztr\IeC {\'a}ci\IeC {\'o}s \IeC {\'e}s bejelentkeztet\IeC {\H o} rendszer}{61}{section.5.1}
 \select@language {magyar} \setcounter {tocdepth}{1}
 \select@language {magyar} \contentsline {subsection}{\numberline {5.1.1}Tesztesetek}{61}{subsection.5.1.1}
 \select@language {magyar} \setcounter {tocdepth}{2}
@@ -100,7 +100,7 @@
 \select@language {magyar} \contentsline {subsubsection}{ID: TC\_3}{62}{section*.51}
 \select@language {magyar} \contentsline {subsubsection}{ID: TC\_4}{62}{section*.52}
 \select@language {magyar} \setcounter {tocdepth}{1}
-\select@language {magyar} \contentsline {subsection}{\numberline {5.1.2}Tesztelj\'ar\'as}{62}{subsection.5.1.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {5.1.2}Tesztelj\IeC {\'a}r\IeC {\'a}s}{62}{subsection.5.1.2}
 \select@language {magyar} \setcounter {tocdepth}{2}
 \select@language {magyar} \setcounter {tocdepth}{1}
 \select@language {magyar} \contentsline {subsection}{\numberline {5.1.3}Tesztesetek}{62}{subsection.5.1.3}
@@ -109,9 +109,9 @@
 \select@language {magyar} \contentsline {subsubsection}{ID: TC\_6}{63}{section*.54}
 \select@language {magyar} \contentsline {subsubsection}{ID: TC\_7}{63}{section*.55}
 \select@language {magyar} \setcounter {tocdepth}{1}
-\select@language {magyar} \contentsline {subsection}{\numberline {5.1.4}Tesztelj\'ar\'as}{63}{subsection.5.1.4}
+\select@language {magyar} \contentsline {subsection}{\numberline {5.1.4}Tesztelj\IeC {\'a}r\IeC {\'a}s}{63}{subsection.5.1.4}
 \select@language {magyar} \setcounter {tocdepth}{2}
-\select@language {magyar} \contentsline {section}{\numberline {5.2}Demo adatkezel\'es\'enek ellen\H orz\'ese}{63}{section.5.2}
+\select@language {magyar} \contentsline {section}{\numberline {5.2}Demo adatkezel\IeC {\'e}s\IeC {\'e}nek ellen\IeC {\H o}rz\IeC {\'e}se}{63}{section.5.2}
 \select@language {magyar} \setcounter {tocdepth}{1}
 \select@language {magyar} \contentsline {subsection}{\numberline {5.2.1}Tesztesetek}{63}{subsection.5.2.1}
 \select@language {magyar} \setcounter {tocdepth}{2}
@@ -122,9 +122,9 @@
 \select@language {magyar} \contentsline {subsubsection}{ID: TC\_12}{64}{section*.60}
 \select@language {magyar} \contentsline {subsubsection}{ID: TC\_13}{64}{section*.61}
 \select@language {magyar} \setcounter {tocdepth}{1}
-\select@language {magyar} \contentsline {subsection}{\numberline {5.2.2}Tesztelj\'ar\'as}{65}{subsection.5.2.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {5.2.2}Tesztelj\IeC {\'a}r\IeC {\'a}s}{65}{subsection.5.2.2}
 \select@language {magyar} \setcounter {tocdepth}{2}
-\select@language {magyar} \contentsline {section}{\numberline {5.3}Adatb\'azis szinkroniz\'aci\'o}{65}{section.5.3}
+\select@language {magyar} \contentsline {section}{\numberline {5.3}Adatb\IeC {\'a}zis szinkroniz\IeC {\'a}ci\IeC {\'o}}{65}{section.5.3}
 \select@language {magyar} \setcounter {tocdepth}{1}
 \select@language {magyar} \contentsline {subsection}{\numberline {5.3.1}Tesztesetek}{65}{subsection.5.3.1}
 \select@language {magyar} \setcounter {tocdepth}{2}
@@ -133,7 +133,7 @@
 \select@language {magyar} \contentsline {subsubsection}{ID: TC\_16}{65}{section*.64}
 \select@language {magyar} \contentsline {subsubsection}{ID: TC\_17}{66}{section*.65}
 \select@language {magyar} \setcounter {tocdepth}{1}
-\select@language {magyar} \contentsline {subsection}{\numberline {5.3.2}Tesztelj\'ar\'as}{66}{subsection.5.3.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {5.3.2}Tesztelj\IeC {\'a}r\IeC {\'a}s}{66}{subsection.5.3.2}
 \select@language {magyar} \setcounter {tocdepth}{2}
 \select@language {magyar} \setcounter {tocdepth}{1}
 \select@language {magyar} \contentsline {subsection}{\numberline {5.3.3}Tesztesetek}{66}{subsection.5.3.3}
@@ -143,21 +143,21 @@
 \select@language {magyar} \contentsline {subsubsection}{ID: TC\_20}{67}{section*.68}
 \select@language {magyar} \contentsline {subsubsection}{ID: TC\_21}{67}{section*.69}
 \select@language {magyar} \setcounter {tocdepth}{1}
-\select@language {magyar} \contentsline {subsection}{\numberline {5.3.4}Tesztelj\'ar\'as}{67}{subsection.5.3.4}
+\select@language {magyar} \contentsline {subsection}{\numberline {5.3.4}Tesztelj\IeC {\'a}r\IeC {\'a}s}{67}{subsection.5.3.4}
 \select@language {magyar} \setcounter {tocdepth}{2}
-\select@language {magyar} \contentsline {section}{\numberline {5.4}Algoritmusok ellen\H orz\'ese}{68}{section.5.4}
+\select@language {magyar} \contentsline {section}{\numberline {5.4}Algoritmusok ellen\IeC {\H o}rz\IeC {\'e}se}{68}{section.5.4}
 \select@language {magyar} \contentsline {chapter}{\numberline {6}Egyebek}{69}{chapter.6}
-\select@language {magyar} \contentsline {section}{\numberline {6.1}Verzi\'okezel\'es}{69}{section.6.1}
+\select@language {magyar} \contentsline {section}{\numberline {6.1}Verzi\IeC {\'o}kezel\IeC {\'e}s}{69}{section.6.1}
 \select@language {magyar} \contentsline {subsection}{\numberline {6.1.1}Git}{69}{subsection.6.1.1}
 \select@language {magyar} \contentsline {subsection}{\numberline {6.1.2}GitHub}{69}{subsection.6.1.2}
-\select@language {magyar} \contentsline {subsection}{\numberline {6.1.3}A v\'alaszt\'as}{70}{subsection.6.1.3}
-\select@language {magyar} \contentsline {subsection}{\numberline {6.1.4}Repozit\'oriumok}{70}{subsection.6.1.4}
-\select@language {magyar} \contentsline {section}{\numberline {6.2}K\"ornyezetek}{70}{section.6.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {6.1.3}A v\IeC {\'a}laszt\IeC {\'a}s}{70}{subsection.6.1.3}
+\select@language {magyar} \contentsline {subsection}{\numberline {6.1.4}Repozit\IeC {\'o}riumok}{70}{subsection.6.1.4}
+\select@language {magyar} \contentsline {section}{\numberline {6.2}K\IeC {\"o}rnyezetek}{70}{section.6.2}
 \select@language {magyar} \contentsline {subsection}{\numberline {6.2.1}SublimeText - linterek}{70}{subsection.6.2.1}
 \select@language {magyar} \contentsline {paragraph}{Linterek}{71}{section*.73}
 \select@language {magyar} \contentsline {subsection}{\numberline {6.2.2}Android Studio}{72}{subsection.6.2.2}
 \select@language {magyar} \contentsline {subsection}{\numberline {6.2.3}PhpStorm}{73}{subsection.6.2.3}
-\select@language {magyar} \contentsline {chapter}{\numberline {7}\"Osszefoglal\'as}{74}{chapter.7}
+\select@language {magyar} \contentsline {chapter}{\numberline {7}\IeC {\"O}sszefoglal\IeC {\'a}s}{74}{chapter.7}
 \select@language {magyar} \ 
 \select@language {magyar} \contentsline {section}{Nyilatkozat}{75}{chapter*.74}
-\select@language {magyar} \contentsline {section}{Irodalomjegyz\'ek}{77}{chapter*.75}
+\select@language {magyar} \contentsline {section}{Irodalomjegyz\IeC {\'e}k}{77}{chapter*.75}
