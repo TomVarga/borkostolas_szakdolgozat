@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2015.5.6)  7 MAY 2015 19:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2015.5.6)  7 MAY 2015 23:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -261,13 +261,6 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-(x:/texlive/2014/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
-
-(x:/texlive/2014/texmf-dist/tex/latex/base/t1enc.def
-File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
-LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
-))
 (x:/texlive/2014/texmf-dist/tex/latex/tex-gyre/tgtermes.sty
 Package: tgtermes 2009/09/27 v1.2 TeX Gyre Termes as default roman family
 
@@ -299,6 +292,18 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 ))))
+(x:/texlive/2014/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(x:/texlive/2014/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+)
+LaTeX Font Info:    Try loading font information for T1+qtm on input line 100.
+
+(x:/texlive/2014/texmf-dist/tex/latex/tex-gyre/t1qtm.fd
+File: t1qtm.fd 2009/09/25 v1.2 font definition file for T1/qtm
+))
 (x:/texlive/2014/texmf-dist/tex/generic/pdftex/glyphtounicode.tex)
 (x:/texlive/2014/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
@@ -561,11 +566,7 @@ File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
 \pgf@yy=\dimen137
 \pgf@zx=\dimen138
 \pgf@zy=\dimen139
-LaTeX Font Info:    Try loading font information for T1+qtm on input line 926.
-
-(x:/texlive/2014/texmf-dist/tex/latex/tex-gyre/t1qtm.fd
-File: t1qtm.fd 2009/09/25 v1.2 font definition file for T1/qtm
-))
+)
 (x:/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.cod
 e.tex
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
@@ -925,7 +926,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip61
 )
-Package hyperref Info: Option `unicode' set `true' on input line 85.
+Package hyperref Info: Option `unicode' set `true' on input line 84.
 
 (x:/texlive/2014/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2012/11/06 v6.83m Hyperref: PDF Unicode definition (HO)
@@ -934,22 +935,22 @@ Now handling font encoding PU ...
 ) (./VargaTamas.aux)
 \openout1 = `VargaTamas.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
 
 
 LaTeX Warning: Please use \usepackage[latin2]{inputenc} with
@@ -985,9 +986,9 @@ e
 ))
 ABD: EveryShipout initializing macros
 \c@lstlisting=\count156
-Package scrbase Info: activating magyar \lstlistingname on input line 88.
+Package scrbase Info: activating magyar \lstlistingname on input line 87.
 \AtBeginShipoutBox=\box62
-Package hyperref Info: Link coloring OFF on input line 88.
+Package hyperref Info: Link coloring OFF on input line 87.
 
 (x:/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -997,9 +998,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count157
 )
-LaTeX Info: Redefining \ref on input line 88.
-LaTeX Info: Redefining \pageref on input line 88.
-LaTeX Info: Redefining \nameref on input line 88.
+LaTeX Info: Redefining \ref on input line 87.
+LaTeX Info: Redefining \pageref on input line 87.
+LaTeX Info: Redefining \nameref on input line 87.
 
 (./VargaTamas.out) (./VargaTamas.out)
 \@outlinefile=\write5
@@ -1010,17 +1011,17 @@ LaTeX Info: Redefining \nameref on input line 88.
 LaTeX Info: Redefining \cal on input line 586.
 LaTeX Info: Redefining \mit on input line 587.
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 134.
+LaTeX Font Info:    Try loading font information for U+msa on input line 133.
 
 (x:/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 134.
+LaTeX Font Info:    Try loading font information for U+msb on input line 133.
 
 (x:/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (37.37614pt too wide) in paragraph at lines 134--141
+Overfull \hbox (37.37614pt too wide) in paragraph at lines 133--140
  [][] 
  []
 
@@ -1031,12 +1032,12 @@ Non-PDF special ignored!
 {x:/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 ]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 171.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 170.
 
  (x:/texlive/2014/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (0.15668pt too wide) in paragraph at lines 172--173
+Overfull \hbox (0.15668pt too wide) in paragraph at lines 171--172
 [][]$\T1/cmtt/m/n/12 http : \OML/cmm/m/it/12 ==\T1/cmtt/m/n/12 olga . inf . u \
 OMS/cmsy/m/n/12 ^^@[] \T1/cmtt/m/n/12 szeged . hu\OML/cmm/m/it/12 =\T1/cmtt/m/n
 /12 borkostolas\OML/cmm/m/it/12 =$[] \T1/qtm/m/n/12 csak a Sze-ge-di Tu-do-mány
@@ -1064,14 +1065,14 @@ OMS/cmsy/m/n/12 ^^@[] \T1/cmtt/m/n/12 szeged . hu\OML/cmm/m/it/12 =\T1/cmtt/m/n
 ] <Wireframe.png, id=512, 730.73pt x 530.98375pt>
 File: Wireframe.png Graphic file (type png)
  <use Wireframe.png>
-Package pdftex.def Info: Wireframe.png used on input line 329.
+Package pdftex.def Info: Wireframe.png used on input line 328.
 (pdftex.def)             Requested size: 298.75262pt x 217.08897pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--334
+Underfull \hbox (badness 10000) in paragraph at lines 332--333
 \T1/qtm/m/n/12 ($\OML/cmm/m/it/12 floating sidebar$\T1/qtm/m/n/12 ), me-nü-pon-
 tok át-ne-ve-zé-se, fej-léc lo-gó fris-sí-té-se.
  []
@@ -1082,34 +1083,34 @@ File: ../../Borkostolas_weblap/dbmodel.png Graphic file (type png)
 
 <use ../../Borkostolas_weblap/dbmodel.png>
 Package pdftex.def Info: ../../Borkostolas_weblap/dbmodel.png used on input lin
-e 350.
+e 349.
 (pdftex.def)             Requested size: 298.75262pt x 302.37468pt.
  [16 <../../Borkostolas_weblap/dbmodel.png>] [17]
-Underfull \hbox (badness 6477) in paragraph at lines 378--379
+Underfull \hbox (badness 6477) in paragraph at lines 377--378
 \T1/qtm/m/n/12 nö-vek-szik eggyel az $\OML/cmm/m/it/12 AUTO[]INCREMENT$ \T1/qtm
 /m/n/12 -nek kö-szön-he-t®-en. Az év-já-ra-tot
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 408--409
+Underfull \hbox (badness 10000) in paragraph at lines 407--408
 \T1/qtm/m/n/12 Nézzük el®-ször az utób-bit, az id® bé-lyeg tí-pust tá-ro-ló me-
 z®-ket. A
  []
 
 
-Underfull \hbox (badness 6032) in paragraph at lines 408--409
+Underfull \hbox (badness 6032) in paragraph at lines 407--408
 \T1/qtm/m/n/12 hasz-ná-ló vagy eset-le-ges tá-ma-dó mi-kor igé-nyelt jel-szó új
 -ra be-ál-lí-tó e-mailt. A
  []
 
 
-Underfull \hbox (badness 1092) in paragraph at lines 408--409
+Underfull \hbox (badness 1092) in paragraph at lines 407--408
 \OML/cmm/m/it/12 user[]last[]failed[]login$ \T1/qtm/m/n/12 me-z® a leg-utol-só 
 hi-bás be-je-lent-ke-zés id®-pont-ját tá-rol-ja. A
  []
 
 [19] [20]
-Overfull \hbox (11.32777pt too wide) in paragraph at lines 421--422
+Overfull \hbox (11.32777pt too wide) in paragraph at lines 420--421
  []\T1/qtm/b/n/12 Flaot [] [] \T1/qtm/m/n/12 Egy le-be-g® elem ki-ke-rül a $\OM
 L/cmm/m/it/12 normal flow$\T1/qtm/m/n/12 -ból és bal-ra vagy jobb-ra iga-zo-dik
  amennyi-
@@ -1127,71 +1128,77 @@ File: lstlang1.sty 2014/09/06 1.5e listings language file
 (x:/texlive/2014/texmf-dist/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2014/09/06 1.5e listings language file
 ) [24]
-Overfull \hbox (18.3864pt too wide) in paragraph at lines 508--509
+Overfull \hbox (18.3864pt too wide) in paragraph at lines 507--508
 \T1/qtm/m/n/12 in-for-má-ci-ó-ját, majd az így ka-pott in-for-má-ci-ó-kat egy o
 b-jek-tum-ban ad-ja vissza a $\OML/cmm/m/it/12 fetchObject []$
  []
 
 [25]
-LaTeX Font Info:    Try loading font information for OMS+qtm on input line 520.
+LaTeX Font Info:    Try loading font information for OMS+qtm on input line 519.
 
-LaTeX Font Info:    No file OMSqtm.fd. on input line 520.
+LaTeX Font Info:    No file OMSqtm.fd. on input line 519.
 
 
 LaTeX Font Warning: Font shape `OMS/qtm/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textasteriskcentered' on input line 520.
+(Font)              for symbol `textasteriskcentered' on input line 519.
 
-[26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38]
-Underfull \hbox (badness 10000) in paragraph at lines 814--818
+[26] [27] [28] [29] [30] [31] [32] [33] [34] [35]
+Overfull \hbox (0.62346pt too wide) in paragraph at lines 738--739
+[]\T1/qtm/m/n/12 Amennyiben meg-gy®-z®d-tünk, hogy a szer-ver ezen kri-té-ri-um
+-nak mind ele-get tesz, nincs
+ []
+
+[36] [37] [38]
+Underfull \hbox (badness 10000) in paragraph at lines 813--817
 \T1/qtm/m/n/12 mint az $\OML/cmm/m/it/12 admin:php$ \T1/qtm/m/n/12 vagy az $\OM
 L/cmm/m/it/12 androidCalculator:php$\T1/qtm/m/n/12 , de a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 814--818
+Underfull \hbox (badness 10000) in paragraph at lines 813--817
 
  []
 
 
-Underfull \hbox (badness 7486) in paragraph at lines 814--818
+Underfull \hbox (badness 7486) in paragraph at lines 813--817
 \T1/qtm/m/n/12 ta-lál-ha-tó. A bal ol-da-li a $\OML/cmm/m/it/12 wines$ \T1/qtm/
 m/n/12 táb-lá-ban ta-lál-ha-tó bo-ro-kat lis-táz-za kis és a
  []
 
 [39]
-Overfull \hbox (61.20485pt too wide) in paragraph at lines 841--842
+Overfull \hbox (66.53285pt too wide) in paragraph at lines 840--841
 \T1/qtm/m/n/12 ken majd a szá-mí-tás fut-ta-tan-dó. Az adat-bá-zis-ból a töb-bi
- ér-té-ke-lés be-gy¶j-té-sért a $\OML/cmm/m/it/12 getTastersScores:php$
+ ér-té-ke-lés be-gy¶j-té-sé-ért a $\OML/cmm/m/it/12 getTastersScores:php$
  []
 
 [40]
-Overfull \hbox (17.89397pt too wide) in paragraph at lines 845--846
+Overfull \hbox (23.22197pt too wide) in paragraph at lines 844--845
 \T1/qtm/m/n/12 ál-ta-lam imp-le-men-tált $\OML/cmm/m/it/12 CoHITS$ \T1/qtm/m/n/
-12 al-go-rit-mus kép-zi az egyik cso-por-tot, amely a $\OML/cmm/m/it/12 HITSsta
-rt:php$
+12 al-go-rit-mus ké-pe-zi az egyik cso-por-tot, amely a $\OML/cmm/m/it/12 HITSs
+tart:php$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 853--854
+Underfull \hbox (badness 10000) in paragraph at lines 852--853
 \T1/qtm/m/n/12 sá-nál, amely az adott bor-ra vo-nat-ko-zó át-la-gos ér-té-ke-lé
 -se-ket tar-tal-maz-za. A
  []
 
 [41]
-Underfull \hbox (badness 3118) in paragraph at lines 863--864
+Underfull \hbox (badness 3118) in paragraph at lines 862--863
 \OML/cmm/m/it/12 tWLeftTransposed$ \T1/qtm/m/n/12 nem más mint a $\OML/cmm/m/it
 /12 tWLeftData$ \T1/qtm/m/n/12 transz-po-nál-ta, amit a tömb
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 863--864
+Underfull \hbox (badness 10000) in paragraph at lines 862--863
 \OML/cmm/m/it/12 flipDiaognally\OT1/cmr/m/n/12 ($\OML/cmm/m/it/12 arr\OT1/cmr/m
 /n/12 )$ \T1/qtm/m/n/12 me-tó-dus vé-gez el. Vé-gül a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 863--864
+Underfull \hbox (badness 10000) in paragraph at lines 862--863
 \OML/cmm/m/it/12 tWRightMultipliedBytWLeftTransposed$ \T1/qtm/m/n/12 egy a $\OM
 L/cmm/m/it/12 tWRightData$ \T1/qtm/m/n/12 és
  []
@@ -1201,37 +1208,37 @@ L/cmm/m/it/12 tWRightData$ \T1/qtm/m/n/12 és
 [44
 
 ]
-Overfull \hbox (25.71509pt too wide) in paragraph at lines 895--896
+Overfull \hbox (25.71509pt too wide) in paragraph at lines 894--895
 \T1/qtm/m/n/12 ob-jek-tum. A $\OML/cmm/m/it/12 View$ \T1/qtm/m/n/12 egy ob-jek-
 tum amely fel-hasz-ná-lói in-ter-ak-ci-ót tesz le-he-t®-vé míg a $\OML/cmm/m/it
 /12 ViewGroup$
  []
 
 
-Overfull \hbox (1.4333pt too wide) in paragraph at lines 902--903
+Overfull \hbox (1.4333pt too wide) in paragraph at lines 901--902
 []\T1/qtm/m/n/12 Az ele-me-ket fu-tá-si id®-ben pél-dá-nyo-sít-hat-juk. Az al-k
 al-ma-zás prog-ram-ma-ti-ku-san hoz-
  []
 
 [45] [46]
-Underfull \hbox (badness 10000) in paragraph at lines 927--931
+Underfull \hbox (badness 10000) in paragraph at lines 926--930
 
  []
 
 [47]
-Underfull \hbox (badness 2096) in paragraph at lines 944--945
+Underfull \hbox (badness 2096) in paragraph at lines 943--944
 []\T1/qtm/m/n/12 Egy ac-ti-vity új pél-dá-nyát úgy in-dít-hat-juk el, hogy egy 
 intent-el meg-hív-juk a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 950--951
+Underfull \hbox (badness 10000) in paragraph at lines 949--950
 \T1/qtm/m/n/12 tok ak-kor is meg-®r-zés-re ke-rül-nek, ha az al-kal-ma-zás be-z
 á-rás-ra ke-rül-ne. A
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 953--954
+Underfull \hbox (badness 10000) in paragraph at lines 952--953
 \T1/qtm/m/n/12 Az adat-bá-zis hoz-zá-fé-rést pe-dig a $\OML/cmm/m/it/12 getWrit
 ableDatabase []$\T1/qtm/m/n/12 , il-let-ve
  []
@@ -1240,7 +1247,7 @@ ableDatabase []$\T1/qtm/m/n/12 , il-let-ve
 File: lstlang1.sty 2014/09/06 1.5e listings language file
 ) [50]
 [51] [52]
-Underfull \hbox (badness 3989) in paragraph at lines 1033--1034
+Underfull \hbox (badness 3989) in paragraph at lines 1032--1033
 \T1/qtm/m/n/12 tér-nék ki. El®-ször is ar-ra hív-nám fel a fi-gyel-met, hogy ez
  az ac-ti-vity már a
  []
@@ -1248,29 +1255,23 @@ Underfull \hbox (badness 3989) in paragraph at lines 1033--1034
 <UserPage.png, id=924, 320.69812pt x 514.92375pt>
 File: UserPage.png Graphic file (type png)
  <use UserPage.png>
-Package pdftex.def Info: UserPage.png used on input line 1038.
+Package pdftex.def Info: UserPage.png used on input line 1037.
 (pdftex.def)             Requested size: 160.34866pt x 257.46124pt.
-
-Overfull \hbox (2.90591pt too wide) in paragraph at lines 1043--1044
-\T1/qtm/m/n/12 mint a fel-hasz-ná-ló ér-té-ke-lé-se-i-nek meg-je-le-ní-té-se a 
-fel-ada-ta, il-let-ve a fel-s® $\OML/cmm/m/it/12 detailsContainer$
- []
-
-[53 <./UserPage.png>]
-Underfull \hbox (badness 1205) in paragraph at lines 1054--1055
+ [53 <./UserPage.png>]
+Underfull \hbox (badness 1205) in paragraph at lines 1053--1054
 []\T1/qtm/m/n/12 A lis-ta ele-mek-kel va-ló fel-töl-té-sé-ért a $\OML/cmm/m/it/
 12 WinesAdapter$ \T1/qtm/m/n/12 osz-tály fe-le-l®s, amely az
  []
 
 [54]
-Underfull \hbox (badness 1337) in paragraph at lines 1073--1074
+Underfull \hbox (badness 1337) in paragraph at lines 1072--1073
 \OML/cmm/m/it/12 ScoredWine$ \T1/qtm/m/n/12 ob-jek-tu-mot az $\OML/cmm/m/it/12 
 ArrayList$ \T1/qtm/m/n/12 -b®l a $\OML/cmm/m/it/12 getItem []$ \T1/qtm/m/n/12 m
 e-tó-dus má-sol-ja ki. A
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1075--1077
+Underfull \hbox (badness 10000) in paragraph at lines 1074--1076
 \OML/cmm/m/it/12 setOnItemClickListener []$ \T1/qtm/m/n/12 me-tó-du-sát amely e
 gy olyan $\OML/cmm/m/it/12 AdapterView$
  []
@@ -1279,20 +1280,27 @@ gy olyan $\OML/cmm/m/it/12 AdapterView$
 File: TabletResults.png Graphic file (type png)
 
 <use TabletResults.png>
-Package pdftex.def Info: TabletResults.png used on input line 1087.
+Package pdftex.def Info: TabletResults.png used on input line 1086.
 (pdftex.def)             Requested size: 383.93343pt x 223.58476pt.
  [56 <./TabletResults.png>]
 4. fejezet.
 [57
 
-] [58] [59]
-Underfull \hbox (badness 2126) in paragraph at lines 1151--1152
+] [58]
+Overfull \hbox (38.33351pt too wide) in paragraph at lines 1141--1142
+\T1/qtm/m/n/12 azok res-pek-tív hasz-ná-la-tá-val az ér-té-ke-lés $\OML/cmm/m/i
+t/12 ArrayList <[] Score >[]$ \T1/qtm/m/n/12 -ba va-ló gy¶j-té-se $\OML/cmm/m/i
+t/12 remoteScores$\T1/qtm/m/n/12 ,
+ []
+
+[59]
+Underfull \hbox (badness 2126) in paragraph at lines 1150--1151
 \T1/qtm/m/n/12 ma-zás fel-hasz-ná-lói fe-lü-le-té-nek fris-sí-té-se. Ami-re oda
  kell fi-gyel-ni az az, hogy ha
  []
 
 
-Overfull \hbox (3.57765pt too wide) in paragraph at lines 1154--1155
+Overfull \hbox (3.57765pt too wide) in paragraph at lines 1153--1154
 \T1/qtm/m/n/12 Az al-go-rit-mu-sok ered-mé-nyé-nek meg-je-le-ní-té-se is te-kin
 t-he-t® egy faj-ta szol-gál-ta-tás-nak, amely
  []
@@ -1304,21 +1312,21 @@ t-he-t® egy faj-ta szol-gál-ta-tás-nak, amely
 \c@TPTCStart=\count160
 \c@TPTCStop=\count161
 
-Underfull \hbox (badness 10000) in paragraph at lines 1183--1192
+Underfull \hbox (badness 10000) in paragraph at lines 1182--1191
 \T1/qtm/b/n/12 Bemenet: $\OML/cmm/m/it/12 user[]name \OT1/cmr/m/n/12 =[] "\OML/
 cmm/m/it/12 tom\OT1/cmr/m/n/12 "$ $\OML/cmm/m/it/12 user[]password[]ew \OT1/cmr
 /m/n/12 =[] "\OML/cmm/m/it/12 tom\OT1/cmr/m/n/12 123"$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1194--1203
+Underfull \hbox (badness 10000) in paragraph at lines 1193--1202
 \T1/qtm/b/n/12 Bemenet: $\OML/cmm/m/it/12 user[]name \OT1/cmr/m/n/12 =[] "\OML/
 cmm/m/it/12 t\OT1/cmr/m/n/12 "$ $\OML/cmm/m/it/12 user[]password[]ew \OT1/cmr/m
 /n/12 =[] "\OML/cmm/m/it/12 tom\OT1/cmr/m/n/12 123"$
  []
 
 
-Overfull \hbox (8.21252pt too wide) in paragraph at lines 1205--1214
+Overfull \hbox (8.21252pt too wide) in paragraph at lines 1204--1213
 \T1/qtm/b/n/12 Bemenet: $\OML/cmm/m/it/12 user[]name \OT1/cmr/m/n/12 =[] ""$ $\
 OML/cmm/m/it/12 user[]password[]ew \OT1/cmr/m/n/12 =[] "\OML/cmm/m/it/12 tom\OT
 1/cmr/m/n/12 123"$ $\OML/cmm/m/it/12 user[]password[]repeat \OT1/cmr/m/n/12 =
@@ -1328,11 +1336,11 @@ OML/cmm/m/it/12 user[]password[]ew \OT1/cmr/m/n/12 =[] "\OML/cmm/m/it/12 tom\OT
 
 ]
 
-LaTeX Warning: Command \' invalid in math mode on input line 1220.
+LaTeX Warning: Command \' invalid in math mode on input line 1219.
 
 Missing character: There is no á in font cmr12!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1216--1225
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1224
 \T1/qtm/b/n/12 Bemenet: $\OML/cmm/m/it/12 user[]name \OT1/cmr/m/n/12 =[] "\OML/
 cmm/m/it/12 tom\OT1/cmr/m/n/12 1"$ $\OML/cmm/m/it/12 user[]password[]new \OT1/c
 mr/m/n/12 =[] "\OML/cmm/m/it/12 tom\OT1/cmr/m/n/12 123"$
@@ -1343,7 +1351,7 @@ mr/m/n/12 =[] "\OML/cmm/m/it/12 tom\OT1/cmr/m/n/12 123"$
 File: algoritmus_kis_adatok.png Graphic file (type png)
 
 <use algoritmus_kis_adatok.png>
-Package pdftex.def Info: algoritmus_kis_adatok.png used on input line 1578.
+Package pdftex.def Info: algoritmus_kis_adatok.png used on input line 1577.
 (pdftex.def)             Requested size: 298.75262pt x 185.29817pt.
  [68 <./algoritmus_kis_adatok.png>]
 6. fejezet.
@@ -1356,14 +1364,14 @@ Package pdftex.def Info: algoritmus_kis_adatok.png used on input line 1578.
 ] [75
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1911--1912
+Underfull \hbox (badness 10000) in paragraph at lines 1910--1911
 [][]$\T1/cmtt/m/n/12 http : \OML/cmm/m/it/12 ==\T1/cmtt/m/n/12 wiki . hashphp .
  org\OML/cmm/m/it/12 =\T1/cmtt/m/n/12 PDO _ Tutorial _ for _ MySQL _ Developers
  #
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1925--1926
+Underfull \hbox (badness 10000) in paragraph at lines 1924--1925
 []\T1/qtm/m/n/12 ECMAScript Lan-gu-age Spe-ci-fi-ca-ti-on []$\T1/cmtt/m/n/12 ht
 tp : \OML/cmm/m/it/12 ==\T1/cmtt/m/n/12 www . ecma \OMS/qtm/m/n/12 ^^@[] \T1/cm
 tt/m/n/12 international .
@@ -1372,11 +1380,11 @@ tt/m/n/12 international .
 [76
 
 ] [77]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1974.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1974.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1973.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1973.
  (./VargaTamas.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1974.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1974.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1973.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1973.
 
 Package rerunfilecheck Info: File `VargaTamas.out' has not changed.
 (rerunfilecheck)             Checksum: B9126C6B5E8E6F3AD90214FDB0967758;10933.
@@ -1384,16 +1392,16 @@ Package rerunfilecheck Info: File `VargaTamas.out' has not changed.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1974.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1973.
  ) 
 Here is how much of TeX's memory you used:
- 28140 strings out of 493109
- 495329 string characters out of 6138588
+ 28138 strings out of 493109
+ 495308 string characters out of 6138588
  919673 words of memory out of 5000000
- 30715 multiletter control sequences out of 15000+600000
- 51995 words of font info for 60 fonts, out of 8000000 for 9000
+ 30714 multiletter control sequences out of 15000+600000
+ 51231 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,19n,76p,2369b,3177s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,19n,76p,2369b,3175s stack positions out of 5000i,500n,10000p,200000b,80000s
 {x:/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{x:/texl
 ive/2014/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc}<x:/texlive/2014/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmex10.pfb><x:/texlive/2014/texmf-dist/fonts/
@@ -1408,7 +1416,7 @@ ype1/public/amsfonts/symbols/msam10.pfb><x:/texlive/2014/texmf-dist/fonts/type1
 /public/tex-gyre/qtmb.pfb><x:/texlive/2014/texmf-dist/fonts/type1/public/tex-gy
 re/qtmr.pfb><x:/texlive/2014/texmf-dist/fonts/type1/public/tex-gyre/qtmri.pfb><
 x:/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on VargaTamas.pdf (77 pages, 564207 bytes).
+Output written on VargaTamas.pdf (77 pages, 564027 bytes).
 PDF statistics:
  1322 PDF objects out of 1440 (max. 8388607)
  1194 compressed objects within 12 object streams
