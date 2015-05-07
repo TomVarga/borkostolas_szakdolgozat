@@ -265,25 +265,25 @@
 	Tehát látható, hogy az így előállított algoritmust alkalmazni lehet egy borkóstolási gráfra kóstolók rangsorolásának céljából az ő képességeik és szakmai hozzáértésük alapján. Általánosságban az figyelhető meg, hogy az így előálló rangsor jobban teljesít, mint más egyszerű statisztikai algoritmusok. Ki tudja szűrni a hozzá nem értő kóstolókat \cite{CoHITS}.
 	
 	\section{Hamming}
-	A Hamming-távolságot \eqref{Hamming-távolság} többnyire vektorok, karaktersorozatok, valamint bitminták közötti eltérések kimutatására használják. A Hamming-távolság csak azt mondja meg, hogy hány helyen nem illeszkedik az egyik minta a másikra. Legyen $ S_{1} $ és $ S_{2} $ két azonos hosszú minta.
+	A Hamming-távolságot \ref{eq:Hamming-távolság} többnyire vektorok, karaktersorozatok, valamint bitminták közötti eltérések kimutatására használják. A Hamming-távolság csak azt mondja meg, hogy hány helyen nem illeszkedik az egyik minta a másikra. Legyen $ S_{1} $ és $ S_{2} $ két azonos hosszú minta.
 	
-	\begin{equation} \label{Hamming-távolság}
+	\begin{equation} \label{eq:Hamming-távolság}
 	D_{Hamming}\left ( S_{1},S_{2} \right )=\sum_{p=0}^{|S_{1}|}S_{1}\left(p\right)\neq S_{2}\left(p\right)
 	\end{equation}
 	
 	Ez a távolság nem lesz megfelelő mérték vizsgálathoz, mivel nem túl informatív.
 	
 	\section{Koszinusz}
-	Legyen $ \pi^1 $ és $ \pi^2 $ két permutáció-vektor. Ekkor ezek koszinusz távolságát az \eqref{Koszinusz-távolság} képlet szerint számíthatjuk ki, ahol $ || \cdot || $ az euklideszi normát jelöli.
+	Legyen $ \pi^1 $ és $ \pi^2 $ két permutáció-vektor. Ekkor ezek koszinusz távolságát az \ref{eq:Koszinusz-távolság} képlet szerint számíthatjuk ki, ahol $ || \cdot || $ az euklideszi normát jelöli.
 	
-	\begin{equation} \label{Koszinusz-távolság}
+	\begin{equation} \label{eq:Koszinusz-távolság}
 	D_{cos}\left(\pi^1,\pi^2\right)=1-\dfrac{\pi^1\cdot\pi^2}{||\pi^1||\cdot||\pi^2||}
 	\end{equation}
 	
 	\section{Precedencia}
-	A precedencia távolság meghatározásához definiálnunk kell először a precedencia mátrix fogalmát. Egy $ \pi $, $ n $ hosszúságú permutáció precedencia mátrixa, egy olyan bináris elemekből álló $ n \times n $-es $ P $ mátrix, amelyben $ P_{\pi_{i}\pi_{j}}=1, i<j $ egyébként $P_{ij}=0$, azaz a permutáció elemeinek sorrendjét kódoljuk egy bináris mátrixszal. A precedencia távolságot két $\pi^1$ és $\pi^2$ permutáció között ($P_{1}$ és $P_{2}$ a nekik megfelelő precedencia mátrix) a precedencia mátrixuk egyező nem nulla elemeinek számából számíthatjuk ki \eqref{Precedencia-távolság} szerint.
+	A precedencia távolság meghatározásához definiálnunk kell először a precedencia mátrix fogalmát. Egy $ \pi $, $ n $ hosszúságú permutáció precedencia mátrixa, egy olyan bináris elemekből álló $ n \times n $-es $ P $ mátrix, amelyben $ P_{\pi_{i}\pi_{j}}=1, i<j $ egyébként $P_{ij}=0$, azaz a permutáció elemeinek sorrendjét kódoljuk egy bináris mátrixszal. A precedencia távolságot két $\pi^1$ és $\pi^2$ permutáció között ($P_{1}$ és $P_{2}$ a nekik megfelelő precedencia mátrix) a precedencia mátrixuk egyező nem nulla elemeinek számából számíthatjuk ki \ref{eq:Precedencia-távolság} szerint.
 	
-	\begin{equation} \label{Precedencia-távolság}
+	\begin{equation} \label{eq:Precedencia-távolság}
 	D_{prec}\left(\pi^1, \pi^2\right)=\dfrac{n\left(n-1\right)}{2}-\sum_{i=1}^{n}\sum_{j=1}^{n}P_{ij}^1P_{ij}^2
 	\end{equation}
 	
@@ -293,8 +293,8 @@
 	Szemléletesen: Legyen $N_{\pi}$ a $\pi$ permutáció összefüggőségi mátrixa. Kezdetben minden eleme legyen $0$, majd a $\pi$ permutáció minden $i$ elemére az $N_{pi}\left(\pi_{i},\pi{i+1}\right)=1$. A $\pi^1$ és $\pi^2$ permutációra kiszámoljuk az $N_{\pi^1}$ és $N_{\pi^2}$ mátrixokat. $n_{adj}$ az $N_{\pi^1}$
 	és$N_{\pi^2}$ mátrixban azonos cellában lévő $1$-esek száma. 
 	
-	Ekkor az összefüggősségi távolság \eqref{Összeföggőségi-távolság} szerint számítandó.
-	\begin{equation} \label{Összeföggőségi-távolság}
+	Ekkor az összefüggősségi távolság \ref{eq:Összeföggőségi-távolság} szerint számítandó.
+	\begin{equation} \label{eq:Összeföggőségi-távolság}
 	D_{adj}\left(\pi^1,\pi^2\right)=n-n_{adj}-1
 	\end{equation}
 	\cite{Borkostolas projekt}
@@ -504,7 +504,7 @@ db_connection = null;
 		\end{lstlisting}
 	\end{minipage}
 	
-	Miután sikeresen létrehoztunk egy aktív adatbázis kapcsolatot SQL utasításokat a \ref{lst:php pdo sql query} kódrészletben látott módon indíthatunk. A példában éppen lekérjük egy felhasználó összes információját, majd az így kapott információkat egy objektumban adja vissza a $fetchObject\left(\right)$ metódus. Tehát például a $user\_id$ a \ref{lst:php pdo result handling} kódrészletben látottak szerint lesz elérhető. Használatos még többek között a $fetchAll\left(\right)$ ami az SQL lekérdezés által visszaadott összes sort egy-egy tömbben adja vissza. Hasznos lehet még ismerni a $rowCount\left(\right)$ metódust, ami megadja az SQL parancs által érintett sorok számát.
+	Miután sikeresen létrehoztunk egy aktív adatbázis kapcsolatot SQL utasításokat a \ref{lst:php pdo sql query} kódrészletben látott módon indíthatunk. A példában éppen lekérjük egy felhasználó összes információját, majd az így kapott információkat egy objektumban adja vissza a \linebreak$fetchObject\left(\right)$ metódus. Tehát például a $user\_id$ a \ref{lst:php pdo result handling} kódrészletben látottak szerint lesz elérhető. Használatos még többek között a $fetchAll\left(\right)$ ami az SQL lekérdezés által visszaadott összes sort egy-egy tömbben adja vissza. Hasznos lehet még ismerni a $rowCount\left(\right)$ metódust, ami megadja az SQL parancs által érintett sorok számát.
 	
 	\noindent\begin{minipage}{\linewidth}
 		\begin{lstlisting}[language=php,label={lst:php pdo result handling}, caption={PHP PDO eredmény kezelés}]
@@ -837,11 +837,11 @@ if ($login->isUserLoggedIn() == true) {
 	
 	Most, hogy kigyűjtöttük a friss értékeléseket azokkal, ideje frissítenünk az adatbázist. Ehhez egy AJAX hívást használtam, ennek köszönhetően a demó oldal nem kerül frissítésre, amelynek köszönhetően, ha bármilyen hiba lépne fel a beviteli mezők nem vesztik el a tartalmukat, később újból meg lehet próbálni az elküldést. A tényleges adatbázisba írást a $addWineScoresToDB.php$ állomány végzi, amely minden egyes értékelésre előbb megnézi, hogy adott felhasználó értékelte -e már az adott bort, tehát a $scores$ táblában van -e már az ő $user\_id$ és a $wine\_id$ -hez tartozó $score$. Amennyiben igen, és az új értékelés egy szám, akkor azt az újra cserélni, de ha az új értékelés nem szám, tehát a felhasználó törölte a már meglévő értékelését, akkor a $score$ értékét $null$ -ra állítja. Azért ezt a megközelítést választottam, mert úgy gondoltam, ha valaki már egyszer értékelt egy bort, majd törölte annak értékelését, akkor valószínű, hogy előbb-utóbb vissza fog térni arra a borra és újra értékeli. Természetesen, ha az adatbázisban nem volt még az adott bor értékelve, akkor simán csak beszúrjuk a bor értékelését a $score$ táblába a megfelelő $user\_id$, illetve $wine\_id$ párossal. Végül, ha nem történt semmilyen hiba $success$ üzenettel térünk vissza az AJAX hívásból.
 	
-	Miután sikeresen frissült az adatbázis a felhasználó új értékelésével el kell, hogy készítsük az algoritmusok számára azt a mátrixot amely azon értékeléseket tartalmazza amelyeken majd a számítás futtatandó. Az adatbázisból a többi értékelés begyűjtéséért a $getTastersScores.php$ segéd állomány felelős, amely azt egy JSON stringben adja vissza az AJAX hívásnak.
+	Miután sikeresen frissült az adatbázis a felhasználó új értékelésével el kell, hogy készítsük az algoritmusok számára azt a mátrixot amely azon értékeléseket tartalmazza amelyeken majd a számítás futtatandó. Az adatbázisból a többi értékelés begyűjtéséért a \linebreak$getTastersScores.php$ segéd állomány felelős, amely azt egy JSON stringben adja vissza az AJAX hívásnak.
 	
 	A következő lépésben két adatsort készítünk, az egyik a megkapott teljes adatsor értékeléseit fogja tartalmazni sor folytonos formában egy tömbben, a felhasználó nevével, majd azt az ő értékeléseivel követve, amelyet a többi kóstoló anonimizált neve követ az ő értékeléseikkel, ahol a név indikálja egy új értékelés sorozat kezdetét. A másik adatsor csak olyan borok értékelését fogja tartalmazni amit a felhasználó is értékelt, ez ugyan kicsit csalás de úgy vettük észre, hogy ez olyan esetekben ahol a felhasználó csak kevés bort értékelt jobb eredményt ad.
 	
-	Az így előkészített adatsorok feldolgozását a $getData$ JavaScript függvény folytatja, amelynek feladata több AJAX híváson keresztül a számítások elvégzése, majd a kinyert adatok alapján a grafikon rajzoló függvények meghívása. Az első AJAX hívás a $selectAlgorithm.php$ állományra irányul, amely feladata a munka kétfelé ágaztatása az alapján, hogy amelyik típusú algoritmus lett kiválasztva a demó oldalon. A két kategória egyszerűen az alapján van meghatározva, hogy ki implementálta az adott algoritmust. Az általam implementált $CoHITS$ algoritmus képezi az egyik csoportot, amely a $HITSstart.php$ állományból indul ki, míg a kapott kód alapján működő többi algoritmus kezelésért a $calculateGivenAlgorithm.php$ felelős.
+	Az így előkészített adatsorok feldolgozását a $getData$ JavaScript függvény folytatja, amelynek feladata több AJAX híváson keresztül a számítások elvégzése, majd a kinyert adatok alapján a grafikon rajzoló függvények meghívása. Az első AJAX hívás a $selectAlgorithm.php$ állományra irányul, amely feladata a munka kétfelé ágaztatása az alapján, hogy amelyik típusú algoritmus lett kiválasztva a demó oldalon. A két kategória egyszerűen az alapján van meghatározva, hogy ki implementálta az adott algoritmust. Az általam implementált $CoHITS$ algoritmus képezi az egyik csoportot, amely a \linebreak$HITSstart.php$ állományból indul ki, míg a kapott kód alapján működő többi algoritmus kezelésért a $calculateGivenAlgorithm.php$ felelős.
 	
 	A $calculateGivenAlgorithm.php$ -csak röviden térnék ki, hiszen ez főképp nem az én munkám (forrás: \cite{Borkostolas projekt}). Amit én írtam bele az a kódrészlet amely megjegyzések között szerepel a forráskódban, ennek a bemeneti adatok olyan formátumban hozása a feladata amelyet ezek az algoritmusok elvárnak. Végeztem még két kisebb javítást is, az egyik az volt, hogy a bemeneti adatok során való feldolgozáskor az egyik ciklus rosszul volt indexelve ezért egy elem mindig kimaradt a feldolgozásból. A másik kis javítás pedig egy nullával való osztás elkerülésére irányult.
 	
@@ -891,7 +891,7 @@ $tWLeft[$sTaster][$sItem] = (array_sum($tDiffFromAvgByItem[$sItem])-$nScore)/((c
 	Talán a legfontosabb fájl, amelynek feladatai közé tartozik többek között az alkalmazás belépési pontjának meghatározása. Itt kerül definiálásra az alkalmazás neve, ikonja és az ahhoz tartozó címke. Az itt definiált jogosultság kérések alapján kell majd a felhasználónak dönteni, hogy telepíti -e az alkalmazást és természetesen csakis ezen jogosultságok által engedélyezett szolgáltatások lesznek elérhetőek az alkalmazás számára. Most konkréten három ilyen szolgáltatás elérésére volt szükségem ezek a hálózat állapotának lekérdezése, internet hozzáférés, valamint engedély a külső tárhelyre való írásra. Azon activity-k amik nem szerepelnek ebben a fájlban, nem lesznek elérhetőek az alkalmazásból. Nem utolsó sorban itt adhatjuk meg azt is, hogy milyen Android verziók alatt futtatható az alkalmazás, jelenleg az alkalmazás legalább 16 os SDK (software development kit) verziót követel meg, ami a $Jelly\ Bean$ fantázia nevű android 4.1 -nek felel meg.
 	
 	\subsection*{View és ViewGroup}
-	Android fejlesztés során minden felhasználói felületi elem vagy $View$ vagy $ViewGroup$ objektum. A $View$ egy objektum amely felhasználói interakciót tesz lehetővé míg a $ViewGroup$ a $View$ objektumokat (vagy más $ViewGroup$ -okat) tartalmazó objektum, amely a felhasználói felület elrendezésének definiálására szolgál. Nem kell megijedni, nem kell minden egyes felhasználói felületet nekünk definiálni, léteznek már kész felhasználható elemek, amelyeknek csak azt kell megmondanunk, hogy milyen tartalmat jelenítsenek meg, ilyen például az $ActionBar$, $Dialog$ vagy a $Status\ Notification$.
+	Android fejlesztés során minden felhasználói felületi elem vagy $View$ vagy $ViewGroup$ objektum. A $View$ egy objektum amely felhasználói interakciót tesz lehetővé míg a \linebreak$ViewGroup$ a $View$ objektumokat (vagy más $ViewGroup$ -okat) tartalmazó objektum, amely a felhasználói felület elrendezésének definiálására szolgál. Nem kell megijedni, nem kell minden egyes felhasználói felületet nekünk definiálni, léteznek már kész felhasználható elemek, amelyeknek csak azt kell megmondanunk, hogy milyen tartalmat jelenítsenek meg, ilyen például az $ActionBar$, $Dialog$ vagy a $Status\ Notification$.
 	
 	\subsection*{Layout}
 	Ez egy XML fájl, amely definiálja a felhasználói felületen megjelenő elemek vizuális elrendezését. Két módszer létezik egy elrendezés definiálására, amelyek külön-külön, de akár egymással kombinálva is alkalmazhatók:
@@ -1138,7 +1138,7 @@ for (int i=0; i < jsonArray.length(); i++ ){
 	Az első lépés az, hogy indítunk egy új szálat, hiszen hálózati műveleteket készülünk csinálni, amelyet egyből követhet is a hálózat meglétének ellenőrzése a már megszokott módon. Eddig nincs semmi újdonság.
 	
 	\subsection{syncScores}
-	A $DBSyncController$ osztály $syncScores\left(\right)$ metódusa felelős az értékelések szinkronizációjáért. Itt az első lépés az adatbázis elérést biztosító osztályok példányosítása, majd azok respektív használatával az értékelés $ArrayList<Score>$ -ba való gyűjtése $remoteScores$, illetve $localScores$ változó nevek alatt.
+	A $DBSyncController$ osztály $syncScores\left(\right)$ metódusa felelős az értékelések szinkronizációjáért. Itt az első lépés az adatbázis elérést biztosító osztályok példányosítása, majd azok respektív használatával az értékelés $ArrayList<Score>$ -ba való gyűjtése \linebreak$remoteScores$, illetve $localScores$ változó nevek alatt.
 	
 	Amennyiben a $remoteScores$ tartalmazott értékeléseket azt átadjuk a $LocalDAO$ \linebreak$addOrUpdateScore\left(\right)$ -nak, amely feladata a lokális adatbázis frissítése. Ez úgy történik, hogy minden egyes $remoteScores$ értékelésére megnézzük, hogy a lokális adatbázisban van -e bejegyzés az adott $user\_id$ és $wine\_id$ kombinációval. Amennyiben igen, meg kell vizsgálni, hogy az értékelések megegyeznek -e, illetve, hogy a távoli értékelés nem -e volt korábban létrehozva mint a lokális, mert ha a két feltétel közül bármelyik teljesül, akkor nem kell frissíteni a lokális adatbázist. Viszont ha ezen feltételek nem teljesülnek, vagy nem volt még bejegyzés a lokális adatbázisban, akkor egyszerűen csak beszúrjuk azt. Ezzel be is fejeztük a helyi adatbázis frissítését.
 	

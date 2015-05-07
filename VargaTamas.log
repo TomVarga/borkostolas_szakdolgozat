@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2015.5.6)  7 MAY 2015 23:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2015.5.6)  7 MAY 2015 23:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1128,9 +1128,9 @@ File: lstlang1.sty 2014/09/06 1.5e listings language file
 (x:/texlive/2014/texmf-dist/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2014/09/06 1.5e listings language file
 ) [24]
-Overfull \hbox (18.3864pt too wide) in paragraph at lines 507--508
+Underfull \hbox (badness 3260) in paragraph at lines 507--508
 \T1/qtm/m/n/12 in-for-má-ci-ó-ját, majd az így ka-pott in-for-má-ci-ó-kat egy o
-b-jek-tum-ban ad-ja vissza a $\OML/cmm/m/it/12 fetchObject []$
+b-jek-tum-ban ad-ja vissza a
  []
 
 [25]
@@ -1167,25 +1167,24 @@ m/n/12 táb-lá-ban ta-lál-ha-tó bo-ro-kat lis-táz-za kis és a
  []
 
 [39]
-Overfull \hbox (66.53285pt too wide) in paragraph at lines 840--841
+Underfull \hbox (badness 1253) in paragraph at lines 840--841
 \T1/qtm/m/n/12 ken majd a szá-mí-tás fut-ta-tan-dó. Az adat-bá-zis-ból a töb-bi
- ér-té-ke-lés be-gy¶j-té-sé-ért a $\OML/cmm/m/it/12 getTastersScores:php$
+ ér-té-ke-lés be-gy¶j-té-sé-ért a
  []
 
 [40]
-Overfull \hbox (23.22197pt too wide) in paragraph at lines 844--845
+Underfull \hbox (badness 5274) in paragraph at lines 844--845
 \T1/qtm/m/n/12 ál-ta-lam imp-le-men-tált $\OML/cmm/m/it/12 CoHITS$ \T1/qtm/m/n/
-12 al-go-rit-mus ké-pe-zi az egyik cso-por-tot, amely a $\OML/cmm/m/it/12 HITSs
-tart:php$
+12 al-go-rit-mus ké-pe-zi az egyik cso-por-tot, amely a
  []
 
-
+[41]
 Underfull \hbox (badness 10000) in paragraph at lines 852--853
 \T1/qtm/m/n/12 sá-nál, amely az adott bor-ra vo-nat-ko-zó át-la-gos ér-té-ke-lé
 -se-ket tar-tal-maz-za. A
  []
 
-[41]
+
 Underfull \hbox (badness 3118) in paragraph at lines 862--863
 \OML/cmm/m/it/12 tWLeftTransposed$ \T1/qtm/m/n/12 nem más mint a $\OML/cmm/m/it
 /12 tWLeftData$ \T1/qtm/m/n/12 transz-po-nál-ta, amit a tömb
@@ -1208,13 +1207,6 @@ L/cmm/m/it/12 tWRightData$ \T1/qtm/m/n/12 és
 [44
 
 ]
-Overfull \hbox (25.71509pt too wide) in paragraph at lines 894--895
-\T1/qtm/m/n/12 ob-jek-tum. A $\OML/cmm/m/it/12 View$ \T1/qtm/m/n/12 egy ob-jek-
-tum amely fel-hasz-ná-lói in-ter-ak-ci-ót tesz le-he-t®-vé míg a $\OML/cmm/m/it
-/12 ViewGroup$
- []
-
-
 Overfull \hbox (1.4333pt too wide) in paragraph at lines 901--902
 []\T1/qtm/m/n/12 Az ele-me-ket fu-tá-si id®-ben pél-dá-nyo-sít-hat-juk. Az al-k
 al-ma-zás prog-ram-ma-ti-ku-san hoz-
@@ -1286,14 +1278,7 @@ Package pdftex.def Info: TabletResults.png used on input line 1086.
 4. fejezet.
 [57
 
-] [58]
-Overfull \hbox (38.33351pt too wide) in paragraph at lines 1141--1142
-\T1/qtm/m/n/12 azok res-pek-tív hasz-ná-la-tá-val az ér-té-ke-lés $\OML/cmm/m/i
-t/12 ArrayList <[] Score >[]$ \T1/qtm/m/n/12 -ba va-ló gy¶j-té-se $\OML/cmm/m/i
-t/12 remoteScores$\T1/qtm/m/n/12 ,
- []
-
-[59]
+] [58] [59]
 Underfull \hbox (badness 2126) in paragraph at lines 1150--1151
 \T1/qtm/m/n/12 ma-zás fel-hasz-ná-lói fe-lü-le-té-nek fris-sí-té-se. Ami-re oda
  kell fi-gyel-ni az az, hogy ha
@@ -1396,7 +1381,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1973.
  ) 
 Here is how much of TeX's memory you used:
  28138 strings out of 493109
- 495308 string characters out of 6138588
+ 495320 string characters out of 6138588
  919673 words of memory out of 5000000
  30714 multiletter control sequences out of 15000+600000
  51231 words of font info for 59 fonts, out of 8000000 for 9000
@@ -1416,7 +1401,7 @@ ype1/public/amsfonts/symbols/msam10.pfb><x:/texlive/2014/texmf-dist/fonts/type1
 /public/tex-gyre/qtmb.pfb><x:/texlive/2014/texmf-dist/fonts/type1/public/tex-gy
 re/qtmr.pfb><x:/texlive/2014/texmf-dist/fonts/type1/public/tex-gyre/qtmri.pfb><
 x:/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on VargaTamas.pdf (77 pages, 564029 bytes).
+Output written on VargaTamas.pdf (77 pages, 563978 bytes).
 PDF statistics:
  1322 PDF objects out of 1440 (max. 8388607)
  1194 compressed objects within 12 object streams
